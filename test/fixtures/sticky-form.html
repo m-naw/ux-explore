@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" /><title>Formularz pod belką</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      header { position: fixed; top: 0; left: 0; right: 0; height: 120px; background: #135; color: #fff; z-index: 30; }
+      .above { height: 1800px; }
+      .below { height: 1200px; }
+      #given { display: block; height: 40px; }
+    </style>
+  </head>
+  <body onload="window.scrollTo(0, document.getElementById('given').offsetTop - 20)">
+    <header><nav><a href="/home">Start</a></nav></header>
+    <main>
+      <h1>Formularz pod belką</h1>
+      <div class="above"></div>
+      <form id="form" novalidate>
+        <label for="given">Imię</label>
+        <input id="given" name="given_name" autocomplete="given-name" type="text" />
+      </form>
+      <div class="below"></div>
+    </main>
+  </body>
+</html>

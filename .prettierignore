@@ -1,0 +1,14 @@
+node_modules/
+dist/
+reports/
+package-lock.json
+
+# Recorded run data, kept byte-for-byte as the run produced it.
+benchmarks/
+__snapshots__/
+
+# Fixture markup is test input: reflowing it would change the text a page renders.
+test/fixtures/
+
+# Planning notes tracked here but not shipped in the public cut.
+docs/internal/

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" /><title>Cookie modal</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      #veil { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 50; }
+      #dialog { position: fixed; inset: 10% 20%; background: #fff; z-index: 51; padding: 24px; }
+      #x { width: 24px; height: 24px; }
+    </style>
+  </head>
+  <body>
+    <main><h1>Cennik</h1><button id="cta" onclick="document.title='cta-clicked'">Wybierz plan</button></main>
+    <div id="veil"></div>
+    <div id="dialog" role="dialog" aria-label="Cookies">
+      <p>Używamy plików cookie.</p>
+      <button id="accept" onclick="document.getElementById('veil').remove(); document.getElementById('dialog').remove();">
+        Akceptuję wszystkie
+      </button>
+      <a href="/pl/cookies">Polityka cookie</a>
+      <!-- Named only by aria-label, and last so it is not the control dismissOverlay picks. -->
+      <button id="x" aria-label="Close" onclick="document.getElementById('veil').remove(); document.getElementById('dialog').remove();"></button>
+    </div>
+  </body>
+</html>

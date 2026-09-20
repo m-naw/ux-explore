@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Hidden text</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      /* The three ways real sites keep copy in the DOM without putting it on screen. */
+      .sr-only {
+        position: absolute; width: 1px; height: 1px; overflow: hidden;
+        clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+      }
+      .offscreen { position: absolute; left: -9999px; top: 0; }
+      .drawer {
+        position: fixed; top: 0; left: 0; width: 280px; height: 100%;
+        transform: translateX(-100%); background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Visible heading</h1>
+      <p id="real">This paragraph is genuinely on screen and must be sent.</p>
+      <p class="sr-only">SRONLY skip to the main content of this page</p>
+      <p class="offscreen">OFFCANVAS parked far to the left of the viewport</p>
+      <!-- An option that renders its own label inside an open shadow root: the label is the
+           button's name, so it must not also be billed as page copy. -->
+      <rich-cta id="rich" role="button" tabindex="0" aria-label="Start the check"></rich-cta>
+    </main>
+    <nav class="drawer">
+      <p>DRAWERCOPY the navigation drawer is closed until the menu button is pressed</p>
+      <a href="/menu">Drawer link</a>
+    </nav>
+    <script>
+      customElements.define(
+        'rich-cta',
+        class extends HTMLElement {
+          connectedCallback() {
+            this.attachShadow({ mode: 'open' }).innerHTML = '<span>SHADOWLABEL Start the check</span>';
+          }
+        },
+      );
+    </script>
+  </body>
+</html>

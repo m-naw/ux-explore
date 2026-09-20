@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Lazy list</title><style>body { margin: 0; } #pad { height: 1600px; }</style></head>
+  <body>
+    <main>
+      <h1>Lazy list</h1>
+      <div id="pad"></div>
+      <ul id="list"><li><a href="/item/1">Item 1</a></li></ul>
+    </main>
+    <script>
+      let loaded = false;
+      window.addEventListener('scroll', () => {
+        if (loaded || window.scrollY < 300) return;
+        loaded = true;
+        const list = document.getElementById('list');
+        for (const n of [2, 3, 4]) {
+          const li = document.createElement('li');
+          li.innerHTML = '<a href="/item/' + n + '">Item ' + n + '</a>';
+          list.appendChild(li);
+        }
+      });
+    </script>
+  </body>
+</html>

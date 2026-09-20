@@ -1,0 +1,1730 @@
+{
+  "summary": {
+    "runId": "2026-09-20T17-51-07-aodk",
+    "persona": {
+      "name": "Olena"
+    },
+    "browserLocale": "uk-UA",
+    "device": "mobile",
+    "seed": 2,
+    "outcome": {
+      "needMet": false,
+      "gaveUp": false,
+      "left": false,
+      "believedDone": false,
+      "reason": "step budget exhausted",
+      "bucket": "none",
+      "totalSteps": 12,
+      "totalDurationMs": 11554,
+      "outcomeFindings": []
+    },
+    "perUrl": [
+      {
+        "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+        "visits": 11,
+        "meanEntropy": 0.4050160100408647,
+        "meanConfusion": 1.7018181818181817,
+        "exits": 1,
+        "leaveRate": 0,
+        "backtracks": 0,
+        "topSampled": [
+          {
+            "name": "Для себе",
+            "meanProbability": 1
+          },
+          {
+            "name": "Так, 4 червня 2025 р. у мене був активний PESEL UKR",
+            "meanProbability": 1
+          },
+          {
+            "name": "Так, маю активний PESEL UKR",
+            "meanProbability": 1
+          }
+        ]
+      },
+      {
+        "url": "https://dopomo.pl/uk/zayava-na-kartu-cukr?ads=",
+        "visits": 1,
+        "meanEntropy": 0.3856055891937721,
+        "meanConfusion": 2.43,
+        "exits": 0,
+        "leaveRate": 0,
+        "backtracks": 0,
+        "topSampled": [
+          {
+            "name": "Перевірте, чи можете подати →",
+            "meanProbability": 1
+          }
+        ]
+      }
+    ]
+  },
+  "rows": [
+    {
+      "step": 1,
+      "timestamp": 1789926670382,
+      "url": "https://dopomo.pl/uk/zayava-na-kartu-cukr?ads=",
+      "stateHash": "a13370fd3905968531ab7b1b45b003edbad250b5",
+      "viewHash": "285e8de14cf47f94d3ac033342871a3ce543c5d5",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 54,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible)",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible)",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible)",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_27",
+          "kind": "element",
+          "description": "link \"Кваліфікація CUKR\" -> /uk/pathfinder?step=tree (below fold)",
+          "elementId": "el_27"
+        },
+        {
+          "id": "el_28",
+          "kind": "element",
+          "description": "link \"Подати заяву на CUKR\" -> /uk/zayava-na-kartu-cukr (below fold)",
+          "elementId": "el_28"
+        },
+        {
+          "id": "el_29",
+          "kind": "element",
+          "description": "link \"Фото до заяви CUKR\" -> /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)",
+          "elementId": "el_29"
+        },
+        {
+          "id": "el_30",
+          "kind": "element",
+          "description": "link \"Шлях CUKR\" -> /uk/karta-pobytu-cukr (below fold)",
+          "elementId": "el_30"
+        },
+        {
+          "id": "el_31",
+          "kind": "element",
+          "description": "link \"Шлях CUKR для дитини\" -> /uk/karta-pobytu-cukr-dlya-dytyny (below fold)",
+          "elementId": "el_31"
+        },
+        {
+          "id": "el_32",
+          "kind": "element",
+          "description": "link \"Оплати за заяви\" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_32"
+        },
+        {
+          "id": "el_33",
+          "kind": "element",
+          "description": "link \"Чат\" -> /uk/chat (below fold)",
+          "elementId": "el_33"
+        },
+        {
+          "id": "el_34",
+          "kind": "element",
+          "description": "link \"Довгостроковий резидент ЄС\" -> /uk/rezydent-dovhostrokovyi-ue (below fold)",
+          "elementId": "el_34"
+        },
+        {
+          "id": "el_35",
+          "kind": "element",
+          "description": "link \"Заява про видачу/обмін карти\" -> /uk/dokumenty/karta-pobytu-vydacha-obmin (below fold)",
+          "elementId": "el_35"
+        },
+        {
+          "id": "el_36",
+          "kind": "element",
+          "description": "link \"Ваш шлях у Польщі\" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (below fold)",
+          "elementId": "el_36"
+        },
+        {
+          "id": "el_37",
+          "kind": "element",
+          "description": "link \"Інші інструменти\" -> /uk/instrumenty-lehalizatsiyi/paperovi-zaiavy-oplaty-foto (below fold)",
+          "elementId": "el_37"
+        },
+        {
+          "id": "el_38",
+          "kind": "element",
+          "description": "link \"Запис в ужонд: карта побиту\" -> /uk/bronyuvannia-vizytu-podannia-zayavy-otrymannia-karty-pobytu (below fold)",
+          "elementId": "el_38"
+        },
+        {
+          "id": "el_39",
+          "kind": "element",
+          "description": "link \"Банківський рахунок без карти побиту\" -> /uk/bankivskyi-rakhunok-dlia-inozemtsiv (below fold)",
+          "elementId": "el_39"
+        },
+        {
+          "id": "el_40",
+          "kind": "element",
+          "description": "link \"Profil Zaufany через банк\" -> /uk/profil-zaufany-cherez-bank (below fold)",
+          "elementId": "el_40"
+        },
+        {
+          "id": "el_41",
+          "kind": "element",
+          "description": "link \"Заява на тимчасове перебування\" -> /uk/karta-pobytu-po-roboti (below fold)",
+          "elementId": "el_41"
+        },
+        {
+          "id": "el_42",
+          "kind": "element",
+          "description": "link \"Про нас\" -> /uk/about (below fold)",
+          "elementId": "el_42"
+        },
+        {
+          "id": "el_43",
+          "kind": "element",
+          "description": "link \"Співпраця\" -> /uk/spivpratsia (below fold)",
+          "elementId": "el_43"
+        },
+        {
+          "id": "el_44",
+          "kind": "element",
+          "description": "link \"Блог\" -> /uk/blog (below fold)",
+          "elementId": "el_44"
+        },
+        {
+          "id": "el_45",
+          "kind": "element",
+          "description": "link \"Контакт\" -> /uk/contact (below fold)",
+          "elementId": "el_45"
+        },
+        {
+          "id": "el_46",
+          "kind": "element",
+          "description": "link \"Робота\" -> /uk/kariera (below fold)",
+          "elementId": "el_46"
+        },
+        {
+          "id": "el_47",
+          "kind": "element",
+          "description": "link \"Приватність\" -> /uk/privacy (below fold)",
+          "elementId": "el_47"
+        },
+        {
+          "id": "el_48",
+          "kind": "element",
+          "description": "link \"Умови\" -> /uk/terms (below fold)",
+          "elementId": "el_48"
+        },
+        {
+          "id": "el_49",
+          "kind": "element",
+          "description": "link \"Cookies\" -> /uk/cookies (below fold)",
+          "elementId": "el_49"
+        },
+        {
+          "id": "el_50",
+          "kind": "element",
+          "description": "link \"Polski\" -> /pl/wniosek-o-karte-cukr (below fold)",
+          "elementId": "el_50"
+        },
+        {
+          "id": "el_51",
+          "kind": "element",
+          "description": "link \"Русский\" -> /ru/zayavlenie-na-kartu-cukr (below fold)",
+          "elementId": "el_51"
+        },
+        {
+          "id": "el_52",
+          "kind": "element",
+          "description": "link \"English\" -> /en/cukr-card-application (below fold)",
+          "elementId": "el_52"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Перевірте, чи можете подати →\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Далі Dopomo працює як експерт із CUKR поруч із вами — від фото до подання в MOS: кожен розділ, додаток та оплата перевір\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "button \"Подивіться, як це працює ↓\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Безкоштовна перевірка за 2 хвилини · допомога із заявою 199 zł — разово.\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "button \"Крок 1: Список документів для вашої справи\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"Крок 2: Кожне поле без вгадування\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Крок 3: Біометричне фото в ціні\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Крок 4: Оплати без помилок\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "el_10",
+          "kind": "element",
+          "description": "button \"Крок 5: Розділ про судимість без стресу\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_10"
+        },
+        {
+          "id": "el_11",
+          "kind": "element",
+          "description": "button \"Крок 6: Перевірка перед поданням\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_11"
+        },
+        {
+          "id": "el_12",
+          "kind": "element",
+          "description": "button \"Крок 7: MOS разом + асистент AI\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_12"
+        },
+        {
+          "id": "el_13",
+          "kind": "element",
+          "description": "link \"інструкція по карті побиту CUKR\" -> /uk/blog/karta-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_13"
+        },
+        {
+          "id": "el_14",
+          "kind": "element",
+          "description": "link \"калькуляторі оплат\" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_14"
+        },
+        {
+          "id": "el_15",
+          "kind": "element",
+          "description": "link \"хронологія карти CUKR\" -> /uk/karta-pobytu-cukr (below fold)",
+          "elementId": "el_15"
+        },
+        {
+          "id": "el_16",
+          "kind": "element",
+          "description": "button \"Що таке віртуальний асистент?+\" (below fold)",
+          "elementId": "el_16"
+        },
+        {
+          "id": "el_18",
+          "kind": "element",
+          "description": "button \"Чи подає Dopomo заяву замість мене?+\" (below fold)",
+          "elementId": "el_18"
+        },
+        {
+          "id": "el_17",
+          "kind": "element",
+          "description": "link \"легалізації перебування в Польщі\" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (below fold)",
+          "elementId": "el_17"
+        },
+        {
+          "id": "el_19",
+          "kind": "element",
+          "description": "button \"Чи потрібен мені Profil Zaufany?+\" (below fold)",
+          "elementId": "el_19"
+        },
+        {
+          "id": "el_20",
+          "kind": "element",
+          "description": "button \"Які документи мені потрібно підготувати?+\" (below fold)",
+          "elementId": "el_20"
+        },
+        {
+          "id": "el_22",
+          "kind": "element",
+          "description": "button \"Чому 199 zł, якщо подання в MOS безкоштовне?+\" (below fold)",
+          "elementId": "el_22"
+        },
+        {
+          "id": "el_21",
+          "kind": "element",
+          "description": "link \"для заяви на дитину\" -> /uk/karta-pobytu-cukr-dlya-dytyny (below fold)",
+          "elementId": "el_21"
+        },
+        {
+          "id": "el_23",
+          "kind": "element",
+          "description": "button \"Що, якщо мої дані не збігаються з реєстром?+\" (below fold)",
+          "elementId": "el_23"
+        },
+        {
+          "id": "el_24",
+          "kind": "element",
+          "description": "button \"Чи зберігаєте ви мої дані про судимість?+\" (below fold)",
+          "elementId": "el_24"
+        },
+        {
+          "id": "el_25",
+          "kind": "element",
+          "description": "button \"Чи плачу я лише один раз?+\" (below fold)",
+          "elementId": "el_25"
+        },
+        {
+          "id": "el_53",
+          "kind": "element",
+          "description": "button \"Налаштування cookie\" (below fold)",
+          "elementId": "el_53"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_28": 0.0101010101010101,
+        "el_06": 0.0101010101010101,
+        "el_27": 0.0101010101010101,
+        "el_04": 0.9494949494949495,
+        "scroll_down": 0.0202020202020202
+      },
+      "pruned": {
+        "el_04": 1
+      },
+      "sampled": "el_04",
+      "sampledName": "Перевірте, чи можете подати →",
+      "argmax": "el_04",
+      "exploration": false,
+      "confidence": 0.9494949494949495,
+      "entropy": 0.3856055891937721,
+      "goalMet": 0.05,
+      "confusion": 2.43,
+      "outcome": {
+        "urlChanged": true,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 673
+      },
+      "timing": {
+        "extractMs": 478,
+        "decideMs": 711,
+        "decideRetryMs": 0,
+        "executeMs": 674,
+        "settleMs": 479
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 6909,
+      "inputTokens": 4185,
+      "visibleTextChars": 557,
+      "seenTextChars": 0,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 2,
+      "timestamp": 1789926671196,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "69827c7eb41b57a38f6297a72f64f086ebe21891",
+      "viewHash": "80b6ebf17326e7c235e25d79b2c5cdc94a2c6b60",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 14,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "link \"Політика конфіденційності\" -> /uk/privacy (visible; under \"Згода на файли cookie\"; near \"Ми використовуємо необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли \") [inside a dialog covering the page]",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "link \"Політика cookie\" -> /uk/cookies (visible; under \"Згода на файли cookie\"; near \"Ми використовуємо необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли \") [inside a dialog covering the page]",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Прийняти всі\" (visible; under \"Згода на файли cookie\"; near \"Ми використовуємо необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли \") [inside a dialog covering the page]",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Відхилити всі\" (visible; under \"Згода на файли cookie\"; near \"Ми використовуємо необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли \") [inside a dialog covering the page]",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "button \"Керувати налаштуваннями\" (visible; under \"Згода на файли cookie\"; near \"Ми використовуємо необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли \") [inside a dialog covering the page]",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "el_10",
+          "kind": "element",
+          "description": "radio \"Для себе\" (visible; under \"Для кого Ви хочете підготувати заяву на карту побуту CUKR?\"; near \"Питання 1 з 6\")",
+          "elementId": "el_10"
+        },
+        {
+          "id": "el_11",
+          "kind": "element",
+          "description": "radio \"Для моєї дитини\" (visible; under \"Для кого Ви хочете підготувати заяву на карту побуту CUKR?\"; near \"Не впевнені?\")",
+          "elementId": "el_11"
+        },
+        {
+          "id": "el_12",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Для кого Ви хочете підготувати заяву на карту побуту CUKR?\"; near \"Не впевнені?\")",
+          "elementId": "el_12"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_04": 0.03,
+        "el_10": 0.2,
+        "el_03": 0.77
+      },
+      "pruned": {
+        "el_03": 0.7938144329896908,
+        "el_10": 0.2061855670103093
+      },
+      "sampled": "el_03",
+      "sampledName": "Прийняти всі",
+      "argmax": "el_03",
+      "exploration": false,
+      "confidence": 0.77,
+      "entropy": 0.9064960594405433,
+      "goalMet": 0.05,
+      "confusion": 2.6,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 326
+      },
+      "timing": {
+        "extractMs": 32,
+        "decideMs": 244,
+        "decideRetryMs": 0,
+        "executeMs": 326,
+        "settleMs": 208
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 3814,
+      "inputTokens": 2205,
+      "visibleTextChars": 415,
+      "seenTextChars": 0,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 3,
+      "timestamp": 1789926671908,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "6da703e70909573f5242417392db6b8aa4d6990a",
+      "viewHash": "7012f6ee6dd1be05594c9aa561908435d69939bd",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"Для себе\" (visible; under \"Для кого Ви хочете підготувати заяву на карту побуту CUKR?\"; near \"Питання 1 з 6\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Для моєї дитини\" (visible; under \"Для кого Ви хочете підготувати заяву на карту побуту CUKR?\"; near \"Не впевнені?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Для кого Ви хочете підготувати заяву на карту побуту CUKR?\"; near \"Не впевнені?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_05": 1
+      },
+      "pruned": {
+        "el_05": 1
+      },
+      "sampled": "el_05",
+      "sampledName": "Для себе",
+      "argmax": "el_05",
+      "exploration": false,
+      "confidence": 1,
+      "entropy": 0,
+      "goalMet": 0.04,
+      "confusion": 1.76,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 272
+      },
+      "timing": {
+        "extractMs": 24,
+        "decideMs": 248,
+        "decideRetryMs": 0,
+        "executeMs": 272,
+        "settleMs": 162
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 2620,
+      "inputTokens": 1487,
+      "visibleTextChars": 162,
+      "seenTextChars": 252,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 4,
+      "timestamp": 1789926672685,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "9561c5bbd1a350ea1dfbca9bfbf6ae36010dec40",
+      "viewHash": "949ab4606e241853b01ccc027f29d39819e6e951",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"Для себе\" (visible; under \"Для кого Ви хочете підготувати заяву на карту побуту CUKR?\"; near \"Питання 1 з 6\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Для моєї дитини\" (visible; under \"Для кого Ви хочете підготувати заяву на карту побуту CUKR?\"; near \"Не впевнені?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Для кого Ви хочете підготувати заяву на карту побуту CUKR?\"; near \"Не впевнені?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Далі →\" (visible; under \"Для кого Ви хочете підготувати заяву на карту побуту CUKR?\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_07": 0.01,
+        "el_04": 0.01,
+        "el_09": 0.89,
+        "el_05": 0.09
+      },
+      "pruned": {
+        "el_09": 0.9081632653061225,
+        "el_05": 0.09183673469387756
+      },
+      "sampled": "el_09",
+      "sampledName": "Далі →",
+      "argmax": "el_09",
+      "exploration": false,
+      "confidence": 0.89,
+      "entropy": 0.5951601860848226,
+      "goalMet": 0.06,
+      "confusion": 1.37,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 277
+      },
+      "timing": {
+        "extractMs": 27,
+        "decideMs": 280,
+        "decideRetryMs": 0,
+        "executeMs": 277,
+        "settleMs": 158
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 2767,
+      "inputTokens": 1560,
+      "visibleTextChars": 162,
+      "seenTextChars": 252,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 5,
+      "timestamp": 1789926673502,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "c42e80ef69437ff5d6a2b015e767b7285e65de99",
+      "viewHash": "de8ba8c556bcb7675b292b5272ae023ebef16d79",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"🇺🇦Громадянство України\" (visible; under \"Яке у Вас громадянство?\"; near \"Карта побуту CUKR призначена для громадян України та деяких членів їхніх родин.\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Інше громадянство\" (visible; under \"Яке у Вас громадянство?\"; near \"Не впевнені?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Яке у Вас громадянство?\"; near \"Не впевнені?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Назад\" (visible; under \"Яке у Вас громадянство?\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_05": 1
+      },
+      "pruned": {
+        "el_05": 1
+      },
+      "sampled": "el_05",
+      "sampledName": "🇺🇦Громадянство України",
+      "argmax": "el_05",
+      "exploration": false,
+      "confidence": 1,
+      "entropy": 0,
+      "goalMet": 0.04,
+      "confusion": 1.39,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 263
+      },
+      "timing": {
+        "extractMs": 28,
+        "decideMs": 351,
+        "decideRetryMs": 0,
+        "executeMs": 263,
+        "settleMs": 157
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 2885,
+      "inputTokens": 1662,
+      "visibleTextChars": 159,
+      "seenTextChars": 382,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 6,
+      "timestamp": 1789926674281,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "b23083dc6847e11c86c1e554512fe751a6e11a0a",
+      "viewHash": "d319167809cbe413ccfb2354a1c6756157f6176e",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"🇺🇦Громадянство України\" (visible; under \"Яке у Вас громадянство?\"; near \"Карта побуту CUKR призначена для громадян України та деяких членів їхніх родин.\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Інше громадянство\" (visible; under \"Яке у Вас громадянство?\"; near \"Не впевнені?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Яке у Вас громадянство?\"; near \"Не впевнені?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Назад\" (visible; under \"Яке у Вас громадянство?\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Далі →\" (visible; under \"Яке у Вас громадянство?\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_05": 0.03,
+        "el_09": 0.97
+      },
+      "pruned": {
+        "el_09": 1
+      },
+      "sampled": "el_09",
+      "sampledName": "Далі →",
+      "argmax": "el_09",
+      "exploration": false,
+      "confidence": 0.97,
+      "entropy": 0.1943918578315762,
+      "goalMet": 0.06,
+      "confusion": 0.97,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 275
+      },
+      "timing": {
+        "extractMs": 21,
+        "decideMs": 299,
+        "decideRetryMs": 0,
+        "executeMs": 275,
+        "settleMs": 160
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 2994,
+      "inputTokens": 1726,
+      "visibleTextChars": 159,
+      "seenTextChars": 382,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 7,
+      "timestamp": 1789926675113,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "c6cace7a92da121ff4e95c33bfa799fa3c0328ad",
+      "viewHash": "5ef8c7a4aee2d7a7ff876102ffb3a573694b0157",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"Так, маю активний PESEL UKR\" (visible; under \"Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?\"; near \"Це той самий статус, який Ви отримали як особа під тимчасовим захистом після приїзду з України.\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Ні / не знаю / маю інший статус (напр. NUE, дозвіл на побут)\" (visible; under \"Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?\"; near \"Не впевнені?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?\"; near \"Не впевнені?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Назад\" (visible; under \"Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_06": 0.02,
+        "el_07": 0.01,
+        "el_05": 0.97
+      },
+      "pruned": {
+        "el_05": 1
+      },
+      "sampled": "el_05",
+      "sampledName": "Так, маю активний PESEL UKR",
+      "argmax": "el_05",
+      "exploration": false,
+      "confidence": 0.97,
+      "entropy": 0.2219407328532109,
+      "goalMet": 0.04,
+      "confusion": 1.68,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 280
+      },
+      "timing": {
+        "extractMs": 24,
+        "decideMs": 351,
+        "decideRetryMs": 0,
+        "executeMs": 280,
+        "settleMs": 159
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 3437,
+      "inputTokens": 1920,
+      "visibleTextChars": 222,
+      "seenTextChars": 509,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 8,
+      "timestamp": 1789926675896,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "85ffca7ad87725ad3aa9ed7193bac9a19b86a170",
+      "viewHash": "85a05fe21da8b6b20bdb8af0d0cf7fd8c1573fde",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"Так, маю активний PESEL UKR\" (visible; under \"Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?\"; near \"Це той самий статус, який Ви отримали як особа під тимчасовим захистом після приїзду з України.\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Ні / не знаю / маю інший статус (напр. NUE, дозвіл на побут)\" (visible; under \"Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?\"; near \"Не впевнені?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?\"; near \"Не впевнені?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Назад\" (visible; under \"Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Далі →\" (visible; under \"Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_05": 0.01,
+        "el_04": 0.01,
+        "el_09": 0.97,
+        "el_06": 0.01
+      },
+      "pruned": {
+        "el_09": 1
+      },
+      "sampled": "el_09",
+      "sampledName": "Далі →",
+      "argmax": "el_09",
+      "exploration": false,
+      "confidence": 0.97,
+      "entropy": 0.24194073285321088,
+      "goalMet": 0.11,
+      "confusion": 1.33,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 279
+      },
+      "timing": {
+        "extractMs": 29,
+        "decideMs": 300,
+        "decideRetryMs": 0,
+        "executeMs": 279,
+        "settleMs": 159
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 3596,
+      "inputTokens": 2004,
+      "visibleTextChars": 222,
+      "seenTextChars": 509,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 9,
+      "timestamp": 1789926676674,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "6db618001a0a896a6ecfb8524f4b9131185820c1",
+      "viewHash": "2dc6e7804221faf2c6da897123dfa6439696b2f5",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"Так — у мене був такий безперервний період (навіть якщо потім була перерва)\" (visible; under \"Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері\"; near \"Достатньо одного безперервного відрізка в 365 днів — без жодної перерви; він зараховується, навіть якщо закінчився в мин\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Ні — жоден безперервний період не досяг 365 днів / не знаю\" (visible; under \"Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері\"; near \"Не впевнені?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері\"; near \"Не впевнені?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Назад\" (visible; under \"Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері\"; near \"Не впевнені?\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_05": 0.84,
+        "el_06": 0.08,
+        "scroll_down": 0.07,
+        "el_07": 0.01
+      },
+      "pruned": {
+        "el_05": 0.9130434782608696,
+        "el_06": 0.08695652173913045
+      },
+      "sampled": "el_05",
+      "sampledName": "Так — у мене був такий безперервний період (навіть якщо потім була перерва)",
+      "argmax": "el_05",
+      "exploration": false,
+      "confidence": 0.84,
+      "entropy": 0.8377947100965337,
+      "goalMet": 0.06,
+      "confusion": 1.69,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 263
+      },
+      "timing": {
+        "extractMs": 27,
+        "decideMs": 286,
+        "decideRetryMs": 0,
+        "executeMs": 263,
+        "settleMs": 161
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 4173,
+      "inputTokens": 2484,
+      "visibleTextChars": 479,
+      "seenTextChars": 699,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 10,
+      "timestamp": 1789926677434,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "b3e5fb2bea869c05deadb4307e3ded6a33a04c7e",
+      "viewHash": "b86e00556aace481b206784b3f9f283c5d4f21d1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"Так — у мене був такий безперервний період (навіть якщо потім була перерва)\" (visible; under \"Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері\"; near \"Достатньо одного безперервного відрізка в 365 днів — без жодної перерви; він зараховується, навіть якщо закінчився в мин\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Ні — жоден безперервний період не досяг 365 днів / не знаю\" (visible; under \"Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері\"; near \"Не впевнені?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері\"; near \"Не впевнені?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Назад\" (visible; under \"Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері\"; near \"Не впевнені?\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Далі →\" (visible; under \"Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері\"; near \"Не впевнені?\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_04": 0.01,
+        "scroll_down": 0.05,
+        "el_09": 0.92,
+        "el_06": 0.01,
+        "el_05": 0.01
+      },
+      "pruned": {
+        "el_09": 1
+      },
+      "sampled": "el_09",
+      "sampledName": "Далі →",
+      "argmax": "el_09",
+      "exploration": false,
+      "confidence": 0.92,
+      "entropy": 0.5260827854579047,
+      "goalMet": 0.12,
+      "confusion": 1.53,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 272
+      },
+      "timing": {
+        "extractMs": 27,
+        "decideMs": 285,
+        "decideRetryMs": 0,
+        "executeMs": 273,
+        "settleMs": 158
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 4413,
+      "inputTokens": 2633,
+      "visibleTextChars": 479,
+      "seenTextChars": 699,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 11,
+      "timestamp": 1789926678252,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "42de00f9b15a26aca8d2c8c67fb512a1f3739273",
+      "viewHash": "df5e754047d13abefadef5f7521265df72dcba58",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"Так, 4 червня 2025 р. у мене був активний PESEL UKR\" (visible; under \"Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?\"; near \"Це конкретна дата, яку вимагає закон. Якщо того дня Ви не мали активного статусу UKR (напр. були тоді поза Польщею довше\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Ні / не знаю\" (visible; under \"Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?\"; near \"Не впевнені?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?\"; near \"Не впевнені?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Назад\" (visible; under \"Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?\"; near \"Не впевнені?\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_07": 0.04,
+        "el_05": 0.91,
+        "el_06": 0.05
+      },
+      "pruned": {
+        "el_05": 1
+      },
+      "sampled": "el_05",
+      "sampledName": "Так, 4 червня 2025 р. у мене був активний PESEL UKR",
+      "argmax": "el_05",
+      "exploration": false,
+      "confidence": 0.91,
+      "entropy": 0.525666662449543,
+      "goalMet": 0.08,
+      "confusion": 2.39,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 262
+      },
+      "timing": {
+        "extractMs": 28,
+        "decideMs": 343,
+        "decideRetryMs": 0,
+        "executeMs": 262,
+        "settleMs": 158
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 4156,
+      "inputTokens": 2407,
+      "visibleTextChars": 294,
+      "seenTextChars": 893,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 12,
+      "timestamp": 1789926679099,
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "ebc8fdcf3d0af787d0a88e3d73833aa85bcc0ae8",
+      "viewHash": "e26c0bf20a8800aae2aef67ad28544c337c6165c",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершити\" (visible; near \"Крок 1 Кваліфікація\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"Так, 4 червня 2025 р. у мене був активний PESEL UKR\" (visible; under \"Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?\"; near \"Це конкретна дата, яку вимагає закон. Якщо того дня Ви не мали активного статусу UKR (напр. були тоді поза Польщею довше\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Ні / не знаю\" (visible; under \"Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?\"; near \"Не впевнені?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Запитати асистента\" (visible; under \"Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?\"; near \"Не впевнені?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Назад\" (visible; under \"Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?\"; near \"Не впевнені?\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Далі →\" (visible; under \"Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?\"; near \"Не впевнені?\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_04": 0.0404040404040404,
+        "el_09": 0.9393939393939393,
+        "el_05": 0.0101010101010101,
+        "el_06": 0.0101010101010101
+      },
+      "pruned": {
+        "el_09": 1
+      },
+      "sampled": "el_09",
+      "sampledName": "Далі →",
+      "argmax": "el_09",
+      "exploration": false,
+      "confidence": 0.9393939393939393,
+      "entropy": 0.405702383382166,
+      "goalMet": 0.21,
+      "confusion": 2.01,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 283
+      },
+      "timing": {
+        "extractMs": 24,
+        "decideMs": 368,
+        "decideRetryMs": 0,
+        "executeMs": 283,
+        "settleMs": 162
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 4224,
+      "inputTokens": 2464,
+      "visibleTextChars": 294,
+      "seenTextChars": 893,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3"
+    }
+  ]
+}

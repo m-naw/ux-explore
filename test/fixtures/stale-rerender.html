@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Rerender</title></head>
+  <body>
+    <main><h1>Rerender</h1><div id="slot"></div></main>
+    <script>
+      const mode = new URLSearchParams(location.search).get('mode') || 'once';
+      let rerenders = 0;
+      function render() {
+        const slot = document.getElementById('slot');
+        slot.innerHTML = '';
+        const btn = document.createElement('button');
+        btn.id = 'target';
+        btn.textContent = 'Continue';
+        btn.addEventListener('click', () => { document.title = 'continue-clicked'; });
+        slot.appendChild(btn);
+      }
+      render();
+      window.__rerender = () => {
+        rerenders += 1;
+        if (mode === 'once' && rerenders > 1) return false;
+        render();
+        return true;
+      };
+    </script>
+  </body>
+</html>

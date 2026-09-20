@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Wniosek</title>
+  </head>
+  <body>
+    <main>
+      <h1>Wniosek o kartę pobytu</h1>
+      <!-- Two steps whose controls are named identically. Only the question changes, which
+           is exactly the shape a React wizard renders: the same Tak/Nie/Dalej buttons under
+           a new heading. -->
+      <h2 id="question">Czy masz ważny paszport?</h2>
+      <div>
+        <button id="yes" type="button">Tak</button>
+        <button id="no" type="button">Nie</button>
+      </div>
+      <script>
+        const QUESTIONS = ['Czy masz ważny paszport?', 'Czy mieszkasz w Polsce od roku?'];
+        let step = 0;
+        function advance() {
+          step += 1;
+          document.getElementById('question').textContent =
+            QUESTIONS[Math.min(step, QUESTIONS.length - 1)];
+        }
+        document.getElementById('yes').addEventListener('click', advance);
+        document.getElementById('no').addEventListener('click', advance);
+      </script>
+    </main>
+  </body>
+</html>

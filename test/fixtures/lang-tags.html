@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8" /><title>Języki</title>
+  </head>
+  <body>
+    <main>
+      <h1>Wybierz język</h1>
+      <nav>
+        <!-- A region-tagged hreflang: the persona reads `uk`, not `uk-UA`. -->
+        <a href="/uk" hreflang="uk-UA">Українська</a>
+        <!-- x-default is a routing hint, not a language; it must not become a switch target. -->
+        <a href="/start" hreflang="x-default">Start</a>
+        <!-- No hreflang at all: the query-string fallback still applies. -->
+        <a href="/?lang=en">English</a>
+      </nav>
+    </main>
+  </body>
+</html>

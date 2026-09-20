@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Live region</title></head>
+  <body>
+    <main>
+      <h1>Live region</h1>
+      <a href="/stable">Stable link</a>
+      <div aria-live="polite"><button id="ticker">0</button></div>
+    </main>
+    <script>
+      let n = 0;
+      setInterval(() => { document.getElementById('ticker').textContent = String(++n); }, 60);
+    </script>
+  </body>
+</html>

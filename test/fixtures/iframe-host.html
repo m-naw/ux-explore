@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pl">
+  <head><meta charset="utf-8" /><title>Ramka</title></head>
+  <body>
+    <main>
+      <h1>Ramka</h1>
+      <p>Krok 2 z 4</p>
+      <a href="/pl/cukr" hreflang="pl">Polski</a>
+      <a href="/uk/cukr" hreflang="uk">Українська</a>
+      <iframe id="same" src="/iframe-child.html" title="same origin" width="400" height="200"></iframe>
+      <iframe id="cross" title="cross origin" width="400" height="200"></iframe>
+      <div role="alert">Pole jest wymagane</div>
+    </main>
+    <script>
+      // The second origin is only known at run time, so the test passes it in ?alt=
+      const alt = new URLSearchParams(location.search).get('alt');
+      if (alt) document.getElementById('cross').src = alt + '/iframe-child.html';
+    </script>
+  </body>
+</html>

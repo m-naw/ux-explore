@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Sticky header</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      header { position: fixed; top: 0; left: 0; right: 0; height: 120px; background: #135; color: #fff; z-index: 30; }
+      .above { height: 1800px; }
+      .below { height: 1200px; }
+      #cta { display: block; height: 40px; }
+    </style>
+  </head>
+  <body onload="window.scrollTo(0, document.getElementById('cta').offsetTop - 20)">
+    <header><nav><a href="/home">Home</a></nav></header>
+    <main>
+      <h1>Sticky header</h1>
+      <div class="above"></div>
+      <button id="cta" onclick="this.setAttribute('data-clicked', 'yes'); document.title = 'cta-clicked';">
+        Start now
+      </button>
+      <div class="below"></div>
+    </main>
+  </body>
+</html>

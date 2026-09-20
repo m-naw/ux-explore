@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Rerender frame host</title>
+  </head>
+  <body>
+    <main>
+      <h1>Rerender frame host</h1>
+      <!-- The re-rendering control lives in a same-origin iframe. A top-level role+name
+           locator cannot reach it, so this is the case that is genuinely stale: every handle
+           detaches and there is no other way in. -->
+      <iframe src="rerender-loop.html" width="600" height="300" title="Embedded step"></iframe>
+    </main>
+  </body>
+</html>

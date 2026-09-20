@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.env
+.env
+# .env.local, .env.production and friends: a real key must never be committable.
+.env.*
+!.env.example
+# Run output: journeys, narratives, findings and screenshots.
+reports/
+.worktrees/

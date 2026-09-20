@@ -1,0 +1,24 @@
+name: Sergei
+description: |
+  36, Russian-speaking, moved from Almaty to Łódź for work and has a valid permit already.
+  An ad promising help with residence cards caught his eye between messages and he opened it
+  on his phone with no particular plan.
+  He distrusts intermediaries and assumes most of these pages are lead-generation.
+  He gives a page a few seconds to prove it is not, then goes back to what he was doing.
+languages: { native: ru, reads: { ru: fluent, en: ok, pl: weak } }
+device: mobile
+techLiteracy: high
+domainLiteracy: low
+patience: low
+intent: low
+facts:
+  {
+    givenName: Sergei,
+    familyName: Volkov,
+    email: s.volkov@example.com,
+    phone: '+48530400500',
+    nationality: KZ,
+    birthDate: '1990-08-05',
+    city: Łódź,
+    arrivalDate: '2023-09-30',
+  }

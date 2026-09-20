@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Tabs</title></head>
+  <body>
+    <main>
+      <h1>Tabs</h1>
+      <div role="tablist"><button role="tab" id="tab-a">Overview</button><button role="tab" id="tab-b">Requirements</button></div>
+      <div id="panel">
+        <a href="#">Overview link one</a>
+        <a href="#">Overview link two</a>
+        <a href="#">Overview link three</a>
+      </div>
+      <p aria-live="polite" id="ticker">0</p>
+    </main>
+    <script>
+      let n = 0;
+      setInterval(() => { document.getElementById('ticker').textContent = String(++n); }, 100);
+      // The panel links are inert: clicking one must leave the page exactly where it is,
+      // so the loop detector sees the same state and the same action three times running.
+      document.addEventListener('click', (e) => {
+        if (e.target instanceof HTMLAnchorElement) e.preventDefault();
+      });
+      document.getElementById('tab-b').addEventListener('click', () => {
+        document.getElementById('panel').innerHTML =
+          '<a href="#">Documents needed</a><a href="#">Fees</a><a href="#">Deadlines</a>';
+      });
+    </script>
+  </body>
+</html>

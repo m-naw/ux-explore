@@ -1,0 +1,1148 @@
+{
+  "summary": {
+    "runId": "2026-09-20T17-49-27-pbrl",
+    "persona": {
+      "name": "Anna"
+    },
+    "browserLocale": "pl-PL",
+    "device": "desktop",
+    "seed": 1,
+    "outcome": {
+      "needMet": true,
+      "gaveUp": false,
+      "left": false,
+      "believedDone": false,
+      "reason": "criteria matched",
+      "bucket": "product",
+      "totalSteps": 4,
+      "totalDurationMs": 4891,
+      "outcomeFindings": [
+        "unrecognized-success"
+      ]
+    },
+    "perUrl": [
+      {
+        "url": "https://books.toscrape.com",
+        "visits": 1,
+        "meanEntropy": 0.6453556861713613,
+        "meanConfusion": 2.92,
+        "exits": 0,
+        "leaveRate": 0,
+        "backtracks": 0,
+        "topSampled": [
+          {
+            "name": "Travel",
+            "meanProbability": 0.9368421052631578
+          }
+        ]
+      },
+      {
+        "url": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html",
+        "visits": 1,
+        "meanEntropy": 3.3809901173266703,
+        "meanConfusion": 2.81,
+        "exits": 1,
+        "leaveRate": 0,
+        "backtracks": 0,
+        "topSampled": [
+          {
+            "name": "1,000 Places to See Before You Die",
+            "meanProbability": 0.04545454545454545
+          }
+        ]
+      }
+    ]
+  },
+  "rows": [
+    {
+      "step": 1,
+      "timestamp": 1789926570107,
+      "url": "https://books.toscrape.com/",
+      "stateHash": "33e48b3ef11b64d12caa53c638997166a815fc54",
+      "viewHash": "0098f6d89e3d6ac630c969aba64ffce639f28569",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "elementsCount": 114,
+      "droppedElements": 53,
+      "options": [
+        {
+          "id": "el_56",
+          "kind": "element",
+          "description": "button \"Add to basket\" (below fold)",
+          "elementId": "el_56"
+        },
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "link \"Books to Scrape\" -> /index.html (visible; near \"We love being scraped!\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "link \"Home\" -> /index.html (visible; near \"All products\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "link \"Books\" -> /catalogue/category/books_1/index.html (visible; under \"All products\"; near \"1000 results - showing 1 to 20 .\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "link \"Travel\" -> /catalogue/category/books/travel_2/index.html (visible; under \"All products\"; near \"1000 results - showing 1 to 20 .\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "link \"Mystery\" -> /catalogue/category/books/mystery_3/index.html (visible; under \"All products\"; near \"1000 results - showing 1 to 20 .\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "link \"Historical Fiction\" -> /catalogue/category/books/historical-fiction_4/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "link \"Sequential Art\" -> /catalogue/category/books/sequential-art_5/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "link \"Classics\" -> /catalogue/category/books/classics_6/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "link \"Philosophy\" -> /catalogue/category/books/philosophy_7/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "el_10",
+          "kind": "element",
+          "description": "link \"Romance\" -> /catalogue/category/books/romance_8/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_10"
+        },
+        {
+          "id": "el_11",
+          "kind": "element",
+          "description": "link \"Womens Fiction\" -> /catalogue/category/books/womens-fiction_9/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_11"
+        },
+        {
+          "id": "el_12",
+          "kind": "element",
+          "description": "link \"Fiction\" -> /catalogue/category/books/fiction_10/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_12"
+        },
+        {
+          "id": "el_13",
+          "kind": "element",
+          "description": "link \"Childrens\" -> /catalogue/category/books/childrens_11/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_13"
+        },
+        {
+          "id": "el_14",
+          "kind": "element",
+          "description": "link \"Religion\" -> /catalogue/category/books/religion_12/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_14"
+        },
+        {
+          "id": "el_15",
+          "kind": "element",
+          "description": "link \"Nonfiction\" -> /catalogue/category/books/nonfiction_13/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_15"
+        },
+        {
+          "id": "el_16",
+          "kind": "element",
+          "description": "link \"Music\" -> /catalogue/category/books/music_14/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_16"
+        },
+        {
+          "id": "el_17",
+          "kind": "element",
+          "description": "link \"Default\" -> /catalogue/category/books/default_15/index.html (visible; under \"All products\"; near \"£51.77\")",
+          "elementId": "el_17"
+        },
+        {
+          "id": "el_18",
+          "kind": "element",
+          "description": "link \"Science Fiction\" -> /catalogue/category/books/science-fiction_16/index.html (visible; under \"All products\"; near \"£51.77\")",
+          "elementId": "el_18"
+        },
+        {
+          "id": "el_19",
+          "kind": "element",
+          "description": "link \"Sports and Games\" -> /catalogue/category/books/sports-and-games_17/index.html (visible; under \"All products\"; near \"£51.77\")",
+          "elementId": "el_19"
+        },
+        {
+          "id": "el_20",
+          "kind": "element",
+          "description": "link \"Add a comment\" -> /catalogue/category/books/add-a-comment_18/index.html (visible; under \"All products\"; near \"£51.77\")",
+          "elementId": "el_20"
+        },
+        {
+          "id": "el_21",
+          "kind": "element",
+          "description": "link \"Fantasy\" -> /catalogue/category/books/fantasy_19/index.html (visible; under \"All products\"; near \"£51.77\")",
+          "elementId": "el_21"
+        },
+        {
+          "id": "el_22",
+          "kind": "element",
+          "description": "link \"New Adult\" -> /catalogue/category/books/new-adult_20/index.html (visible; under \"All products\"; near \"£51.77\")",
+          "elementId": "el_22"
+        },
+        {
+          "id": "el_23",
+          "kind": "element",
+          "description": "link \"Young Adult\" -> /catalogue/category/books/young-adult_21/index.html (visible; under \"All products\"; near \"£51.77\")",
+          "elementId": "el_23"
+        },
+        {
+          "id": "el_24",
+          "kind": "element",
+          "description": "link \"Science\" -> /catalogue/category/books/science_22/index.html (visible; under \"All products\"; near \"£51.77\")",
+          "elementId": "el_24"
+        },
+        {
+          "id": "el_25",
+          "kind": "element",
+          "description": "link \"Poetry\" -> /catalogue/category/books/poetry_23/index.html (visible; under \"All products\"; near \"£51.77\")",
+          "elementId": "el_25"
+        },
+        {
+          "id": "el_26",
+          "kind": "element",
+          "description": "link \"Paranormal\" -> /catalogue/category/books/paranormal_24/index.html (visible; under \"All products\"; near \"In stock\")",
+          "elementId": "el_26"
+        },
+        {
+          "id": "el_54",
+          "kind": "element",
+          "description": "link \"A Light in the Attic\" -> /catalogue/a-light-in-the-attic_1000/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_54"
+        },
+        {
+          "id": "el_55",
+          "kind": "element",
+          "description": "link \"A Light in the ...\" -> /catalogue/a-light-in-the-attic_1000/index.html (visible; under \"All products\"; near \"£51.77\")",
+          "elementId": "el_55"
+        },
+        {
+          "id": "el_57",
+          "kind": "element",
+          "description": "link \"Tipping the Velvet\" -> /catalogue/tipping-the-velvet_999/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_57"
+        },
+        {
+          "id": "el_60",
+          "kind": "element",
+          "description": "link \"Soumission\" -> /catalogue/soumission_998/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_60"
+        },
+        {
+          "id": "el_63",
+          "kind": "element",
+          "description": "link \"Sharp Objects\" -> /catalogue/sharp-objects_997/index.html (visible; under \"All products\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_63"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_04": 0.89,
+        "leave": 0.060000000000000005,
+        "scroll_down": 0.04,
+        "el_03": 0.01
+      },
+      "pruned": {
+        "el_04": 0.9368421052631578,
+        "leave": 0.06315789473684211
+      },
+      "sampled": "el_04",
+      "sampledName": "Travel",
+      "sampledHref": "/catalogue/category/books/travel_2/index.html",
+      "argmax": "el_04",
+      "exploration": false,
+      "confidence": 0.89,
+      "entropy": 0.6453556861713613,
+      "goalMet": 0.03,
+      "confusion": 2.92,
+      "outcome": {
+        "urlChanged": true,
+        "stateChanged": true,
+        "consoleErrors": [
+          "Mixed Content: The page at 'https://books.toscrape.com/catalogue/category/books/travel_2/index.html' was loaded over HTTPS, but requested an insecure script 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'. This request has been blocked; the content must be served over HTTPS. (https://books.toscrape.com/catalogue/category/books/travel_2/index.html)"
+        ],
+        "failedRequests": [],
+        "validationMessages": [
+          "Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no real meaning."
+        ],
+        "durationMs": 511
+      },
+      "timing": {
+        "extractMs": 168,
+        "decideMs": 694,
+        "decideRetryMs": 0,
+        "executeMs": 511,
+        "settleMs": 165
+      },
+      "flags": [],
+      "bucket": "product",
+      "stateChars": 7874,
+      "inputTokens": 2647,
+      "visibleTextChars": 282,
+      "seenTextChars": 0,
+      "scrollOnly": false,
+      "nextUrl": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html"
+    },
+    {
+      "step": 2,
+      "timestamp": 1789926570869,
+      "url": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html",
+      "stateHash": "abf87e44c8099be08a8a0df1eb36389d4fd74549",
+      "viewHash": "a8e5becc51e0b18b8e3d5422e5e07b3ab4e78c51",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "elementsCount": 87,
+      "droppedElements": 40,
+      "options": [
+        {
+          "id": "el_57",
+          "kind": "element",
+          "description": "button \"Add to basket\" (below fold)",
+          "elementId": "el_57"
+        },
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "link \"Books to Scrape\" -> /index.html (visible; near \"We love being scraped!\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "link \"Home\" -> /index.html (visible; near \"Travel\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "link \"Books\" -> /catalogue/category/books_1/index.html (visible; near \"Travel\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "link \"Travel\" -> /catalogue/category/books/travel_2/index.html (visible; under \"Travel\"; near \"11 results.\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "link \"Mystery\" -> /catalogue/category/books/mystery_3/index.html (visible; under \"Travel\"; near \"11 results.\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "link \"Historical Fiction\" -> /catalogue/category/books/historical-fiction_4/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "link \"Sequential Art\" -> /catalogue/category/books/sequential-art_5/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "link \"Classics\" -> /catalogue/category/books/classics_6/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "el_10",
+          "kind": "element",
+          "description": "link \"Philosophy\" -> /catalogue/category/books/philosophy_7/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_10"
+        },
+        {
+          "id": "el_11",
+          "kind": "element",
+          "description": "link \"Romance\" -> /catalogue/category/books/romance_8/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_11"
+        },
+        {
+          "id": "el_12",
+          "kind": "element",
+          "description": "link \"Womens Fiction\" -> /catalogue/category/books/womens-fiction_9/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_12"
+        },
+        {
+          "id": "el_13",
+          "kind": "element",
+          "description": "link \"Fiction\" -> /catalogue/category/books/fiction_10/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_13"
+        },
+        {
+          "id": "el_14",
+          "kind": "element",
+          "description": "link \"Childrens\" -> /catalogue/category/books/childrens_11/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_14"
+        },
+        {
+          "id": "el_15",
+          "kind": "element",
+          "description": "link \"Religion\" -> /catalogue/category/books/religion_12/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_15"
+        },
+        {
+          "id": "el_16",
+          "kind": "element",
+          "description": "link \"Nonfiction\" -> /catalogue/category/books/nonfiction_13/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_16"
+        },
+        {
+          "id": "el_17",
+          "kind": "element",
+          "description": "link \"Music\" -> /catalogue/category/books/music_14/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_17"
+        },
+        {
+          "id": "el_18",
+          "kind": "element",
+          "description": "link \"Default\" -> /catalogue/category/books/default_15/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_18"
+        },
+        {
+          "id": "el_19",
+          "kind": "element",
+          "description": "link \"Science Fiction\" -> /catalogue/category/books/science-fiction_16/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_19"
+        },
+        {
+          "id": "el_20",
+          "kind": "element",
+          "description": "link \"Sports and Games\" -> /catalogue/category/books/sports-and-games_17/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_20"
+        },
+        {
+          "id": "el_21",
+          "kind": "element",
+          "description": "link \"Add a comment\" -> /catalogue/category/books/add-a-comment_18/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_21"
+        },
+        {
+          "id": "el_22",
+          "kind": "element",
+          "description": "link \"Fantasy\" -> /catalogue/category/books/fantasy_19/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_22"
+        },
+        {
+          "id": "el_23",
+          "kind": "element",
+          "description": "link \"New Adult\" -> /catalogue/category/books/new-adult_20/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_23"
+        },
+        {
+          "id": "el_24",
+          "kind": "element",
+          "description": "link \"Young Adult\" -> /catalogue/category/books/young-adult_21/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_24"
+        },
+        {
+          "id": "el_25",
+          "kind": "element",
+          "description": "link \"Science\" -> /catalogue/category/books/science_22/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_25"
+        },
+        {
+          "id": "el_26",
+          "kind": "element",
+          "description": "link \"Poetry\" -> /catalogue/category/books/poetry_23/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_26"
+        },
+        {
+          "id": "el_27",
+          "kind": "element",
+          "description": "link \"Paranormal\" -> /catalogue/category/books/paranormal_24/index.html (visible; under \"Travel\"; near \"In stock\")",
+          "elementId": "el_27"
+        },
+        {
+          "id": "el_55",
+          "kind": "element",
+          "description": "link \"It's Only the Himalayas\" -> /catalogue/its-only-the-himalayas_981/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_55"
+        },
+        {
+          "id": "el_58",
+          "kind": "element",
+          "description": "link \"Full Moon over Noah’s Ark: An Odyssey to Mount Ararat and Beyond\" -> /catalogue/full-moon-over-noahs-ark-an-odyssey-to-mount-ararat-and-beyond_811/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_58"
+        },
+        {
+          "id": "el_59",
+          "kind": "element",
+          "description": "link \"Full Moon over Noah’s ...\" -> /catalogue/full-moon-over-noahs-ark-an-odyssey-to-mount-ararat-and-beyond_811/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_59"
+        },
+        {
+          "id": "el_61",
+          "kind": "element",
+          "description": "link \"See America: A Celebration of Our National Parks & Treasured Sites\" -> /catalogue/see-america-a-celebration-of-our-national-parks-treasured-sites_732/index.html (visible; under \"Travel\"; near \"Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no re\")",
+          "elementId": "el_61"
+        },
+        {
+          "id": "el_62",
+          "kind": "element",
+          "description": "link \"See America: A Celebration ...\" -> /catalogue/see-america-a-celebration-of-our-national-parks-treasured-sites_732/index.html (visible; under \"Travel\"; near \"£45.17\")",
+          "elementId": "el_62"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "leave": 0.02,
+        "el_61": 0.01,
+        "el_58": 0.01,
+        "scroll_down": 0.87,
+        "el_59": 0.01,
+        "el_55": 0.08
+      },
+      "pruned": {
+        "scroll_down": 0.9157894736842106,
+        "el_55": 0.08421052631578949
+      },
+      "sampled": "scroll_down",
+      "sampledName": "scroll_down",
+      "argmax": "scroll_down",
+      "exploration": false,
+      "confidence": 0.87,
+      "entropy": 0.778495348386331,
+      "goalMet": 0.05,
+      "confusion": 2.5,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [
+          "Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no real meaning."
+        ],
+        "durationMs": 255
+      },
+      "timing": {
+        "extractMs": 92,
+        "decideMs": 286,
+        "decideRetryMs": 0,
+        "executeMs": 255,
+        "settleMs": 159
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 7999,
+      "inputTokens": 2707,
+      "visibleTextChars": 249,
+      "seenTextChars": 0,
+      "scrollOnly": true,
+      "nextUrl": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html"
+    },
+    {
+      "step": 3,
+      "timestamp": 1789926571606,
+      "url": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html",
+      "stateHash": "d3a800ff1c027e67c8b8f83696226d3ba9879436",
+      "viewHash": "f565723ff09297e10588bc482a00f1adc9cd2d15",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "elementsCount": 87,
+      "droppedElements": 40,
+      "options": [
+        {
+          "id": "el_57",
+          "kind": "element",
+          "description": "button \"Add to basket\" (visible; near \"In stock\")",
+          "elementId": "el_57"
+        },
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "link \"Books to Scrape\" -> /index.html (below fold)",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_20",
+          "kind": "element",
+          "description": "link \"Sports and Games\" -> /catalogue/category/books/sports-and-games_17/index.html (visible; near \"£45.17\")",
+          "elementId": "el_20"
+        },
+        {
+          "id": "el_21",
+          "kind": "element",
+          "description": "link \"Add a comment\" -> /catalogue/category/books/add-a-comment_18/index.html (visible; near \"£45.17\")",
+          "elementId": "el_21"
+        },
+        {
+          "id": "el_22",
+          "kind": "element",
+          "description": "link \"Fantasy\" -> /catalogue/category/books/fantasy_19/index.html (visible; near \"£45.17\")",
+          "elementId": "el_22"
+        },
+        {
+          "id": "el_23",
+          "kind": "element",
+          "description": "link \"New Adult\" -> /catalogue/category/books/new-adult_20/index.html (visible; near \"£45.17\")",
+          "elementId": "el_23"
+        },
+        {
+          "id": "el_24",
+          "kind": "element",
+          "description": "link \"Young Adult\" -> /catalogue/category/books/young-adult_21/index.html (visible; near \"£45.17\")",
+          "elementId": "el_24"
+        },
+        {
+          "id": "el_25",
+          "kind": "element",
+          "description": "link \"Science\" -> /catalogue/category/books/science_22/index.html (visible; near \"£45.17\")",
+          "elementId": "el_25"
+        },
+        {
+          "id": "el_26",
+          "kind": "element",
+          "description": "link \"Poetry\" -> /catalogue/category/books/poetry_23/index.html (visible; near \"£45.17\")",
+          "elementId": "el_26"
+        },
+        {
+          "id": "el_27",
+          "kind": "element",
+          "description": "link \"Paranormal\" -> /catalogue/category/books/paranormal_24/index.html (visible; near \"In stock\")",
+          "elementId": "el_27"
+        },
+        {
+          "id": "el_28",
+          "kind": "element",
+          "description": "link \"Art\" -> /catalogue/category/books/art_25/index.html (visible; near \"In stock\")",
+          "elementId": "el_28"
+        },
+        {
+          "id": "el_29",
+          "kind": "element",
+          "description": "link \"Psychology\" -> /catalogue/category/books/psychology_26/index.html (visible; near \"In stock\")",
+          "elementId": "el_29"
+        },
+        {
+          "id": "el_30",
+          "kind": "element",
+          "description": "link \"Autobiography\" -> /catalogue/category/books/autobiography_27/index.html (visible; near \"In stock\")",
+          "elementId": "el_30"
+        },
+        {
+          "id": "el_31",
+          "kind": "element",
+          "description": "link \"Parenting\" -> /catalogue/category/books/parenting_28/index.html (visible; near \"In stock\")",
+          "elementId": "el_31"
+        },
+        {
+          "id": "el_32",
+          "kind": "element",
+          "description": "link \"Adult Fiction\" -> /catalogue/category/books/adult-fiction_29/index.html (visible; near \"In stock\")",
+          "elementId": "el_32"
+        },
+        {
+          "id": "el_33",
+          "kind": "element",
+          "description": "link \"Humor\" -> /catalogue/category/books/humor_30/index.html (visible; near \"In stock\")",
+          "elementId": "el_33"
+        },
+        {
+          "id": "el_34",
+          "kind": "element",
+          "description": "link \"Horror\" -> /catalogue/category/books/horror_31/index.html (visible; near \"In stock\")",
+          "elementId": "el_34"
+        },
+        {
+          "id": "el_35",
+          "kind": "element",
+          "description": "link \"History\" -> /catalogue/category/books/history_32/index.html (visible; near \"In stock\")",
+          "elementId": "el_35"
+        },
+        {
+          "id": "el_36",
+          "kind": "element",
+          "description": "link \"Food and Drink\" -> /catalogue/category/books/food-and-drink_33/index.html (visible; near \"In stock\")",
+          "elementId": "el_36"
+        },
+        {
+          "id": "el_37",
+          "kind": "element",
+          "description": "link \"Christian Fiction\" -> /catalogue/category/books/christian-fiction_34/index.html (visible; near \"£37.33\")",
+          "elementId": "el_37"
+        },
+        {
+          "id": "el_38",
+          "kind": "element",
+          "description": "link \"Business\" -> /catalogue/category/books/business_35/index.html (visible; near \"£37.33\")",
+          "elementId": "el_38"
+        },
+        {
+          "id": "el_39",
+          "kind": "element",
+          "description": "link \"Biography\" -> /catalogue/category/books/biography_36/index.html (visible; near \"£37.33\")",
+          "elementId": "el_39"
+        },
+        {
+          "id": "el_40",
+          "kind": "element",
+          "description": "link \"Thriller\" -> /catalogue/category/books/thriller_37/index.html (visible; near \"£37.33\")",
+          "elementId": "el_40"
+        },
+        {
+          "id": "el_41",
+          "kind": "element",
+          "description": "link \"Contemporary\" -> /catalogue/category/books/contemporary_38/index.html (visible; near \"£37.33\")",
+          "elementId": "el_41"
+        },
+        {
+          "id": "el_42",
+          "kind": "element",
+          "description": "link \"Spirituality\" -> /catalogue/category/books/spirituality_39/index.html (visible; near \"£37.33\")",
+          "elementId": "el_42"
+        },
+        {
+          "id": "el_43",
+          "kind": "element",
+          "description": "link \"Academic\" -> /catalogue/category/books/academic_40/index.html (visible; near \"£37.33\")",
+          "elementId": "el_43"
+        },
+        {
+          "id": "el_44",
+          "kind": "element",
+          "description": "link \"Self Help\" -> /catalogue/category/books/self-help_41/index.html (visible; near \"£37.33\")",
+          "elementId": "el_44"
+        },
+        {
+          "id": "el_45",
+          "kind": "element",
+          "description": "link \"Historical\" -> /catalogue/category/books/historical_42/index.html (visible; near \"£37.33\")",
+          "elementId": "el_45"
+        },
+        {
+          "id": "el_46",
+          "kind": "element",
+          "description": "link \"Christian\" -> /catalogue/category/books/christian_43/index.html (visible; near \"£37.33\")",
+          "elementId": "el_46"
+        },
+        {
+          "id": "el_47",
+          "kind": "element",
+          "description": "link \"Suspense\" -> /catalogue/category/books/suspense_44/index.html (visible; near \"In stock\")",
+          "elementId": "el_47"
+        },
+        {
+          "id": "el_48",
+          "kind": "element",
+          "description": "link \"Short Stories\" -> /catalogue/category/books/short-stories_45/index.html (visible; near \"In stock\")",
+          "elementId": "el_48"
+        },
+        {
+          "id": "el_49",
+          "kind": "element",
+          "description": "link \"Novels\" -> /catalogue/category/books/novels_46/index.html (visible; near \"In stock\")",
+          "elementId": "el_49"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "scroll_up",
+          "kind": "scroll_up",
+          "description": "scroll back up the page"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "back": 0.01,
+        "scroll_up": 0.03,
+        "leave": 0.01,
+        "scroll_down": 0.95
+      },
+      "pruned": {
+        "scroll_down": 1
+      },
+      "sampled": "scroll_down",
+      "sampledName": "scroll_down",
+      "argmax": "scroll_down",
+      "exploration": false,
+      "confidence": 0.95,
+      "entropy": 0.3549444868386896,
+      "goalMet": 0.05,
+      "confusion": 2.66,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [
+          "Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no real meaning."
+        ],
+        "durationMs": 256
+      },
+      "timing": {
+        "extractMs": 88,
+        "decideMs": 275,
+        "decideRetryMs": 0,
+        "executeMs": 257,
+        "settleMs": 159
+      },
+      "flags": [],
+      "bucket": "none",
+      "stateChars": 5810,
+      "inputTokens": 2321,
+      "visibleTextChars": 127,
+      "seenTextChars": 185,
+      "scrollOnly": true,
+      "nextUrl": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html"
+    },
+    {
+      "step": 4,
+      "timestamp": 1789926572535,
+      "url": "https://books.toscrape.com/catalogue/category/books/travel_2/index.html",
+      "stateHash": "a0527c1cfba4d0b03d584aa0ca4d06fcd3348e78",
+      "viewHash": "e20f5b0e6173ba52ce671d9a6e669fb83c84aa58",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "elementsCount": 87,
+      "droppedElements": 40,
+      "options": [
+        {
+          "id": "el_57",
+          "kind": "element",
+          "description": "button \"Add to basket\" (below fold)",
+          "elementId": "el_57"
+        },
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "link \"Books to Scrape\" -> /index.html (below fold)",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_39",
+          "kind": "element",
+          "description": "link \"Biography\" -> /catalogue/category/books/biography_36/index.html (visible; near \"£37.33\")",
+          "elementId": "el_39"
+        },
+        {
+          "id": "el_40",
+          "kind": "element",
+          "description": "link \"Thriller\" -> /catalogue/category/books/thriller_37/index.html (visible; near \"£37.33\")",
+          "elementId": "el_40"
+        },
+        {
+          "id": "el_41",
+          "kind": "element",
+          "description": "link \"Contemporary\" -> /catalogue/category/books/contemporary_38/index.html (visible; near \"£37.33\")",
+          "elementId": "el_41"
+        },
+        {
+          "id": "el_42",
+          "kind": "element",
+          "description": "link \"Spirituality\" -> /catalogue/category/books/spirituality_39/index.html (visible; near \"£37.33\")",
+          "elementId": "el_42"
+        },
+        {
+          "id": "el_43",
+          "kind": "element",
+          "description": "link \"Academic\" -> /catalogue/category/books/academic_40/index.html (visible; near \"£37.33\")",
+          "elementId": "el_43"
+        },
+        {
+          "id": "el_44",
+          "kind": "element",
+          "description": "link \"Self Help\" -> /catalogue/category/books/self-help_41/index.html (visible; near \"£37.33\")",
+          "elementId": "el_44"
+        },
+        {
+          "id": "el_45",
+          "kind": "element",
+          "description": "link \"Historical\" -> /catalogue/category/books/historical_42/index.html (visible; near \"£37.33\")",
+          "elementId": "el_45"
+        },
+        {
+          "id": "el_46",
+          "kind": "element",
+          "description": "link \"Christian\" -> /catalogue/category/books/christian_43/index.html (visible; near \"£37.33\")",
+          "elementId": "el_46"
+        },
+        {
+          "id": "el_47",
+          "kind": "element",
+          "description": "link \"Suspense\" -> /catalogue/category/books/suspense_44/index.html (visible; near \"In stock\")",
+          "elementId": "el_47"
+        },
+        {
+          "id": "el_48",
+          "kind": "element",
+          "description": "link \"Short Stories\" -> /catalogue/category/books/short-stories_45/index.html (visible; near \"In stock\")",
+          "elementId": "el_48"
+        },
+        {
+          "id": "el_49",
+          "kind": "element",
+          "description": "link \"Novels\" -> /catalogue/category/books/novels_46/index.html (visible; near \"In stock\")",
+          "elementId": "el_49"
+        },
+        {
+          "id": "el_50",
+          "kind": "element",
+          "description": "link \"Health\" -> /catalogue/category/books/health_47/index.html (visible; near \"In stock\")",
+          "elementId": "el_50"
+        },
+        {
+          "id": "el_51",
+          "kind": "element",
+          "description": "link \"Politics\" -> /catalogue/category/books/politics_48/index.html (visible; near \"In stock\")",
+          "elementId": "el_51"
+        },
+        {
+          "id": "el_52",
+          "kind": "element",
+          "description": "link \"Cultural\" -> /catalogue/category/books/cultural_49/index.html (visible; near \"In stock\")",
+          "elementId": "el_52"
+        },
+        {
+          "id": "el_53",
+          "kind": "element",
+          "description": "link \"Erotica\" -> /catalogue/category/books/erotica_50/index.html (visible; near \"In stock\")",
+          "elementId": "el_53"
+        },
+        {
+          "id": "el_54",
+          "kind": "element",
+          "description": "link \"Crime\" -> /catalogue/category/books/crime_51/index.html (visible; near \"In stock\")",
+          "elementId": "el_54"
+        },
+        {
+          "id": "el_67",
+          "kind": "element",
+          "description": "link \"Under the Tuscan Sun\" -> /catalogue/under-the-tuscan-sun_504/index.html (visible; near \"£37.33\")",
+          "elementId": "el_67"
+        },
+        {
+          "id": "el_70",
+          "kind": "element",
+          "description": "link \"A Summer In Europe\" -> /catalogue/a-summer-in-europe_458/index.html (visible; near \"£37.33\")",
+          "elementId": "el_70"
+        },
+        {
+          "id": "el_73",
+          "kind": "element",
+          "description": "link \"The Great Railway Bazaar\" -> /catalogue/the-great-railway-bazaar_446/index.html (visible; near \"£37.33\")",
+          "elementId": "el_73"
+        },
+        {
+          "id": "el_76",
+          "kind": "element",
+          "description": "link \"A Year in Provence (Provence #1)\" -> /catalogue/a-year-in-provence-provence-1_421/index.html (visible; near \"£37.33\")",
+          "elementId": "el_76"
+        },
+        {
+          "id": "el_77",
+          "kind": "element",
+          "description": "link \"A Year in Provence ...\" -> /catalogue/a-year-in-provence-provence-1_421/index.html (visible; near \"£37.33\")",
+          "elementId": "el_77"
+        },
+        {
+          "id": "el_79",
+          "kind": "element",
+          "description": "link \"The Road to Little Dribbling: Adventures of an American in Britain (Notes From a\" -> /catalogue/the-road-to-little-dribbling-adventures-of-an-american-in-britain-notes-from-a-small-island-2_277/index.html (visible; near \"In stock\")",
+          "elementId": "el_79"
+        },
+        {
+          "id": "el_80",
+          "kind": "element",
+          "description": "link \"The Road to Little ...\" -> /catalogue/the-road-to-little-dribbling-adventures-of-an-american-in-britain-notes-from-a-small-island-2_277/index.html (visible; near \"£23.21\")",
+          "elementId": "el_80"
+        },
+        {
+          "id": "el_82",
+          "kind": "element",
+          "description": "link \"Neither Here nor There: Travels in Europe\" -> /catalogue/neither-here-nor-there-travels-in-europe_198/index.html (visible; near \"In stock\")",
+          "elementId": "el_82"
+        },
+        {
+          "id": "el_83",
+          "kind": "element",
+          "description": "link \"Neither Here nor There: ...\" -> /catalogue/neither-here-nor-there-travels-in-europe_198/index.html (visible; near \"£23.21\")",
+          "elementId": "el_83"
+        },
+        {
+          "id": "el_85",
+          "kind": "element",
+          "description": "link \"1,000 Places to See Before You Die\" -> /catalogue/1000-places-to-see-before-you-die_1/index.html (visible; near \"In stock\")",
+          "elementId": "el_85"
+        },
+        {
+          "id": "el_86",
+          "kind": "element",
+          "description": "link \"1,000 Places to See ...\" -> /catalogue/1000-places-to-see-before-you-die_1/index.html (visible; near \"£23.21\")",
+          "elementId": "el_86"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "link \"Home\" -> /index.html (below fold)",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "link \"Books\" -> /catalogue/category/books_1/index.html (below fold)",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "link \"Travel\" -> /catalogue/category/books/travel_2/index.html (below fold)",
+          "elementId": "el_05"
+        },
+        {
+          "id": "scroll_up",
+          "kind": "scroll_up",
+          "description": "scroll back up the page"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_73": 0.010101010101010098,
+        "leave": 0.11111111111111109,
+        "scroll_up": 0.2525252525252525,
+        "el_80": 0.1313131313131313,
+        "el_70": 0.020202020202020197,
+        "el_83": 0.1515151515151515,
+        "el_86": 0.060606060606060594,
+        "el_79": 0.0505050505050505,
+        "el_76": 0.010101010101010098,
+        "el_52": 0.010101010101010098,
+        "el_03": 0.020202020202020197,
+        "el_82": 0.0505050505050505,
+        "el_01": 0.010101010101010098,
+        "back": 0.020202020202020197,
+        "el_67": 0.040404040404040394,
+        "el_42": 0.010101010101010098,
+        "el_85": 0.040404040404040394
+      },
+      "pruned": {
+        "scroll_up": 0.2840909090909091,
+        "el_83": 0.17045454545454547,
+        "el_80": 0.14772727272727273,
+        "leave": 0.125,
+        "el_86": 0.06818181818181818,
+        "el_79": 0.056818181818181816,
+        "el_82": 0.056818181818181816,
+        "el_67": 0.04545454545454545,
+        "el_85": 0.04545454545454545
+      },
+      "sampled": "el_85",
+      "sampledName": "1,000 Places to See Before You Die",
+      "sampledHref": "/catalogue/1000-places-to-see-before-you-die_1/index.html",
+      "argmax": "scroll_up",
+      "exploration": true,
+      "confidence": 0.2525252525252525,
+      "entropy": 3.3809901173266703,
+      "goalMet": 0.05,
+      "confusion": 2.81,
+      "outcome": {
+        "urlChanged": true,
+        "stateChanged": true,
+        "consoleErrors": [
+          "Mixed Content: The page at 'https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html' was loaded over HTTPS, but requested an insecure script 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'. This request has been blocked; the content must be served over HTTPS. (https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html)"
+        ],
+        "failedRequests": [],
+        "validationMessages": [
+          "Warning! This is a demo website for web scraping purposes. Prices and ratings here were randomly assigned and have no real meaning."
+        ],
+        "durationMs": 453
+      },
+      "timing": {
+        "extractMs": 76,
+        "decideMs": 305,
+        "decideRetryMs": 0,
+        "executeMs": 453,
+        "settleMs": 160
+      },
+      "flags": [
+        "high-entropy",
+        "low-confidence"
+      ],
+      "bucket": "product",
+      "stateChars": 6045,
+      "inputTokens": 2439,
+      "visibleTextChars": 111,
+      "seenTextChars": 213,
+      "scrollOnly": false,
+      "nextUrl": "https://books.toscrape.com/catalogue/1000-places-to-see-before-you-die_1/index.html"
+    }
+  ]
+}

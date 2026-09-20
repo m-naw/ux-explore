@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" /><title>Kreator z ukrytym krokiem</title>
+    <style>
+      .sr-only { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; }
+      #panel-2 { display: none; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Kreator</h1>
+      <!-- Two wizard panels, only one of them mounted. Each panel names its radios with
+           label[for] proxies, which is the only clickable handle for an sr-only control. -->
+      <fieldset id="panel-1">
+        <legend>Krok 1</legend>
+        <input class="sr-only" type="radio" id="p1-work" name="kind" value="work" />
+        <label for="p1-work">Praca</label>
+        <input class="sr-only" type="radio" id="p1-study" name="kind" value="study" />
+        <label for="p1-study">Studia</label>
+      </fieldset>
+      <fieldset id="panel-2">
+        <legend>Krok 2</legend>
+        <input class="sr-only" type="radio" id="p2-spouse" name="reason" value="spouse" />
+        <label for="p2-spouse">Małżeństwo</label>
+        <input class="sr-only" type="radio" id="p2-child" name="reason" value="child" />
+        <label for="p2-child">Dziecko</label>
+      </fieldset>
+      <button type="button">Dalej</button>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Wall of text</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; font-size: 9px; line-height: 1.1; }
+      p { margin: 0; }
+      .spacer { height: 3000px; }
+    </style>
+  </head>
+  <body>
+    <main id="wall"></main>
+    <div class="spacer"></div>
+    <script>
+      // 20 paragraphs x 300 chars = 6000 chars of on-screen text, against a 2500-char cap.
+      // Each paragraph starts with its own number so a test can tell which survived the trim.
+      const wall = document.getElementById('wall');
+      // Two 600-char paragraphs first, so the 400-char per-block trim has something to bite on
+      // and the trimmed blocks are early enough to fit inside the total cap.
+      for (const label of ['LONG01', 'LONG02']) {
+        const p = document.createElement('p');
+        p.textContent = `${label} ${'y'.repeat(600 - label.length - 1)}`;
+        wall.appendChild(p);
+      }
+      for (let i = 1; i <= 20; i += 1) {
+        const p = document.createElement('p');
+        const label = `P${String(i).padStart(2, '0')} `;
+        p.textContent = label + 'x'.repeat(300 - label.length);
+        wall.appendChild(p);
+      }
+    </script>
+  </body>
+</html>

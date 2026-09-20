@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Framed panel</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      /* 88px of a 400px-tall frame is 22% of the frame, but only 12% of the 720px top viewport. */
+      #panel { position: fixed; left: 0; right: 0; bottom: 0; height: 88px; background: #eee; }
+    </style>
+  </head>
+  <body>
+    <main><h1>Framed</h1></main>
+    <div id="panel"><button id="details">Show details</button></div>
+  </body>
+</html>

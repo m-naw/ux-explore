@@ -1,0 +1,642 @@
+{
+  "states": 30,
+  "engines": [
+    "jev",
+    "haiku",
+    "sonnet"
+  ],
+  "perEngine": {
+    "jev": {
+      "states": 30,
+      "medianLatencyMs": 602,
+      "p95LatencyMs": 641,
+      "inputTokens": 203334,
+      "outputTokens": 0,
+      "totalCostUsd": 0.008540028,
+      "invalidSamples": 0,
+      "repeatL1": 0.06003142536475871,
+      "referenceAgreement": 0.8333333333333334,
+      "l1VsReference": 0.6022424242424244,
+      "labelAccuracy": null
+    },
+    "haiku": {
+      "states": 30,
+      "medianLatencyMs": 1092,
+      "p95LatencyMs": 1569,
+      "inputTokens": 277285,
+      "outputTokens": 3986,
+      "totalCostUsd": 0.297215,
+      "invalidSamples": 0,
+      "repeatL1": null,
+      "referenceAgreement": 0.7666666666666667,
+      "l1VsReference": 0.4,
+      "labelAccuracy": null
+    },
+    "sonnet": {
+      "states": 30,
+      "medianLatencyMs": 1683,
+      "p95LatencyMs": 2483,
+      "inputTokens": 313910,
+      "outputTokens": 4295,
+      "totalCostUsd": 0.6707700000000001,
+      "invalidSamples": 0,
+      "repeatL1": null,
+      "referenceAgreement": 1,
+      "l1VsReference": 0,
+      "labelAccuracy": null
+    }
+  },
+  "pairs": [
+    {
+      "a": "jev",
+      "b": "haiku",
+      "meanL1": 0.46424242424242423,
+      "argmaxAgreement": 0.8666666666666667
+    },
+    {
+      "a": "jev",
+      "b": "sonnet",
+      "meanL1": 0.6022424242424244,
+      "argmaxAgreement": 0.8333333333333334
+    },
+    {
+      "a": "haiku",
+      "b": "sonnet",
+      "meanL1": 0.4,
+      "argmaxAgreement": 0.7666666666666667
+    }
+  ],
+  "errors": [],
+  "perState": [
+    {
+      "stateId": "2026-09-20T17-50-02-63zn#1",
+      "reference": "el_04",
+      "argmax": {
+        "jev": "el_04",
+        "haiku": "el_04",
+        "sonnet": "el_04"
+      },
+      "l1VsReference": {
+        "jev": 0.101010101010101,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-50-02-63zn#3",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 0.02000000000000001,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-50-02-63zn#5",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-50-02-63zn#7",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 0.02000000000000001,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-50-02-63zn#10",
+      "reference": "el_09",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_09",
+        "sonnet": "el_09"
+      },
+      "l1VsReference": {
+        "jev": 0.17999999999999997,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-50-02-63zn#12",
+      "reference": "el_09",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_09",
+        "sonnet": "el_09"
+      },
+      "l1VsReference": {
+        "jev": 0.15999999999999998,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-50-42-1csa#2",
+      "reference": "el_04",
+      "argmax": {
+        "jev": "el_04",
+        "haiku": "el_03",
+        "sonnet": "el_04"
+      },
+      "l1VsReference": {
+        "jev": 1.36,
+        "haiku": 1.2,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-50-42-1csa#5",
+      "reference": "el_09",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_09",
+        "sonnet": "el_09"
+      },
+      "l1VsReference": {
+        "jev": 1.1600000000000001,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-50-42-1csa#7",
+      "reference": "leave",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "leave",
+        "sonnet": "leave"
+      },
+      "l1VsReference": {
+        "jev": 1.56,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-07-aodk#2",
+      "reference": "el_03",
+      "argmax": {
+        "jev": "el_03",
+        "haiku": "el_03",
+        "sonnet": "el_03"
+      },
+      "l1VsReference": {
+        "jev": 0.41999999999999993,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-07-aodk#5",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-07-aodk#7",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 0.02000000000000001,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-07-aodk#9",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 0.39999999999999997,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-07-aodk#11",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 0.19999999999999998,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-20-y3xp#2",
+      "reference": "el_03",
+      "argmax": {
+        "jev": "el_03",
+        "haiku": "el_03",
+        "sonnet": "el_03"
+      },
+      "l1VsReference": {
+        "jev": 0.48,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-20-y3xp#4",
+      "reference": "el_09",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_09",
+        "sonnet": "el_09"
+      },
+      "l1VsReference": {
+        "jev": 0.17999999999999997,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-20-y3xp#6",
+      "reference": "el_09",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_05",
+        "sonnet": "el_09"
+      },
+      "l1VsReference": {
+        "jev": 0.060000000000000026,
+        "haiku": 1.2,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-20-y3xp#9",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 0.42,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-20-y3xp#11",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 0.18,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-33-r27o#1",
+      "reference": "el_04",
+      "argmax": {
+        "jev": "el_04",
+        "haiku": "el_04",
+        "sonnet": "el_04"
+      },
+      "l1VsReference": {
+        "jev": 0.5600000000000002,
+        "haiku": 0.39999999999999997,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-33-r27o#4",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_09",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 1.8400000000000003,
+        "haiku": 2,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-33-r27o#6",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_09",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 1.9800000000000002,
+        "haiku": 2,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-33-r27o#8",
+      "reference": "el_09",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_09",
+        "sonnet": "el_09"
+      },
+      "l1VsReference": {
+        "jev": 0.15999999999999998,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-33-r27o#10",
+      "reference": "el_06",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_09",
+        "sonnet": "el_06"
+      },
+      "l1VsReference": {
+        "jev": 1.56,
+        "haiku": 1.6,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-45-6are#2",
+      "reference": "el_04",
+      "argmax": {
+        "jev": "el_04",
+        "haiku": "el_03",
+        "sonnet": "el_04"
+      },
+      "l1VsReference": {
+        "jev": 1.32,
+        "haiku": 1.2,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-45-6are#4",
+      "reference": "el_09",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_09",
+        "sonnet": "el_09"
+      },
+      "l1VsReference": {
+        "jev": 0.6262626262626264,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-45-6are#6",
+      "reference": "el_09",
+      "argmax": {
+        "jev": "el_09",
+        "haiku": "el_09",
+        "sonnet": "el_09"
+      },
+      "l1VsReference": {
+        "jev": 0.15999999999999998,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-45-6are#9",
+      "reference": "el_06",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_06"
+      },
+      "l1VsReference": {
+        "jev": 1.1800000000000002,
+        "haiku": 2,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-51-45-6are#11",
+      "reference": "el_05",
+      "argmax": {
+        "jev": "el_05",
+        "haiku": "el_05",
+        "sonnet": "el_05"
+      },
+      "l1VsReference": {
+        "jev": 0.76,
+        "haiku": 0.39999999999999997,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    },
+    {
+      "stateId": "2026-09-20T17-52-06-g86c#1",
+      "reference": "switch_language:ru",
+      "argmax": {
+        "jev": "switch_language:ru",
+        "haiku": "switch_language:ru",
+        "sonnet": "switch_language:ru"
+      },
+      "l1VsReference": {
+        "jev": 1,
+        "haiku": 0,
+        "sonnet": 0
+      },
+      "invalidSamples": {
+        "jev": 0,
+        "haiku": 0,
+        "sonnet": 0
+      }
+    }
+  ]
+}

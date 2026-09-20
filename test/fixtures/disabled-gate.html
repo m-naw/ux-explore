@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <title>Пошук допомоги</title>
+  </head>
+  <body>
+    <main>
+      <h1>Чим ми можемо допомогти?</h1>
+      <p>Крок 2 з 4</p>
+      <form id="wizard">
+        <fieldset>
+          <legend>Оберіть варіант</legend>
+          <label><input type="radio" name="reason" value="work" id="r-work" /> Робота</label>
+          <label><input type="radio" name="reason" value="study" id="r-study" /> Навчання</label>
+        </fieldset>
+
+        <!-- A whole section the site gates off until a later step. The control in its first
+             <legend> stays interactive, which is what the HTML spec says. -->
+        <fieldset disabled id="later">
+          <legend>Пізніше <button type="button" id="explain">Пояснити</button></legend>
+          <label for="city">Місто проживання</label>
+          <input type="text" id="city" name="city" />
+        </fieldset>
+
+        <!-- The gate: enabled only once a radio is chosen. -->
+        <button type="button" id="next" disabled>Далі →</button>
+      </form>
+
+      <!-- A link the site disables the ARIA way, which no `:disabled` match would catch. -->
+      <a href="/help" id="help" aria-disabled="true">Довідка</a>
+
+      <nav>
+        <!-- The current language, marked the way most sites mark it. -->
+        <a href="/uk/pathfinder" hreflang="uk" aria-disabled="true" id="lang-uk">Українська</a>
+        <a href="/pl/pathfinder" hreflang="pl" id="lang-pl">Polski</a>
+      </nav>
+    </main>
+    <script>
+      for (const radio of document.querySelectorAll('input[name=reason]')) {
+        radio.addEventListener('change', () => {
+          document.getElementById('next').disabled = false;
+        });
+      }
+    </script>
+  </body>
+</html>

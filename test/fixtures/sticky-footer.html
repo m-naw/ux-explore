@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Sticky footer</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      /* 120px of the 720px viewport is under the 20% overlay threshold, and the text carries no
+         dismiss keyword, so this is a pinned bar to scroll clear of — downwards, this time. */
+      footer { position: fixed; bottom: 0; left: 0; right: 0; height: 120px; background: #135; color: #fff; z-index: 30; }
+      .above { height: 1800px; }
+      .below { height: 1200px; }
+      #cta { display: block; height: 40px; }
+    </style>
+  </head>
+  <body onload="window.scrollTo(0, document.getElementById('cta').offsetTop - 610)">
+    <main>
+      <div class="above"></div>
+      <button id="cta" onclick="this.setAttribute('data-clicked', 'yes'); document.title = 'cta-clicked';">
+        Start now
+      </button>
+      <div class="below"></div>
+    </main>
+    <footer><span>Site notice</span></footer>
+  </body>
+</html>

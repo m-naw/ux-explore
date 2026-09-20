@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Offscreen overlay</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; height: 100vh; }
+      /* Far too small to be an overlay on area alone: only ~100x88 of it is on screen. */
+      #bar { position: fixed; left: -400px; width: 500px; bottom: 0; height: 88px; background: #222; color: #fff; }
+      /* Sits inside the bar's box but entirely off the left edge of the viewport. */
+      #ghost { position: absolute; left: -380px; width: 60px; bottom: 30px; }
+    </style>
+  </head>
+  <body>
+    <main><h1>Plans</h1><button id="cta" onclick="document.title='cta-clicked'">Choose plan</button></main>
+    <button id="ghost">Ghost</button>
+    <div id="bar">
+      <button id="ok" onclick="document.getElementById('bar').remove()">Got it</button>
+    </div>
+  </body>
+</html>

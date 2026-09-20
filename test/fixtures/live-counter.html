@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" /><title>Licznik</title>
+  </head>
+  <body>
+    <main>
+      <h1>Wniosek</h1>
+      <p>Wypełnij wniosek zanim skończy się czas.</p>
+      <!-- A live region the persona genuinely reads, and which changes on its own every
+           100ms. It belongs in the text sent to the model and nowhere near the state hash. -->
+      <p id="clock" aria-live="polite">Pozostało 600 sekund</p>
+      <!-- aria-live="off" is the explicit opt-out, so this one is ordinary page copy. -->
+      <p id="quiet" aria-live="off">Sekcja 1 z 3</p>
+      <button id="go" type="button">Dalej</button>
+    </main>
+    <script>
+      let left = 600;
+      setInterval(() => {
+        left -= 1;
+        document.getElementById('clock').textContent = 'Pozostało ' + left + ' sekund';
+      }, 100);
+    </script>
+  </body>
+</html>

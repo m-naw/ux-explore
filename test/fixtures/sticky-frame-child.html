@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Framed offer</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      /* 150px of a 250px-tall frame is 60% of the frame, but only 5% of the 1280x720 top
+         viewport, so it is a sticky header to scroll clear of, not an overlay to dismiss. */
+      #banner { position: fixed; top: 0; left: 0; right: 0; height: 150px; background: #135; color: #fff; z-index: 30; }
+      .above { height: 300px; }
+      .below { height: 600px; }
+      #cta { display: block; height: 40px; }
+    </style>
+  </head>
+  <body onload="window.scrollTo(0, document.getElementById('cta').offsetTop - 20)">
+    <div id="banner"><span>Site notice</span></div>
+    <div class="above"></div>
+    <button id="cta" onclick="this.setAttribute('data-clicked', 'yes'); document.title = 'cta-clicked';">
+      Start now
+    </button>
+    <div class="below"></div>
+  </body>
+</html>

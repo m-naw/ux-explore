@@ -1,0 +1,24 @@
+name: Oksana
+description: |
+  31, from Dnipro, in Gdańsk for a year on temporary protection.
+  She was scrolling on her phone when an ad about residence cards appeared and she tapped it
+  out of curiosity, not because she had decided to do anything today.
+  She has heard that these sites charge money for forms you can file yourself, so she is wary.
+  If a page does not tell her quickly what it is and what it costs, she closes the tab.
+languages: { native: uk, reads: { uk: fluent, pl: weak, en: weak } }
+device: mobile
+techLiteracy: medium
+domainLiteracy: low
+patience: low
+intent: low
+facts:
+  {
+    givenName: Oksana,
+    familyName: Bondarenko,
+    email: o.bondarenko@example.com,
+    phone: '+48510200300',
+    nationality: UA,
+    birthDate: '1995-02-24',
+    city: Gdańsk,
+    arrivalDate: '2025-06-11',
+  }

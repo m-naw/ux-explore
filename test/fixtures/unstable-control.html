@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Unstable</title>
+    <style>
+      /* The button never holds still, so Playwright's stability check times out on it.
+         That is our problem, not the site's: the step buckets `tool` and the run continues. */
+      #wobble { position: relative; animation: wobble 400ms infinite alternate; }
+      @keyframes wobble { from { left: 0; } to { left: 60px; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Unstable control</h1>
+      <p>The primary action moves around the page.</p>
+      <button id="wobble">Apply now</button>
+      <a href="/help">Help</a>
+    </main>
+  </body>
+</html>

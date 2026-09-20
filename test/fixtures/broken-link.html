@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Broken</title></head>
+  <body>
+    <main>
+      <h1>Broken</h1>
+      <a href="/definitely-missing.html">Download the form</a>
+      <button id="boom" onclick="undefinedFunctionCall()">Submit application</button>
+    </main>
+    <script>
+      const alt = new URLSearchParams(location.search).get('alt');
+      if (alt) {
+        const s = document.createElement('script');
+        s.src = alt + '/third-party.js';
+        document.head.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

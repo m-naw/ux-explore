@@ -1,0 +1,68 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`writeReport > matches the serialized journey snapshot 1`] = `
+"summary:
+  runId: 2026-09-19T10-00-00-abcd
+  persona:
+    name: Olena
+  browserLocale: uk-UA
+  device: mobile
+  seed: 1
+  outcome:
+    needMet: true
+    gaveUp: false
+    left: false
+    believedDone: false
+    reason: criteria matched
+    bucket: none
+    totalSteps: 1
+    totalDurationMs: 800
+    outcomeFindings: []
+  perUrl: []
+rows:
+  - step: 1
+    timestamp: 0
+    url: https://dopomo.pl/pl
+    stateHash: h1
+    viewHash: v1
+    viewport:
+      width: 390
+      height: 844
+    elementsCount: 9
+    droppedElements: 0
+    options: []
+    distribution:
+      a: 1
+    pruned:
+      a: 1
+    sampled: a
+    sampledName: Karta CUKR
+    sampledHref: /pl/cukr
+    argmax: a
+    exploration: false
+    confidence: 1
+    entropy: 0
+    goalMet: 0
+    confusion: 1
+    outcome:
+      urlChanged: true
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 30
+    timing:
+      extractMs: 80
+      decideMs: 300
+      decideRetryMs: 0
+      executeMs: 180
+      settleMs: 250
+    flags: []
+    bucket: none
+    stateChars: 3000
+    inputTokens: 1000
+    visibleTextChars: 0
+    seenTextChars: 0
+    scrollOnly: false
+"
+`;

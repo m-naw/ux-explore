@@ -1,0 +1,24 @@
+name: Anna
+description: |
+  34, Polish, HR manager at a company hiring a foreign employee.
+  Needs the official procedure for supporting that employee's work permit application.
+  Fluent in Polish, works on a laptop, and already knows the bureaucracy from earlier cases.
+  She is looking for the specific procedure, not a general explanation.
+languages: { native: pl, reads: { pl: fluent, en: ok } }
+device: desktop
+techLiteracy: high
+domainLiteracy: high
+patience: medium
+intent: high
+facts:
+  {
+    givenName: Anna,
+    familyName: Zielińska,
+    email: a.zielinska@example.com,
+    phone: '+48800700900',
+    nationality: PL,
+    birthDate: '1992-09-12',
+    city: Poznań,
+    employer: Nordwind Logistics S.A.,
+    pesel: '92091201234',
+  }

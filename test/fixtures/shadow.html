@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Shadow</title></head>
+  <body>
+    <main><h1>Shadow host</h1><open-host id="host"></open-host><closed-host id="closed"></closed-host></main>
+    <script>
+      const open = document.getElementById('host').attachShadow({ mode: 'open' });
+      open.innerHTML = '<button id="inner" aria-label="Open shadow action">Shadow CTA</button>';
+      open.getElementById('inner').addEventListener('click', () => { document.title = 'shadow-clicked'; });
+      const closed = document.getElementById('closed').attachShadow({ mode: 'closed' });
+      closed.innerHTML = '<button>Invisible to the extractor</button>';
+    </script>
+  </body>
+</html>

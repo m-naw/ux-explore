@@ -1,0 +1,24 @@
+name: Dmitry
+description: |
+  29, Russian-speaking software developer, originally from Minsk, now in Kraków.
+  Needs a Blue Card or a work-based temporary residence permit.
+  Works on a laptop, scans pages fast, and skips anything that reads like marketing.
+  He is impatient with slow or badly organised sites and looks for the form directly.
+languages: { native: ru, reads: { ru: fluent, en: fluent, pl: ok, uk: weak } }
+device: desktop
+techLiteracy: high
+domainLiteracy: medium
+patience: low
+intent: high
+facts:
+  {
+    givenName: Dmitry,
+    familyName: Ivanou,
+    email: d.ivanou@example.com,
+    phone: '+48600300400',
+    nationality: BY,
+    birthDate: '1997-11-02',
+    city: Kraków,
+    employer: Softline Sp. z o.o.,
+    arrivalDate: '2024-01-15',
+  }

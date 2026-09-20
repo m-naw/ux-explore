@@ -1,0 +1,22 @@
+name: Olena
+description: |
+  38, from Kharkiv, in Wrocław since 2022 under temporary protection.
+  Needs to switch to a CUKR residence card before her status ends.
+  Uses her phone for everything. Bureaucracy scares her.
+languages: { native: uk, reads: { uk: fluent, pl: weak, en: none } }
+device: mobile
+techLiteracy: low
+domainLiteracy: low
+patience: low
+intent: high
+facts:
+  {
+    givenName: Olena,
+    familyName: Kovalenko,
+    email: olena.k@example.com,
+    phone: '+48500100200',
+    nationality: UA,
+    birthDate: '1988-04-17',
+    city: Wrocław,
+    arrivalDate: '2022-03-08',
+  }

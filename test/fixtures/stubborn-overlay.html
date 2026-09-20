@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Stubborn overlay</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      /* No dismiss control anywhere, and Escape is not wired up: the veil never goes away. */
+      #veil { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 50; }
+    </style>
+  </head>
+  <body>
+    <main><h1>Plans</h1><button id="cta" onclick="document.title='cta-clicked'">Choose plan</button></main>
+    <div id="veil"></div>
+  </body>
+</html>

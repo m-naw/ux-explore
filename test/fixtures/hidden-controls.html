@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Hidden controls</title>
+    <style>
+      /* The two ways a design system hides a real checkbox behind a styled label. */
+      .sr-only { position: absolute; width: 1px; height: 1px; clip: rect(0, 0, 0, 0); overflow: hidden; }
+      .faded { opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Hidden controls</h1>
+      <form>
+        <input type="checkbox" id="terms" class="sr-only" name="terms" />
+        <label for="terms">Accept terms</label>
+        <label for="news">Subscribe to the newsletter</label>
+        <input type="checkbox" id="news" class="faded" name="news" />
+        <label for="size">Choose a size</label>
+        <select id="size" class="sr-only" name="size">
+          <option value="s">Small</option>
+          <option value="m">Medium</option>
+        </select>
+      </form>
+    </main>
+  </body>
+</html>

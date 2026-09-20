@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Late link</title>
+    <style>body { margin: 0; font-family: sans-serif; } .spacer { height: 2400px; }</style>
+  </head>
+  <body>
+    <!-- Text only at the top, so the first step extracts zero interactive elements while the
+         page still has body text. Scrolling reveals the only control, so the journey has
+         somewhere to go: a zero-elements step must bucket `tool` and carry on. -->
+    <main>
+      <h1>Nothing to click yet</h1>
+      <p>Everything you can act on lives further down this page.</p>
+      <div class="spacer"></div>
+      <div id="late"></div>
+    </main>
+    <script>
+      addEventListener(
+        'scroll',
+        () => {
+          const slot = document.getElementById('late');
+          if (window.scrollY > 100 && slot.childElementCount === 0) {
+            slot.innerHTML = '<a href="/appeared">Appeared link</a>';
+          }
+        },
+        { passive: true },
+      );
+    </script>
+  </body>
+</html>

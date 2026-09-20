@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" /><title>Wniosek</title>
+    <style>.sr-only { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; } .error { color: #b00; }
+      #city-list { list-style: none; margin: 0; padding: 0; border: 1px solid #999; }
+      #city-list [role=option][aria-selected=true] { background: #def; }</style>
+  </head>
+  <body>
+    <main>
+      <h1>Wniosek o kartę pobytu</h1>
+      <p>Krok 2 z 3</p>
+      <form id="form" novalidate>
+        <label for="given">Imię</label>
+        <input id="given" name="given_name" autocomplete="given-name" type="text" required />
+
+        <label for="email">Adres e-mail</label>
+        <input id="email" name="email" type="email" />
+
+        <label for="birth">Data urodzenia</label>
+        <input id="birth" name="birth_date" type="date" />
+
+        <label for="country">Obywatelstwo</label>
+        <select id="country" name="nationality">
+          <option value="">Wybierz</option>
+          <option value="UA">Ukraina</option>
+          <option value="BY">Białoruś</option>
+          <option value="PL">Polska</option>
+        </select>
+
+        <label for="city">Miasto pobytu</label>
+        <input id="city" name="city" role="combobox" aria-expanded="false" aria-controls="city-list" aria-autocomplete="list" autocomplete="off" />
+        <ul id="city-list" role="listbox" hidden></ul>
+
+        <fieldset>
+          <legend>Rodzaj wniosku</legend>
+          <input class="sr-only" type="radio" id="r-work" name="kind" value="work" />
+          <label for="r-work">Praca</label>
+          <input class="sr-only" type="radio" id="r-study" name="kind" value="study" />
+          <label for="r-study">Studia</label>
+        </fieldset>
+
+        <label for="motive">Uzasadnienie</label>
+        <textarea id="motive" name="motivation" aria-required="true"></textarea>
+
+        <!-- Optional and fact-less: the persona leaving it blank is not why a submit is
+             rejected, so it must never become the missing-fact label. -->
+        <label for="note">Dodatkowe uwagi</label>
+        <input id="note" name="note" type="text" />
+
+        <button type="submit">Dalej</button>
+      </form>
+      <div id="errors"></div>
+    </main>
+    <script>
+      // A scripted autocomplete rather than a <datalist>: the native suggestion popup is
+      // browser chrome that headless Chromium never renders, so it cannot be driven from a
+      // test. This is also the shape the extractor sees on real sites: role=combobox plus a
+      // role=listbox of role=option, opened by input and committed with ArrowDown + Enter.
+      const CITIES = ['Wrocław', 'Warszawa'];
+      const city = document.getElementById('city');
+      const list = document.getElementById('city-list');
+      let active = -1;
+
+      function closeList() {
+        list.hidden = true;
+        list.innerHTML = '';
+        active = -1;
+        city.setAttribute('aria-expanded', 'false');
+      }
+
+      function highlight() {
+        const items = list.querySelectorAll('[role=option]');
+        items.forEach((li, i) => li.setAttribute('aria-selected', String(i === active)));
+      }
+
+      city.addEventListener('input', () => {
+        const query = city.value.trim().toLowerCase();
+        const hits = query ? CITIES.filter((c) => c.toLowerCase().startsWith(query)) : [];
+        if (hits.length === 0) { closeList(); return; }
+        list.innerHTML = '';
+        for (const c of hits) {
+          const li = document.createElement('li');
+          li.setAttribute('role', 'option');
+          li.setAttribute('aria-selected', 'false');
+          li.textContent = c;
+          li.addEventListener('mousedown', () => { city.value = c; closeList(); });
+          list.appendChild(li);
+        }
+        active = -1;
+        list.hidden = false;
+        city.setAttribute('aria-expanded', 'true');
+      });
+
+      city.addEventListener('keydown', (e) => {
+        const items = list.querySelectorAll('[role=option]');
+        if (list.hidden || items.length === 0) return;
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          active = (active + 1) % items.length;
+          highlight();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          active = (active - 1 + items.length) % items.length;
+          highlight();
+        } else if (e.key === 'Enter') {
+          // Swallowed so committing a suggestion never submits the form by implication.
+          e.preventDefault();
+          if (active >= 0) city.value = items[active].textContent;
+          closeList();
+        } else if (e.key === 'Escape') {
+          closeList();
+        }
+      });
+
+      city.addEventListener('blur', closeList);
+
+      document.getElementById('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const errors = document.getElementById('errors');
+        errors.innerHTML = '';
+        const missing = [];
+        if (!document.getElementById('given').value) missing.push('Imię jest wymagane');
+        if (!document.getElementById('motive').value) missing.push('Uzasadnienie jest wymagane');
+        if (missing.length === 0) { document.title = 'wizard-submitted'; return; }
+        for (const m of missing) {
+          const p = document.createElement('p');
+          p.className = 'error';
+          p.setAttribute('role', 'alert');
+          p.textContent = m;
+          errors.appendChild(p);
+        }
+      });
+    </script>
+  </body>
+</html>

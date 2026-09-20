@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rerender loop</title>
+  </head>
+  <body>
+    <main>
+      <h1>Rerender loop</h1>
+      <!-- The framework re-renders on a timer and replaces the node every time, so any
+           handle taken from an extraction is detached within 150ms. The button is always
+           there by role and name, which is how a real person still finds it. -->
+      <div id="slot"></div>
+      <script>
+        function render() {
+          const slot = document.getElementById('slot');
+          slot.innerHTML = '';
+          const btn = document.createElement('button');
+          btn.id = 'target';
+          btn.textContent = 'Continue';
+          btn.addEventListener('click', () => {
+            document.title = 'continue-clicked';
+          });
+          slot.appendChild(btn);
+        }
+        render();
+        setInterval(render, 150);
+        // Lets a test force the re-render at the exact moment a retry would use its handle,
+        // rather than leaving the double detach to the timer and to luck.
+        window.__rerender = render;
+      </script>
+    </main>
+  </body>
+</html>

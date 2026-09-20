@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Shadow summary under a bar</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; height: 100vh; }
+      /* 88px of a 720px viewport: far under 20%, so only the dismiss-keyword rule can fire. */
+      #bar { position: fixed; left: 0; right: 0; bottom: 0; height: 88px; background: #222; color: #fff; }
+      /* The only control the bar covers, and it lives inside an open shadow root. */
+      my-panel { position: absolute; left: 40px; bottom: 30px; }
+    </style>
+  </head>
+  <body>
+    <main><h1>Plans</h1></main>
+    <my-panel></my-panel>
+    <div id="bar"><button id="ok" onclick="document.getElementById('bar').remove()">Got it</button></div>
+    <script>
+      class MyPanel extends HTMLElement {
+        connectedCallback() {
+          this.attachShadow({ mode: 'open' }).innerHTML =
+            '<details><summary>More options</summary><p>Extra</p></details>';
+        }
+      }
+      customElements.define('my-panel', MyPanel);
+    </script>
+  </body>
+</html>

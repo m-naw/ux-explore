@@ -1,0 +1,72 @@
+{
+  "name": "ux-explore",
+  "version": "0.2.0",
+  "description": "Goal-driven synthetic persona testing for websites: Jev decides, Playwright acts, one Sonnet report per journey",
+  "keywords": [
+    "ux-testing",
+    "synthetic-personas",
+    "playwright",
+    "accessibility",
+    "e2e-testing",
+    "llm-agent",
+    "usability-testing"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-naw/ux-explore.git"
+  },
+  "homepage": "https://github.com/m-naw/ux-explore#readme",
+  "bugs": {
+    "url": "https://github.com/m-naw/ux-explore/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "main": "index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./types": "./types.ts",
+    "./personas": "./personas.ts"
+  },
+  "files": [
+    "engine",
+    "journey",
+    "personas",
+    "scripts",
+    "index.ts",
+    "types.ts",
+    "personas.ts",
+    "report.ts",
+    "cli.ts",
+    "cli-config.ts",
+    "cli-output.ts",
+    "!**/*.test.ts",
+    "!**/__snapshots__/**"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:unit": "vitest run --project unit",
+    "test:browser": "vitest run --project browser",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "metrics": "tsx scripts/metrics.ts",
+    "bench": "tsx scripts/bench-decide.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
+    "dotenv": "^16.6.0",
+    "playwright": "^1.58.2",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "prettier": "^3.9.8",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.0"
+  }
+}

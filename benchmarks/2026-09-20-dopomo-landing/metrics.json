@@ -1,0 +1,124 @@
+{
+  "runIds": [
+    "2026-09-20T18-02-57-axp8",
+    "2026-09-20T18-03-05-w4cc",
+    "2026-09-20T18-03-09-6fm7",
+    "2026-09-20T18-03-21-2rcq",
+    "2026-09-20T18-03-29-xhtu",
+    "2026-09-20T18-03-33-tc95"
+  ],
+  "divergenceRatio": 11.527731650614415,
+  "explorationRate": 0.25806451612903225,
+  "completionRateByExploration": {
+    "explored": 0,
+    "exploited": 0
+  },
+  "perUrl": [
+    {
+      "url": "https://dopomo.pl/ru/pathfinder?step=tree&from=cukr-landing-v3",
+      "visits": 2,
+      "meanEntropy": 1.8682946222006462,
+      "meanConfusion": 1.88,
+      "exits": 0,
+      "leaveRate": 0,
+      "backtracks": 0,
+      "topSampled": [
+        {
+          "name": "Для себя",
+          "meanProbability": 0.4631578947368421
+        },
+        {
+          "name": "back",
+          "meanProbability": 0.10416666666666667
+        }
+      ]
+    },
+    {
+      "url": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr",
+      "visits": 6,
+      "meanEntropy": 2.282856689675587,
+      "meanConfusion": 2.0283333333333338,
+      "exits": 2,
+      "leaveRate": 1,
+      "backtracks": 2,
+      "topSampled": [
+        {
+          "name": "Проверьте, можете ли подать →",
+          "meanProbability": 0.5161290322580645
+        },
+        {
+          "name": "leave",
+          "meanProbability": 0.4707807386629266
+        },
+        {
+          "name": "Отклонить все",
+          "meanProbability": 0.391304347826087
+        }
+      ]
+    },
+    {
+      "url": "https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3",
+      "visits": 15,
+      "meanEntropy": 1.585559936635743,
+      "meanConfusion": 2.042,
+      "exits": 2,
+      "leaveRate": 0.5,
+      "backtracks": 1,
+      "topSampled": [
+        {
+          "name": "🇺🇦Громадянство України",
+          "meanProbability": 1
+        },
+        {
+          "name": "Далі →",
+          "meanProbability": 0.8950528682124277
+        },
+        {
+          "name": "Так, маю активний PESEL UKR",
+          "meanProbability": 0.8297872340425532
+        }
+      ]
+    },
+    {
+      "url": "https://dopomo.pl/uk/zayava-na-kartu-cukr?ads=",
+      "visits": 7,
+      "meanEntropy": 1.5128948539266815,
+      "meanConfusion": 2.474285714285714,
+      "exits": 2,
+      "leaveRate": 1,
+      "backtracks": 0,
+      "topSampled": [
+        {
+          "name": "Перевірте, чи можете подати →",
+          "meanProbability": 0.7512856474988312
+        },
+        {
+          "name": "Русский",
+          "meanProbability": 0.43852339181286554
+        },
+        {
+          "name": "leave",
+          "meanProbability": 0.26948488241881297
+        }
+      ]
+    }
+  ],
+  "leaveRateByPersona": {
+    "Sergei": 1,
+    "Oksana": 0.6666666666666666
+  },
+  "ordinalCheck": {
+    "expected": [
+      "Anna",
+      "Dmitry",
+      "James",
+      "Olena"
+    ],
+    "actual": [
+      "Sergei",
+      "Oksana"
+    ],
+    "ordered": false
+  },
+  "charsPerToken": 1.8289443265300818
+}

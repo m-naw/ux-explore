@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Client-side navigation</title>
+  </head>
+  <body>
+    <main id="main">
+      <h1>Home</h1>
+      <button id="cta">Register now</button>
+      <button id="spinner">Loading 0</button>
+    </main>
+    <script>
+      // A Next.js style client route change: the URL only commits a few hundred ms after the
+      // click, while the view keeps churning, so the commit lands during settle().
+      document.getElementById('cta').addEventListener('click', () => {
+        let n = 0;
+        const spinner = document.getElementById('spinner');
+        const id = setInterval(() => {
+          n += 1;
+          spinner.textContent = 'Loading ' + n;
+          if (n >= 4) {
+            clearInterval(id);
+            history.pushState({}, '', '/uk/register?step=1');
+            document.getElementById('main').innerHTML =
+              '<h1>Register</h1><button id="continue">Continue</button>';
+          }
+        }, 100);
+      });
+    </script>
+  </body>
+</html>

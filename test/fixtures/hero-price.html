@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" /><title>Картка CUKR</title>
+    <!-- Without this, Chromium lays a mobile emulation out at 980px and scales, so the
+         390x844 viewport the harness promises reports innerHeight 2121 and nothing is
+         below the fold. Every real mobile page carries the tag. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      section { padding: 24px; }
+      p { margin: 8px 0; }
+      footer { margin-top: 1800px; }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2 id="hero-heading">Отримайте карту CUKR</h2>
+      <p id="price">Безкоштовна перевірка за 2 хвилини, далі 249 zł за повний пакет.</p>
+      <button id="check">Перевірте →</button>
+      <shadow-note id="note"></shadow-note>
+    </section>
+    <footer><a href="/terms">Умови</a></footer>
+    <script>
+      customElements.define(
+        'shadow-note',
+        class extends HTMLElement {
+          connectedCallback() {
+            this.attachShadow({ mode: 'open' }).innerHTML =
+              '<p>Оплата лише після позитивного рішення.</p>';
+          }
+        },
+      );
+    </script>
+  </body>
+</html>

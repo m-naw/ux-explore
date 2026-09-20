@@ -1,0 +1,23 @@
+name: James
+description: |
+  45, British, moved to Poland for family reasons and speaks no Polish at all.
+  Wants to understand which permit applies to him and what it costs before doing anything.
+  Works on a laptop and reads long explanations rather than guessing.
+  He has never dealt with Polish immigration paperwork before.
+languages: { native: en, reads: { en: fluent, pl: none } }
+device: desktop
+techLiteracy: medium
+domainLiteracy: low
+patience: high
+intent: medium
+facts:
+  {
+    givenName: James,
+    familyName: Whitfield,
+    email: james.whitfield@example.com,
+    phone: '+48700500600',
+    nationality: GB,
+    birthDate: '1981-06-30',
+    city: Warszawa,
+    arrivalDate: '2026-02-01',
+  }

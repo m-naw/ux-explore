@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Delayed redirect</title>
+  </head>
+  <body>
+    <main>
+      <h1>Delayed redirect</h1>
+      <p>Continue starts a scripted redirect chain, the way an interstitial or a consent
+        gate bounces a visitor through several documents before settling.</p>
+      <a id="go" href="#">Continue</a>
+      <a href="/smoke.html">Somewhere else</a>
+      <nav id="bulk"></nav>
+    </main>
+    <script>
+      // A directory big enough that reading it takes longer than the gap between two hops,
+      // so a read that starts mid-chain cannot finish inside one document.
+      var bulk = document.getElementById('bulk');
+      var html = '';
+      for (var n = 1; n <= 400; n += 1) html += '<a href="/entry-' + n + '.html">Entry ' + n + '</a> ';
+      bulk.innerHTML = html;
+    </script>
+    <script>
+      // Each hop carries its own deadline and hop count, so every document re-arms the chain
+      // until one of them is spent. While the chain runs, any read of this page loses its
+      // execution context to the next hop - the navigation race extract() has to survive.
+      // The chain is bounded twice over so a slow machine cannot leave it running.
+      var CHAIN_MS = 2500;
+      var MAX_HOPS = 4000;
+      var params = new URLSearchParams(location.search);
+      var until = Number(params.get('until') || 0);
+      var hop = Number(params.get('hop') || 0);
+
+      if (until > 0 && Date.now() < until && hop < MAX_HOPS) {
+        location.replace('delayed-redirect.html?until=' + until + '&hop=' + (hop + 1));
+      }
+
+      document.getElementById('go').addEventListener('click', function (e) {
+        e.preventDefault();
+        setTimeout(function () {
+          location.replace('delayed-redirect.html?until=' + (Date.now() + CHAIN_MS) + '&hop=1');
+        }, 50);
+      });
+    </script>
+  </body>
+</html>

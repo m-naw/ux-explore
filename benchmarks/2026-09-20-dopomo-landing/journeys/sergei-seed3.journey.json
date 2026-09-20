@@ -1,0 +1,2759 @@
+{
+  "summary": {
+    "runId": "2026-09-20T18-03-09-6fm7",
+    "persona": {
+      "name": "Sergei"
+    },
+    "browserLocale": "ru-RU",
+    "device": "mobile",
+    "seed": 3,
+    "outcome": {
+      "needMet": false,
+      "gaveUp": false,
+      "left": true,
+      "believedDone": false,
+      "reason": "left the site",
+      "bucket": "bounce",
+      "totalSteps": 8,
+      "totalDurationMs": 10337,
+      "outcomeFindings": []
+    },
+    "perUrl": [
+      {
+        "url": "https://dopomo.pl/ru/pathfinder?step=tree&from=cukr-landing-v3",
+        "visits": 2,
+        "meanEntropy": 1.8682946222006462,
+        "meanConfusion": 1.88,
+        "exits": 0,
+        "leaveRate": 0,
+        "backtracks": 0,
+        "topSampled": [
+          {
+            "name": "Для себя",
+            "meanProbability": 0.4631578947368421
+          },
+          {
+            "name": "back",
+            "meanProbability": 0.10416666666666667
+          }
+        ]
+      },
+      {
+        "url": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr",
+        "visits": 4,
+        "meanEntropy": 2.3044332640818634,
+        "meanConfusion": 1.7550000000000001,
+        "exits": 1,
+        "leaveRate": 1,
+        "backtracks": 2,
+        "topSampled": [
+          {
+            "name": "Проверьте, можете ли подать →",
+            "meanProbability": 0.5161290322580645
+          },
+          {
+            "name": "Отклонить все",
+            "meanProbability": 0.3804347826086957
+          },
+          {
+            "name": "leave",
+            "meanProbability": 0.3763440860215053
+          }
+        ]
+      },
+      {
+        "url": "https://dopomo.pl/uk/zayava-na-kartu-cukr?ads=",
+        "visits": 1,
+        "meanEntropy": 1.8590935373297217,
+        "meanConfusion": 3.01,
+        "exits": 0,
+        "leaveRate": 0,
+        "backtracks": 0,
+        "topSampled": [
+          {
+            "name": "Русский",
+            "meanProbability": 0.29473684210526313
+          }
+        ]
+      }
+    ]
+  },
+  "rows": [
+    {
+      "step": 1,
+      "timestamp": 1789927393034,
+      "url": "https://dopomo.pl/uk/zayava-na-kartu-cukr?ads=",
+      "stateHash": "a13370fd3905968531ab7b1b45b003edbad250b5",
+      "viewHash": "285e8de14cf47f94d3ac033342871a3ce543c5d5",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 54,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible)",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible)",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible)",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_27",
+          "kind": "element",
+          "description": "link \"Кваліфікація CUKR\" -> /uk/pathfinder?step=tree (below fold)",
+          "elementId": "el_27"
+        },
+        {
+          "id": "el_28",
+          "kind": "element",
+          "description": "link \"Подати заяву на CUKR\" -> /uk/zayava-na-kartu-cukr (below fold)",
+          "elementId": "el_28"
+        },
+        {
+          "id": "el_29",
+          "kind": "element",
+          "description": "link \"Фото до заяви CUKR\" -> /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)",
+          "elementId": "el_29"
+        },
+        {
+          "id": "el_30",
+          "kind": "element",
+          "description": "link \"Шлях CUKR\" -> /uk/karta-pobytu-cukr (below fold)",
+          "elementId": "el_30"
+        },
+        {
+          "id": "el_31",
+          "kind": "element",
+          "description": "link \"Шлях CUKR для дитини\" -> /uk/karta-pobytu-cukr-dlya-dytyny (below fold)",
+          "elementId": "el_31"
+        },
+        {
+          "id": "el_32",
+          "kind": "element",
+          "description": "link \"Оплати за заяви\" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_32"
+        },
+        {
+          "id": "el_33",
+          "kind": "element",
+          "description": "link \"Чат\" -> /uk/chat (below fold)",
+          "elementId": "el_33"
+        },
+        {
+          "id": "el_34",
+          "kind": "element",
+          "description": "link \"Довгостроковий резидент ЄС\" -> /uk/rezydent-dovhostrokovyi-ue (below fold)",
+          "elementId": "el_34"
+        },
+        {
+          "id": "el_35",
+          "kind": "element",
+          "description": "link \"Заява про видачу/обмін карти\" -> /uk/dokumenty/karta-pobytu-vydacha-obmin (below fold)",
+          "elementId": "el_35"
+        },
+        {
+          "id": "el_36",
+          "kind": "element",
+          "description": "link \"Ваш шлях у Польщі\" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (below fold)",
+          "elementId": "el_36"
+        },
+        {
+          "id": "el_37",
+          "kind": "element",
+          "description": "link \"Інші інструменти\" -> /uk/instrumenty-lehalizatsiyi/paperovi-zaiavy-oplaty-foto (below fold)",
+          "elementId": "el_37"
+        },
+        {
+          "id": "el_38",
+          "kind": "element",
+          "description": "link \"Запис в ужонд: карта побиту\" -> /uk/bronyuvannia-vizytu-podannia-zayavy-otrymannia-karty-pobytu (below fold)",
+          "elementId": "el_38"
+        },
+        {
+          "id": "el_39",
+          "kind": "element",
+          "description": "link \"Банківський рахунок без карти побиту\" -> /uk/bankivskyi-rakhunok-dlia-inozemtsiv (below fold)",
+          "elementId": "el_39"
+        },
+        {
+          "id": "el_40",
+          "kind": "element",
+          "description": "link \"Profil Zaufany через банк\" -> /uk/profil-zaufany-cherez-bank (below fold)",
+          "elementId": "el_40"
+        },
+        {
+          "id": "el_41",
+          "kind": "element",
+          "description": "link \"Заява на тимчасове перебування\" -> /uk/karta-pobytu-po-roboti (below fold)",
+          "elementId": "el_41"
+        },
+        {
+          "id": "el_42",
+          "kind": "element",
+          "description": "link \"Про нас\" -> /uk/about (below fold)",
+          "elementId": "el_42"
+        },
+        {
+          "id": "el_43",
+          "kind": "element",
+          "description": "link \"Співпраця\" -> /uk/spivpratsia (below fold)",
+          "elementId": "el_43"
+        },
+        {
+          "id": "el_44",
+          "kind": "element",
+          "description": "link \"Блог\" -> /uk/blog (below fold)",
+          "elementId": "el_44"
+        },
+        {
+          "id": "el_45",
+          "kind": "element",
+          "description": "link \"Контакт\" -> /uk/contact (below fold)",
+          "elementId": "el_45"
+        },
+        {
+          "id": "el_46",
+          "kind": "element",
+          "description": "link \"Робота\" -> /uk/kariera (below fold)",
+          "elementId": "el_46"
+        },
+        {
+          "id": "el_47",
+          "kind": "element",
+          "description": "link \"Приватність\" -> /uk/privacy (below fold)",
+          "elementId": "el_47"
+        },
+        {
+          "id": "el_48",
+          "kind": "element",
+          "description": "link \"Умови\" -> /uk/terms (below fold)",
+          "elementId": "el_48"
+        },
+        {
+          "id": "el_49",
+          "kind": "element",
+          "description": "link \"Cookies\" -> /uk/cookies (below fold)",
+          "elementId": "el_49"
+        },
+        {
+          "id": "el_50",
+          "kind": "element",
+          "description": "link \"Polski\" -> /pl/wniosek-o-karte-cukr (below fold)",
+          "elementId": "el_50"
+        },
+        {
+          "id": "el_51",
+          "kind": "element",
+          "description": "link \"Русский\" -> /ru/zayavlenie-na-kartu-cukr (below fold)",
+          "elementId": "el_51"
+        },
+        {
+          "id": "el_52",
+          "kind": "element",
+          "description": "link \"English\" -> /en/cukr-card-application (below fold)",
+          "elementId": "el_52"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Перевірте, чи можете подати →\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Далі Dopomo працює як експерт із CUKR поруч із вами — від фото до подання в MOS: кожен розділ, додаток та оплата перевір\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "button \"Подивіться, як це працює ↓\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Безкоштовна перевірка за 2 хвилини · допомога із заявою 199 zł — разово.\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "button \"Крок 1: Список документів для вашої справи\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"Крок 2: Кожне поле без вгадування\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Крок 3: Біометричне фото в ціні\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Крок 4: Оплати без помилок\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "el_10",
+          "kind": "element",
+          "description": "button \"Крок 5: Розділ про судимість без стресу\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_10"
+        },
+        {
+          "id": "el_11",
+          "kind": "element",
+          "description": "button \"Крок 6: Перевірка перед поданням\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_11"
+        },
+        {
+          "id": "el_12",
+          "kind": "element",
+          "description": "button \"Крок 7: MOS разом + асистент AI\" (visible; under \"Спочатку перевірте, чи можете подати на CUKR. Безкоштовно, за 2 хвилини.\"; near \"Ваші документи й додатки\")",
+          "elementId": "el_12"
+        },
+        {
+          "id": "el_13",
+          "kind": "element",
+          "description": "link \"інструкція по карті побиту CUKR\" -> /uk/blog/karta-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_13"
+        },
+        {
+          "id": "el_14",
+          "kind": "element",
+          "description": "link \"калькуляторі оплат\" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_14"
+        },
+        {
+          "id": "el_15",
+          "kind": "element",
+          "description": "link \"хронологія карти CUKR\" -> /uk/karta-pobytu-cukr (below fold)",
+          "elementId": "el_15"
+        },
+        {
+          "id": "el_16",
+          "kind": "element",
+          "description": "button \"Що таке віртуальний асистент?+\" (below fold)",
+          "elementId": "el_16"
+        },
+        {
+          "id": "el_18",
+          "kind": "element",
+          "description": "button \"Чи подає Dopomo заяву замість мене?+\" (below fold)",
+          "elementId": "el_18"
+        },
+        {
+          "id": "el_17",
+          "kind": "element",
+          "description": "link \"легалізації перебування в Польщі\" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (below fold)",
+          "elementId": "el_17"
+        },
+        {
+          "id": "el_19",
+          "kind": "element",
+          "description": "button \"Чи потрібен мені Profil Zaufany?+\" (below fold)",
+          "elementId": "el_19"
+        },
+        {
+          "id": "el_20",
+          "kind": "element",
+          "description": "button \"Які документи мені потрібно підготувати?+\" (below fold)",
+          "elementId": "el_20"
+        },
+        {
+          "id": "el_22",
+          "kind": "element",
+          "description": "button \"Чому 199 zł, якщо подання в MOS безкоштовне?+\" (below fold)",
+          "elementId": "el_22"
+        },
+        {
+          "id": "el_21",
+          "kind": "element",
+          "description": "link \"для заяви на дитину\" -> /uk/karta-pobytu-cukr-dlya-dytyny (below fold)",
+          "elementId": "el_21"
+        },
+        {
+          "id": "el_23",
+          "kind": "element",
+          "description": "button \"Що, якщо мої дані не збігаються з реєстром?+\" (below fold)",
+          "elementId": "el_23"
+        },
+        {
+          "id": "el_24",
+          "kind": "element",
+          "description": "button \"Чи зберігаєте ви мої дані про судимість?+\" (below fold)",
+          "elementId": "el_24"
+        },
+        {
+          "id": "el_25",
+          "kind": "element",
+          "description": "button \"Чи плачу я лише один раз?+\" (below fold)",
+          "elementId": "el_25"
+        },
+        {
+          "id": "el_53",
+          "kind": "element",
+          "description": "button \"Налаштування cookie\" (below fold)",
+          "elementId": "el_53"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "switch_language:ru",
+          "kind": "switch_language",
+          "description": "switch the site language to ru (\"Русский\")",
+          "elementId": "el_51",
+          "languageCode": "ru"
+        },
+        {
+          "id": "switch_language:en",
+          "kind": "switch_language",
+          "description": "switch the site language to en (\"English\")",
+          "elementId": "el_52",
+          "languageCode": "en"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_02": 0.01,
+        "leave": 0.37,
+        "el_51": 0.09,
+        "el_04": 0.03,
+        "switch_language:ru": 0.5
+      },
+      "pruned": {
+        "switch_language:ru": 0.5208333333333334,
+        "leave": 0.3854166666666667,
+        "el_51": 0.09375
+      },
+      "sampled": "switch_language:ru",
+      "sampledName": "Русский",
+      "sampledHref": "/ru/zayavlenie-na-kartu-cukr",
+      "argmax": "switch_language:ru",
+      "exploration": false,
+      "confidence": 0.5,
+      "entropy": 1.561588224453208,
+      "goalMet": 0.19,
+      "confusion": 3.49,
+      "outcome": {
+        "urlChanged": true,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 1251
+      },
+      "timing": {
+        "extractMs": 437,
+        "decideMs": 675,
+        "decideRetryMs": 0,
+        "executeMs": 1252,
+        "settleMs": 292
+      },
+      "flags": [
+        "confused",
+        "overlay-undismissed"
+      ],
+      "bucket": "tool",
+      "stateChars": 7282,
+      "inputTokens": 4286,
+      "visibleTextChars": 557,
+      "seenTextChars": 0,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr",
+      "overlayDismissal": {
+        "dismissed": true,
+        "method": "escape"
+      }
+    },
+    {
+      "step": 2,
+      "timestamp": 1789927394125,
+      "url": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr",
+      "stateHash": "f4b21f0e1e8e98cf09d1ddc6252ec67e79cf0af2",
+      "viewHash": "01cc5141683cc4b23920c416af69144f50ebd454",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 59,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible)",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"Language: RU\" (visible)",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Открыть меню\" (visible)",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_32",
+          "kind": "element",
+          "description": "link \"Квалификация CUKR\" -> /ru/pathfinder?step=tree (below fold)",
+          "elementId": "el_32"
+        },
+        {
+          "id": "el_33",
+          "kind": "element",
+          "description": "link \"Подать заявление на CUKR\" -> /ru/zayavlenie-na-kartu-cukr (below fold)",
+          "elementId": "el_33"
+        },
+        {
+          "id": "el_34",
+          "kind": "element",
+          "description": "link \"Фото для заявления CUKR\" -> /ru/foto-dlya-zayavleniya-cukr-i-na-kartu-pobytu (below fold)",
+          "elementId": "el_34"
+        },
+        {
+          "id": "el_35",
+          "kind": "element",
+          "description": "link \"Путь CUKR\" -> /ru/karta-pobytu-cukr (below fold)",
+          "elementId": "el_35"
+        },
+        {
+          "id": "el_36",
+          "kind": "element",
+          "description": "link \"Путь CUKR для ребёнка\" -> /ru/karta-pobytu-cukr-dlya-rebenka (below fold)",
+          "elementId": "el_36"
+        },
+        {
+          "id": "el_37",
+          "kind": "element",
+          "description": "link \"Оплаты за заявления\" -> /ru/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_37"
+        },
+        {
+          "id": "el_38",
+          "kind": "element",
+          "description": "link \"Чат\" -> /ru/chat (below fold)",
+          "elementId": "el_38"
+        },
+        {
+          "id": "el_39",
+          "kind": "element",
+          "description": "link \"Долгосрочный резидент ЕС\" -> /ru/dolgosrochnyy-rezident-es (below fold)",
+          "elementId": "el_39"
+        },
+        {
+          "id": "el_40",
+          "kind": "element",
+          "description": "link \"Заявление о выдаче/обмене карты\" -> /ru/dokumenty/karta-pobytu-vydacha-obmen (below fold)",
+          "elementId": "el_40"
+        },
+        {
+          "id": "el_41",
+          "kind": "element",
+          "description": "link \"Ваш путь в Польше\" -> /ru/pomoshch-v-legalizatsii-pobytu-v-polshe (below fold)",
+          "elementId": "el_41"
+        },
+        {
+          "id": "el_42",
+          "kind": "element",
+          "description": "link \"Другие инструменты\" -> /ru/instrumenty-legalizatsii/bumazhnye-zayavleniya-oplaty-foto (below fold)",
+          "elementId": "el_42"
+        },
+        {
+          "id": "el_43",
+          "kind": "element",
+          "description": "link \"Запись в ужонд: карта побыту\" -> /ru/zapis-na-vizit-podacha-zayavleniya-poluchenie-karty-pobytu (below fold)",
+          "elementId": "el_43"
+        },
+        {
+          "id": "el_44",
+          "kind": "element",
+          "description": "link \"Банковский счёт без карты побыту\" -> /ru/bankovskiy-schet-dlya-inostrantsev (below fold)",
+          "elementId": "el_44"
+        },
+        {
+          "id": "el_45",
+          "kind": "element",
+          "description": "link \"Profil Zaufany через банк\" -> /ru/profil-zaufany-cherez-bank (below fold)",
+          "elementId": "el_45"
+        },
+        {
+          "id": "el_46",
+          "kind": "element",
+          "description": "link \"Заявление на временное пребывание\" -> /ru/karta-pobytu-po-rabote (below fold)",
+          "elementId": "el_46"
+        },
+        {
+          "id": "el_47",
+          "kind": "element",
+          "description": "link \"О нас\" -> /ru/about (below fold)",
+          "elementId": "el_47"
+        },
+        {
+          "id": "el_48",
+          "kind": "element",
+          "description": "link \"Сотрудничество\" -> /ru/sotrudnichestvo (below fold)",
+          "elementId": "el_48"
+        },
+        {
+          "id": "el_49",
+          "kind": "element",
+          "description": "link \"Блог\" -> /ru/blog (below fold)",
+          "elementId": "el_49"
+        },
+        {
+          "id": "el_50",
+          "kind": "element",
+          "description": "link \"Контакт\" -> /ru/contact (below fold)",
+          "elementId": "el_50"
+        },
+        {
+          "id": "el_51",
+          "kind": "element",
+          "description": "link \"Работа\" -> /ru/kariera (below fold)",
+          "elementId": "el_51"
+        },
+        {
+          "id": "el_52",
+          "kind": "element",
+          "description": "link \"Конфиденциальность\" -> /ru/privacy (below fold)",
+          "elementId": "el_52"
+        },
+        {
+          "id": "el_53",
+          "kind": "element",
+          "description": "link \"Условия\" -> /ru/terms (below fold)",
+          "elementId": "el_53"
+        },
+        {
+          "id": "el_54",
+          "kind": "element",
+          "description": "link \"Cookies\" -> /ru/cookies (below fold)",
+          "elementId": "el_54"
+        },
+        {
+          "id": "el_55",
+          "kind": "element",
+          "description": "link \"Polski\" -> /pl/wniosek-o-karte-cukr (below fold)",
+          "elementId": "el_55"
+        },
+        {
+          "id": "el_56",
+          "kind": "element",
+          "description": "link \"Українська\" -> /uk/zayava-na-kartu-cukr (below fold)",
+          "elementId": "el_56"
+        },
+        {
+          "id": "el_57",
+          "kind": "element",
+          "description": "link \"English\" -> /en/cukr-card-application (below fold)",
+          "elementId": "el_57"
+        },
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "link \"Политика конфиденциальности\" -> /ru/privacy (visible; under \"Согласие на файлы cookie\"; near \"Мы используем необходимые файлы cookie, чтобы Dopomo работал. С вашего разрешения мы также хотели бы использовать файлы \") [inside a dialog covering the page]",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "link \"Политика cookie\" -> /ru/cookies (visible; under \"Согласие на файлы cookie\"; near \"Мы используем необходимые файлы cookie, чтобы Dopomo работал. С вашего разрешения мы также хотели бы использовать файлы \") [inside a dialog covering the page]",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Принять все\" (visible; under \"Согласие на файлы cookie\"; near \"Ваши документы и приложения\") [inside a dialog covering the page]",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Отклонить все\" (visible) [inside a dialog covering the page]",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "button \"Управлять настройками\" (visible) [inside a dialog covering the page]",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Проверьте, можете ли подать →\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Дальше Dopomo работает как эксперт по CUKR рядом с вами — от фото до подачи в MOS: каждый раздел, приложение и оплата пр\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "el_10",
+          "kind": "element",
+          "description": "button \"Посмотрите, как это работает ↓\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Мы используем необходимые файлы cookie, чтобы Dopomo работал. С вашего разрешения мы также хотели бы использовать файлы \")",
+          "elementId": "el_10"
+        },
+        {
+          "id": "el_11",
+          "kind": "element",
+          "description": "button \"Шаг 1: Список документов для вашего дела\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Мы используем необходимые файлы cookie, чтобы Dopomo работал. С вашего разрешения мы также хотели бы использовать файлы \")",
+          "elementId": "el_11"
+        },
+        {
+          "id": "el_12",
+          "kind": "element",
+          "description": "button \"Шаг 2: Каждое поле без угадывания\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Мы используем необходимые файлы cookie, чтобы Dopomo работал. С вашего разрешения мы также хотели бы использовать файлы \")",
+          "elementId": "el_12"
+        },
+        {
+          "id": "el_13",
+          "kind": "element",
+          "description": "button \"Шаг 3: Биометрическое фото в цене\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Мы используем необходимые файлы cookie, чтобы Dopomo работал. С вашего разрешения мы также хотели бы использовать файлы \")",
+          "elementId": "el_13"
+        },
+        {
+          "id": "el_14",
+          "kind": "element",
+          "description": "button \"Шаг 4: Оплаты без ошибок\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Мы используем необходимые файлы cookie, чтобы Dopomo работал. С вашего разрешения мы также хотели бы использовать файлы \")",
+          "elementId": "el_14"
+        },
+        {
+          "id": "el_15",
+          "kind": "element",
+          "description": "button \"Шаг 5: Раздел о судимости без стресса\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Мы используем необходимые файлы cookie, чтобы Dopomo работал. С вашего разрешения мы также хотели бы использовать файлы \")",
+          "elementId": "el_15"
+        },
+        {
+          "id": "el_16",
+          "kind": "element",
+          "description": "button \"Шаг 6: Проверка перед подачей\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Мы используем необходимые файлы cookie, чтобы Dopomo работал. С вашего разрешения мы также хотели бы использовать файлы \")",
+          "elementId": "el_16"
+        },
+        {
+          "id": "el_17",
+          "kind": "element",
+          "description": "button \"Шаг 7: MOS вместе + ассистент AI\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Мы используем необходимые файлы cookie, чтобы Dopomo работал. С вашего разрешения мы также хотели бы использовать файлы \")",
+          "elementId": "el_17"
+        },
+        {
+          "id": "el_18",
+          "kind": "element",
+          "description": "link \"инструкция по карте побыту CUKR\" -> /ru/blog/karta-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_18"
+        },
+        {
+          "id": "el_19",
+          "kind": "element",
+          "description": "link \"калькуляторе оплат\" -> /ru/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_19"
+        },
+        {
+          "id": "el_20",
+          "kind": "element",
+          "description": "link \"хронология карты CUKR\" -> /ru/karta-pobytu-cukr (below fold)",
+          "elementId": "el_20"
+        },
+        {
+          "id": "el_21",
+          "kind": "element",
+          "description": "button \"Что такое виртуальный ассистент?+\" (below fold)",
+          "elementId": "el_21"
+        },
+        {
+          "id": "el_23",
+          "kind": "element",
+          "description": "button \"Подаёт ли Dopomo заявление за меня?+\" (below fold)",
+          "elementId": "el_23"
+        },
+        {
+          "id": "el_22",
+          "kind": "element",
+          "description": "link \"легализации пребывания в Польше\" -> /ru/pomoshch-v-legalizatsii-pobytu-v-polshe (below fold)",
+          "elementId": "el_22"
+        },
+        {
+          "id": "el_24",
+          "kind": "element",
+          "description": "button \"Нужен ли мне Profil Zaufany?+\" (below fold)",
+          "elementId": "el_24"
+        },
+        {
+          "id": "el_25",
+          "kind": "element",
+          "description": "button \"Какие документы мне нужно подготовить?+\" (below fold)",
+          "elementId": "el_25"
+        },
+        {
+          "id": "el_27",
+          "kind": "element",
+          "description": "button \"Почему 199 zł, если подача в MOS бесплатна?+\" (below fold)",
+          "elementId": "el_27"
+        },
+        {
+          "id": "el_26",
+          "kind": "element",
+          "description": "link \"для заявления на ребёнка\" -> /ru/karta-pobytu-cukr-dlya-rebenka (below fold)",
+          "elementId": "el_26"
+        },
+        {
+          "id": "el_28",
+          "kind": "element",
+          "description": "button \"Что, если мои данные не совпадают с реестром?+\" (below fold)",
+          "elementId": "el_28"
+        },
+        {
+          "id": "el_29",
+          "kind": "element",
+          "description": "button \"Храните ли вы мои данные о судимости?+\" (below fold)",
+          "elementId": "el_29"
+        },
+        {
+          "id": "el_30",
+          "kind": "element",
+          "description": "button \"Я плачу только один раз?+\" (below fold)",
+          "elementId": "el_30"
+        },
+        {
+          "id": "el_58",
+          "kind": "element",
+          "description": "button \"Настройки cookie\" (below fold)",
+          "elementId": "el_58"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "switch_language:en",
+          "kind": "switch_language",
+          "description": "switch the site language to en (\"English\")",
+          "elementId": "el_57",
+          "languageCode": "en"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "scroll_down": 0.0404040404040404,
+        "el_32": 0.0101010101010101,
+        "back": 0.1212121212121212,
+        "el_04": 0.35353535353535354,
+        "el_09": 0.3131313131313131,
+        "el_03": 0.0404040404040404,
+        "el_05": 0.0202020202020202,
+        "leave": 0.101010101010101
+      },
+      "pruned": {
+        "el_04": 0.3804347826086957,
+        "el_09": 0.3369565217391304,
+        "back": 0.13043478260869565,
+        "leave": 0.10869565217391303,
+        "el_03": 0.043478260869565216
+      },
+      "sampled": "el_04",
+      "sampledName": "Отклонить все",
+      "argmax": "el_04",
+      "exploration": false,
+      "confidence": 0.35353535353535354,
+      "entropy": 2.3127523557099683,
+      "goalMet": 0.17,
+      "confusion": 1.59,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 360
+      },
+      "timing": {
+        "extractMs": 79,
+        "decideMs": 264,
+        "decideRetryMs": 0,
+        "executeMs": 360,
+        "settleMs": 163
+      },
+      "flags": [
+        "high-entropy",
+        "low-confidence"
+      ],
+      "bucket": "ux",
+      "stateChars": 9238,
+      "inputTokens": 4770,
+      "visibleTextChars": 850,
+      "seenTextChars": 0,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr"
+    },
+    {
+      "step": 3,
+      "timestamp": 1789927395366,
+      "url": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr",
+      "stateHash": "281919ed3c49cf171e99dd57ee3d9a754ea03cf1",
+      "viewHash": "06e004007933ac1ce114ab4f28a8bdecaea065f0",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 54,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible)",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: RU\" (visible)",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Открыть меню\" (visible)",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_27",
+          "kind": "element",
+          "description": "link \"Квалификация CUKR\" -> /ru/pathfinder?step=tree (below fold)",
+          "elementId": "el_27"
+        },
+        {
+          "id": "el_28",
+          "kind": "element",
+          "description": "link \"Подать заявление на CUKR\" -> /ru/zayavlenie-na-kartu-cukr (below fold)",
+          "elementId": "el_28"
+        },
+        {
+          "id": "el_29",
+          "kind": "element",
+          "description": "link \"Фото для заявления CUKR\" -> /ru/foto-dlya-zayavleniya-cukr-i-na-kartu-pobytu (below fold)",
+          "elementId": "el_29"
+        },
+        {
+          "id": "el_30",
+          "kind": "element",
+          "description": "link \"Путь CUKR\" -> /ru/karta-pobytu-cukr (below fold)",
+          "elementId": "el_30"
+        },
+        {
+          "id": "el_31",
+          "kind": "element",
+          "description": "link \"Путь CUKR для ребёнка\" -> /ru/karta-pobytu-cukr-dlya-rebenka (below fold)",
+          "elementId": "el_31"
+        },
+        {
+          "id": "el_32",
+          "kind": "element",
+          "description": "link \"Оплаты за заявления\" -> /ru/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_32"
+        },
+        {
+          "id": "el_33",
+          "kind": "element",
+          "description": "link \"Чат\" -> /ru/chat (below fold)",
+          "elementId": "el_33"
+        },
+        {
+          "id": "el_34",
+          "kind": "element",
+          "description": "link \"Долгосрочный резидент ЕС\" -> /ru/dolgosrochnyy-rezident-es (below fold)",
+          "elementId": "el_34"
+        },
+        {
+          "id": "el_35",
+          "kind": "element",
+          "description": "link \"Заявление о выдаче/обмене карты\" -> /ru/dokumenty/karta-pobytu-vydacha-obmen (below fold)",
+          "elementId": "el_35"
+        },
+        {
+          "id": "el_36",
+          "kind": "element",
+          "description": "link \"Ваш путь в Польше\" -> /ru/pomoshch-v-legalizatsii-pobytu-v-polshe (below fold)",
+          "elementId": "el_36"
+        },
+        {
+          "id": "el_37",
+          "kind": "element",
+          "description": "link \"Другие инструменты\" -> /ru/instrumenty-legalizatsii/bumazhnye-zayavleniya-oplaty-foto (below fold)",
+          "elementId": "el_37"
+        },
+        {
+          "id": "el_38",
+          "kind": "element",
+          "description": "link \"Запись в ужонд: карта побыту\" -> /ru/zapis-na-vizit-podacha-zayavleniya-poluchenie-karty-pobytu (below fold)",
+          "elementId": "el_38"
+        },
+        {
+          "id": "el_39",
+          "kind": "element",
+          "description": "link \"Банковский счёт без карты побыту\" -> /ru/bankovskiy-schet-dlya-inostrantsev (below fold)",
+          "elementId": "el_39"
+        },
+        {
+          "id": "el_40",
+          "kind": "element",
+          "description": "link \"Profil Zaufany через банк\" -> /ru/profil-zaufany-cherez-bank (below fold)",
+          "elementId": "el_40"
+        },
+        {
+          "id": "el_41",
+          "kind": "element",
+          "description": "link \"Заявление на временное пребывание\" -> /ru/karta-pobytu-po-rabote (below fold)",
+          "elementId": "el_41"
+        },
+        {
+          "id": "el_42",
+          "kind": "element",
+          "description": "link \"О нас\" -> /ru/about (below fold)",
+          "elementId": "el_42"
+        },
+        {
+          "id": "el_43",
+          "kind": "element",
+          "description": "link \"Сотрудничество\" -> /ru/sotrudnichestvo (below fold)",
+          "elementId": "el_43"
+        },
+        {
+          "id": "el_44",
+          "kind": "element",
+          "description": "link \"Блог\" -> /ru/blog (below fold)",
+          "elementId": "el_44"
+        },
+        {
+          "id": "el_45",
+          "kind": "element",
+          "description": "link \"Контакт\" -> /ru/contact (below fold)",
+          "elementId": "el_45"
+        },
+        {
+          "id": "el_46",
+          "kind": "element",
+          "description": "link \"Работа\" -> /ru/kariera (below fold)",
+          "elementId": "el_46"
+        },
+        {
+          "id": "el_47",
+          "kind": "element",
+          "description": "link \"Конфиденциальность\" -> /ru/privacy (below fold)",
+          "elementId": "el_47"
+        },
+        {
+          "id": "el_48",
+          "kind": "element",
+          "description": "link \"Условия\" -> /ru/terms (below fold)",
+          "elementId": "el_48"
+        },
+        {
+          "id": "el_49",
+          "kind": "element",
+          "description": "link \"Cookies\" -> /ru/cookies (below fold)",
+          "elementId": "el_49"
+        },
+        {
+          "id": "el_50",
+          "kind": "element",
+          "description": "link \"Polski\" -> /pl/wniosek-o-karte-cukr (below fold)",
+          "elementId": "el_50"
+        },
+        {
+          "id": "el_51",
+          "kind": "element",
+          "description": "link \"Українська\" -> /uk/zayava-na-kartu-cukr (below fold)",
+          "elementId": "el_51"
+        },
+        {
+          "id": "el_52",
+          "kind": "element",
+          "description": "link \"English\" -> /en/cukr-card-application (below fold)",
+          "elementId": "el_52"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Проверьте, можете ли подать →\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Дальше Dopomo работает как эксперт по CUKR рядом с вами — от фото до подачи в MOS: каждый раздел, приложение и оплата пр\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "button \"Посмотрите, как это работает ↓\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Бесплатная проверка за 2 минуты · помощь с заявлением 199 zł — разово.\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "button \"Шаг 1: Список документов для вашего дела\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"Шаг 2: Каждое поле без угадывания\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Шаг 3: Биометрическое фото в цене\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Шаг 4: Оплаты без ошибок\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "el_10",
+          "kind": "element",
+          "description": "button \"Шаг 5: Раздел о судимости без стресса\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_10"
+        },
+        {
+          "id": "el_11",
+          "kind": "element",
+          "description": "button \"Шаг 6: Проверка перед подачей\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_11"
+        },
+        {
+          "id": "el_12",
+          "kind": "element",
+          "description": "button \"Шаг 7: MOS вместе + ассистент AI\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_12"
+        },
+        {
+          "id": "el_13",
+          "kind": "element",
+          "description": "link \"инструкция по карте побыту CUKR\" -> /ru/blog/karta-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_13"
+        },
+        {
+          "id": "el_14",
+          "kind": "element",
+          "description": "link \"калькуляторе оплат\" -> /ru/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_14"
+        },
+        {
+          "id": "el_15",
+          "kind": "element",
+          "description": "link \"хронология карты CUKR\" -> /ru/karta-pobytu-cukr (below fold)",
+          "elementId": "el_15"
+        },
+        {
+          "id": "el_16",
+          "kind": "element",
+          "description": "button \"Что такое виртуальный ассистент?+\" (below fold)",
+          "elementId": "el_16"
+        },
+        {
+          "id": "el_18",
+          "kind": "element",
+          "description": "button \"Подаёт ли Dopomo заявление за меня?+\" (below fold)",
+          "elementId": "el_18"
+        },
+        {
+          "id": "el_17",
+          "kind": "element",
+          "description": "link \"легализации пребывания в Польше\" -> /ru/pomoshch-v-legalizatsii-pobytu-v-polshe (below fold)",
+          "elementId": "el_17"
+        },
+        {
+          "id": "el_19",
+          "kind": "element",
+          "description": "button \"Нужен ли мне Profil Zaufany?+\" (below fold)",
+          "elementId": "el_19"
+        },
+        {
+          "id": "el_20",
+          "kind": "element",
+          "description": "button \"Какие документы мне нужно подготовить?+\" (below fold)",
+          "elementId": "el_20"
+        },
+        {
+          "id": "el_22",
+          "kind": "element",
+          "description": "button \"Почему 199 zł, если подача в MOS бесплатна?+\" (below fold)",
+          "elementId": "el_22"
+        },
+        {
+          "id": "el_21",
+          "kind": "element",
+          "description": "link \"для заявления на ребёнка\" -> /ru/karta-pobytu-cukr-dlya-rebenka (below fold)",
+          "elementId": "el_21"
+        },
+        {
+          "id": "el_23",
+          "kind": "element",
+          "description": "button \"Что, если мои данные не совпадают с реестром?+\" (below fold)",
+          "elementId": "el_23"
+        },
+        {
+          "id": "el_24",
+          "kind": "element",
+          "description": "button \"Храните ли вы мои данные о судимости?+\" (below fold)",
+          "elementId": "el_24"
+        },
+        {
+          "id": "el_25",
+          "kind": "element",
+          "description": "button \"Я плачу только один раз?+\" (below fold)",
+          "elementId": "el_25"
+        },
+        {
+          "id": "el_53",
+          "kind": "element",
+          "description": "button \"Настройки cookie\" (below fold)",
+          "elementId": "el_53"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "switch_language:en",
+          "kind": "switch_language",
+          "description": "switch the site language to en (\"English\")",
+          "elementId": "el_52",
+          "languageCode": "en"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "scroll_down": 0.08,
+        "el_27": 0.04,
+        "back": 0.18000000000000002,
+        "leave": 0.19,
+        "el_06": 0.01,
+        "el_04": 0.48,
+        "el_05": 0.02
+      },
+      "pruned": {
+        "el_04": 0.5161290322580645,
+        "leave": 0.20430107526881722,
+        "back": 0.19354838709677422,
+        "scroll_down": 0.08602150537634409
+      },
+      "sampled": "el_04",
+      "sampledName": "Проверьте, можете ли подать →",
+      "argmax": "el_04",
+      "exploration": false,
+      "confidence": 0.48,
+      "entropy": 2.065381461614672,
+      "goalMet": 0.2,
+      "confusion": 1.77,
+      "outcome": {
+        "urlChanged": true,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 607
+      },
+      "timing": {
+        "extractMs": 79,
+        "decideMs": 349,
+        "decideRetryMs": 0,
+        "executeMs": 607,
+        "settleMs": 473
+      },
+      "flags": [
+        "high-entropy",
+        "low-confidence"
+      ],
+      "bucket": "ux",
+      "stateChars": 7757,
+      "inputTokens": 4029,
+      "visibleTextChars": 584,
+      "seenTextChars": 265,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/ru/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 4,
+      "timestamp": 1789927396127,
+      "url": "https://dopomo.pl/ru/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "930a498546d4dad60b6832bf3906d777a9ff8a73",
+      "viewHash": "e2a2f434b00f47d1bd9982b439b7e91bde66c980",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Шаг 1 Квалификация\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: RU\" (visible; near \"Шаг 1 Квалификация\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Открыть меню\" (visible; near \"Шаг 1 Квалификация\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершить\" (visible; near \"Шаг 1 Квалификация\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"Для себя\" (visible; under \"Для кого Вы хотите подготовить заявление на карту побыта CUKR?\"; near \"Вопрос 1 из 6\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Для моего ребёнка\" (visible; under \"Для кого Вы хотите подготовить заявление на карту побыта CUKR?\"; near \"Не уверены?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Спросить ассистента\" (visible; under \"Для кого Вы хотите подготовить заявление на карту побыта CUKR?\"; near \"Не уверены?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_01": 0.01,
+        "leave": 0.37,
+        "back": 0.14,
+        "el_05": 0.44,
+        "el_07": 0.03,
+        "el_03": 0.01
+      },
+      "pruned": {
+        "el_05": 0.4631578947368421,
+        "leave": 0.3894736842105263,
+        "back": 0.1473684210526316
+      },
+      "sampled": "el_05",
+      "sampledName": "Для себя",
+      "argmax": "el_05",
+      "exploration": false,
+      "confidence": 0.44,
+      "entropy": 1.7336299681819032,
+      "goalMet": 0.11,
+      "confusion": 1.93,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 265
+      },
+      "timing": {
+        "extractMs": 28,
+        "decideMs": 262,
+        "decideRetryMs": 0,
+        "executeMs": 265,
+        "settleMs": 158
+      },
+      "flags": [
+        "low-confidence"
+      ],
+      "bucket": "none",
+      "stateChars": 2721,
+      "inputTokens": 1347,
+      "visibleTextChars": 165,
+      "seenTextChars": 0,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/ru/pathfinder?step=tree&from=cukr-landing-v3"
+    },
+    {
+      "step": 5,
+      "timestamp": 1789927396911,
+      "url": "https://dopomo.pl/ru/pathfinder?step=tree&from=cukr-landing-v3",
+      "stateHash": "a2ce84b88c0e03d35a86b781df1a9ddda57b874c",
+      "viewHash": "14f1039305d3785a61ee0d16794a01221682bc6a",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 9,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Шаг 1 Квалификация\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: RU\" (visible; near \"Шаг 1 Квалификация\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Открыть меню\" (visible; near \"Шаг 1 Квалификация\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Завершить\" (visible; near \"Шаг 1 Квалификация\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "radio \"Для себя\" (visible; under \"Для кого Вы хотите подготовить заявление на карту побыта CUKR?\"; near \"Вопрос 1 из 6\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "radio \"Для моего ребёнка\" (visible; under \"Для кого Вы хотите подготовить заявление на карту побыта CUKR?\"; near \"Не уверены?\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"💬Спросить ассистента\" (visible; under \"Для кого Вы хотите подготовить заявление на карту побыта CUKR?\"; near \"Не уверены?\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Далее →\" (visible; under \"Для кого Вы хотите подготовить заявление на карту побыта CUKR?\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_09": 0.34,
+        "back": 0.1,
+        "el_07": 0.02,
+        "leave": 0.4,
+        "el_05": 0.12,
+        "el_06": 0.01,
+        "el_01": 0.01
+      },
+      "pruned": {
+        "leave": 0.4166666666666667,
+        "el_09": 0.3541666666666667,
+        "el_05": 0.125,
+        "back": 0.10416666666666667
+      },
+      "sampled": "back",
+      "sampledName": "back",
+      "argmax": "leave",
+      "exploration": true,
+      "confidence": 0.4,
+      "entropy": 2.0029592762193893,
+      "goalMet": 0.11,
+      "confusion": 1.83,
+      "outcome": {
+        "urlChanged": true,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 344
+      },
+      "timing": {
+        "extractMs": 23,
+        "decideMs": 245,
+        "decideRetryMs": 0,
+        "executeMs": 344,
+        "settleMs": 255
+      },
+      "flags": [
+        "high-entropy",
+        "low-confidence"
+      ],
+      "bucket": "ux",
+      "stateChars": 2872,
+      "inputTokens": 1411,
+      "visibleTextChars": 165,
+      "seenTextChars": 0,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr"
+    },
+    {
+      "step": 6,
+      "timestamp": 1789927398184,
+      "url": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr",
+      "stateHash": "281919ed3c49cf171e99dd57ee3d9a754ea03cf1",
+      "viewHash": "06e004007933ac1ce114ab4f28a8bdecaea065f0",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 54,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible)",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: RU\" (visible)",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Открыть меню\" (visible)",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_27",
+          "kind": "element",
+          "description": "link \"Квалификация CUKR\" -> /ru/pathfinder?step=tree (below fold)",
+          "elementId": "el_27"
+        },
+        {
+          "id": "el_28",
+          "kind": "element",
+          "description": "link \"Подать заявление на CUKR\" -> /ru/zayavlenie-na-kartu-cukr (below fold)",
+          "elementId": "el_28"
+        },
+        {
+          "id": "el_29",
+          "kind": "element",
+          "description": "link \"Фото для заявления CUKR\" -> /ru/foto-dlya-zayavleniya-cukr-i-na-kartu-pobytu (below fold)",
+          "elementId": "el_29"
+        },
+        {
+          "id": "el_30",
+          "kind": "element",
+          "description": "link \"Путь CUKR\" -> /ru/karta-pobytu-cukr (below fold)",
+          "elementId": "el_30"
+        },
+        {
+          "id": "el_31",
+          "kind": "element",
+          "description": "link \"Путь CUKR для ребёнка\" -> /ru/karta-pobytu-cukr-dlya-rebenka (below fold)",
+          "elementId": "el_31"
+        },
+        {
+          "id": "el_32",
+          "kind": "element",
+          "description": "link \"Оплаты за заявления\" -> /ru/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_32"
+        },
+        {
+          "id": "el_33",
+          "kind": "element",
+          "description": "link \"Чат\" -> /ru/chat (below fold)",
+          "elementId": "el_33"
+        },
+        {
+          "id": "el_34",
+          "kind": "element",
+          "description": "link \"Долгосрочный резидент ЕС\" -> /ru/dolgosrochnyy-rezident-es (below fold)",
+          "elementId": "el_34"
+        },
+        {
+          "id": "el_35",
+          "kind": "element",
+          "description": "link \"Заявление о выдаче/обмене карты\" -> /ru/dokumenty/karta-pobytu-vydacha-obmen (below fold)",
+          "elementId": "el_35"
+        },
+        {
+          "id": "el_36",
+          "kind": "element",
+          "description": "link \"Ваш путь в Польше\" -> /ru/pomoshch-v-legalizatsii-pobytu-v-polshe (below fold)",
+          "elementId": "el_36"
+        },
+        {
+          "id": "el_37",
+          "kind": "element",
+          "description": "link \"Другие инструменты\" -> /ru/instrumenty-legalizatsii/bumazhnye-zayavleniya-oplaty-foto (below fold)",
+          "elementId": "el_37"
+        },
+        {
+          "id": "el_38",
+          "kind": "element",
+          "description": "link \"Запись в ужонд: карта побыту\" -> /ru/zapis-na-vizit-podacha-zayavleniya-poluchenie-karty-pobytu (below fold)",
+          "elementId": "el_38"
+        },
+        {
+          "id": "el_39",
+          "kind": "element",
+          "description": "link \"Банковский счёт без карты побыту\" -> /ru/bankovskiy-schet-dlya-inostrantsev (below fold)",
+          "elementId": "el_39"
+        },
+        {
+          "id": "el_40",
+          "kind": "element",
+          "description": "link \"Profil Zaufany через банк\" -> /ru/profil-zaufany-cherez-bank (below fold)",
+          "elementId": "el_40"
+        },
+        {
+          "id": "el_41",
+          "kind": "element",
+          "description": "link \"Заявление на временное пребывание\" -> /ru/karta-pobytu-po-rabote (below fold)",
+          "elementId": "el_41"
+        },
+        {
+          "id": "el_42",
+          "kind": "element",
+          "description": "link \"О нас\" -> /ru/about (below fold)",
+          "elementId": "el_42"
+        },
+        {
+          "id": "el_43",
+          "kind": "element",
+          "description": "link \"Сотрудничество\" -> /ru/sotrudnichestvo (below fold)",
+          "elementId": "el_43"
+        },
+        {
+          "id": "el_44",
+          "kind": "element",
+          "description": "link \"Блог\" -> /ru/blog (below fold)",
+          "elementId": "el_44"
+        },
+        {
+          "id": "el_45",
+          "kind": "element",
+          "description": "link \"Контакт\" -> /ru/contact (below fold)",
+          "elementId": "el_45"
+        },
+        {
+          "id": "el_46",
+          "kind": "element",
+          "description": "link \"Работа\" -> /ru/kariera (below fold)",
+          "elementId": "el_46"
+        },
+        {
+          "id": "el_47",
+          "kind": "element",
+          "description": "link \"Конфиденциальность\" -> /ru/privacy (below fold)",
+          "elementId": "el_47"
+        },
+        {
+          "id": "el_48",
+          "kind": "element",
+          "description": "link \"Условия\" -> /ru/terms (below fold)",
+          "elementId": "el_48"
+        },
+        {
+          "id": "el_49",
+          "kind": "element",
+          "description": "link \"Cookies\" -> /ru/cookies (below fold)",
+          "elementId": "el_49"
+        },
+        {
+          "id": "el_50",
+          "kind": "element",
+          "description": "link \"Polski\" -> /pl/wniosek-o-karte-cukr (below fold)",
+          "elementId": "el_50"
+        },
+        {
+          "id": "el_51",
+          "kind": "element",
+          "description": "link \"Українська\" -> /uk/zayava-na-kartu-cukr (below fold)",
+          "elementId": "el_51"
+        },
+        {
+          "id": "el_52",
+          "kind": "element",
+          "description": "link \"English\" -> /en/cukr-card-application (below fold)",
+          "elementId": "el_52"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Проверьте, можете ли подать →\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Дальше Dopomo работает как эксперт по CUKR рядом с вами — от фото до подачи в MOS: каждый раздел, приложение и оплата пр\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "button \"Посмотрите, как это работает ↓\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Бесплатная проверка за 2 минуты · помощь с заявлением 199 zł — разово.\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "button \"Шаг 1: Список документов для вашего дела\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"Шаг 2: Каждое поле без угадывания\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Шаг 3: Биометрическое фото в цене\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Шаг 4: Оплаты без ошибок\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "el_10",
+          "kind": "element",
+          "description": "button \"Шаг 5: Раздел о судимости без стресса\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_10"
+        },
+        {
+          "id": "el_11",
+          "kind": "element",
+          "description": "button \"Шаг 6: Проверка перед подачей\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_11"
+        },
+        {
+          "id": "el_12",
+          "kind": "element",
+          "description": "button \"Шаг 7: MOS вместе + ассистент AI\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_12"
+        },
+        {
+          "id": "el_13",
+          "kind": "element",
+          "description": "link \"инструкция по карте побыту CUKR\" -> /ru/blog/karta-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_13"
+        },
+        {
+          "id": "el_14",
+          "kind": "element",
+          "description": "link \"калькуляторе оплат\" -> /ru/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_14"
+        },
+        {
+          "id": "el_15",
+          "kind": "element",
+          "description": "link \"хронология карты CUKR\" -> /ru/karta-pobytu-cukr (below fold)",
+          "elementId": "el_15"
+        },
+        {
+          "id": "el_16",
+          "kind": "element",
+          "description": "button \"Что такое виртуальный ассистент?+\" (below fold)",
+          "elementId": "el_16"
+        },
+        {
+          "id": "el_18",
+          "kind": "element",
+          "description": "button \"Подаёт ли Dopomo заявление за меня?+\" (below fold)",
+          "elementId": "el_18"
+        },
+        {
+          "id": "el_17",
+          "kind": "element",
+          "description": "link \"легализации пребывания в Польше\" -> /ru/pomoshch-v-legalizatsii-pobytu-v-polshe (below fold)",
+          "elementId": "el_17"
+        },
+        {
+          "id": "el_19",
+          "kind": "element",
+          "description": "button \"Нужен ли мне Profil Zaufany?+\" (below fold)",
+          "elementId": "el_19"
+        },
+        {
+          "id": "el_20",
+          "kind": "element",
+          "description": "button \"Какие документы мне нужно подготовить?+\" (below fold)",
+          "elementId": "el_20"
+        },
+        {
+          "id": "el_22",
+          "kind": "element",
+          "description": "button \"Почему 199 zł, если подача в MOS бесплатна?+\" (below fold)",
+          "elementId": "el_22"
+        },
+        {
+          "id": "el_21",
+          "kind": "element",
+          "description": "link \"для заявления на ребёнка\" -> /ru/karta-pobytu-cukr-dlya-rebenka (below fold)",
+          "elementId": "el_21"
+        },
+        {
+          "id": "el_23",
+          "kind": "element",
+          "description": "button \"Что, если мои данные не совпадают с реестром?+\" (below fold)",
+          "elementId": "el_23"
+        },
+        {
+          "id": "el_24",
+          "kind": "element",
+          "description": "button \"Храните ли вы мои данные о судимости?+\" (below fold)",
+          "elementId": "el_24"
+        },
+        {
+          "id": "el_25",
+          "kind": "element",
+          "description": "button \"Я плачу только один раз?+\" (below fold)",
+          "elementId": "el_25"
+        },
+        {
+          "id": "el_53",
+          "kind": "element",
+          "description": "button \"Настройки cookie\" (below fold)",
+          "elementId": "el_53"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "switch_language:en",
+          "kind": "switch_language",
+          "description": "switch the site language to en (\"English\")",
+          "elementId": "el_52",
+          "languageCode": "en"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_07": 0.0101010101010101,
+        "el_05": 0.06060606060606061,
+        "el_04": 0.1414141414141414,
+        "el_22": 0.0303030303030303,
+        "leave": 0.47474747474747475,
+        "back": 0.1313131313131313,
+        "scroll_down": 0.1111111111111111,
+        "el_18": 0.0101010101010101,
+        "el_27": 0.0101010101010101,
+        "el_06": 0.0202020202020202
+      },
+      "pruned": {
+        "leave": 0.5164835164835165,
+        "el_04": 0.15384615384615385,
+        "back": 0.14285714285714285,
+        "scroll_down": 0.12087912087912088,
+        "el_05": 0.06593406593406594
+      },
+      "sampled": "back",
+      "sampledName": "back",
+      "argmax": "leave",
+      "exploration": true,
+      "confidence": 0.47474747474747475,
+      "entropy": 2.3587225636655664,
+      "goalMet": 0.22,
+      "confusion": 1.79,
+      "outcome": {
+        "urlChanged": true,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 629
+      },
+      "timing": {
+        "extractMs": 68,
+        "decideMs": 252,
+        "decideRetryMs": 0,
+        "executeMs": 629,
+        "settleMs": 240
+      },
+      "flags": [
+        "high-entropy",
+        "low-confidence",
+        "backtrack"
+      ],
+      "bucket": "ux",
+      "stateChars": 7892,
+      "inputTokens": 4076,
+      "visibleTextChars": 584,
+      "seenTextChars": 0,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/uk/zayava-na-kartu-cukr?ads="
+    },
+    {
+      "step": 7,
+      "timestamp": 1789927399441,
+      "url": "https://dopomo.pl/uk/zayava-na-kartu-cukr?ads=",
+      "stateHash": "6e8ecc7562dbb89dadd58b114b1165aa7c509f53",
+      "viewHash": "bbbade8d565ffc48674e0abf5ae44b4eb655d5c4",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 54,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible; near \"Інструменти\")",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: UK\" (visible; near \"Інструменти\")",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Відкрити меню\" (visible; near \"Інструменти\")",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_27",
+          "kind": "element",
+          "description": "link \"Кваліфікація CUKR\" -> /uk/pathfinder?step=tree (below fold)",
+          "elementId": "el_27"
+        },
+        {
+          "id": "el_28",
+          "kind": "element",
+          "description": "link \"Подати заяву на CUKR\" -> /uk/zayava-na-kartu-cukr (below fold)",
+          "elementId": "el_28"
+        },
+        {
+          "id": "el_29",
+          "kind": "element",
+          "description": "link \"Фото до заяви CUKR\" -> /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)",
+          "elementId": "el_29"
+        },
+        {
+          "id": "el_30",
+          "kind": "element",
+          "description": "link \"Шлях CUKR\" -> /uk/karta-pobytu-cukr (below fold)",
+          "elementId": "el_30"
+        },
+        {
+          "id": "el_31",
+          "kind": "element",
+          "description": "link \"Шлях CUKR для дитини\" -> /uk/karta-pobytu-cukr-dlya-dytyny (below fold)",
+          "elementId": "el_31"
+        },
+        {
+          "id": "el_32",
+          "kind": "element",
+          "description": "link \"Оплати за заяви\" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (visible; near \"Інструменти\")",
+          "elementId": "el_32"
+        },
+        {
+          "id": "el_33",
+          "kind": "element",
+          "description": "link \"Чат\" -> /uk/chat (visible; near \"Інструменти\")",
+          "elementId": "el_33"
+        },
+        {
+          "id": "el_34",
+          "kind": "element",
+          "description": "link \"Довгостроковий резидент ЄС\" -> /uk/rezydent-dovhostrokovyi-ue (visible; near \"Інструменти\")",
+          "elementId": "el_34"
+        },
+        {
+          "id": "el_35",
+          "kind": "element",
+          "description": "link \"Заява про видачу/обмін карти\" -> /uk/dokumenty/karta-pobytu-vydacha-obmin (visible; near \"Інструменти\")",
+          "elementId": "el_35"
+        },
+        {
+          "id": "el_36",
+          "kind": "element",
+          "description": "link \"Ваш шлях у Польщі\" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (visible; near \"Інструменти\")",
+          "elementId": "el_36"
+        },
+        {
+          "id": "el_37",
+          "kind": "element",
+          "description": "link \"Інші інструменти\" -> /uk/instrumenty-lehalizatsiyi/paperovi-zaiavy-oplaty-foto (visible)",
+          "elementId": "el_37"
+        },
+        {
+          "id": "el_38",
+          "kind": "element",
+          "description": "link \"Запис в ужонд: карта побиту\" -> /uk/bronyuvannia-vizytu-podannia-zayavy-otrymannia-karty-pobytu (visible; near \"Компанія\")",
+          "elementId": "el_38"
+        },
+        {
+          "id": "el_39",
+          "kind": "element",
+          "description": "link \"Банківський рахунок без карти побиту\" -> /uk/bankivskyi-rakhunok-dlia-inozemtsiv (visible; near \"Компанія\")",
+          "elementId": "el_39"
+        },
+        {
+          "id": "el_40",
+          "kind": "element",
+          "description": "link \"Profil Zaufany через банк\" -> /uk/profil-zaufany-cherez-bank (visible; near \"Компанія\")",
+          "elementId": "el_40"
+        },
+        {
+          "id": "el_41",
+          "kind": "element",
+          "description": "link \"Заява на тимчасове перебування\" -> /uk/karta-pobytu-po-roboti (visible; near \"Компанія\")",
+          "elementId": "el_41"
+        },
+        {
+          "id": "el_42",
+          "kind": "element",
+          "description": "link \"Про нас\" -> /uk/about (visible; near \"Компанія\")",
+          "elementId": "el_42"
+        },
+        {
+          "id": "el_43",
+          "kind": "element",
+          "description": "link \"Співпраця\" -> /uk/spivpratsia (visible; near \"Компанія\")",
+          "elementId": "el_43"
+        },
+        {
+          "id": "el_44",
+          "kind": "element",
+          "description": "link \"Блог\" -> /uk/blog (visible; near \"Компанія\")",
+          "elementId": "el_44"
+        },
+        {
+          "id": "el_45",
+          "kind": "element",
+          "description": "link \"Контакт\" -> /uk/contact (visible; near \"Dopomo — незалежний AI-асистент, не пов'язаний з польським урядом. Офіційний портал: mos.cudzoziemcy.gov.pl/uk/\")",
+          "elementId": "el_45"
+        },
+        {
+          "id": "el_46",
+          "kind": "element",
+          "description": "link \"Робота\" -> /uk/kariera (visible; near \"Dopomo — незалежний AI-асистент, не пов'язаний з польським урядом. Офіційний портал: mos.cudzoziemcy.gov.pl/uk/\")",
+          "elementId": "el_46"
+        },
+        {
+          "id": "el_47",
+          "kind": "element",
+          "description": "link \"Приватність\" -> /uk/privacy (visible; near \"Компанія\")",
+          "elementId": "el_47"
+        },
+        {
+          "id": "el_48",
+          "kind": "element",
+          "description": "link \"Умови\" -> /uk/terms (visible; near \"Компанія\")",
+          "elementId": "el_48"
+        },
+        {
+          "id": "el_49",
+          "kind": "element",
+          "description": "link \"Cookies\" -> /uk/cookies (visible; near \"Компанія\")",
+          "elementId": "el_49"
+        },
+        {
+          "id": "el_50",
+          "kind": "element",
+          "description": "link \"Polski\" -> /pl/wniosek-o-karte-cukr (visible; near \"Українська\")",
+          "elementId": "el_50"
+        },
+        {
+          "id": "el_51",
+          "kind": "element",
+          "description": "link \"Русский\" -> /ru/zayavlenie-na-kartu-cukr (visible; near \"Українська\")",
+          "elementId": "el_51"
+        },
+        {
+          "id": "el_52",
+          "kind": "element",
+          "description": "link \"English\" -> /en/cukr-card-application (visible; near \"Українська\")",
+          "elementId": "el_52"
+        },
+        {
+          "id": "el_53",
+          "kind": "element",
+          "description": "button \"Налаштування cookie\" (visible; near \"Facebook\")",
+          "elementId": "el_53"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Перевірте, чи можете подати →\" (below fold)",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "button \"Подивіться, як це працює ↓\" (below fold)",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "button \"Крок 1: Список документів для вашої справи\" (below fold)",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"Крок 2: Кожне поле без вгадування\" (below fold)",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Крок 3: Біометричне фото в ціні\" (below fold)",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Крок 4: Оплати без помилок\" (below fold)",
+          "elementId": "el_09"
+        },
+        {
+          "id": "el_10",
+          "kind": "element",
+          "description": "button \"Крок 5: Розділ про судимість без стресу\" (below fold)",
+          "elementId": "el_10"
+        },
+        {
+          "id": "el_11",
+          "kind": "element",
+          "description": "button \"Крок 6: Перевірка перед поданням\" (below fold)",
+          "elementId": "el_11"
+        },
+        {
+          "id": "el_12",
+          "kind": "element",
+          "description": "button \"Крок 7: MOS разом + асистент AI\" (below fold)",
+          "elementId": "el_12"
+        },
+        {
+          "id": "el_13",
+          "kind": "element",
+          "description": "link \"інструкція по карті побиту CUKR\" -> /uk/blog/karta-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_13"
+        },
+        {
+          "id": "el_14",
+          "kind": "element",
+          "description": "link \"калькуляторі оплат\" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_14"
+        },
+        {
+          "id": "el_15",
+          "kind": "element",
+          "description": "link \"хронологія карти CUKR\" -> /uk/karta-pobytu-cukr (below fold)",
+          "elementId": "el_15"
+        },
+        {
+          "id": "el_16",
+          "kind": "element",
+          "description": "button \"Що таке віртуальний асистент?+\" (below fold)",
+          "elementId": "el_16"
+        },
+        {
+          "id": "el_18",
+          "kind": "element",
+          "description": "button \"Чи подає Dopomo заяву замість мене?+\" (below fold)",
+          "elementId": "el_18"
+        },
+        {
+          "id": "el_17",
+          "kind": "element",
+          "description": "link \"легалізації перебування в Польщі\" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (below fold)",
+          "elementId": "el_17"
+        },
+        {
+          "id": "el_19",
+          "kind": "element",
+          "description": "button \"Чи потрібен мені Profil Zaufany?+\" (below fold)",
+          "elementId": "el_19"
+        },
+        {
+          "id": "el_20",
+          "kind": "element",
+          "description": "button \"Які документи мені потрібно підготувати?+\" (below fold)",
+          "elementId": "el_20"
+        },
+        {
+          "id": "el_22",
+          "kind": "element",
+          "description": "button \"Чому 199 zł, якщо подання в MOS безкоштовне?+\" (below fold)",
+          "elementId": "el_22"
+        },
+        {
+          "id": "el_21",
+          "kind": "element",
+          "description": "link \"для заяви на дитину\" -> /uk/karta-pobytu-cukr-dlya-dytyny (below fold)",
+          "elementId": "el_21"
+        },
+        {
+          "id": "el_23",
+          "kind": "element",
+          "description": "button \"Що, якщо мої дані не збігаються з реєстром?+\" (below fold)",
+          "elementId": "el_23"
+        },
+        {
+          "id": "el_24",
+          "kind": "element",
+          "description": "button \"Чи зберігаєте ви мої дані про судимість?+\" (below fold)",
+          "elementId": "el_24"
+        },
+        {
+          "id": "el_25",
+          "kind": "element",
+          "description": "button \"Чи плачу я лише один раз?+\" (below fold)",
+          "elementId": "el_25"
+        },
+        {
+          "id": "scroll_up",
+          "kind": "scroll_up",
+          "description": "scroll back up the page"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "switch_language:ru",
+          "kind": "switch_language",
+          "description": "switch the site language to ru (\"Русский\")",
+          "elementId": "el_51",
+          "languageCode": "ru"
+        },
+        {
+          "id": "switch_language:en",
+          "kind": "switch_language",
+          "description": "switch the site language to en (\"English\")",
+          "elementId": "el_52",
+          "languageCode": "en"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "back": 0.060606060606060615,
+        "el_51": 0.12121212121212122,
+        "switch_language:ru": 0.2828282828282829,
+        "el_02": 0.020202020202020204,
+        "leave": 0.494949494949495,
+        "el_04": 0.020202020202020204
+      },
+      "pruned": {
+        "leave": 0.5157894736842105,
+        "switch_language:ru": 0.29473684210526313,
+        "el_51": 0.1263157894736842,
+        "back": 0.06315789473684211
+      },
+      "sampled": "switch_language:ru",
+      "sampledName": "Русский",
+      "sampledHref": "/ru/zayavlenie-na-kartu-cukr",
+      "argmax": "leave",
+      "exploration": true,
+      "confidence": 0.494949494949495,
+      "entropy": 1.8590935373297217,
+      "goalMet": 0.31,
+      "confusion": 3.01,
+      "outcome": {
+        "urlChanged": true,
+        "stateChanged": true,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 707
+      },
+      "timing": {
+        "extractMs": 68,
+        "decideMs": 235,
+        "decideRetryMs": 0,
+        "executeMs": 707,
+        "settleMs": 242
+      },
+      "flags": [
+        "low-confidence",
+        "confused"
+      ],
+      "bucket": "ux",
+      "stateChars": 6832,
+      "inputTokens": 3798,
+      "visibleTextChars": 197,
+      "seenTextChars": 0,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr"
+    },
+    {
+      "step": 8,
+      "timestamp": 1789927400085,
+      "url": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr",
+      "stateHash": "281919ed3c49cf171e99dd57ee3d9a754ea03cf1",
+      "viewHash": "06e004007933ac1ce114ab4f28a8bdecaea065f0",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elementsCount": 54,
+      "droppedElements": 0,
+      "options": [
+        {
+          "id": "el_01",
+          "kind": "element",
+          "description": "button \"Dopomo home\" (visible)",
+          "elementId": "el_01"
+        },
+        {
+          "id": "el_02",
+          "kind": "element",
+          "description": "button \"Language: RU\" (visible)",
+          "elementId": "el_02"
+        },
+        {
+          "id": "el_03",
+          "kind": "element",
+          "description": "button \"Открыть меню\" (visible)",
+          "elementId": "el_03"
+        },
+        {
+          "id": "el_27",
+          "kind": "element",
+          "description": "link \"Квалификация CUKR\" -> /ru/pathfinder?step=tree (below fold)",
+          "elementId": "el_27"
+        },
+        {
+          "id": "el_28",
+          "kind": "element",
+          "description": "link \"Подать заявление на CUKR\" -> /ru/zayavlenie-na-kartu-cukr (below fold)",
+          "elementId": "el_28"
+        },
+        {
+          "id": "el_29",
+          "kind": "element",
+          "description": "link \"Фото для заявления CUKR\" -> /ru/foto-dlya-zayavleniya-cukr-i-na-kartu-pobytu (below fold)",
+          "elementId": "el_29"
+        },
+        {
+          "id": "el_30",
+          "kind": "element",
+          "description": "link \"Путь CUKR\" -> /ru/karta-pobytu-cukr (below fold)",
+          "elementId": "el_30"
+        },
+        {
+          "id": "el_31",
+          "kind": "element",
+          "description": "link \"Путь CUKR для ребёнка\" -> /ru/karta-pobytu-cukr-dlya-rebenka (below fold)",
+          "elementId": "el_31"
+        },
+        {
+          "id": "el_32",
+          "kind": "element",
+          "description": "link \"Оплаты за заявления\" -> /ru/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_32"
+        },
+        {
+          "id": "el_33",
+          "kind": "element",
+          "description": "link \"Чат\" -> /ru/chat (below fold)",
+          "elementId": "el_33"
+        },
+        {
+          "id": "el_34",
+          "kind": "element",
+          "description": "link \"Долгосрочный резидент ЕС\" -> /ru/dolgosrochnyy-rezident-es (below fold)",
+          "elementId": "el_34"
+        },
+        {
+          "id": "el_35",
+          "kind": "element",
+          "description": "link \"Заявление о выдаче/обмене карты\" -> /ru/dokumenty/karta-pobytu-vydacha-obmen (below fold)",
+          "elementId": "el_35"
+        },
+        {
+          "id": "el_36",
+          "kind": "element",
+          "description": "link \"Ваш путь в Польше\" -> /ru/pomoshch-v-legalizatsii-pobytu-v-polshe (below fold)",
+          "elementId": "el_36"
+        },
+        {
+          "id": "el_37",
+          "kind": "element",
+          "description": "link \"Другие инструменты\" -> /ru/instrumenty-legalizatsii/bumazhnye-zayavleniya-oplaty-foto (below fold)",
+          "elementId": "el_37"
+        },
+        {
+          "id": "el_38",
+          "kind": "element",
+          "description": "link \"Запись в ужонд: карта побыту\" -> /ru/zapis-na-vizit-podacha-zayavleniya-poluchenie-karty-pobytu (below fold)",
+          "elementId": "el_38"
+        },
+        {
+          "id": "el_39",
+          "kind": "element",
+          "description": "link \"Банковский счёт без карты побыту\" -> /ru/bankovskiy-schet-dlya-inostrantsev (below fold)",
+          "elementId": "el_39"
+        },
+        {
+          "id": "el_40",
+          "kind": "element",
+          "description": "link \"Profil Zaufany через банк\" -> /ru/profil-zaufany-cherez-bank (below fold)",
+          "elementId": "el_40"
+        },
+        {
+          "id": "el_41",
+          "kind": "element",
+          "description": "link \"Заявление на временное пребывание\" -> /ru/karta-pobytu-po-rabote (below fold)",
+          "elementId": "el_41"
+        },
+        {
+          "id": "el_42",
+          "kind": "element",
+          "description": "link \"О нас\" -> /ru/about (below fold)",
+          "elementId": "el_42"
+        },
+        {
+          "id": "el_43",
+          "kind": "element",
+          "description": "link \"Сотрудничество\" -> /ru/sotrudnichestvo (below fold)",
+          "elementId": "el_43"
+        },
+        {
+          "id": "el_44",
+          "kind": "element",
+          "description": "link \"Блог\" -> /ru/blog (below fold)",
+          "elementId": "el_44"
+        },
+        {
+          "id": "el_45",
+          "kind": "element",
+          "description": "link \"Контакт\" -> /ru/contact (below fold)",
+          "elementId": "el_45"
+        },
+        {
+          "id": "el_46",
+          "kind": "element",
+          "description": "link \"Работа\" -> /ru/kariera (below fold)",
+          "elementId": "el_46"
+        },
+        {
+          "id": "el_47",
+          "kind": "element",
+          "description": "link \"Конфиденциальность\" -> /ru/privacy (below fold)",
+          "elementId": "el_47"
+        },
+        {
+          "id": "el_48",
+          "kind": "element",
+          "description": "link \"Условия\" -> /ru/terms (below fold)",
+          "elementId": "el_48"
+        },
+        {
+          "id": "el_49",
+          "kind": "element",
+          "description": "link \"Cookies\" -> /ru/cookies (below fold)",
+          "elementId": "el_49"
+        },
+        {
+          "id": "el_50",
+          "kind": "element",
+          "description": "link \"Polski\" -> /pl/wniosek-o-karte-cukr (below fold)",
+          "elementId": "el_50"
+        },
+        {
+          "id": "el_51",
+          "kind": "element",
+          "description": "link \"Українська\" -> /uk/zayava-na-kartu-cukr (below fold)",
+          "elementId": "el_51"
+        },
+        {
+          "id": "el_52",
+          "kind": "element",
+          "description": "link \"English\" -> /en/cukr-card-application (below fold)",
+          "elementId": "el_52"
+        },
+        {
+          "id": "el_04",
+          "kind": "element",
+          "description": "button \"Проверьте, можете ли подать →\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Дальше Dopomo работает как эксперт по CUKR рядом с вами — от фото до подачи в MOS: каждый раздел, приложение и оплата пр\")",
+          "elementId": "el_04"
+        },
+        {
+          "id": "el_05",
+          "kind": "element",
+          "description": "button \"Посмотрите, как это работает ↓\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Бесплатная проверка за 2 минуты · помощь с заявлением 199 zł — разово.\")",
+          "elementId": "el_05"
+        },
+        {
+          "id": "el_06",
+          "kind": "element",
+          "description": "button \"Шаг 1: Список документов для вашего дела\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_06"
+        },
+        {
+          "id": "el_07",
+          "kind": "element",
+          "description": "button \"Шаг 2: Каждое поле без угадывания\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_07"
+        },
+        {
+          "id": "el_08",
+          "kind": "element",
+          "description": "button \"Шаг 3: Биометрическое фото в цене\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_08"
+        },
+        {
+          "id": "el_09",
+          "kind": "element",
+          "description": "button \"Шаг 4: Оплаты без ошибок\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_09"
+        },
+        {
+          "id": "el_10",
+          "kind": "element",
+          "description": "button \"Шаг 5: Раздел о судимости без стресса\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_10"
+        },
+        {
+          "id": "el_11",
+          "kind": "element",
+          "description": "button \"Шаг 6: Проверка перед подачей\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_11"
+        },
+        {
+          "id": "el_12",
+          "kind": "element",
+          "description": "button \"Шаг 7: MOS вместе + ассистент AI\" (visible; under \"Сначала проверьте, можете ли подать на CUKR. Бесплатно, за 2 минуты.\"; near \"Ваши документы и приложения\")",
+          "elementId": "el_12"
+        },
+        {
+          "id": "el_13",
+          "kind": "element",
+          "description": "link \"инструкция по карте побыту CUKR\" -> /ru/blog/karta-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_13"
+        },
+        {
+          "id": "el_14",
+          "kind": "element",
+          "description": "link \"калькуляторе оплат\" -> /ru/oplata-za-kartu-pobytu-cukr-2026 (below fold)",
+          "elementId": "el_14"
+        },
+        {
+          "id": "el_15",
+          "kind": "element",
+          "description": "link \"хронология карты CUKR\" -> /ru/karta-pobytu-cukr (below fold)",
+          "elementId": "el_15"
+        },
+        {
+          "id": "el_16",
+          "kind": "element",
+          "description": "button \"Что такое виртуальный ассистент?+\" (below fold)",
+          "elementId": "el_16"
+        },
+        {
+          "id": "el_18",
+          "kind": "element",
+          "description": "button \"Подаёт ли Dopomo заявление за меня?+\" (below fold)",
+          "elementId": "el_18"
+        },
+        {
+          "id": "el_17",
+          "kind": "element",
+          "description": "link \"легализации пребывания в Польше\" -> /ru/pomoshch-v-legalizatsii-pobytu-v-polshe (below fold)",
+          "elementId": "el_17"
+        },
+        {
+          "id": "el_19",
+          "kind": "element",
+          "description": "button \"Нужен ли мне Profil Zaufany?+\" (below fold)",
+          "elementId": "el_19"
+        },
+        {
+          "id": "el_20",
+          "kind": "element",
+          "description": "button \"Какие документы мне нужно подготовить?+\" (below fold)",
+          "elementId": "el_20"
+        },
+        {
+          "id": "el_22",
+          "kind": "element",
+          "description": "button \"Почему 199 zł, если подача в MOS бесплатна?+\" (below fold)",
+          "elementId": "el_22"
+        },
+        {
+          "id": "el_21",
+          "kind": "element",
+          "description": "link \"для заявления на ребёнка\" -> /ru/karta-pobytu-cukr-dlya-rebenka (below fold)",
+          "elementId": "el_21"
+        },
+        {
+          "id": "el_23",
+          "kind": "element",
+          "description": "button \"Что, если мои данные не совпадают с реестром?+\" (below fold)",
+          "elementId": "el_23"
+        },
+        {
+          "id": "el_24",
+          "kind": "element",
+          "description": "button \"Храните ли вы мои данные о судимости?+\" (below fold)",
+          "elementId": "el_24"
+        },
+        {
+          "id": "el_25",
+          "kind": "element",
+          "description": "button \"Я плачу только один раз?+\" (below fold)",
+          "elementId": "el_25"
+        },
+        {
+          "id": "el_53",
+          "kind": "element",
+          "description": "button \"Настройки cookie\" (below fold)",
+          "elementId": "el_53"
+        },
+        {
+          "id": "scroll_down",
+          "kind": "scroll_down",
+          "description": "scroll down to see more"
+        },
+        {
+          "id": "back",
+          "kind": "back",
+          "description": "go back to the previous page"
+        },
+        {
+          "id": "switch_language:en",
+          "kind": "switch_language",
+          "description": "switch the site language to en (\"English\")",
+          "elementId": "el_52",
+          "languageCode": "en"
+        },
+        {
+          "id": "leave",
+          "kind": "leave",
+          "description": "leave this site"
+        }
+      ],
+      "distribution": {
+        "el_27": 0.040404040404040394,
+        "el_04": 0.2323232323232323,
+        "el_06": 0.030303030303030297,
+        "back": 0.1515151515151515,
+        "scroll_down": 0.12121212121212119,
+        "leave": 0.3535353535353535,
+        "el_22": 0.030303030303030297,
+        "el_05": 0.040404040404040394
+      },
+      "pruned": {
+        "leave": 0.3763440860215053,
+        "el_04": 0.24731182795698922,
+        "back": 0.16129032258064516,
+        "scroll_down": 0.1290322580645161,
+        "el_05": 0.04301075268817203,
+        "el_27": 0.04301075268817203
+      },
+      "sampled": "leave",
+      "sampledName": "leave",
+      "argmax": "leave",
+      "exploration": false,
+      "confidence": 0.3535353535353535,
+      "entropy": 2.4808766753372486,
+      "goalMet": 0.2,
+      "confusion": 1.87,
+      "outcome": {
+        "urlChanged": false,
+        "stateChanged": false,
+        "consoleErrors": [],
+        "failedRequests": [],
+        "validationMessages": [],
+        "durationMs": 0
+      },
+      "timing": {
+        "extractMs": 61,
+        "decideMs": 249,
+        "decideRetryMs": 0,
+        "executeMs": 0,
+        "settleMs": 0
+      },
+      "flags": [
+        "high-entropy",
+        "low-confidence",
+        "backtrack",
+        "left"
+      ],
+      "bucket": "ux",
+      "stateChars": 8210,
+      "inputTokens": 4198,
+      "visibleTextChars": 584,
+      "seenTextChars": 0,
+      "scrollOnly": false,
+      "nextUrl": "https://dopomo.pl/ru/zayavlenie-na-kartu-cukr"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Slow wizard step</title>
+  </head>
+  <body>
+    <main>
+      <h1>Slow wizard step</h1>
+      <p id="question">Do you hold a valid passport?</p>
+      <!-- The transition a framework wizard really performs: the answer is accepted at once,
+           the next screen lands seconds later, and the button is re-rendered the whole time.
+           A 1.5s settle sees neither the navigation nor a changed page. -->
+      <div id="slot"></div>
+      <script>
+        const params = new URLSearchParams(location.search);
+        const delay = Number(params.get('delay') || 2500);
+        // `mousedown` is the shape that loses the step: the action fires on the press, the
+        // node goes away before the release, and Playwright reports a detached element for a
+        // click that did in fact happen.
+        const trigger = params.get('trigger') || 'click';
+        let armed = true;
+        let timer = 0;
+        function advance() {
+          if (!armed) return;
+          armed = false;
+          if (trigger === 'mousedown') {
+            clearInterval(timer);
+            document.getElementById('slot').replaceChildren();
+          }
+          setTimeout(() => {
+            location.href = 'slow-wizard-done.html';
+          }, delay);
+        }
+        function render() {
+          const slot = document.getElementById('slot');
+          slot.replaceChildren();
+          const btn = document.createElement('button');
+          btn.id = 'next';
+          btn.textContent = 'Next';
+          btn.addEventListener(trigger, advance);
+          slot.appendChild(btn);
+        }
+        render();
+        timer = setInterval(render, 150);
+      </script>
+    </main>
+  </body>
+</html>
