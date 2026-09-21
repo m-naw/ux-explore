@@ -120,10 +120,12 @@ function outcomeLabel(summary: Summary | undefined, last: Row | undefined): 'GOA
   return 'GOAL NOT MET';
 }
 
-/** Findings count, or null when the report call failed (a zero would then be a lie). */
+/** Findings count, or null when the report call failed or was skipped (a zero would then be a lie). */
 function readFindingsCount(runDir: string): number | null {
   const issues = join(runDir, 'tool-issues.json');
   if (existsSync(issues) && /"report-failed"/.test(readFileSync(issues, 'utf8'))) return null;
+  const narrative = join(runDir, 'narrative.md');
+  if (!existsSync(narrative) || !readFileSync(narrative, 'utf8').trim()) return null; // --no-report
   for (const name of ['findings.yaml', 'findings.json']) {
     const p = join(runDir, name);
     if (!existsSync(p)) continue;

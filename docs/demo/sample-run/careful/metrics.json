@@ -1,0 +1,78 @@
+{
+  "runIds": [
+    "2026-09-21T16-56-19-7jyu"
+  ],
+  "divergenceRatio": null,
+  "explorationRate": 0.18181818181818182,
+  "completionRateByExploration": {
+    "explored": 0,
+    "exploited": null
+  },
+  "perUrl": [
+    {
+      "url": "https://dopomo.pl/en",
+      "visits": 2,
+      "meanEntropy": 2.5526483029247657,
+      "meanConfusion": 2.3099999999999996,
+      "exits": 0,
+      "leaveRate": 0,
+      "backtracks": 0,
+      "topSampled": [
+        {
+          "name": "A CUKR card for you or your childUkrainian citizens with PESEL UKR status",
+          "meanProbability": 0.3152173913043479
+        },
+        {
+          "name": "CUKR qualification",
+          "meanProbability": 0.14444444444444446
+        }
+      ]
+    },
+    {
+      "url": "https://dopomo.pl/en/pathfinder?step=positive",
+      "visits": 4,
+      "meanEntropy": 1.8286821423862656,
+      "meanConfusion": 2.3375000000000004,
+      "exits": 1,
+      "leaveRate": 0,
+      "backtracks": 1,
+      "topSampled": [
+        {
+          "name": "Email address",
+          "meanProbability": 0.5786849020544672
+        }
+      ]
+    },
+    {
+      "url": "https://dopomo.pl/en/pathfinder?step=tree",
+      "visits": 15,
+      "meanEntropy": 0.8809994422566324,
+      "meanConfusion": 2.102,
+      "exits": 0,
+      "leaveRate": 0,
+      "backtracks": 1,
+      "topSampled": [
+        {
+          "name": "🇺🇦Ukrainian citizenship",
+          "meanProbability": 1
+        },
+        {
+          "name": "Next →",
+          "meanProbability": 0.898030045351474
+        },
+        {
+          "name": "Yes, on 4 June 2025 I had an active PESEL UKR",
+          "meanProbability": 0.8555555555555555
+        }
+      ]
+    }
+  ],
+  "leaveRateByPersona": {
+    "Olena": 0
+  },
+  "charsPerToken": 2.7437642499510018,
+  "reportValidation": {
+    "droppedFindings": 0,
+    "downgradedFindings": 0
+  }
+}

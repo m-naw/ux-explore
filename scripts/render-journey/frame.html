@@ -42,6 +42,11 @@
     overflow: hidden;
   }
   #shot img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  #device { display: contents; }
+  /* Portrait screenshot: dark phone bezel filling the column height, panel on the right unchanged. */
+  body.phone #shot { background: transparent; border: none; }
+  body.phone #device { display: block; height: 100%; padding: 12px; background: #1b1e27; border: 1px solid #3a4157; border-radius: 38px; box-shadow: 0 0 0 2px #0a0b0f, 0 18px 40px rgba(0,0,0,.6); }
+  body.phone #shot img { width: auto; height: 100%; border-radius: 26px; background: #000; }
   #card {
     flex: 1 1 auto;
     min-width: 0;
@@ -137,10 +142,41 @@
   #verdict .reason { color: var(--muted); font-size: 16px; }
   #verdict .stats { margin-top: 36px; display: flex; justify-content: center; gap: 48px; font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
   #verdict .stats b { display: block; color: var(--text); font-size: 34px; font-weight: 700; }
+
+  /* Comparison card: two persona columns side by side (compare.ts). */
+  body.compare { flex-direction: column; gap: 14px; }
+  body.compare #shot, body.compare #card { display: none; }
+  #compare { display: none; flex: 1 1 auto; flex-direction: column; min-height: 0; }
+  body.compare #compare { display: flex; }
+  #compare .title { font-size: 30px; font-weight: 800; letter-spacing: -.01em; }
+  #compare .sub { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  #compare .cols { display: flex; gap: 20px; flex: 1 1 auto; margin-top: 14px; min-height: 0; }
+  #compare .col { flex: 1 1 0; min-width: 0; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; }
+  #compare .col .who { font-size: 22px; }
+  #compare .col .persona { white-space: normal; font-size: 14px; margin-top: 4px; min-height: 2.7em; }
+  #compare .col .big { font-size: 44px; font-weight: 800; letter-spacing: .02em; margin: 22px 0 2px; }
+  #compare .big.met { color: var(--good); }
+  #compare .big.notmet { color: var(--bad); }
+  #compare .big.gaveup { color: var(--accent); }
+  #compare .big.stuck { color: var(--argmax); }
+  #compare .reason { color: var(--muted); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #compare .stats { margin-top: 26px; display: flex; gap: 32px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  #compare .stats b { display: block; color: var(--text); font-size: 30px; font-weight: 700; }
+  #compare .stats .expl b { color: var(--accent); }
+  #compare .stats .conf b { color: var(--bad); }
+  #compare .strip { margin-top: auto; }
+  #compare .bars { display: flex; align-items: flex-end; gap: 3px; height: 170px; margin-top: 6px; }
+  #compare .bars div { flex: 1 1 0; min-height: 2px; background: var(--bar); border-radius: 2px 2px 0 0; }
+  #compare .bars div.expl { background: var(--accent); }
+  #compare .bars div.conf { background: var(--bad); }
+  #compare .legend { display: flex; gap: 14px; font-size: 11px; color: var(--faint); margin-top: 6px; }
+  #compare .legend i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 4px; vertical-align: -1px; background: var(--bar); }
+  #compare .legend i.expl { background: var(--accent); }
+  #compare .legend i.conf { background: var(--bad); }
 </style>
 </head>
 <body>
-  <div id="shot"><img id="img" alt="" /></div>
+  <div id="shot"><div id="device"><img id="img" alt="" /></div></div>
   <div id="card">
     <header>
       <div class="top"><div class="who" id="who"></div><div class="step" id="step"></div></div>
@@ -152,6 +188,7 @@
     <footer id="footer"></footer>
   </div>
   <div id="verdict"></div>
+  <div id="compare"></div>
 
 <script>
   const MAX_ROWS = 7;
@@ -193,8 +230,11 @@
     img.onload = () => {
       // Fit the pane to the screenshot's aspect (portrait phone shots would otherwise waste half the pane).
       const shot = document.getElementById('shot');
-      const h = shot.clientHeight;
-      const want = h * (img.naturalWidth / img.naturalHeight) + 2;
+      const portrait = img.naturalHeight > img.naturalWidth;
+      document.body.classList.toggle('phone', portrait);
+      const bezel = portrait ? 26 : 0; // 12px padding + 1px border each side
+      const h = shot.clientHeight - bezel;
+      const want = h * (img.naturalWidth / img.naturalHeight) + 2 + bezel;
       shot.style.flexBasis = Math.min(want, 0.55 * 1240) + 'px';
       shot.style.flexGrow = '0';
     };
@@ -294,6 +334,34 @@
       `<div class="big ${cls}">${esc(m.label)}</div>` +
       (m.reason ? `<div class="reason">${esc(m.reason)}</div>` : '') +
       `<div class="stats">${stats.join('')}</div>`;
+    return true;
+  };
+
+  // Comparison card: { title, goal, runs: [{ persona, personaLine, label, reason, steps, exploration, confusion, entropy: [], expl: [], conf: [] }, ...] }.
+  window.renderCompare = function renderCompare(m) {
+    document.body.classList.add('compare');
+    const maxE = Math.max(0.01, ...m.runs.flatMap(r => r.entropy));
+    const cols = m.runs.map(r => {
+      const cls = { 'GOAL MET': 'met', 'GOAL NOT MET': 'notmet', 'GAVE UP': 'gaveup', 'STUCK': 'stuck' }[r.label] || 'notmet';
+      const bars = r.entropy.map((e, i) => {
+        const k = r.conf.includes(i + 1) ? ' class="conf"' : r.expl.includes(i + 1) ? ' class="expl"' : '';
+        return `<div${k} style="height:${Math.max(3, (e / maxE) * 100).toFixed(1)}%"></div>`;
+      }).join('');
+      return `<div class="col">` +
+        `<div class="who">${esc(r.persona)}</div><div class="persona">${esc(r.personaLine || '')}</div>` +
+        `<div class="big ${cls}">${esc(r.label)}</div>` +
+        (r.reason ? `<div class="reason">${esc(r.reason)}</div>` : '') +
+        `<div class="stats"><div><b>${r.steps}</b>steps taken</div>` +
+        `<div class="expl"><b>${r.exploration}</b>exploration moves</div>` +
+        `<div class="conf"><b>${r.confusion}</b>confusion steps</div></div>` +
+        `<div class="strip"><div class="label-h">entropy per step</div><div class="bars">${bars}</div>` +
+        `<div class="legend"><span><i></i>step</span><span><i class="expl"></i>sampled ≠ argmax</span><span><i class="conf"></i>confused</span></div></div>` +
+        `</div>`;
+    }).join('');
+    document.getElementById('compare').innerHTML =
+      `<div class="title">${esc(m.title)}</div>` +
+      (m.goal ? `<div class="sub">Goal: <b>${esc(m.goal)}</b></div>` : '') +
+      `<div class="cols">${cols}</div>`;
     return true;
   };
 </script>

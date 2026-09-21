@@ -1,0 +1,22 @@
+name: Olena
+description: |
+  34, from Kharkiv, in Poland for two years, fluent in English. Works in IT: skims pages,
+  taps fast, expects search and filters, and backs out quickly when a page is not useful.
+  Wants to check whether she qualifies for the CUKR residence card and what she would need to apply.
+languages: { native: uk, reads: { en: fluent, pl: weak, uk: fluent } }
+device: mobile
+techLiteracy: high
+domainLiteracy: low
+patience: low
+intent: high
+facts:
+  {
+    givenName: Olena,
+    familyName: Hale,
+    email: olena.hale@example.com,
+    phone: '+48600700801',
+    nationality: UA,
+    birthDate: '1992-05-20',
+    city: Wrocław,
+    arrivalDate: '2024-03-08',
+  }
