@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Consent choice</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      #veil { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 50; }
+      #dialog { position: fixed; inset: 10% 20%; background: #fff; z-index: 51; padding: 24px; }
+    </style>
+  </head>
+  <body>
+    <main><h1>Plans</h1><button id="cta" onclick="document.title='cta-clicked'">Choose plan</button></main>
+    <div id="veil"></div>
+    <div id="dialog" role="dialog" aria-modal="true" aria-label="Cookies">
+      <p>We use cookies.</p>
+      <button id="accept" onclick="document.body.dataset.dismissed='accept'; document.title='accepted'; document.getElementById('veil').remove(); document.getElementById('dialog').remove();">
+        Accept all
+      </button>
+      <button id="reject" onclick="document.body.dataset.dismissed='reject'">Reject</button>
+      <button id="manage">Manage preferences</button>
+    </div>
+  </body>
+</html>

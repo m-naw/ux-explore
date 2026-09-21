@@ -4,7 +4,7 @@
 import type { ElementHandle, Page } from 'playwright';
 import type { Element as UxElement, Option, Outcome, OverlayDismissal } from './types';
 import { extract, extractWithRetry, type Extraction } from './extract';
-import { dismissOverlay, isOverlayOccluder, type Rect } from './overlay';
+import { dismissOverlay, isOverlayOccluder, overlayDismissPlan, type Rect } from './overlay';
 import { hasStateChanged } from './state-diff';
 import { NAME_SHIM } from './name-shim';
 import { timer } from './timing';
@@ -447,6 +447,11 @@ interface ClickState {
   overlayBlocked: boolean;
   /** The last dismissal this step attempted, recorded whether or not it worked. */
   overlayDismissal?: OverlayDismissal;
+  /**
+   * The overlay has its own choices and no plain close control. The click was not attempted
+   * and consent was not accepted; the next extraction offers those choices.
+   */
+  overlayDeferred: boolean;
   /** Re-extractions taken while clearing an overlay. The caller disposes them. */
   scratches: Extraction[];
 }
@@ -461,6 +466,7 @@ async function clickWithPreChecks(
   // Each attempt starts from a clean sheet: a retry on a fresh handle must not inherit the
   // verdict of the attempt on the stale one.
   state.overlayBlocked = false;
+  state.overlayDeferred = false;
   delete state.overlayDismissal;
 
   await handle.scrollIntoViewIfNeeded({ timeout: nextTimeout() });
@@ -471,8 +477,15 @@ async function clickWithPreChecks(
 
   if (!occlusion.clear && occlusion.pinned) {
     if (occlusion.pinnedIsOverlay) {
+      const plan = overlayDismissPlan(ctx.extraction.state.elements);
+      if (plan === 'defer') {
+        state.overlayBlocked = true;
+        state.overlayDeferred = true;
+        return;
+      }
       // dismissOverlay() counts Escape as a dismissal, so it is only ever called once an
       // overlay was actually detected on the occluder, and the re-check is what decides.
+      // `defer` already returned: a consent dialog with no close control is not Escaped away.
       state.overlayDismissal = await dismissOverlay(ctx.page, ctx.extraction);
       // Dismissing an overlay usually unlocks the page, and unlocking it can resize the
       // viewport (a scroll bar comes back). The re-check measures against the viewport the
@@ -751,7 +764,7 @@ export async function execute(ctx: ExecuteContext): Promise<ExecuteResult> {
   let scrollChangedY = false;
   let valueChanged = false;
   // Filled in as the click progresses, so a throw cannot erase what the pre-checks found.
-  const clickState: ClickState = { overlayBlocked: false, scratches: [] };
+  const clickState: ClickState = { overlayBlocked: false, overlayDeferred: false, scratches: [] };
 
   const scrollYBefore = before.meta.scrollY;
   const targetId = option.elementId ?? option.id;
@@ -805,6 +818,7 @@ export async function execute(ctx: ExecuteContext): Promise<ExecuteResult> {
         // is scrolled out of the way and an overlay that survives dismissal is reported as
         // `overlayBlocked` rather than as a bare timeout.
         await clickWithPreChecks(ctx, handle, clickState, nextClickTimeout);
+        if (clickState.overlayDeferred) break;
         if (isCombobox) {
           // A combobox needs real keystrokes to open its suggestion list; fill() would not.
           await handle.fill('', { timeout: nextClickTimeout() });

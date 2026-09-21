@@ -130,7 +130,7 @@ describeBrowser('extract (main frame)', () => {
     const accept = before.state.elements.find((e) => e.name === 'Accept all')!;
     expect(accept.inAriaLive).toBe(true);
     expect(accept.overlay).toBe(true);
-    expect(accept.dismissesOverlay).toBe(true);
+    expect(accept.dismissesOverlay).toBe(false);
 
     await page.click('#accept');
     const after = await extract(page);

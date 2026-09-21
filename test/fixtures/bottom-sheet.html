@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Bottom sheet</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      #sheet {
+        position: fixed; left: 0; right: 0; bottom: 0; height: 50%;
+        background: #fff; z-index: 20; padding: 16px;
+      }
+      #under { margin-top: 520px; }
+    </style>
+  </head>
+  <body>
+    <button id="help">Help</button>
+    <div id="under">
+      <label><input type="radio" name="q" value="yes" /> Yes</label>
+      <label><input type="radio" name="q" value="no" /> No</label>
+    </div>
+    <div id="sheet" role="dialog" aria-modal="true" aria-label="Chat">
+      <button id="close" aria-label="Close">Close</button>
+      <button id="send">Send</button>
+    </div>
+  </body>
+</html>

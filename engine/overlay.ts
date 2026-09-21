@@ -8,28 +8,40 @@ import { CLICK_TIMEOUT_MS, escapeRegExp, originOf } from './util';
 
 /**
  * Dismiss keywords, most specific first.
- * They are stems: matched at a word start, with no trailing boundary, so `akceptuj`
- * matches `Akceptuję` while `ok` cannot match the `ok` buried inside `cookie`.
+ * They are stems: matched at a word start, with no trailing boundary, so `zamknij`
+ * matches `Zamknij` while `ok` cannot match the `ok` buried inside `cookie`.
+ *
+ * Accept / agree (and their translations) are consent choices, not dismissals. Clicking
+ * them silently records a decision the persona never made. They live in `CONSENT_KEYWORDS`.
  */
 export const DISMISS_KEYWORDS = [
-  'accept',
-  'agree',
   'ok',
   'close',
+  'dismiss',
+  'skip',
   'got it',
-  'akceptuj',
-  'zgadzam',
   'zamknij',
   'rozumiem',
-  'прийняти',
-  'погоджуюсь',
   'закрити',
   'зрозуміло',
-  'принять',
-  'согласен',
   'закрыть',
   'понятно',
   '×',
+] as const;
+
+/**
+ * Consent choices. A banner that says one of these is an overlay the persona must answer;
+ * none of them is a control `dismissOverlay` may click on its own.
+ */
+export const CONSENT_KEYWORDS = [
+  'accept',
+  'agree',
+  'akceptuj',
+  'zgadzam',
+  'прийняти',
+  'погоджуюсь',
+  'принять',
+  'согласен',
 ] as const;
 
 /** Fraction of the top-level viewport a pinned ancestor must cover to be an overlay on area alone. */
@@ -39,14 +51,36 @@ const LETTER_STEMS = DISMISS_KEYWORDS.filter((k) => /\p{L}/u.test(k));
 const SYMBOLS = DISMISS_KEYWORDS.filter((k) => !/\p{L}/u.test(k));
 
 const STEM_PATTERN = `(?<!\\p{L})(?:${LETTER_STEMS.map(escapeRegExp).join('|')})`;
+const CONSENT_PATTERN = `(?<!\\p{L})(?:${CONSENT_KEYWORDS.map(escapeRegExp).join('|')})`;
 
 /** No `g` flag, so the regex carries no `lastIndex` state between calls and can be shared. */
 const STEM_RE = new RegExp(STEM_PATTERN, 'iu');
+const CONSENT_RE = new RegExp(CONSENT_PATTERN, 'iu');
 
 export function isDismissName(name: string): boolean {
   const lower = name.toLowerCase();
   if (SYMBOLS.some((s) => lower.includes(s))) return true;
   return STEM_RE.test(lower);
+}
+
+/** True when `text` names a consent choice (Accept / Agree and translations), not a close control. */
+export function isConsentText(text: string): boolean {
+  return CONSENT_RE.test(text.toLowerCase());
+}
+
+export type OverlayDismissPlan = 'control' | 'defer' | 'escape';
+
+/**
+ * What to do when a click target sits under an overlay.
+ * A plain close/dismiss/skip control may be clicked. Consent choices (Accept / Reject / Manage)
+ * must be left for the persona. With neither, Escape is the only remaining attempt.
+ */
+export function overlayDismissPlan(
+  elements: Array<{ overlay: boolean; dismissesOverlay: boolean }>,
+): OverlayDismissPlan {
+  if (elements.some((e) => e.dismissesOverlay)) return 'control';
+  if (elements.some((e) => e.overlay && !e.dismissesOverlay)) return 'defer';
+  return 'escape';
 }
 
 /** A viewport-relative box, in the coordinates of the frame that measured it. */
@@ -97,12 +131,13 @@ export function isOverlayOccluder(input: OccluderJudgement): boolean {
     );
     if ((width * height) / topArea > OVERLAY_AREA_RATIO) return true;
   }
-  return isDismissName(text);
+  return isDismissName(text) || isConsentText(text);
 }
 
 interface AnnotateArgs {
   stems: string;
   symbols: string[];
+  consentStems: string;
   ratio: number;
   topWidth: number;
   topHeight: number;
@@ -110,23 +145,46 @@ interface AnnotateArgs {
   offsetY: number;
 }
 
+interface AnnotateFlag {
+  overlay: boolean;
+  /** Centre is covered by an open overlay; the element must not be offered. */
+  covered: boolean;
+}
+
 /**
  * Browser-side annotator. Serialized by Playwright, so it may not close over Node scope.
- * Returns one `overlay` boolean per element of `window.__uxExtract.elements`, in that order.
+ * Returns one `{overlay, covered}` flag per element of `window.__uxExtract.elements`, in that order.
  *
  * Every rect is translated by the frame's on-screen offset and judged against the top-level
  * viewport, so a panel that fills a small iframe is not mistaken for a full-page overlay.
+ *
+ * `covered` is an elementFromPoint check: the topmost hit is neither the element nor a
+ * descendant, and it lies in a dialog / aria-modal or in a fixed/sticky layer big enough
+ * (or consent/dismiss-worded enough) to be an overlay. Page chrome under that threshold
+ * stays, so a sticky header can still be scrolled clear of at click time.
  */
 /* c8 ignore start -- runs inside the browser */
-function annotateInFrame(arg: AnnotateArgs): boolean[] {
+function annotateInFrame(arg: AnnotateArgs): AnnotateFlag[] {
   const stash = (window as unknown as { __uxExtract?: { elements: Element[] } }).__uxExtract;
   const elements = stash?.elements ?? [];
   const stemRe = new RegExp(arg.stems, 'iu');
+  const consentRe = new RegExp(arg.consentStems, 'iu');
   const topArea = arg.topWidth * arg.topHeight;
 
   function hasDismissText(value: string): boolean {
     const lower = value.toLowerCase();
     return arg.symbols.some((s) => lower.includes(s)) || stemRe.test(lower);
+  }
+
+  function hasConsentText(value: string): boolean {
+    return consentRe.test(value.toLowerCase());
+  }
+
+  function layerText(node: Element): string {
+    const labels = [node, ...Array.from(node.querySelectorAll('[aria-label]'))]
+      .map((n) => n.getAttribute('aria-label') || '')
+      .join(' ');
+    return `${node.textContent || ''} ${labels}`;
   }
 
   // Frame-local viewport coordinates shifted into the top page's viewport coordinates.
@@ -165,10 +223,8 @@ function annotateInFrame(arg: AnnotateArgs): boolean[] {
     let overlay = topArea > 0 && (width * height) / topArea > arg.ratio;
 
     if (!overlay) {
-      const labels = [pinned, ...Array.from(pinned.querySelectorAll('[aria-label]'))]
-        .map((n) => n.getAttribute('aria-label') || '')
-        .join(' ');
-      if (hasDismissText(`${pinned.textContent || ''} ${labels}`)) {
+      const text = layerText(pinned);
+      if (hasDismissText(text) || hasConsentText(text)) {
         // The "interactive element" an overlay may be covering is exactly what
         // the extractor collected for this frame: the same roles, already filtered to the visible
         // ones and already walked through open shadow roots, which querySelectorAll cannot reach.
@@ -193,9 +249,64 @@ function annotateInFrame(arg: AnnotateArgs): boolean[] {
     return overlay;
   }
 
+  function ownsHit(el: Element, hit: Element): boolean {
+    if (hit === el || el.contains(hit)) return true;
+    let node: Node | null = hit;
+    while (node) {
+      if (node === el) return true;
+      const root = node.getRootNode();
+      if (root instanceof ShadowRoot) node = root.host;
+      else return false;
+    }
+    return false;
+  }
+
+  function overlayContainerOf(node: Element): Element | null {
+    let current: Node | null = node;
+    while (current) {
+      if (current instanceof Element) {
+        const role = (current.getAttribute('role') || '').toLowerCase();
+        if (
+          current.tagName === 'DIALOG' ||
+          role === 'dialog' ||
+          role === 'alertdialog' ||
+          current.getAttribute('aria-modal') === 'true'
+        ) {
+          return current;
+        }
+        const position = getComputedStyle(current).position;
+        if (position === 'fixed' || position === 'sticky') {
+          const box = boxOf(current);
+          const width = Math.max(0, Math.min(box.right, arg.topWidth) - Math.max(box.left, 0));
+          const height = Math.max(0, Math.min(box.bottom, arg.topHeight) - Math.max(box.top, 0));
+          const large = topArea > 0 && (width * height) / topArea > arg.ratio;
+          const text = layerText(current);
+          if (large || hasDismissText(text) || hasConsentText(text)) return current;
+        }
+      }
+      const parent: Node | null = current.parentNode;
+      current = parent instanceof ShadowRoot ? parent.host : parent;
+    }
+    return null;
+  }
+
+  function coveredByOverlay(el: Element): boolean {
+    const rect = el.getBoundingClientRect();
+    if (rect.width <= 0 || rect.height <= 0) return false;
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    if (cx < 0 || cy < 0 || cx >= window.innerWidth || cy >= window.innerHeight) return false;
+    const hit = document.elementFromPoint(cx, cy);
+    if (!hit || ownsHit(el, hit)) return false;
+    return overlayContainerOf(hit) !== null;
+  }
+
   return elements.map((el) => {
     const pinned = pinnedAncestor(el);
-    return pinned ? isOverlay(pinned) : false;
+    return {
+      overlay: pinned ? isOverlay(pinned) : false,
+      covered: coveredByOverlay(el),
+    };
   });
 }
 /* c8 ignore stop */
@@ -204,17 +315,21 @@ function annotateInFrame(arg: AnnotateArgs): boolean[] {
  * Set `overlay` and `dismissesOverlay` on every element of `state`, in place.
  *
  * An element is in an overlay when its nearest fixed/sticky ancestor covers over 20% of the
- * top-level viewport, or contains a dismiss keyword and covers the centre of at least one
- * in-viewport interactive element. One `evaluate` per frame annotates every element of that
+ * top-level viewport, or contains a dismiss or consent keyword and covers the centre of at least
+ * one in-viewport interactive element. One `evaluate` per frame annotates every element of that
  * frame, by reading the element array `extract` stashed on `window.__uxExtract`.
+ *
+ * Returns the ids whose centres are covered by an open overlay. `extract` drops those after
+ * annotation so a small consent bar is still recognised from the control it hides.
  *
  * Only `extract()` may call this, and only within the same call that read the frames: it relies on
  * that read's `window.__uxExtract` stash and on the `NAME_SHIM` that `readFrame` installed per
  * frame, neither of which it sets up itself.
  */
-export async function annotateOverlays(page: Page, state: PageState): Promise<void> {
+export async function annotateOverlays(page: Page, state: PageState): Promise<string[]> {
+  const coveredIds: string[] = [];
   const top = state.meta.viewport;
-  if (top.width <= 0 || top.height <= 0) return;
+  if (top.width <= 0 || top.height <= 0) return coveredIds;
 
   const byFrame = new Map<string, string[]>();
   for (const el of state.elements) {
@@ -261,11 +376,12 @@ export async function annotateOverlays(page: Page, state: PageState): Promise<vo
       }
     }
 
-    let flags: boolean[];
+    let flags: AnnotateFlag[];
     try {
       flags = await frame.evaluate(annotateInFrame, {
         stems: STEM_PATTERN,
         symbols: [...SYMBOLS],
+        consentStems: CONSENT_PATTERN,
         ratio: OVERLAY_AREA_RATIO,
         topWidth: top.width,
         topHeight: top.height,
@@ -284,17 +400,19 @@ export async function annotateOverlays(page: Page, state: PageState): Promise<vo
       const el = byId.get(id);
       if (!el) continue;
       const ordinal = Number.parseInt(id.slice(prefix.length).replace('el_', ''), 10);
-      const overlay = flags[ordinal - 1];
-      if (overlay === undefined) {
+      const flag = flags[ordinal - 1];
+      if (flag === undefined) {
         throw new Error(
           `annotateOverlays: frame "${prefix || 'main'}" returned ${flags.length} flags, ` +
             `but element ${id} needs index ${ordinal - 1}`,
         );
       }
-      el.overlay = overlay;
-      el.dismissesOverlay = overlay && isDismissName(el.name);
+      el.overlay = flag.overlay;
+      el.dismissesOverlay = flag.overlay && isDismissName(el.name);
+      if (flag.covered) coveredIds.push(id);
     }
   }
+  return coveredIds;
 }
 
 /**

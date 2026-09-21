@@ -30,7 +30,7 @@ describeBrowser('overlay', () => {
 
     const accept = ex.state.elements.find((e) => e.name === 'Akceptuję wszystkie')!;
     expect(accept.overlay).toBe(true);
-    expect(accept.dismissesOverlay).toBe(true);
+    expect(accept.dismissesOverlay).toBe(false);
 
     const policy = ex.state.elements.find((e) => e.name === 'Polityka cookie')!;
     expect(policy.overlay).toBe(true);
@@ -41,9 +41,11 @@ describeBrowser('overlay', () => {
     expect(close.overlay).toBe(true);
     expect(close.dismissesOverlay).toBe(true);
 
-    expect(ex.state.elements.find((e) => e.name === 'Wybierz plan')!.overlay).toBe(false);
+    // The call to action sits under the dialog, so it is not offered.
+    expect(ex.state.elements.find((e) => e.name === 'Wybierz plan')).toBeUndefined();
 
     expect(await dismissOverlay(page, ex)).toEqual({ dismissed: true, method: 'control' });
+    expect(await page.evaluate(() => document.body.dataset.dismissed)).toBe('close');
     await ex.dispose();
 
     const after = await extract(page);
@@ -61,8 +63,8 @@ describeBrowser('overlay', () => {
     expect(ok.overlay).toBe(true);
     expect(ok.dismissesOverlay).toBe(true);
 
-    // The control the bar covers is not itself in an overlay: it has no pinned ancestor.
-    expect(ex.state.elements.find((e) => e.name === 'Choose plan')!.overlay).toBe(false);
+    // The control the bar covers is not offered: its centre hits the fixed bar.
+    expect(ex.state.elements.find((e) => e.name === 'Choose plan')).toBeUndefined();
 
     await ex.dispose();
     await closePage(page);
@@ -101,7 +103,7 @@ describeBrowser('overlay', () => {
     await annotateOverlays(page, ex.state);
 
     expect(ex.state.elements[0]!.overlay).toBe(true);
-    expect(ex.state.elements[0]!.dismissesOverlay).toBe(true);
+    expect(ex.state.elements[0]!.dismissesOverlay).toBe(false);
 
     await ex.dispose();
     await closePage(page);
@@ -132,6 +134,21 @@ describeBrowser('overlay', () => {
     const details = ex.state.elements.find((e) => e.name === 'Show details')!;
     expect(details.id.startsWith('f1:')).toBe(true);
     expect(details.overlay).toBe(false);
+
+    await ex.dispose();
+    await closePage(page);
+  });
+
+  it('offers only overlay controls while a bottom sheet covers the page behind it', async () => {
+    const page = await openPage();
+    await page.goto(server.url('bottom-sheet.html'));
+    const ex = await extract(page);
+
+    expect(ex.state.elements.filter((e) => e.role === 'radio')).toHaveLength(0);
+    expect(ex.state.elements.map((e) => e.name)).toEqual(
+      expect.arrayContaining(['Help', 'Close', 'Send']),
+    );
+    expect(ex.state.elements.find((e) => e.name === 'Close')!.dismissesOverlay).toBe(true);
 
     await ex.dispose();
     await closePage(page);

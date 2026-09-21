@@ -14,12 +14,12 @@
     <div id="veil"></div>
     <div id="dialog" role="dialog" aria-label="Cookies">
       <p>Używamy plików cookie.</p>
-      <button id="accept" onclick="document.getElementById('veil').remove(); document.getElementById('dialog').remove();">
+      <button id="accept" onclick="document.body.dataset.dismissed='accept'; document.getElementById('veil').remove(); document.getElementById('dialog').remove();">
         Akceptuję wszystkie
       </button>
       <a href="/pl/cookies">Polityka cookie</a>
-      <!-- Named only by aria-label, and last so it is not the control dismissOverlay picks. -->
-      <button id="x" aria-label="Close" onclick="document.getElementById('veil').remove(); document.getElementById('dialog').remove();"></button>
+      <!-- Named only by aria-label. Accept is a consent choice, so this is the control dismissOverlay picks. -->
+      <button id="x" aria-label="Close" onclick="document.body.dataset.dismissed='close'; document.getElementById('veil').remove(); document.getElementById('dialog').remove();"></button>
     </div>
   </body>
 </html>

@@ -1,3 +1,6 @@
+import { mkdtemp, readFile, rm, stat } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
 import { it, expect, beforeAll, afterAll } from 'vitest';
 import {
   describeBrowser,
@@ -642,5 +645,75 @@ describeBrowser('leaving after belief, and the non-responsive flag', () => {
     expect(journey.rows.length).toBeGreaterThan(1);
     expect(journey.rows[0]!.flags).toContain('non-responsive');
     for (const later of journey.rows.slice(1)) expect(later.flags).not.toContain('non-responsive');
+  });
+
+  it('writes screenshots/final.jpg on every exit path', async () => {
+    const output = await mkdtemp(path.join(tmpdir(), 'ux-final-'));
+    const browser = await getBrowser();
+    const exits: Array<{
+      reason: string;
+      engine: DecideEngine;
+      overrides?: Partial<ExploreConfig>;
+    }> = [
+      {
+        reason: 'criteria matched',
+        overrides: { successUrl: /terms/, maxSteps: 4 },
+        engine: fixedEngine(
+          (input) => input.options.find((o) => o.description.includes('Terms of Service'))!.id,
+        ),
+      },
+      {
+        reason: 'loop detected',
+        overrides: { url: server.url('spa-tabs.html'), maxSteps: 10 },
+        engine: fixedEngine(
+          (input) => input.options.find((o) => o.description.includes('Overview link one'))!.id,
+        ),
+      },
+      {
+        reason: 'unverified',
+        overrides: { maxSteps: 8 },
+        engine: fixedEngine((input) => input.options[0]!.id, 0.95),
+      },
+      {
+        reason: 'tool failure: jev-failure',
+        engine: {
+          async decide(): Promise<RawDecision> {
+            throw new JevUnavailableError('Jev returned 500', 500);
+          },
+        },
+      },
+      {
+        reason: 'left the site',
+        overrides: { maxSteps: 8 },
+        engine: scriptedEngine([byId('scroll_down'), byId('leave')], 3),
+      },
+      {
+        reason: 'step budget exhausted',
+        overrides: { maxSteps: 1 },
+        engine: fixedEngine((input) => input.options[0]!.id),
+      },
+    ];
+
+    try {
+      for (const exit of exits) {
+        const journey = await drive(config({ screenshots: true, output, ...exit.overrides }), {
+          browser,
+          engine: exit.engine,
+        });
+        expect(journey.summary.outcome.reason).toBe(exit.reason);
+        const shotDir = path.join(output, journey.summary.runId, 'screenshots');
+        const finalShot = await readFile(path.join(shotDir, 'final.jpg'));
+        expect(finalShot.byteLength).toBeGreaterThan(0);
+        if (exit.reason === 'criteria matched') {
+          const before = await readFile(path.join(shotDir, 'step-01.jpg'));
+          expect(Buffer.compare(before, finalShot)).not.toBe(0);
+        }
+        if (exit.reason.startsWith('tool failure')) {
+          await expect(stat(path.join(shotDir, 'step-01.jpg'))).rejects.toThrow();
+        }
+      }
+    } finally {
+      await rm(output, { recursive: true, force: true });
+    }
   });
 });
