@@ -1,0 +1,2790 @@
+summary:
+  runId: 2026-09-20T19-23-26-jkps
+  persona:
+    name: Olena
+  browserLocale: uk-UA
+  device: mobile
+  seed: 1
+  outcome:
+    needMet: true
+    gaveUp: false
+    left: false
+    believedDone: false
+    reason: criteria matched
+    bucket: ux
+    totalSteps: 20
+    totalDurationMs: 17890
+    outcomeFindings:
+      - unrecognized-success
+  perUrl:
+    - url: https://dopomo.pl/uk
+      visits: 3
+      meanEntropy: 1.6086509655485948
+      meanConfusion: 2.46
+      exits: 0
+      leaveRate: 0
+      backtracks: 0
+      topSampled:
+        - name: Прийняти всі
+          meanProbability: 0.7333333333333333
+        - name: Карта CUKR для вас або вашої дитиниГромадяни України зі статусом PESEL UKR
+          meanProbability: 0.6595744680851063
+        - name: Подати заяву на CUKR
+          meanProbability: 0.07608695652173914
+    - url: https://dopomo.pl/uk/pathfinder/case/cukr/qual?case=single&from=cukr-landing-v3
+      visits: 2
+      meanEntropy: 1.9059580764836705
+      meanConfusion: 2.875
+      exits: 1
+      leaveRate: 0
+      backtracks: 0
+      topSampled:
+        - name: Почати безкоштовно
+          meanProbability: 0.8295454545454545
+        - name: Відкрити меню
+          meanProbability: 0.11458333333333333
+    - url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+      visits: 12
+      meanEntropy: 0.4867305552583827
+      meanConfusion: 2.0700000000000003
+      exits: 0
+      leaveRate: 0
+      backtracks: 0
+      topSampled:
+        - name: Для себе
+          meanProbability: 1
+        - name: Так, маю активний PESEL UKR
+          meanProbability: 1
+        - name: 🇺🇦Громадянство України
+          meanProbability: 1
+    - url: https://dopomo.pl/uk/zayava-na-kartu-cukr
+      visits: 1
+      meanEntropy: 0.9764770570124089
+      meanConfusion: 2.69
+      exits: 0
+      leaveRate: 0
+      backtracks: 0
+      topSampled:
+        - name: Перевірте, чи можете подати →
+          meanProbability: 0.9120879120879122
+rows:
+  - step: 1
+    timestamp: 1789932208848
+    url: https://dopomo.pl/uk
+    stateHash: e88c815d4dae96446c6b21384e6a19bc6786c0f8
+    viewHash: 79f435d23d04bdc1d4078118cdda6431e9d34d30
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-01.jpg
+    elementsCount: 53
+    droppedElements: 0
+    options:
+      - id: el_12
+        kind: element
+        description: textbox "Запитайте асистента Dopomo" (below fold)
+        elementId: el_12
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Легалізація перебування в Польщі")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Легалізація перебування в Польщі")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Легалізація перебування в Польщі")
+        elementId: el_03
+      - id: el_22
+        kind: element
+        description: link "Кваліфікація CUKR" -> /uk/pathfinder?step=tree (below fold)
+        elementId: el_22
+      - id: el_23
+        kind: element
+        description: link "Подати заяву на CUKR" -> /uk/zayava-na-kartu-cukr (below fold)
+        elementId: el_23
+      - id: el_24
+        kind: element
+        description: link "Фото до заяви CUKR" -> /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)
+        elementId: el_24
+      - id: el_25
+        kind: element
+        description: link "Шлях CUKR" -> /uk/karta-pobytu-cukr (below fold)
+        elementId: el_25
+      - id: el_26
+        kind: element
+        description: link "Шлях CUKR для дитини" -> /uk/karta-pobytu-cukr-dlya-dytyny (below fold)
+        elementId: el_26
+      - id: el_27
+        kind: element
+        description: link "Оплати за заяви" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)
+        elementId: el_27
+      - id: el_28
+        kind: element
+        description: link "Чат" -> /uk/chat (below fold)
+        elementId: el_28
+      - id: el_29
+        kind: element
+        description: link "Довгостроковий резидент ЄС" -> /uk/rezydent-dovhostrokovyi-ue (below fold)
+        elementId: el_29
+      - id: el_30
+        kind: element
+        description: link "Заява про видачу/обмін карти" -> /uk/dokumenty/karta-pobytu-vydacha-obmin (below fold)
+        elementId: el_30
+      - id: el_31
+        kind: element
+        description: link "Ваш шлях у Польщі" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (below fold)
+        elementId: el_31
+      - id: el_32
+        kind: element
+        description: link "Інші інструменти" -> /uk/instrumenty-lehalizatsiyi/paperovi-zaiavy-oplaty-foto (below fold)
+        elementId: el_32
+      - id: el_33
+        kind: element
+        description: 'link "Запис в ужонд: карта побиту" -> /uk/bronyuvannia-vizytu-podannia-zayavy-otrymannia-karty-pobytu
+          (below fold)'
+        elementId: el_33
+      - id: el_34
+        kind: element
+        description: link "Банківський рахунок без карти побиту" -> /uk/bankivskyi-rakhunok-dlia-inozemtsiv (below fold)
+        elementId: el_34
+      - id: el_35
+        kind: element
+        description: link "Profil Zaufany через банк" -> /uk/profil-zaufany-cherez-bank (below fold)
+        elementId: el_35
+      - id: el_36
+        kind: element
+        description: link "Заява на тимчасове перебування" -> /uk/karta-pobytu-po-roboti (below fold)
+        elementId: el_36
+      - id: el_37
+        kind: element
+        description: link "Про нас" -> /uk/about (below fold)
+        elementId: el_37
+      - id: el_38
+        kind: element
+        description: link "Співпраця" -> /uk/spivpratsia (below fold)
+        elementId: el_38
+      - id: el_39
+        kind: element
+        description: link "Блог" -> /uk/blog (below fold)
+        elementId: el_39
+      - id: el_40
+        kind: element
+        description: link "Контакт" -> /uk/contact (below fold)
+        elementId: el_40
+      - id: el_41
+        kind: element
+        description: link "Робота" -> /uk/kariera (below fold)
+        elementId: el_41
+      - id: el_42
+        kind: element
+        description: link "Приватність" -> /uk/privacy (below fold)
+        elementId: el_42
+      - id: el_43
+        kind: element
+        description: link "Умови" -> /uk/terms (below fold)
+        elementId: el_43
+      - id: el_44
+        kind: element
+        description: link "Cookies" -> /uk/cookies (below fold)
+        elementId: el_44
+      - id: el_45
+        kind: element
+        description: link "Polski" -> /pl (below fold)
+        elementId: el_45
+      - id: el_46
+        kind: element
+        description: link "Русский" -> /ru (below fold)
+        elementId: el_46
+      - id: el_47
+        kind: element
+        description: link "English" -> /en (below fold)
+        elementId: el_47
+      - id: el_50
+        kind: element
+        description: link "CUKR" -> /uk/pathfinder?step=tree&from=homepage (below fold)
+        elementId: el_50
+      - id: el_51
+        kind: element
+        description: link "Перебування" -> /uk/pathfinder/case/trc/qual (below fold)
+        elementId: el_51
+      - id: el_52
+        kind: element
+        description: link "Чат" -> /uk#home-chat (below fold)
+        elementId: el_52
+      - id: el_53
+        kind: element
+        description: link "Інструменти" -> /uk/instrumenty-lehalizatsiyi/paperovi-zaiavy-oplaty-foto (below fold)
+        elementId: el_53
+      - id: el_04
+        kind: element
+        description: button "Карта CUKR для вас або вашої дитиниГромадяни України зі статусом PESEL UKR" (visible; under "Заява
+          CUKR, дозвіл на тимчасове перебування подана правильно з першого разу"; near "Допомога з картою побиту онлайн,
+          в одному місці. Ведемо крок за кроком — від фото до подання в MOS, зокрема для карти по")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: button "Тимчасове перебування і роботаГромадяни третіх країн (поза ЄС), які працюють у П" (visible; under
+          "Заява CUKR, дозвіл на тимчасове перебування подана правильно з першого разу"; near "Допомога з картою побиту
+          онлайн, в одному місці. Ведемо крок за кроком — від фото до подання в MOS, зокрема для карти по")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: button "Маю питання про свою ситуаціюАсистент Dopomo — без оплат" (visible; under "Заява CUKR, дозвіл на
+          тимчасове перебування подана правильно з першого разу")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "Хочу лише дещо перевіритиМайстер заяви, збори, бронювання візиту — без оплат" (visible; under
+          "Заява CUKR, дозвіл на тимчасове перебування подана правильно з першого разу")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Карта CUKR" (below fold)
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: button "Перебування і робота" (below fold)
+        elementId: el_09
+      - id: el_10
+        kind: element
+        description: link "Біометричне фото" -> /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)
+        elementId: el_10
+      - id: el_11
+        kind: element
+        description: link "Перевірити, чи можете подати →" -> /uk/pathfinder?step=tree&from=homepage (below fold)
+        elementId: el_11
+      - id: el_14
+        kind: element
+        description: link "Відкрити майстер" -> /uk/dokumenty/karta-pobytu-vydacha-obmin/maister (below fold)
+        elementId: el_14
+      - id: el_15
+        kind: element
+        description: link "Дізнатися більше" -> /uk/dokumenty/karta-pobytu-vydacha-obmin (below fold)
+        elementId: el_15
+      - id: el_16
+        kind: element
+        description: link "Збори за заявиОФІЦІЙНІ ДАНІОберіть процедуру (наприклад, карта CUKR) і воєводств" ->
+          /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)
+        elementId: el_16
+      - id: el_17
+        kind: element
+        description: link "Запис в ужонд16 ВОЄВОДСТВЯк записатися в ужонд на подання заяви або отримання ка" ->
+          /uk/bronyuvannia-vizytu-podannia-zayavy-otrymannia-karty-pobytu (below fold)
+        elementId: el_17
+      - id: el_18
+        kind: element
+        description: link "Фото для заявиПорадник, як самостійно зробити телефоном біометричне фото відпові" ->
+          /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)
+        elementId: el_18
+      - id: el_19
+        kind: element
+        description: link "Profil Zaufany через банкАктивуйте безкоштовний довірений профіль через інтернет" ->
+          /uk/profil-zaufany-cherez-bank (below fold)
+        elementId: el_19
+      - id: el_20
+        kind: element
+        description: link "Profil Zaufany" -> /uk/profil-zaufany-cherez-bank (below fold)
+        elementId: el_20
+      - id: el_21
+        kind: element
+        description: link "довгострокового резидента ЄС" -> /uk/rezydent-dovhostrokovyi-ue (below fold)
+        elementId: el_21
+      - id: el_48
+        kind: element
+        description: button "Налаштування cookie" (below fold)
+        elementId: el_48
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_06: 0.09
+      el_28: 0.01
+      el_23: 0.060000000000000005
+      el_25: 0.01
+      el_04: 0.62
+      el_50: 0.01
+      scroll_down: 0.11
+      el_08: 0.02
+      el_07: 0.01
+      el_11: 0.060000000000000005
+    pruned:
+      el_04: 0.6595744680851063
+      scroll_down: 0.11702127659574467
+      el_06: 0.09574468085106382
+      el_11: 0.06382978723404255
+      el_23: 0.06382978723404255
+    sampled: el_04
+    sampledName: Карта CUKR для вас або вашої дитиниГромадяни України зі статусом PESEL UKR
+    argmax: el_04
+    exploration: false
+    confidence: 0.62
+    entropy: 1.9562282490684124
+    goalMet: 0.06
+    confusion: 2.55
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 388
+    timing:
+      extractMs: 271
+      decideMs: 706
+      decideRetryMs: 0
+      executeMs: 389
+      settleMs: 162
+    flags: []
+    bucket: none
+    stateChars: 6487
+    inputTokens: 3792
+    visibleTextChars: 244
+    seenTextChars: 0
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk
+  - step: 2
+    timestamp: 1789932209912
+    url: https://dopomo.pl/uk
+    stateHash: 1913488099669e62a560b500e506b7a23146dbf9
+    viewHash: b61ae7fef1568a8be1fa070403a8dd42c99a1180
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-02.jpg
+    elementsCount: 60
+    droppedElements: 0
+    options:
+      - id: el_19
+        kind: element
+        description: textbox "Запитайте асистента Dopomo" (below fold)
+        elementId: el_19
+      - id: el_06
+        kind: element
+        description: button "Dopomo home" (visible; near "Легалізація перебування в Польщі")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: 'button "Language: UK" (visible; near "Легалізація перебування в Польщі")'
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Відкрити меню" (visible; near "Легалізація перебування в Польщі")
+        elementId: el_08
+      - id: el_29
+        kind: element
+        description: link "Кваліфікація CUKR" -> /uk/pathfinder?step=tree (below fold)
+        elementId: el_29
+      - id: el_30
+        kind: element
+        description: link "Подати заяву на CUKR" -> /uk/zayava-na-kartu-cukr (below fold)
+        elementId: el_30
+      - id: el_31
+        kind: element
+        description: link "Фото до заяви CUKR" -> /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)
+        elementId: el_31
+      - id: el_32
+        kind: element
+        description: link "Шлях CUKR" -> /uk/karta-pobytu-cukr (below fold)
+        elementId: el_32
+      - id: el_33
+        kind: element
+        description: link "Шлях CUKR для дитини" -> /uk/karta-pobytu-cukr-dlya-dytyny (below fold)
+        elementId: el_33
+      - id: el_34
+        kind: element
+        description: link "Оплати за заяви" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)
+        elementId: el_34
+      - id: el_35
+        kind: element
+        description: link "Чат" -> /uk/chat (below fold)
+        elementId: el_35
+      - id: el_36
+        kind: element
+        description: link "Довгостроковий резидент ЄС" -> /uk/rezydent-dovhostrokovyi-ue (below fold)
+        elementId: el_36
+      - id: el_37
+        kind: element
+        description: link "Заява про видачу/обмін карти" -> /uk/dokumenty/karta-pobytu-vydacha-obmin (below fold)
+        elementId: el_37
+      - id: el_38
+        kind: element
+        description: link "Ваш шлях у Польщі" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (below fold)
+        elementId: el_38
+      - id: el_39
+        kind: element
+        description: link "Інші інструменти" -> /uk/instrumenty-lehalizatsiyi/paperovi-zaiavy-oplaty-foto (below fold)
+        elementId: el_39
+      - id: el_40
+        kind: element
+        description: 'link "Запис в ужонд: карта побиту" -> /uk/bronyuvannia-vizytu-podannia-zayavy-otrymannia-karty-pobytu
+          (below fold)'
+        elementId: el_40
+      - id: el_41
+        kind: element
+        description: link "Банківський рахунок без карти побиту" -> /uk/bankivskyi-rakhunok-dlia-inozemtsiv (below fold)
+        elementId: el_41
+      - id: el_42
+        kind: element
+        description: link "Profil Zaufany через банк" -> /uk/profil-zaufany-cherez-bank (below fold)
+        elementId: el_42
+      - id: el_43
+        kind: element
+        description: link "Заява на тимчасове перебування" -> /uk/karta-pobytu-po-roboti (below fold)
+        elementId: el_43
+      - id: el_44
+        kind: element
+        description: link "Про нас" -> /uk/about (below fold)
+        elementId: el_44
+      - id: el_45
+        kind: element
+        description: link "Співпраця" -> /uk/spivpratsia (below fold)
+        elementId: el_45
+      - id: el_46
+        kind: element
+        description: link "Блог" -> /uk/blog (below fold)
+        elementId: el_46
+      - id: el_47
+        kind: element
+        description: link "Контакт" -> /uk/contact (below fold)
+        elementId: el_47
+      - id: el_48
+        kind: element
+        description: link "Робота" -> /uk/kariera (below fold)
+        elementId: el_48
+      - id: el_49
+        kind: element
+        description: link "Приватність" -> /uk/privacy (below fold)
+        elementId: el_49
+      - id: el_50
+        kind: element
+        description: link "Умови" -> /uk/terms (below fold)
+        elementId: el_50
+      - id: el_51
+        kind: element
+        description: link "Cookies" -> /uk/cookies (below fold)
+        elementId: el_51
+      - id: el_52
+        kind: element
+        description: link "Polski" -> /pl (below fold)
+        elementId: el_52
+      - id: el_53
+        kind: element
+        description: link "Русский" -> /ru (below fold)
+        elementId: el_53
+      - id: el_54
+        kind: element
+        description: link "English" -> /en (below fold)
+        elementId: el_54
+      - id: el_57
+        kind: element
+        description: link "CUKR" -> /uk/pathfinder?step=tree&from=homepage (below fold)
+        elementId: el_57
+      - id: el_58
+        kind: element
+        description: link "Перебування" -> /uk/pathfinder/case/trc/qual (below fold)
+        elementId: el_58
+      - id: el_59
+        kind: element
+        description: link "Чат" -> /uk#home-chat (below fold)
+        elementId: el_59
+      - id: el_60
+        kind: element
+        description: link "Інструменти" -> /uk/instrumenty-lehalizatsiyi/paperovi-zaiavy-oplaty-foto (below fold)
+        elementId: el_60
+      - id: el_01
+        kind: element
+        description: link "Політика конфіденційності" -> /uk/privacy (visible; under "Згода на файли cookie"; near "Ми
+          використовуємо необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати
+          файли ") [inside a dialog covering the page]
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: link "Політика cookie" -> /uk/cookies (visible; under "Згода на файли cookie"; near "Ми використовуємо
+          необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли ")
+          [inside a dialog covering the page]
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Прийняти всі" (visible; under "Згода на файли cookie"; near "Біометричне фото у ціні — Робите його
+          телефоном. Кадруємо, виправляємо тло і перевіряємо кожну вимогу установи — без пох") [inside a dialog covering
+          the page]
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Відхилити всі" (visible; under "Згода на файли cookie"; near "Кожне поле з поясненням — Кажемо, що
+          саме вписати і на що зважати. Пояснюємо вашою мовою і допомагаємо помітити прогалин") [inside a dialog
+          covering the page]
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: button "Керувати налаштуваннями" (visible; under "Згода на файли cookie"; near "Кожне поле з поясненням —
+          Кажемо, що саме вписати і на що зважати. Пояснюємо вашою мовою і допомагаємо помітити прогалин") [inside a
+          dialog covering the page]
+        elementId: el_05
+      - id: el_09
+        kind: element
+        description: button "Карта CUKR для вас або вашої дитиниГромадяни України зі статусом PESEL UKR" (visible; under "Заява
+          CUKR, дозвіл на тимчасове перебування подана правильно з першого разу"; near "Три роки легального перебування
+          і роботи в Польщі — одна справа, ведена без дорогої помилки від першого поля до правильн")
+        elementId: el_09
+      - id: el_10
+        kind: element
+        description: link "Перевірити, чи можете подати →" -> /uk/pathfinder?step=tree&from=homepage (below fold)
+        elementId: el_10
+      - id: el_11
+        kind: element
+        description: link "Подивіться, як це працює ↓" -> /uk#home-how (below fold)
+        elementId: el_11
+      - id: el_12
+        kind: element
+        description: button "Тимчасове перебування і роботаГромадяни третіх країн (поза ЄС), які працюють у П" (below fold)
+        elementId: el_12
+      - id: el_13
+        kind: element
+        description: button "Маю питання про свою ситуаціюАсистент Dopomo — без оплат" (below fold)
+        elementId: el_13
+      - id: el_14
+        kind: element
+        description: button "Хочу лише дещо перевіритиМайстер заяви, збори, бронювання візиту — без оплат" (below fold)
+        elementId: el_14
+      - id: el_15
+        kind: element
+        description: button "Карта CUKR" (below fold)
+        elementId: el_15
+      - id: el_16
+        kind: element
+        description: button "Перебування і робота" (below fold)
+        elementId: el_16
+      - id: el_17
+        kind: element
+        description: link "Біометричне фото" -> /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)
+        elementId: el_17
+      - id: el_21
+        kind: element
+        description: link "Відкрити майстер" -> /uk/dokumenty/karta-pobytu-vydacha-obmin/maister (below fold)
+        elementId: el_21
+      - id: el_22
+        kind: element
+        description: link "Дізнатися більше" -> /uk/dokumenty/karta-pobytu-vydacha-obmin (below fold)
+        elementId: el_22
+      - id: el_23
+        kind: element
+        description: link "Збори за заявиОФІЦІЙНІ ДАНІОберіть процедуру (наприклад, карта CUKR) і воєводств" ->
+          /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)
+        elementId: el_23
+      - id: el_24
+        kind: element
+        description: link "Запис в ужонд16 ВОЄВОДСТВЯк записатися в ужонд на подання заяви або отримання ка" ->
+          /uk/bronyuvannia-vizytu-podannia-zayavy-otrymannia-karty-pobytu (below fold)
+        elementId: el_24
+      - id: el_25
+        kind: element
+        description: link "Фото для заявиПорадник, як самостійно зробити телефоном біометричне фото відпові" ->
+          /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)
+        elementId: el_25
+      - id: el_26
+        kind: element
+        description: link "Profil Zaufany через банкАктивуйте безкоштовний довірений профіль через інтернет" ->
+          /uk/profil-zaufany-cherez-bank (below fold)
+        elementId: el_26
+      - id: el_27
+        kind: element
+        description: link "Profil Zaufany" -> /uk/profil-zaufany-cherez-bank (below fold)
+        elementId: el_27
+      - id: el_28
+        kind: element
+        description: link "довгострокового резидента ЄС" -> /uk/rezydent-dovhostrokovyi-ue (below fold)
+        elementId: el_28
+      - id: el_55
+        kind: element
+        description: button "Налаштування cookie" (below fold)
+        elementId: el_55
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_30: 0.06999999999999999
+      el_04: 0.09
+      el_09: 0.02
+      el_03: 0.76
+      scroll_down: 0.060000000000000005
+    pruned:
+      el_03: 0.8260869565217392
+      el_04: 0.09782608695652174
+      el_30: 0.07608695652173914
+    sampled: el_30
+    sampledName: Подати заяву на CUKR
+    sampledHref: /uk/zayava-na-kartu-cukr
+    argmax: el_03
+    exploration: true
+    confidence: 0.76
+    entropy: 1.23852543484049
+    goalMet: 0.06
+    confusion: 2.41
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 500
+    timing:
+      extractMs: 75
+      decideMs: 283
+      decideRetryMs: 0
+      executeMs: 500
+      settleMs: 320
+    flags: []
+    bucket: none
+    stateChars: 8411
+    inputTokens: 5049
+    visibleTextChars: 1105
+    seenTextChars: 0
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk
+  - step: 3
+    timestamp: 1789932210953
+    url: https://dopomo.pl/uk
+    stateHash: ffa075795c53a8721e105d1742bc8af791216820
+    viewHash: 4572a26e15c3d6daad15af40a8878cbb7f3c7f28
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-03.jpg
+    elementsCount: 60
+    droppedElements: 0
+    options:
+      - id: el_19
+        kind: element
+        description: textbox "Запитайте асистента Dopomo" (below fold)
+        elementId: el_19
+      - id: el_06
+        kind: element
+        description: button "Dopomo home" (visible; near "Асистент Dopomo відповідає українською, польською, російською та
+          англійською і спирається на офіційні джерела. Акаунт, а")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: 'button "Language: UK" (visible; near "Асистент Dopomo відповідає українською, польською, російською та
+          англійською і спирається на офіційні джерела. Акаунт, а")'
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Відкрити меню" (visible; near "Асистент Dopomo відповідає українською, польською, російською та
+          англійською і спирається на офіційні джерела. Акаунт, а")
+        elementId: el_08
+      - id: el_29
+        kind: element
+        description: link "Кваліфікація CUKR" -> /uk/pathfinder?step=tree (visible; near "Заява CUKR")
+        elementId: el_29
+      - id: el_30
+        kind: element
+        description: link "Подати заяву на CUKR" -> /uk/zayava-na-kartu-cukr (visible; near "Заява CUKR")
+        elementId: el_30
+      - id: el_31
+        kind: element
+        description: link "Фото до заяви CUKR" -> /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (visible; near "Ми використовуємо
+          необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли ")
+        elementId: el_31
+      - id: el_32
+        kind: element
+        description: link "Шлях CUKR" -> /uk/karta-pobytu-cukr (visible; near "Ми використовуємо необхідні файли cookie, щоб
+          Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли ")
+        elementId: el_32
+      - id: el_33
+        kind: element
+        description: link "Шлях CUKR для дитини" -> /uk/karta-pobytu-cukr-dlya-dytyny (visible; near "Ми використовуємо
+          необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли ")
+        elementId: el_33
+      - id: el_34
+        kind: element
+        description: link "Оплати за заяви" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (visible; near "Ми використовуємо необхідні
+          файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли ")
+        elementId: el_34
+      - id: el_35
+        kind: element
+        description: link "Чат" -> /uk/chat (visible; near "Ми використовуємо необхідні файли cookie, щоб Dopomo працювало. За
+          вашою згодою ми також хотіли б використовувати файли ")
+        elementId: el_35
+      - id: el_36
+        kind: element
+        description: link "Довгостроковий резидент ЄС" -> /uk/rezydent-dovhostrokovyi-ue (visible; near "Ми використовуємо
+          необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли ")
+        elementId: el_36
+      - id: el_37
+        kind: element
+        description: link "Заява про видачу/обмін карти" -> /uk/dokumenty/karta-pobytu-vydacha-obmin (visible; near "Ми
+          використовуємо необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати
+          файли ")
+        elementId: el_37
+      - id: el_38
+        kind: element
+        description: link "Ваш шлях у Польщі" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (visible)
+        elementId: el_38
+      - id: el_39
+        kind: element
+        description: link "Інші інструменти" -> /uk/instrumenty-lehalizatsiyi/paperovi-zaiavy-oplaty-foto (visible)
+        elementId: el_39
+      - id: el_40
+        kind: element
+        description: 'link "Запис в ужонд: карта побиту" -> /uk/bronyuvannia-vizytu-podannia-zayavy-otrymannia-karty-pobytu
+          (visible)'
+        elementId: el_40
+      - id: el_41
+        kind: element
+        description: link "Банківський рахунок без карти побиту" -> /uk/bankivskyi-rakhunok-dlia-inozemtsiv (visible)
+        elementId: el_41
+      - id: el_42
+        kind: element
+        description: link "Profil Zaufany через банк" -> /uk/profil-zaufany-cherez-bank (below fold)
+        elementId: el_42
+      - id: el_43
+        kind: element
+        description: link "Заява на тимчасове перебування" -> /uk/karta-pobytu-po-roboti (below fold)
+        elementId: el_43
+      - id: el_44
+        kind: element
+        description: link "Про нас" -> /uk/about (below fold)
+        elementId: el_44
+      - id: el_45
+        kind: element
+        description: link "Співпраця" -> /uk/spivpratsia (below fold)
+        elementId: el_45
+      - id: el_46
+        kind: element
+        description: link "Блог" -> /uk/blog (below fold)
+        elementId: el_46
+      - id: el_47
+        kind: element
+        description: link "Контакт" -> /uk/contact (below fold)
+        elementId: el_47
+      - id: el_48
+        kind: element
+        description: link "Робота" -> /uk/kariera (below fold)
+        elementId: el_48
+      - id: el_49
+        kind: element
+        description: link "Приватність" -> /uk/privacy (below fold)
+        elementId: el_49
+      - id: el_50
+        kind: element
+        description: link "Умови" -> /uk/terms (below fold)
+        elementId: el_50
+      - id: el_51
+        kind: element
+        description: link "Cookies" -> /uk/cookies (below fold)
+        elementId: el_51
+      - id: el_52
+        kind: element
+        description: link "Polski" -> /pl (below fold)
+        elementId: el_52
+      - id: el_53
+        kind: element
+        description: link "Русский" -> /ru (below fold)
+        elementId: el_53
+      - id: el_54
+        kind: element
+        description: link "English" -> /en (below fold)
+        elementId: el_54
+      - id: el_57
+        kind: element
+        description: link "CUKR" -> /uk/pathfinder?step=tree&from=homepage (visible)
+        elementId: el_57
+      - id: el_58
+        kind: element
+        description: link "Перебування" -> /uk/pathfinder/case/trc/qual (visible)
+        elementId: el_58
+      - id: el_59
+        kind: element
+        description: link "Чат" -> /uk#home-chat (visible)
+        elementId: el_59
+      - id: el_60
+        kind: element
+        description: link "Інструменти" -> /uk/instrumenty-lehalizatsiyi/paperovi-zaiavy-oplaty-foto (visible)
+        elementId: el_60
+      - id: el_01
+        kind: element
+        description: link "Політика конфіденційності" -> /uk/privacy (visible; under "Згода на файли cookie"; near "Ми
+          використовуємо необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати
+          файли ") [inside a dialog covering the page]
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: link "Політика cookie" -> /uk/cookies (visible; under "Згода на файли cookie"; near "Ми використовуємо
+          необхідні файли cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли ")
+          [inside a dialog covering the page]
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Прийняти всі" (visible; under "Згода на файли cookie"; near "Ми використовуємо необхідні файли
+          cookie, щоб Dopomo працювало. За вашою згодою ми також хотіли б використовувати файли ") [inside a dialog
+          covering the page]
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Відхилити всі" (visible) [inside a dialog covering the page]
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: button "Керувати налаштуваннями" (visible) [inside a dialog covering the page]
+        elementId: el_05
+      - id: el_09
+        kind: element
+        description: button "Карта CUKR для вас або вашої дитиниГромадяни України зі статусом PESEL UKR" (below fold)
+        elementId: el_09
+      - id: el_10
+        kind: element
+        description: link "Перевірити, чи можете подати →" -> /uk/pathfinder?step=tree&from=homepage (below fold)
+        elementId: el_10
+      - id: el_11
+        kind: element
+        description: link "Подивіться, як це працює ↓" -> /uk#home-how (below fold)
+        elementId: el_11
+      - id: el_12
+        kind: element
+        description: button "Тимчасове перебування і роботаГромадяни третіх країн (поза ЄС), які працюють у П" (below fold)
+        elementId: el_12
+      - id: el_13
+        kind: element
+        description: button "Маю питання про свою ситуаціюАсистент Dopomo — без оплат" (below fold)
+        elementId: el_13
+      - id: el_14
+        kind: element
+        description: button "Хочу лише дещо перевіритиМайстер заяви, збори, бронювання візиту — без оплат" (below fold)
+        elementId: el_14
+      - id: el_15
+        kind: element
+        description: button "Карта CUKR" (below fold)
+        elementId: el_15
+      - id: el_16
+        kind: element
+        description: button "Перебування і робота" (below fold)
+        elementId: el_16
+      - id: el_17
+        kind: element
+        description: link "Біометричне фото" -> /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)
+        elementId: el_17
+      - id: el_21
+        kind: element
+        description: link "Відкрити майстер" -> /uk/dokumenty/karta-pobytu-vydacha-obmin/maister (below fold)
+        elementId: el_21
+      - id: el_22
+        kind: element
+        description: link "Дізнатися більше" -> /uk/dokumenty/karta-pobytu-vydacha-obmin (below fold)
+        elementId: el_22
+      - id: el_23
+        kind: element
+        description: link "Збори за заявиОФІЦІЙНІ ДАНІОберіть процедуру (наприклад, карта CUKR) і воєводств" ->
+          /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)
+        elementId: el_23
+      - id: el_24
+        kind: element
+        description: link "Запис в ужонд16 ВОЄВОДСТВЯк записатися в ужонд на подання заяви або отримання ка" ->
+          /uk/bronyuvannia-vizytu-podannia-zayavy-otrymannia-karty-pobytu (below fold)
+        elementId: el_24
+      - id: el_25
+        kind: element
+        description: link "Фото для заявиПорадник, як самостійно зробити телефоном біометричне фото відпові" ->
+          /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)
+        elementId: el_25
+      - id: el_26
+        kind: element
+        description: link "Profil Zaufany через банкАктивуйте безкоштовний довірений профіль через інтернет" ->
+          /uk/profil-zaufany-cherez-bank (below fold)
+        elementId: el_26
+      - id: el_27
+        kind: element
+        description: link "Profil Zaufany" -> /uk/profil-zaufany-cherez-bank (below fold)
+        elementId: el_27
+      - id: el_28
+        kind: element
+        description: link "довгострокового резидента ЄС" -> /uk/rezydent-dovhostrokovyi-ue (below fold)
+        elementId: el_28
+      - id: el_55
+        kind: element
+        description: button "Налаштування cookie" (below fold)
+        elementId: el_55
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: scroll_up
+        kind: scroll_up
+        description: scroll back up the page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      scroll_up: 0.0101010101010101
+      el_29: 0.0202020202020202
+      el_10: 0.0202020202020202
+      scroll_down: 0.0909090909090909
+      leave: 0.0101010101010101
+      el_30: 0.0303030303030303
+      el_04: 0.15151515151515152
+      el_03: 0.6666666666666666
+    pruned:
+      el_03: 0.7333333333333333
+      el_04: 0.16666666666666669
+      scroll_down: 0.09999999999999999
+    sampled: el_03
+    sampledName: Прийняти всі
+    argmax: el_03
+    exploration: false
+    confidence: 0.6666666666666666
+    entropy: 1.6311992127368824
+    goalMet: 0.06
+    confusion: 2.42
+    outcome:
+      urlChanged: true
+      stateChanged: true
+      consoleErrors:
+        - "Loading the image
+          'https://www.google.de/pagead/1p-user-list/18289644296/?random=1789932210833&cv=11&fst=1789930800000&bg=fffff\
+          f&guid=ON&async=1&en=gtag.config&gtm=45be69g1h1v9257085407za200zd9257085407xecxf1&gcd=13r3r3r2r5l1&dma_cps=a&\
+          dma=1&tag_exp=115938466~115938469~118897920~118897930~119381664~120213116~120385422~120469145~120469153~12084\
+          7435&u_w=390&u_h=844&url=https%3A%2F%2Fdopomo.pl%2Fuk%2Fzayava-na-kartu-cukr&rcb=13&frm=0&tiba=%D0%97%D0%B0%D\
+          1%8F%D0%B2%D0%B0%20%D0%BD%D0%B0%20%D0%BA%D0%B0%D1%80%D1%82%D1%83%20CUKR%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D\
+          0%BC%D0%B8%D0%BB%D0%BE%D0%BA%20%7C%20Dopomo&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1918678557.178\
+          9932211&uaa=arm&uab=64&uafvl=HeadlessChrome%3B147.0.7727.0%7CNot.A%252FBrand%3B8.0.0.0%7CChromium%3B147.0.772\
+          7.0&uamb=1&uam=&uap=Android&uapv=11&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQSWwBAzi\
+          Hc_f22P1qkEUk57WyCclLuJjTeo4GtQOqAy4TnbeF0tQr_XT-wLAmVgKnvJs4G1yJe1-WledQ0J5FsHt-i6uYTrQqfDQhuFFIWs9qD8FA99zy\
+          q1PGverM&random=636757138&rmt_tld=1&ipr=y' violates the following Content Security Policy directive: \"img-src
+          'self' data: blob: https://dopomo.matomo.cloud https://www.googleadservices.com
+          https://googleads.g.doubleclick.net https://www.google.com https://www.google.pl
+          https://www.googletagmanager.com https://fonts.gstatic.com\". The action has been blocked.
+          (https://dopomo.pl/uk/zayava-na-kartu-cukr)"
+      failedRequests: []
+      validationMessages: []
+      durationMs: 411
+    timing:
+      extractMs: 73
+      decideMs: 240
+      decideRetryMs: 0
+      executeMs: 412
+      settleMs: 169
+    flags: []
+    bucket: product
+    stateChars: 9605
+    inputTokens: 5928
+    visibleTextChars: 665
+    seenTextChars: 852
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/zayava-na-kartu-cukr
+  - step: 4
+    timestamp: 1789932212166
+    url: https://dopomo.pl/uk/zayava-na-kartu-cukr
+    stateHash: fab2f5b8d0484495626bc4ec4fbc4d4e3fe9f7b3
+    viewHash: f87040ee1933fb549438d892c25fd6421196b106
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-04.jpg
+    elementsCount: 54
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible)
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible)'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible)
+        elementId: el_03
+      - id: el_27
+        kind: element
+        description: link "Кваліфікація CUKR" -> /uk/pathfinder?step=tree (below fold)
+        elementId: el_27
+      - id: el_28
+        kind: element
+        description: link "Подати заяву на CUKR" -> /uk/zayava-na-kartu-cukr (below fold)
+        elementId: el_28
+      - id: el_29
+        kind: element
+        description: link "Фото до заяви CUKR" -> /uk/foto-do-zaiavy-cukr-i-na-kartu-pobytu (below fold)
+        elementId: el_29
+      - id: el_30
+        kind: element
+        description: link "Шлях CUKR" -> /uk/karta-pobytu-cukr (below fold)
+        elementId: el_30
+      - id: el_31
+        kind: element
+        description: link "Шлях CUKR для дитини" -> /uk/karta-pobytu-cukr-dlya-dytyny (below fold)
+        elementId: el_31
+      - id: el_32
+        kind: element
+        description: link "Оплати за заяви" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)
+        elementId: el_32
+      - id: el_33
+        kind: element
+        description: link "Чат" -> /uk/chat (below fold)
+        elementId: el_33
+      - id: el_34
+        kind: element
+        description: link "Довгостроковий резидент ЄС" -> /uk/rezydent-dovhostrokovyi-ue (below fold)
+        elementId: el_34
+      - id: el_35
+        kind: element
+        description: link "Заява про видачу/обмін карти" -> /uk/dokumenty/karta-pobytu-vydacha-obmin (below fold)
+        elementId: el_35
+      - id: el_36
+        kind: element
+        description: link "Ваш шлях у Польщі" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (below fold)
+        elementId: el_36
+      - id: el_37
+        kind: element
+        description: link "Інші інструменти" -> /uk/instrumenty-lehalizatsiyi/paperovi-zaiavy-oplaty-foto (below fold)
+        elementId: el_37
+      - id: el_38
+        kind: element
+        description: 'link "Запис в ужонд: карта побиту" -> /uk/bronyuvannia-vizytu-podannia-zayavy-otrymannia-karty-pobytu
+          (below fold)'
+        elementId: el_38
+      - id: el_39
+        kind: element
+        description: link "Банківський рахунок без карти побиту" -> /uk/bankivskyi-rakhunok-dlia-inozemtsiv (below fold)
+        elementId: el_39
+      - id: el_40
+        kind: element
+        description: link "Profil Zaufany через банк" -> /uk/profil-zaufany-cherez-bank (below fold)
+        elementId: el_40
+      - id: el_41
+        kind: element
+        description: link "Заява на тимчасове перебування" -> /uk/karta-pobytu-po-roboti (below fold)
+        elementId: el_41
+      - id: el_42
+        kind: element
+        description: link "Про нас" -> /uk/about (below fold)
+        elementId: el_42
+      - id: el_43
+        kind: element
+        description: link "Співпраця" -> /uk/spivpratsia (below fold)
+        elementId: el_43
+      - id: el_44
+        kind: element
+        description: link "Блог" -> /uk/blog (below fold)
+        elementId: el_44
+      - id: el_45
+        kind: element
+        description: link "Контакт" -> /uk/contact (below fold)
+        elementId: el_45
+      - id: el_46
+        kind: element
+        description: link "Робота" -> /uk/kariera (below fold)
+        elementId: el_46
+      - id: el_47
+        kind: element
+        description: link "Приватність" -> /uk/privacy (below fold)
+        elementId: el_47
+      - id: el_48
+        kind: element
+        description: link "Умови" -> /uk/terms (below fold)
+        elementId: el_48
+      - id: el_49
+        kind: element
+        description: link "Cookies" -> /uk/cookies (below fold)
+        elementId: el_49
+      - id: el_50
+        kind: element
+        description: link "Polski" -> /pl/wniosek-o-karte-cukr (below fold)
+        elementId: el_50
+      - id: el_51
+        kind: element
+        description: link "Русский" -> /ru/zayavlenie-na-kartu-cukr (below fold)
+        elementId: el_51
+      - id: el_52
+        kind: element
+        description: link "English" -> /en/cukr-card-application (below fold)
+        elementId: el_52
+      - id: el_04
+        kind: element
+        description: 'button "Перевірте, чи можете подати →" (visible; under "Спочатку перевірте, чи можете подати на CUKR.
+          Безкоштовно, за 2 хвилини."; near "Далі Dopomo працює як експерт із CUKR поруч із вами — від фото до подання в
+          MOS: кожен розділ, додаток та оплата перевір")'
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: button "Подивіться, як це працює ↓" (visible; under "Спочатку перевірте, чи можете подати на CUKR.
+          Безкоштовно, за 2 хвилини."; near "Безкоштовна перевірка за 2 хвилини · допомога із заявою 199 zł — разово.")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: 'button "Крок 1: Список документів для вашої справи" (visible; under "Спочатку перевірте, чи можете подати
+          на CUKR. Безкоштовно, за 2 хвилини."; near "Ваші документи й додатки")'
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: 'button "Крок 2: Кожне поле без вгадування" (visible; under "Спочатку перевірте, чи можете подати на CUKR.
+          Безкоштовно, за 2 хвилини."; near "Ваші документи й додатки")'
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: 'button "Крок 3: Біометричне фото в ціні" (visible; under "Спочатку перевірте, чи можете подати на CUKR.
+          Безкоштовно, за 2 хвилини."; near "Ваші документи й додатки")'
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: 'button "Крок 4: Оплати без помилок" (visible; under "Спочатку перевірте, чи можете подати на CUKR.
+          Безкоштовно, за 2 хвилини."; near "Ваші документи й додатки")'
+        elementId: el_09
+      - id: el_10
+        kind: element
+        description: 'button "Крок 5: Розділ про судимість без стресу" (visible; under "Спочатку перевірте, чи можете подати на
+          CUKR. Безкоштовно, за 2 хвилини."; near "Ваші документи й додатки")'
+        elementId: el_10
+      - id: el_11
+        kind: element
+        description: 'button "Крок 6: Перевірка перед поданням" (visible; under "Спочатку перевірте, чи можете подати на CUKR.
+          Безкоштовно, за 2 хвилини."; near "Ваші документи й додатки")'
+        elementId: el_11
+      - id: el_12
+        kind: element
+        description: 'button "Крок 7: MOS разом + асистент AI" (visible; under "Спочатку перевірте, чи можете подати на CUKR.
+          Безкоштовно, за 2 хвилини."; near "Ваші документи й додатки")'
+        elementId: el_12
+      - id: el_13
+        kind: element
+        description: link "інструкція по карті побиту CUKR" -> /uk/blog/karta-pobytu-cukr-2026 (below fold)
+        elementId: el_13
+      - id: el_14
+        kind: element
+        description: link "калькуляторі оплат" -> /uk/oplata-za-kartu-pobytu-cukr-2026 (below fold)
+        elementId: el_14
+      - id: el_15
+        kind: element
+        description: link "хронологія карти CUKR" -> /uk/karta-pobytu-cukr (below fold)
+        elementId: el_15
+      - id: el_16
+        kind: element
+        description: button "Що таке віртуальний асистент?+" (below fold)
+        elementId: el_16
+      - id: el_18
+        kind: element
+        description: button "Чи подає Dopomo заяву замість мене?+" (below fold)
+        elementId: el_18
+      - id: el_17
+        kind: element
+        description: link "легалізації перебування в Польщі" -> /uk/dopomoha-v-lehalizatsiyi-pobytu-v-polshchi (below fold)
+        elementId: el_17
+      - id: el_19
+        kind: element
+        description: button "Чи потрібен мені Profil Zaufany?+" (below fold)
+        elementId: el_19
+      - id: el_20
+        kind: element
+        description: button "Які документи мені потрібно підготувати?+" (below fold)
+        elementId: el_20
+      - id: el_22
+        kind: element
+        description: button "Чому 199 zł, якщо подання в MOS безкоштовне?+" (below fold)
+        elementId: el_22
+      - id: el_21
+        kind: element
+        description: link "для заяви на дитину" -> /uk/karta-pobytu-cukr-dlya-dytyny (below fold)
+        elementId: el_21
+      - id: el_23
+        kind: element
+        description: button "Що, якщо мої дані не збігаються з реєстром?+" (below fold)
+        elementId: el_23
+      - id: el_24
+        kind: element
+        description: button "Чи зберігаєте ви мої дані про судимість?+" (below fold)
+        elementId: el_24
+      - id: el_25
+        kind: element
+        description: button "Чи плачу я лише один раз?+" (below fold)
+        elementId: el_25
+      - id: el_53
+        kind: element
+        description: button "Налаштування cookie" (below fold)
+        elementId: el_53
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_04: 0.83
+      el_06: 0.08
+      el_27: 0.01
+      scroll_down: 0.05
+      el_33: 0.02
+      el_05: 0.01
+    pruned:
+      el_04: 0.9120879120879122
+      el_06: 0.08791208791208792
+    sampled: el_04
+    sampledName: Перевірте, чи можете подати →
+    argmax: el_04
+    exploration: false
+    confidence: 0.83
+    entropy: 0.9764770570124089
+    goalMet: 0.05
+    confusion: 2.69
+    outcome:
+      urlChanged: true
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 603
+    timing:
+      extractMs: 67
+      decideMs: 256
+      decideRetryMs: 0
+      executeMs: 603
+      settleMs: 470
+    flags: []
+    bucket: none
+    stateChars: 7184
+    inputTokens: 4326
+    visibleTextChars: 557
+    seenTextChars: 0
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 5
+    timestamp: 1789932212931
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: 6da703e70909573f5242417392db6b8aa4d6990a
+    viewHash: 7012f6ee6dd1be05594c9aa561908435d69939bd
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-05.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "Для себе" (visible; under "Для кого Ви хочете підготувати заяву на карту побуту CUKR?"; near
+          "Питання 1 з 6")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "Для моєї дитини" (visible; under "Для кого Ви хочете підготувати заяву на карту побуту CUKR?"; near
+          "Не впевнені?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Для кого Ви хочете підготувати заяву на карту побуту CUKR?";
+          near "Не впевнені?")
+        elementId: el_07
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_05: 0.99
+      el_07: 0.01
+    pruned:
+      el_05: 1
+    sampled: el_05
+    sampledName: Для себе
+    argmax: el_05
+    exploration: false
+    confidence: 0.99
+    entropy: 0.08079313589591118
+    goalMet: 0.05
+    confusion: 1.92
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 261
+    timing:
+      extractMs: 23
+      decideMs: 269
+      decideRetryMs: 0
+      executeMs: 261
+      settleMs: 160
+    flags: []
+    bucket: none
+    stateChars: 2547
+    inputTokens: 1415
+    visibleTextChars: 162
+    seenTextChars: 0
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 6
+    timestamp: 1789932213646
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: 9561c5bbd1a350ea1dfbca9bfbf6ae36010dec40
+    viewHash: 949ab4606e241853b01ccc027f29d39819e6e951
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-06.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "Для себе" (visible; under "Для кого Ви хочете підготувати заяву на карту побуту CUKR?"; near
+          "Питання 1 з 6")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "Для моєї дитини" (visible; under "Для кого Ви хочете підготувати заяву на карту побуту CUKR?"; near
+          "Не впевнені?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Для кого Ви хочете підготувати заяву на карту побуту CUKR?";
+          near "Не впевнені?")
+        elementId: el_07
+      - id: el_09
+        kind: element
+        description: button "Далі →" (visible; under "Для кого Ви хочете підготувати заяву на карту побуту CUKR?")
+        elementId: el_09
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_09: 0.91
+      el_05: 0.08
+      el_07: 0.01
+    pruned:
+      el_09: 1
+    sampled: el_09
+    sampledName: Далі →
+    argmax: el_09
+    exploration: false
+    confidence: 0.91
+    entropy: 0.48176306719391104
+    goalMet: 0.04
+    confusion: 1.78
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 277
+    timing:
+      extractMs: 30
+      decideMs: 244
+      decideRetryMs: 0
+      executeMs: 277
+      settleMs: 159
+    flags: []
+    bucket: none
+    stateChars: 2694
+    inputTokens: 1488
+    visibleTextChars: 162
+    seenTextChars: 0
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 7
+    timestamp: 1789932214359
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: c42e80ef69437ff5d6a2b015e767b7285e65de99
+    viewHash: de8ba8c556bcb7675b292b5272ae023ebef16d79
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-07.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "🇺🇦Громадянство України" (visible; under "Яке у Вас громадянство?"; near "Карта побуту CUKR
+          призначена для громадян України та деяких членів їхніх родин.")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "Інше громадянство" (visible; under "Яке у Вас громадянство?"; near "Не впевнені?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Яке у Вас громадянство?"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Назад" (visible; under "Яке у Вас громадянство?")
+        elementId: el_08
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_05: 1
+    pruned:
+      el_05: 1
+    sampled: el_05
+    sampledName: 🇺🇦Громадянство України
+    argmax: el_05
+    exploration: false
+    confidence: 1
+    entropy: 0
+    goalMet: 0.04
+    confusion: 1.97
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 258
+    timing:
+      extractMs: 22
+      decideMs: 276
+      decideRetryMs: 0
+      executeMs: 258
+      settleMs: 159
+    flags: []
+    bucket: none
+    stateChars: 2839
+    inputTokens: 1596
+    visibleTextChars: 159
+    seenTextChars: 129
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 8
+    timestamp: 1789932215130
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: b23083dc6847e11c86c1e554512fe751a6e11a0a
+    viewHash: d319167809cbe413ccfb2354a1c6756157f6176e
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-08.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "🇺🇦Громадянство України" (visible; under "Яке у Вас громадянство?"; near "Карта побуту CUKR
+          призначена для громадян України та деяких членів їхніх родин.")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "Інше громадянство" (visible; under "Яке у Вас громадянство?"; near "Не впевнені?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Яке у Вас громадянство?"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Назад" (visible; under "Яке у Вас громадянство?")
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: button "Далі →" (visible; under "Яке у Вас громадянство?")
+        elementId: el_09
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_09: 0.9
+      el_05: 0.1
+    pruned:
+      el_09: 1
+    sampled: el_09
+    sampledName: Далі →
+    argmax: el_09
+    exploration: false
+    confidence: 0.9
+    entropy: 0.4689955935892812
+    goalMet: 0.06
+    confusion: 1.72
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 278
+    timing:
+      extractMs: 21
+      decideMs: 311
+      decideRetryMs: 0
+      executeMs: 278
+      settleMs: 159
+    flags: []
+    bucket: none
+    stateChars: 2948
+    inputTokens: 1661
+    visibleTextChars: 159
+    seenTextChars: 129
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 9
+    timestamp: 1789932215930
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: c6cace7a92da121ff4e95c33bfa799fa3c0328ad
+    viewHash: 5ef8c7a4aee2d7a7ff876102ffb3a573694b0157
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-09.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "Так, маю активний PESEL UKR" (visible; under "Чи маєте Ви зараз активний статус UKR (номер PESEL зі
+          статусом „UKR”)?"; near "Це той самий статус, який Ви отримали як особа під тимчасовим захистом після приїзду
+          з України.")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "Ні / не знаю / маю інший статус (напр. NUE, дозвіл на побут)" (visible; under "Чи маєте Ви зараз
+          активний статус UKR (номер PESEL зі статусом „UKR”)?"; near "Не впевнені?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Чи маєте Ви зараз активний статус UKR (номер PESEL зі
+          статусом „UKR”)?"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Назад" (visible; under "Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?")
+        elementId: el_08
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_07: 0.02
+      el_06: 0.02
+      el_05: 0.96
+    pruned:
+      el_05: 1
+    sampled: el_05
+    sampledName: Так, маю активний PESEL UKR
+    argmax: el_05
+    exploration: false
+    confidence: 0.96
+    entropy: 0.28229218908241477
+    goalMet: 0.04
+    confusion: 2.25
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 259
+    timing:
+      extractMs: 27
+      decideMs: 345
+      decideRetryMs: 0
+      executeMs: 259
+      settleMs: 159
+    flags: []
+    bucket: none
+    stateChars: 3391
+    inputTokens: 1854
+    visibleTextChars: 222
+    seenTextChars: 256
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 10
+    timestamp: 1789932216640
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: 85ffca7ad87725ad3aa9ed7193bac9a19b86a170
+    viewHash: 85a05fe21da8b6b20bdb8af0d0cf7fd8c1573fde
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-10.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "Так, маю активний PESEL UKR" (visible; under "Чи маєте Ви зараз активний статус UKR (номер PESEL зі
+          статусом „UKR”)?"; near "Це той самий статус, який Ви отримали як особа під тимчасовим захистом після приїзду
+          з України.")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "Ні / не знаю / маю інший статус (напр. NUE, дозвіл на побут)" (visible; under "Чи маєте Ви зараз
+          активний статус UKR (номер PESEL зі статусом „UKR”)?"; near "Не впевнені?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Чи маєте Ви зараз активний статус UKR (номер PESEL зі
+          статусом „UKR”)?"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Назад" (visible; under "Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?")
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: button "Далі →" (visible; under "Чи маєте Ви зараз активний статус UKR (номер PESEL зі статусом „UKR”)?")
+        elementId: el_09
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_06: 0.01
+      el_04: 0.01
+      el_05: 0.02
+      el_09: 0.95
+      el_07: 0.01
+    pruned:
+      el_09: 1
+    sampled: el_09
+    sampledName: Далі →
+    argmax: el_09
+    exploration: false
+    confidence: 0.95
+    entropy: 0.38249336186032423
+    goalMet: 0.07
+    confusion: 1.87
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 273
+    timing:
+      extractMs: 24
+      decideMs: 247
+      decideRetryMs: 0
+      executeMs: 273
+      settleMs: 160
+    flags: []
+    bucket: none
+    stateChars: 3550
+    inputTokens: 1939
+    visibleTextChars: 222
+    seenTextChars: 256
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 11
+    timestamp: 1789932217365
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: 6db618001a0a896a6ecfb8524f4b9131185820c1
+    viewHash: 2dc6e7804221faf2c6da897123dfa6439696b2f5
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-11.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "Так — у мене був такий безперервний період (навіть якщо потім була перерва)" (visible; under "Чи
+          мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері"; near "Достатньо одного
+          безперервного відрізка в 365 днів — без жодної перерви; він зараховується, навіть якщо закінчився в мин")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "Ні — жоден безперервний період не досяг 365 днів / не знаю" (visible; under "Чи мали Ви статус UKR
+          безперервно щонайменше 365 днів поспіль — у будь-який пері"; near "Не впевнені?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Чи мали Ви статус UKR безперервно щонайменше 365 днів
+          поспіль — у будь-який пері"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Назад" (visible; under "Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який
+          пері"; near "Не впевнені?")
+        elementId: el_08
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_06: 0.11
+      scroll_down: 0.04
+      el_07: 0.04
+      el_05: 0.81
+    pruned:
+      el_05: 0.8804347826086957
+      el_06: 0.11956521739130434
+    sampled: el_05
+    sampledName: Так — у мене був такий безперервний період (навіть якщо потім була перерва)
+    argmax: el_05
+    exploration: false
+    confidence: 0.81
+    entropy: 0.968040209388076
+    goalMet: 0.05
+    confusion: 2.3
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 261
+    timing:
+      extractMs: 25
+      decideMs: 249
+      decideRetryMs: 0
+      executeMs: 261
+      settleMs: 158
+    flags: []
+    bucket: none
+    stateChars: 4128
+    inputTokens: 2419
+    visibleTextChars: 479
+    seenTextChars: 446
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 12
+    timestamp: 1789932218115
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: b3e5fb2bea869c05deadb4307e3ded6a33a04c7e
+    viewHash: b86e00556aace481b206784b3f9f283c5d4f21d1
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-12.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "Так — у мене був такий безперервний період (навіть якщо потім була перерва)" (visible; under "Чи
+          мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який пері"; near "Достатньо одного
+          безперервного відрізка в 365 днів — без жодної перерви; він зараховується, навіть якщо закінчився в мин")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "Ні — жоден безперервний період не досяг 365 днів / не знаю" (visible; under "Чи мали Ви статус UKR
+          безперервно щонайменше 365 днів поспіль — у будь-який пері"; near "Не впевнені?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Чи мали Ви статус UKR безперервно щонайменше 365 днів
+          поспіль — у будь-який пері"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Назад" (visible; under "Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у будь-який
+          пері"; near "Не впевнені?")
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: button "Далі →" (visible; under "Чи мали Ви статус UKR безперервно щонайменше 365 днів поспіль — у
+          будь-який пері"; near "Не впевнені?")
+        elementId: el_09
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_04: 0.02
+      scroll_down: 0.05
+      el_06: 0.01
+      el_05: 0.02
+      el_09: 0.89
+      el_07: 0.01
+    pruned:
+      el_09: 0.9468085106382979
+      scroll_down: 0.05319148936170213
+    sampled: el_09
+    sampledName: Далі →
+    argmax: el_09
+    exploration: false
+    confidence: 0.89
+    entropy: 0.7243570314702625
+    goalMet: 0.14
+    confusion: 1.8
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 260
+    timing:
+      extractMs: 21
+      decideMs: 303
+      decideRetryMs: 0
+      executeMs: 260
+      settleMs: 159
+    flags: []
+    bucket: none
+    stateChars: 4254
+    inputTokens: 2512
+    visibleTextChars: 479
+    seenTextChars: 446
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 13
+    timestamp: 1789932218787
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: 42de00f9b15a26aca8d2c8c67fb512a1f3739273
+    viewHash: df5e754047d13abefadef5f7521265df72dcba58
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-13.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "Так, 4 червня 2025 р. у мене був активний PESEL UKR" (visible; under "Чи мали Ви 4 червня 2025 р.
+          активний статус UKR (PESEL UKR)?"; near "Це конкретна дата, яку вимагає закон. Якщо того дня Ви не мали
+          активного статусу UKR (напр. були тоді поза Польщею довше")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "Ні / не знаю" (visible; under "Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?"; near
+          "Не впевнені?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL
+          UKR)?"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Назад" (visible; under "Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?"; near "Не
+          впевнені?")
+        elementId: el_08
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_07: 0.06999999999999999
+      el_05: 0.89
+      el_06: 0.04
+    pruned:
+      el_05: 0.9270833333333334
+      el_07: 0.07291666666666666
+    sampled: el_05
+    sampledName: Так, 4 червня 2025 р. у мене був активний PESEL UKR
+    argmax: el_05
+    exploration: false
+    confidence: 0.89
+    entropy: 0.6039385916705984
+    goalMet: 0.08
+    confusion: 2.54
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 256
+    timing:
+      extractMs: 25
+      decideMs: 215
+      decideRetryMs: 0
+      executeMs: 256
+      settleMs: 156
+    flags: []
+    bucket: none
+    stateChars: 4162
+    inputTokens: 2419
+    visibleTextChars: 294
+    seenTextChars: 893
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 14
+    timestamp: 1789932219540
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: ebc8fdcf3d0af787d0a88e3d73833aa85bcc0ae8
+    viewHash: e26c0bf20a8800aae2aef67ad28544c337c6165c
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-14.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "Так, 4 червня 2025 р. у мене був активний PESEL UKR" (visible; under "Чи мали Ви 4 червня 2025 р.
+          активний статус UKR (PESEL UKR)?"; near "Це конкретна дата, яку вимагає закон. Якщо того дня Ви не мали
+          активного статусу UKR (напр. були тоді поза Польщею довше")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "Ні / не знаю" (visible; under "Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?"; near
+          "Не впевнені?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL
+          UKR)?"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Назад" (visible; under "Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?"; near "Не
+          впевнені?")
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: button "Далі →" (visible; under "Чи мали Ви 4 червня 2025 р. активний статус UKR (PESEL UKR)?"; near "Не
+          впевнені?")
+        elementId: el_09
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_09: 0.9299999999999999
+      el_07: 0.01
+      el_04: 0.04
+      el_05: 0.01
+      el_06: 0.01
+    pruned:
+      el_09: 1
+    sampled: el_09
+    sampledName: Далі →
+    argmax: el_09
+    exploration: false
+    confidence: 0.9299999999999999
+    entropy: 0.48243849544425554
+    goalMet: 0.22
+    confusion: 2.1
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 275
+    timing:
+      extractMs: 27
+      decideMs: 289
+      decideRetryMs: 0
+      executeMs: 275
+      settleMs: 159
+    flags: []
+    bucket: none
+    stateChars: 4268
+    inputTokens: 2495
+    visibleTextChars: 294
+    seenTextChars: 893
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 15
+    timestamp: 1789932220296
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: 5f77ce422f95f0325abb28a7656b28c69d7c33ca
+    viewHash: 7ff00d28c57cae8900e53d31d5c37ada2c59b8d1
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-15.jpg
+    elementsCount: 10
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: 'radio "Ні, жодної справи в процесі немає" (visible; under "Чи є у Вас уже подана заява на карту побуту або
+          інша справа в процесі (напр. поп"; near "Це дві різні ситуації: раніше подана заява про видачу карти CUKR
+          блокує нову заяву CUKR до завершення справи, а справа п")'
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: 'radio "Так — у мене в процесі справа про дозвіл на тимчасовий побут і працю (єдиний доз" (visible; under
+          "Чи є у Вас уже подана заява на карту побуту або інша справа в процесі (напр. поп"; near "Це дві різні
+          ситуації: раніше подана заява про видачу карти CUKR блокує нову заяву CUKR до завершення справи, а справа п")'
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: radio "Так — у мене вже подана заява на карту побуту CUKR" (visible; under "Чи є у Вас уже подана заява на
+          карту побуту або інша справа в процесі (напр. поп"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Чи є у Вас уже подана заява на карту побуту або інша справа
+          в процесі (напр. поп"; near "Не впевнені?")
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: button "Назад" (visible; under "Чи є у Вас уже подана заява на карту побуту або інша справа в процесі
+          (напр. поп"; near "Не впевнені?")
+        elementId: el_09
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_08: 0.09
+      scroll_down: 0.07
+      el_05: 0.83
+      el_06: 0.01
+    pruned:
+      el_05: 0.9021739130434783
+      el_08: 0.09782608695652174
+    sampled: el_05
+    sampledName: Ні, жодної справи в процесі немає
+    argmax: el_05
+    exploration: false
+    confidence: 0.83
+    entropy: 0.8707653670829367
+    goalMet: 0.08
+    confusion: 2.52
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 261
+    timing:
+      extractMs: 27
+      decideMs: 262
+      decideRetryMs: 0
+      executeMs: 261
+      settleMs: 162
+    flags: []
+    bucket: none
+    stateChars: 4824
+    inputTokens: 2848
+    visibleTextChars: 476
+    seenTextChars: 978
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 16
+    timestamp: 1789932221018
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: 69b190a9f829d4c19325ca28c72ca03dbf5439bc
+    viewHash: 47e7aad90133607b6556172d704250f25ec09017
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-16.jpg
+    elementsCount: 10
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: 'radio "Ні, жодної справи в процесі немає" (visible; under "Чи є у Вас уже подана заява на карту побуту або
+          інша справа в процесі (напр. поп"; near "Це дві різні ситуації: раніше подана заява про видачу карти CUKR
+          блокує нову заяву CUKR до завершення справи, а справа п")'
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: 'radio "Так — у мене в процесі справа про дозвіл на тимчасовий побут і працю (єдиний доз" (visible; under
+          "Чи є у Вас уже подана заява на карту побуту або інша справа в процесі (напр. поп"; near "Це дві різні
+          ситуації: раніше подана заява про видачу карти CUKR блокує нову заяву CUKR до завершення справи, а справа п")'
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: radio "Так — у мене вже подана заява на карту побуту CUKR" (visible; under "Чи є у Вас уже подана заява на
+          карту побуту або інша справа в процесі (напр. поп"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Чи є у Вас уже подана заява на карту побуту або інша справа
+          в процесі (напр. поп"; near "Не впевнені?")
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: button "Назад" (visible; under "Чи є у Вас уже подана заява на карту побуту або інша справа в процесі
+          (напр. поп"; near "Не впевнені?")
+        elementId: el_09
+      - id: el_10
+        kind: element
+        description: button "Далі →" (visible; under "Чи є у Вас уже подана заява на карту побуту або інша справа в процесі
+          (напр. поп"; near "Не впевнені?")
+        elementId: el_10
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      scroll_down: 0.03
+      el_08: 0.01
+      el_10: 0.93
+      el_04: 0.02
+      el_05: 0.01
+    pruned:
+      el_10: 1
+    sampled: el_10
+    sampledName: Далі →
+    argmax: el_10
+    exploration: false
+    confidence: 0.93
+    entropy: 0.49488962042262075
+    goalMet: 0.13
+    confusion: 2.07
+    outcome:
+      urlChanged: false
+      stateChanged: false
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 266
+    timing:
+      extractMs: 27
+      decideMs: 237
+      decideRetryMs: 0
+      executeMs: 266
+      settleMs: 158
+    flags:
+      - no-change
+    bucket: product
+    stateChars: 4974
+    inputTokens: 2951
+    visibleTextChars: 476
+    seenTextChars: 978
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+  - step: 17
+    timestamp: 1789932221869
+    url: https://dopomo.pl/uk/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: 69b190a9f829d4c19325ca28c72ca03dbf5439bc
+    viewHash: 47e7aad90133607b6556172d704250f25ec09017
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-17.jpg
+    elementsCount: 10
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 1 Кваліфікація")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Завершити" (visible; near "Крок 1 Кваліфікація")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: 'radio "Ні, жодної справи в процесі немає" (visible; under "Чи є у Вас уже подана заява на карту побуту або
+          інша справа в процесі (напр. поп"; near "Це дві різні ситуації: раніше подана заява про видачу карти CUKR
+          блокує нову заяву CUKR до завершення справи, а справа п")'
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: 'radio "Так — у мене в процесі справа про дозвіл на тимчасовий побут і працю (єдиний доз" (visible; under
+          "Чи є у Вас уже подана заява на карту побуту або інша справа в процесі (напр. поп"; near "Це дві різні
+          ситуації: раніше подана заява про видачу карти CUKR блокує нову заяву CUKR до завершення справи, а справа п")'
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: radio "Так — у мене вже подана заява на карту побуту CUKR" (visible; under "Чи є у Вас уже подана заява на
+          карту побуту або інша справа в процесі (напр. поп"; near "Не впевнені?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "💬Запитати асистента" (visible; under "Чи є у Вас уже подана заява на карту побуту або інша справа
+          в процесі (напр. поп"; near "Не впевнені?")
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: button "Назад" (visible; under "Чи є у Вас уже подана заява на карту побуту або інша справа в процесі
+          (напр. поп"; near "Не впевнені?")
+        elementId: el_09
+      - id: el_10
+        kind: element
+        description: button "Далі →" (visible; under "Чи є у Вас уже подана заява на карту побуту або інша справа в процесі
+          (напр. поп"; near "Не впевнені?")
+        elementId: el_10
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      back: 0.06
+      el_03: 0.02
+      el_08: 0.03
+      el_05: 0.01
+      el_06: 0.01
+      el_10: 0.48
+      scroll_down: 0.31
+      el_09: 0.02
+      el_07: 0.01
+      el_04: 0.04
+      el_01: 0.01
+    pruned:
+      el_10: 0.5217391304347825
+      scroll_down: 0.3369565217391304
+      back: 0.06521739130434781
+      el_04: 0.04347826086956521
+      el_08: 0.032608695652173905
+    sampled: el_10
+    sampledName: Далі →
+    argmax: el_10
+    exploration: false
+    confidence: 0.48
+    entropy: 2.104626708143734
+    goalMet: 0.13
+    confusion: 3.15
+    outcome:
+      urlChanged: true
+      stateChanged: true
+      error: "elementHandle.scrollIntoViewIfNeeded: Element is not attached to the DOM
+
+        Call log:
+
+        \e[2m  - attempting scroll into view action\e[22m
+
+        \e[2m    - waiting for element to be stable\e[22m\n"
+      errorClass: detached
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 246
+    timing:
+      extractMs: 25
+      decideMs: 277
+      decideRetryMs: 0
+      executeMs: 246
+      settleMs: 158
+    flags:
+      - high-entropy
+      - low-confidence
+      - confused
+      - failed-action
+    bucket: stale
+    stateChars: 5064
+    inputTokens: 2977
+    visibleTextChars: 476
+    seenTextChars: 978
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder/case/cukr/qual?case=single&from=cukr-landing-v3
+  - step: 18
+    timestamp: 1789932222564
+    url: https://dopomo.pl/uk/pathfinder/case/cukr/qual?case=single&from=cukr-landing-v3
+    stateHash: 93ed8c0612627b6cd470989949aa4a75267169dc
+    viewHash: f338f52cb9c945b4d833179fb920c2f5263c682f
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-18.jpg
+    elementsCount: 4
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Крок 2/5 Результат")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Крок 2/5 Результат")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Крок 2/5 Результат")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Подивіться, як подати заяву →" (visible; under "Чудово — ви маєте право на CUKR"; near "Понад 365
+          днів безперервного перебування")
+        elementId: el_04
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      scroll_down: 0.44
+      el_01: 0.03
+      el_04: 0.11
+      back: 0.35
+      el_03: 0.07
+    pruned:
+      scroll_down: 0.4888888888888889
+      back: 0.38888888888888884
+      el_04: 0.12222222222222222
+    sampled: scroll_down
+    sampledName: scroll_down
+    argmax: scroll_down
+    exploration: false
+    confidence: 0.44
+    entropy: 1.8218560240278059
+    goalMet: 0.11
+    confusion: 2.96
+    outcome:
+      urlChanged: false
+      stateChanged: false
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 242
+    timing:
+      extractMs: 19
+      decideMs: 273
+      decideRetryMs: 0
+      executeMs: 242
+      settleMs: 156
+    flags:
+      - low-confidence
+    bucket: none
+    stateChars: 2890
+    inputTokens: 1631
+    visibleTextChars: 594
+    seenTextChars: 0
+    scrollOnly: true
+    nextUrl: https://dopomo.pl/uk/pathfinder/case/cukr/qual?case=single&from=cukr-landing-v3
+  - step: 19
+    timestamp: 1789932223279
+    url: https://dopomo.pl/uk/pathfinder/case/cukr/qual?case=single&from=cukr-landing-v3
+    stateHash: 93ed8c0612627b6cd470989949aa4a75267169dc
+    viewHash: f338f52cb9c945b4d833179fb920c2f5263c682f
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-19.jpg
+    elementsCount: 4
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Ви відповідаєте всім чотирьом умовам закону. Ви можете подати заяву на
+          тимчасове проживання на 3 роки — за спрощеними пр")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Ви відповідаєте всім чотирьом умовам закону. Ви можете подати заяву
+          на тимчасове проживання на 3 роки — за спрощеними пр")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Відкрити меню" (visible; near "Ви відповідаєте всім чотирьом умовам закону. Ви можете подати заяву
+          на тимчасове проживання на 3 роки — за спрощеними пр")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Подивіться, як подати заяву →" (visible; under "Чудово — ви маєте право на CUKR"; near "Це
+          автоматизована інформаційна оцінка, а не офіційне рішення. Вашу справу вирішує виключно відповідна установа
+          (воєводсь")
+        elementId: el_04
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: scroll_up
+        kind: scroll_up
+        description: scroll back up the page
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_03: 0.11
+      el_01: 0.03
+      scroll_down: 0.34
+      scroll_up: 0.13
+      back: 0.12
+      el_04: 0.26
+      leave: 0.01
+    pruned:
+      scroll_down: 0.3541666666666667
+      el_04: 0.2708333333333333
+      scroll_up: 0.13541666666666666
+      back: 0.12499999999999999
+      el_03: 0.11458333333333333
+    sampled: el_03
+    sampledName: Відкрити меню
+    argmax: scroll_down
+    exploration: true
+    confidence: 0.34
+    entropy: 2.352665480516307
+    goalMet: 0.09
+    confusion: 2.9
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 256
+    timing:
+      extractMs: 19
+      decideMs: 288
+      decideRetryMs: 0
+      executeMs: 256
+      settleMs: 156
+    flags:
+      - high-entropy
+      - low-confidence
+    bucket: ux
+    stateChars: 3569
+    inputTokens: 2091
+    visibleTextChars: 741
+    seenTextChars: 51
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/pathfinder/case/cukr/qual?case=single&from=cukr-landing-v3
+  - step: 20
+    timestamp: 1789932224316
+    url: https://dopomo.pl/uk/pathfinder/case/cukr/qual?case=single&from=cukr-landing-v3
+    stateHash: 19e099859f489cf49c90ef68f3bb6cbb91208492
+    viewHash: 198139e7d4e9d8ab81f4308f5f7960b49bcae04b
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-20T19-23-26-jkps/screenshots/step-20.jpg
+    elementsCount: 10
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Ви відповідаєте всім чотирьом умовам закону. Ви можете подати заяву на
+          тимчасове проживання на 3 роки — за спрощеними пр") [inside a dialog covering the page]
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: UK" (visible; near "Ви відповідаєте всім чотирьом умовам закону. Ви можете подати заяву
+          на тимчасове проживання на 3 роки — за спрощеними пр") [inside a dialog covering the page]'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Закрити меню" (visible; near "Ви відповідаєте всім чотирьом умовам закону. Ви можете подати заяву
+          на тимчасове проживання на 3 роки — за спрощеними пр") [inside a dialog covering the page]
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "CUKR" (visible; near "Ви відповідаєте всім чотирьом умовам закону. Ви можете подати заяву на
+          тимчасове проживання на 3 роки — за спрощеними пр") [inside a dialog covering the page]
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: button "Тимчасове перебування" (visible; near "Ви відповідаєте всім чотирьом умовам закону. Ви можете
+          подати заяву на тимчасове проживання на 3 роки — за спрощеними пр") [inside a dialog covering the page]
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: button "Чат" (visible; near "Ви відповідаєте всім чотирьом умовам закону. Ви можете подати заяву на
+          тимчасове проживання на 3 роки — за спрощеними пр") [inside a dialog covering the page]
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "Більше" (visible; near "Результат ми зберегли. Наступний крок — безкоштовний акаунт ; одразу після
+          цього ви відкриєте свою справу. Її перший ета") [inside a dialog covering the page]
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Почати безкоштовно" (visible; near "Результат ми зберегли. Наступний крок — безкоштовний акаунт ;
+          одразу після цього ви відкриєте свою справу. Її перший ета") [inside a dialog covering the page]
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: button "Увійти" (visible; near "Ваша ситуація") [inside a dialog covering the page]
+        elementId: el_09
+      - id: el_10
+        kind: element
+        description: button "Подивіться, як подати заяву →" (visible; under "Чудово — ви маєте право на CUKR"; near "Це
+          автоматизована інформаційна оцінка, а не офіційне рішення. Вашу справу вирішує виключно відповідна установа
+          (воєводсь")
+        elementId: el_10
+      - id: scroll_up
+        kind: scroll_up
+        description: scroll back up the page
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      back: 0.01
+      el_09: 0.02
+      el_04: 0.02
+      scroll_up: 0.02
+      el_06: 0.01
+      el_07: 0.02
+      el_05: 0.01
+      el_10: 0.01
+      el_03: 0.15
+      el_08: 0.73
+    pruned:
+      el_08: 0.8295454545454545
+      el_03: 0.17045454545454544
+    sampled: el_08
+    sampledName: Почати безкоштовно
+    argmax: el_08
+    exploration: false
+    confidence: 0.73
+    entropy: 1.4592506724510341
+    goalMet: 0.07
+    confusion: 2.85
+    outcome:
+      urlChanged: true
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 444
+    timing:
+      extractMs: 29
+      decideMs: 292
+      decideRetryMs: 0
+      executeMs: 444
+      settleMs: 325
+    flags: []
+    bucket: none
+    stateChars: 4673
+    inputTokens: 2775
+    visibleTextChars: 741
+    seenTextChars: 51
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/uk/register

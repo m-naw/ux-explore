@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Jev journey frame</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --panel: #171a23;
+    --panel-2: #1e222e;
+    --border: #2a2f3d;
+    --text: #e6e8ee;
+    --muted: #8a90a3;
+    --faint: #5a6072;
+    --accent: #f5b942;
+    --accent-dim: rgba(245, 185, 66, 0.16);
+    --argmax: #6ea8fe;
+    --argmax-dim: rgba(110, 168, 254, 0.14);
+    --good: #3ecf8e;
+    --bad: #ff6b6b;
+    --bar: #3a4157;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1280px; height: 720px; overflow: hidden; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", "Segoe UI", "Noto Sans", "DejaVu Sans", system-ui, sans-serif;
+    font-size: 15px;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+  }
+  #shot {
+    flex: 0 0 55%;
+    background: #000;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  #shot img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  #card {
+    flex: 1 1 auto;
+    min-width: 0;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  header { padding: 16px 18px 12px; border-bottom: 1px solid var(--border); }
+  .top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .who { font-size: 20px; font-weight: 700; }
+  .step { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .goal { margin-top: 6px; color: var(--muted); font-size: 14px; line-height: 1.35; }
+  .goal b { color: var(--text); font-weight: 600; }
+  .url { margin-top: 6px; font-size: 12px; color: var(--faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: ui-monospace, Menlo, Consolas, monospace; }
+
+  #options { flex: 1 1 auto; padding: 10px 18px; overflow: hidden; display: flex; flex-direction: column; gap: 6px; }
+  .label-h { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin-bottom: 2px; }
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 64px;
+    grid-template-rows: auto 8px;
+    column-gap: 10px;
+    row-gap: 4px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+  }
+  .row .name { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 6px; min-width: 0; }
+  .row .name .txt { overflow: hidden; text-overflow: ellipsis; }
+  .row .pct { font-size: 13px; text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; align-self: center; }
+  .row .track { grid-column: 1 / span 2; height: 8px; background: var(--panel-2); border-radius: 4px; overflow: hidden; }
+  .row .fill { height: 100%; background: var(--bar); border-radius: 4px; }
+  .kind { font-size: 10px; color: var(--faint); border: 1px solid var(--border); border-radius: 3px; padding: 0 4px; flex: 0 0 auto; text-transform: lowercase; }
+  .tag { font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border-radius: 3px; padding: 1px 5px; flex: 0 0 auto; }
+  .tag.argmax { color: var(--argmax); background: var(--argmax-dim); }
+  .tag.picked { color: #1a1406; background: var(--accent); }
+
+  .row.pruned { opacity: 0.45; }
+  .row.pruned .txt { text-decoration: line-through; }
+  .row.pruned .fill { background: var(--faint); }
+
+  .row.argmax { border-color: rgba(110, 168, 254, 0.35); background: var(--argmax-dim); }
+  .row.argmax .fill { background: var(--argmax); }
+
+  .row.picked { border-color: var(--accent); background: var(--accent-dim); }
+  .row.picked .fill { background: var(--accent); }
+  .row.picked .pct { color: var(--accent); font-weight: 600; }
+
+  .row.picked.argmax { border-color: var(--accent); background: var(--accent-dim); }
+  .row.picked.argmax .fill { background: var(--accent); }
+
+  .more { font-size: 12px; color: var(--faint); padding: 2px 8px; }
+  .diverge {
+    font-size: 12px; font-weight: 600; color: var(--accent);
+    background: var(--accent-dim); border: 1px dashed var(--accent);
+    border-radius: 6px; padding: 6px 10px; margin-top: 2px;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 13px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  footer .m b { color: var(--text); font-weight: 600; }
+  footer .spacer { flex: 1; }
+  .badge { font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; border: 1px solid var(--border); color: var(--muted); }
+  .badge.on { color: #06281a; background: var(--good); border-color: var(--good); }
+</style>
+</head>
+<body>
+  <div id="shot"><img id="img" alt="" /></div>
+  <div id="card">
+    <header>
+      <div class="top"><div class="who" id="who"></div><div class="step" id="step"></div></div>
+      <div class="goal" id="goal"></div>
+      <div class="url" id="url"></div>
+    </header>
+    <div id="options"></div>
+    <footer id="footer"></footer>
+  </div>
+
+<script>
+  const MAX_ROWS = 7;
+
+  function esc(s) {
+    return String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  }
+
+  // 'button "Label" (visible; near "...")' -> { role: 'button', name: 'Label' }
+  function shortLabel(opt) {
+    const d = String(opt.description ?? opt.id ?? '');
+    const m = d.match(/^([a-z]+)\s+"([^"]*)"/i);
+    if (m) return { role: m[1], name: m[2] };
+    const meta = { scroll_down: 'scroll down', scroll_up: 'scroll up', leave: 'leave site', back: 'go back' };
+    if (meta[opt.id]) return { role: opt.kind || 'action', name: meta[opt.id] };
+    return { role: opt.kind || '', name: d.replace(/\s*\(.*$/s, '') };
+  }
+
+  function pct(p) { return (p * 100).toFixed(p >= 0.1 ? 0 : 1) + '%'; }
+  function fmt(x, n = 2) { return typeof x === 'number' ? x.toFixed(n) : '–'; }
+
+  window.renderStep = function renderStep(row, index, total, screenshotUrl, meta) {
+    meta = meta || {};
+    const img = document.getElementById('img');
+    img.onload = () => {
+      // Fit the pane to the screenshot's aspect (portrait phone shots would otherwise waste half the pane).
+      const shot = document.getElementById('shot');
+      const h = shot.clientHeight;
+      const want = h * (img.naturalWidth / img.naturalHeight) + 2;
+      shot.style.flexBasis = Math.min(want, 0.55 * 1240) + 'px';
+      shot.style.flexGrow = '0';
+    };
+    img.src = screenshotUrl;
+    document.getElementById('who').textContent = meta.persona || 'Persona';
+    document.getElementById('step').textContent = `Step ${index}/${total}`;
+    document.getElementById('goal').innerHTML = meta.goal ? `Goal: <b>${esc(meta.goal)}</b>` : '';
+    document.getElementById('url').textContent = String(row.url || '').replace(/&amp;/g, '&');
+
+    const dist = row.distribution || {};
+    const kept = row.pruned || {};
+    const byId = new Map((row.options || []).map(o => [o.id, o]));
+    const ids = Object.keys(dist).sort((a, b) => (dist[b] || 0) - (dist[a] || 0));
+    for (const id of [row.sampled, row.argmax]) if (id && !ids.includes(id)) ids.push(id);
+
+    const shown = ids.slice(0, MAX_ROWS);
+    for (const id of [row.sampled, row.argmax]) {
+      if (id && !shown.includes(id)) { shown.pop(); shown.push(id); }
+    }
+    const maxP = Math.max(0.0001, ...ids.map(id => dist[id] || 0));
+    const totalOpts = (row.options || []).length;
+
+    const box = document.getElementById('options');
+    box.innerHTML = '';
+    const h = document.createElement('div');
+    h.className = 'label-h';
+    h.textContent = `Jev's options · ${totalOpts} on screen`;
+    box.appendChild(h);
+
+    const diverged = row.sampled && row.argmax && row.sampled !== row.argmax;
+
+    for (const id of shown) {
+      const p = dist[id] || 0;
+      const opt = byId.get(id) || { id, description: row.sampled === id ? row.sampledName : id };
+      const { role, name } = shortLabel(opt);
+      const isPicked = id === row.sampled;
+      const isArgmax = id === row.argmax;
+      const isPruned = !(id in kept) && !isPicked;
+      const cls = ['row', isPruned && 'pruned', isArgmax && 'argmax', isPicked && 'picked'].filter(Boolean).join(' ');
+      const tags = [
+        isPicked && '<span class="tag picked">picked</span>',
+        isArgmax && '<span class="tag argmax">argmax</span>',
+      ].filter(Boolean).join('');
+      const el = document.createElement('div');
+      el.className = cls;
+      el.innerHTML =
+        `<div class="name">${role ? `<span class="kind">${esc(role)}</span>` : ''}<span class="txt">${esc(name)}</span>${tags}</div>` +
+        `<div class="pct">${pct(p)}</div>` +
+        `<div class="track"><div class="fill" style="width:${Math.max(2, (p / maxP) * 100).toFixed(1)}%"></div></div>`;
+      box.appendChild(el);
+    }
+    const hidden = ids.length - shown.length;
+    if (hidden > 0 || totalOpts > ids.length) {
+      const m = document.createElement('div');
+      m.className = 'more';
+      const bits = [];
+      if (hidden > 0) bits.push(`+${hidden} more with mass`);
+      if (totalOpts > ids.length) bits.push(`${totalOpts - ids.length} at ~0%`);
+      m.textContent = bits.join(' · ');
+      box.appendChild(m);
+    }
+    if (diverged) {
+      const d = document.createElement('div');
+      d.className = 'diverge';
+      d.textContent = 'Exploration: sampled a different option than the argmax';
+      box.appendChild(d);
+    }
+
+    const goalMet = typeof row.goalMet === 'number' ? row.goalMet : 0;
+    const goalOn = goalMet >= 0.5;
+    const f = document.getElementById('footer');
+    f.innerHTML =
+      `<span class="m">confidence <b>${fmt(row.confidence)}</b></span>` +
+      `<span class="m">entropy <b>${fmt(row.entropy)}</b></span>` +
+      (typeof row.confusion === 'number' ? `<span class="m">confusion <b>${fmt(row.confusion, 1)}</b></span>` : '') +
+      `<span class="spacer"></span>` +
+      `<span class="badge ${goalOn ? 'on' : ''}">goal met ${fmt(goalMet)}</span>`;
+    return true;
+  };
+</script>
+</body>
+</html>
