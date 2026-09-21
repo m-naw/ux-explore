@@ -1,9 +1,9 @@
 {
   "runIds": [
-    "2026-09-21T17-28-04-m0a5"
+    "2026-09-21T18-15-32-70ak"
   ],
   "divergenceRatio": null,
-  "explorationRate": 0.44,
+  "explorationRate": 0.36,
   "completionRateByExploration": {
     "explored": 0,
     "exploited": null
@@ -12,46 +12,46 @@
     {
       "url": "https://dopomo.pl/en/cukr-card-application",
       "visits": 1,
-      "meanEntropy": 0.7634599606295349,
-      "meanConfusion": 2.32,
+      "meanEntropy": 0.5942141921722764,
+      "meanConfusion": 2.28,
       "exits": 0,
       "leaveRate": 0,
       "backtracks": 0,
       "topSampled": [
         {
           "name": "Check whether you can apply →",
-          "meanProbability": 0.9462365591397849
+          "meanProbability": 1
         }
       ]
     },
     {
       "url": "https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3",
-      "visits": 12,
-      "meanEntropy": 2.76510001010764,
-      "meanConfusion": 3.174166666666667,
+      "visits": 11,
+      "meanEntropy": 2.697719066747037,
+      "meanConfusion": 3.0927272727272723,
       "exits": 1,
       "leaveRate": 0,
-      "backtracks": 1,
+      "backtracks": 5,
       "topSampled": [
         {
+          "name": "↳How can I check whether my UKR status is still active?",
+          "meanProbability": 0.5208333333333333
+        },
+        {
+          "name": "Give consent",
+          "meanProbability": 0.48888888888888893
+        },
+        {
           "name": "Ask the assistant",
-          "meanProbability": 0.4100812368330646
-        },
-        {
-          "name": "I agree",
-          "meanProbability": 0.32967032967032966
-        },
-        {
-          "name": "Email address",
-          "meanProbability": 0.29012266802964476
+          "meanProbability": 0.39354278940567355
         }
       ]
     },
     {
       "url": "https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3",
       "visits": 10,
-      "meanEntropy": 1.350424940429403,
-      "meanConfusion": 2.338,
+      "meanEntropy": 1.4076024506416656,
+      "meanConfusion": 2.39,
       "exits": 0,
       "leaveRate": 0,
       "backtracks": 0,
@@ -62,11 +62,11 @@
         },
         {
           "name": "For myself",
-          "meanProbability": 0.9052631578947369
+          "meanProbability": 0.73
         },
         {
           "name": "Next →",
-          "meanProbability": 0.7355528069813784
+          "meanProbability": 0.6714767573696144
         }
       ]
     }
@@ -74,7 +74,7 @@
   "leaveRateByPersona": {
     "Olena": 0
   },
-  "charsPerToken": 2.9438601530377855,
+  "charsPerToken": 2.9548615145524275,
   "reportValidation": {
     "droppedFindings": 0,
     "downgradedFindings": 0
