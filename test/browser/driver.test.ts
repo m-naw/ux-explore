@@ -152,7 +152,8 @@ describeBrowser('drive', () => {
     expect(sequence(one)).toBe(sequence(two));
     expect(one.rows.length).toBeGreaterThan(1);
     expect(one.rows[0]!.elementsCount).toBeGreaterThan(0);
-    expect(one.rows[0]!.options.length).toBeGreaterThan(5);
+    expect(one.rows[0]!.options.length).toBeGreaterThan(2);
+    expect(one.rows[0]!.options.some((o) => o.description.includes('below fold'))).toBe(false);
     expect(one.rows[0]!.timing.decideMs).toBeGreaterThanOrEqual(0);
   });
 
@@ -160,21 +161,17 @@ describeBrowser('drive', () => {
     const browser = await getBrowser();
     const journey = await drive(config({ maxSteps: 1 }), {
       browser,
-      engine: fixedEngine(
-        (input) => input.options.find((o) => o.description.includes('Terms of Service'))!.id,
-      ),
+      engine: fixedEngine((input) => input.options.find((o) => o.description.includes('Home'))!.id),
     });
-    expect(journey.rows[0]!.sampledName).toBe('Terms of Service');
-    expect(journey.rows[0]!.sampledHref).toBe('/terms');
+    expect(journey.rows[0]!.sampledName).toBe('Home');
+    expect(journey.rows[0]!.sampledHref).toBe('/home');
   });
 
   it('stops on the success url and reports needMet', async () => {
     const browser = await getBrowser();
-    const journey = await drive(config({ successUrl: /terms/, maxSteps: 4 }), {
+    const journey = await drive(config({ successUrl: /\/home/, maxSteps: 4 }), {
       browser,
-      engine: fixedEngine(
-        (input) => input.options.find((o) => o.description.includes('Terms of Service'))!.id,
-      ),
+      engine: fixedEngine((input) => input.options.find((o) => o.description.includes('Home'))!.id),
     });
     expect(journey.summary.outcome.needMet).toBe(true);
     expect(journey.summary.outcome.reason).toBe('criteria matched');
@@ -689,9 +686,9 @@ describeBrowser('leaving after belief, and the non-responsive flag', () => {
     }> = [
       {
         reason: 'criteria matched',
-        overrides: { successUrl: /terms/, maxSteps: 4 },
+        overrides: { successUrl: /\/home/, maxSteps: 4 },
         engine: fixedEngine(
-          (input) => input.options.find((o) => o.description.includes('Terms of Service'))!.id,
+          (input) => input.options.find((o) => o.description.includes('Home'))!.id,
         ),
       },
       {
