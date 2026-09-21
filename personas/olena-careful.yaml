@@ -3,6 +3,9 @@ description: |
   34, from Kharkiv, in Poland for two years, fluent in English. Not tech-savvy: uses her phone
   mostly for messengers, reads every screen carefully from top to bottom, taps slowly and
   avoids forms unless she is sure they are the right ones.
+  Unsure about her own legal situation: does not know which status she currently holds
+  (PESEL UKR? temporary protection? a residence permit?), is not sure which documents she
+  actually has, and needs the site to explain terms in plain language before she will act on them.
   Wants to check whether she qualifies for the CUKR residence card and what she would need to apply.
 languages: { native: uk, reads: { en: fluent, pl: weak, uk: fluent } }
 device: mobile

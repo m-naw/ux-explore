@@ -1,1 +1,181 @@
-[]
+[
+  {
+    "step": 9,
+    "timestamp": 1790011701356,
+    "url": "https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3",
+    "stateHash": "8c89b8e6ebc549b8029474969a940e2eedc44912",
+    "viewHash": "d3f678d3168bba910a85a31cfe6ed3d6861f5e5a",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "screenshotPath": "reports/2026-09-21T17-28-04-m0a5/screenshots/step-09.jpg",
+    "elementsCount": 19,
+    "droppedElements": 0,
+    "options": [
+      {
+        "id": "el_14",
+        "kind": "element",
+        "description": "textbox \"Compose your message\" (visible; near \"AI assistant — not a person. Answers are information, not legal advice.\") [inside a dialog covering the page]",
+        "elementId": "el_14"
+      },
+      {
+        "id": "el_01",
+        "kind": "element",
+        "description": "button \"Dopomo home\" (visible; near \"Step 1 Eligibility\")",
+        "elementId": "el_01"
+      },
+      {
+        "id": "el_02",
+        "kind": "element",
+        "description": "button \"Language: EN\" (visible; near \"Step 1 Eligibility\")",
+        "elementId": "el_02"
+      },
+      {
+        "id": "el_03",
+        "kind": "element",
+        "description": "button \"Open menu\" (visible; near \"Step 1 Eligibility\")",
+        "elementId": "el_03"
+      },
+      {
+        "id": "el_04",
+        "kind": "element",
+        "description": "button \"Exit\" (visible; near \"Step 1 Eligibility\")",
+        "elementId": "el_04"
+      },
+      {
+        "id": "el_05",
+        "kind": "element",
+        "description": "radio \"Yes, I have an active PESEL UKR\" (visible; under \"Do you currently have an active UKR status (a PESEL number with the “UKR” status\"; near \"To help you, we process what you write in the chat — our AI assistant replies to you. Sometimes these may be personal ma\")",
+        "elementId": "el_05"
+      },
+      {
+        "id": "el_06",
+        "kind": "element",
+        "description": "radio \"No / not sure / I have a different status (e.g. NUE, a residence permit)\" (visible; under \"Do you currently have an active UKR status (a PESEL number with the “UKR” status\"; near \"To help you, we process what you write in the chat — our AI assistant replies to you. Sometimes these may be personal ma\")",
+        "elementId": "el_06"
+      },
+      {
+        "id": "el_07",
+        "kind": "element",
+        "description": "button \"💬Ask the assistant\" (visible; under \"Do you currently have an active UKR status (a PESEL number with the “UKR” status\"; near \"Not sure?\")",
+        "elementId": "el_07"
+      },
+      {
+        "id": "el_08",
+        "kind": "element",
+        "description": "button \"Back\" (visible; under \"Do you currently have an active UKR status (a PESEL number with the “UKR” status\"; near \"AI assistant — not a person. Answers are information, not legal advice.\")",
+        "elementId": "el_08"
+      },
+      {
+        "id": "el_10",
+        "kind": "element",
+        "description": "button \"Close\" (visible; near \"Question 3 of 6\") [inside a dialog covering the page]",
+        "elementId": "el_10"
+      },
+      {
+        "id": "el_11",
+        "kind": "element",
+        "description": "button \"I have a residence-and-work permit — do I still have the UKR status needed for t\" (visible; under \"Your consent to chat\"; near \"To help you, we process what you write in the chat — our AI assistant replies to you. Sometimes these may be personal ma\") [inside a dialog covering the page]",
+        "elementId": "el_11"
+      },
+      {
+        "id": "el_12",
+        "kind": "element",
+        "description": "button \"What is UKR status and why does it matter for the CUKR card?\" (visible; under \"Your consent to chat\"; near \"To help you, we process what you write in the chat — our AI assistant replies to you. Sometimes these may be personal ma\") [inside a dialog covering the page]",
+        "elementId": "el_12"
+      },
+      {
+        "id": "el_13",
+        "kind": "element",
+        "description": "button \"I went back to Ukraine and returned — do I still have UKR status for the CUKR ca\" (visible; under \"Your consent to chat\"; near \"To help you, we process what you write in the chat — our AI assistant replies to you. Sometimes these may be personal ma\") [inside a dialog covering the page]",
+        "elementId": "el_13"
+      },
+      {
+        "id": "el_17",
+        "kind": "element",
+        "description": "link \"Privacy policy\" -> /en/privacy (visible; under \"Your consent to chat\"; near \"Not sure?\") [inside a dialog covering the page]",
+        "elementId": "el_17"
+      },
+      {
+        "id": "el_18",
+        "kind": "element",
+        "description": "button \"I agree\" (visible; under \"Your consent to chat\"; near \"Not sure?\") [inside a dialog covering the page]",
+        "elementId": "el_18"
+      },
+      {
+        "id": "el_19",
+        "kind": "element",
+        "description": "button \"Not now\" (visible; under \"Your consent to chat\"; near \"Not sure?\") [inside a dialog covering the page]",
+        "elementId": "el_19"
+      },
+      {
+        "id": "back",
+        "kind": "back",
+        "description": "go back to the previous page"
+      },
+      {
+        "id": "leave",
+        "kind": "leave",
+        "description": "leave this site"
+      }
+    ],
+    "distribution": {
+      "el_10": 0.009999999999999998,
+      "el_18": 0.35,
+      "el_06": 0.21999999999999995,
+      "el_05": 0.009999999999999998,
+      "el_19": 0.009999999999999998,
+      "el_12": 0.029999999999999992,
+      "el_07": 0.29999999999999993,
+      "el_14": 0.029999999999999992,
+      "el_11": 0.039999999999999994
+    },
+    "pruned": {
+      "el_18": 0.38461538461538464,
+      "el_07": 0.3296703296703296,
+      "el_06": 0.24175824175824173,
+      "el_11": 0.04395604395604395
+    },
+    "sampled": "el_07",
+    "sampledName": "💬Ask the assistant",
+    "argmax": "el_18",
+    "exploration": true,
+    "confidence": 0.35,
+    "entropy": 2.2203672490179556,
+    "goalMet": 0.09,
+    "confusion": 2.64,
+    "outcome": {
+      "urlChanged": false,
+      "stateChanged": true,
+      "consoleErrors": [],
+      "failedRequests": [],
+      "validationMessages": [],
+      "durationMs": 4620
+    },
+    "timing": {
+      "extractMs": 36,
+      "decideMs": 282,
+      "decideRetryMs": 0,
+      "executeMs": 4620,
+      "settleMs": 313
+    },
+    "flags": [
+      "high-entropy",
+      "low-confidence",
+      "overlay-undismissed"
+    ],
+    "bucket": "tool",
+    "stateChars": 6649,
+    "inputTokens": 2148,
+    "visibleTextChars": 903,
+    "seenTextChars": 557,
+    "scrollOnly": false,
+    "nextUrl": "https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3",
+    "clickPath": "handle",
+    "overlayDismissal": {
+      "dismissed": true,
+      "method": "escape"
+    }
+  }
+]

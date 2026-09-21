@@ -1,68 +1,72 @@
 {
   "runIds": [
-    "2026-09-21T16-56-19-7jyu"
+    "2026-09-21T17-28-04-m0a5"
   ],
   "divergenceRatio": null,
-  "explorationRate": 0.18181818181818182,
+  "explorationRate": 0.44,
   "completionRateByExploration": {
     "explored": 0,
     "exploited": null
   },
   "perUrl": [
     {
-      "url": "https://dopomo.pl/en",
-      "visits": 2,
-      "meanEntropy": 2.5526483029247657,
-      "meanConfusion": 2.3099999999999996,
+      "url": "https://dopomo.pl/en/cukr-card-application",
+      "visits": 1,
+      "meanEntropy": 0.7634599606295349,
+      "meanConfusion": 2.32,
       "exits": 0,
       "leaveRate": 0,
       "backtracks": 0,
       "topSampled": [
         {
-          "name": "A CUKR card for you or your childUkrainian citizens with PESEL UKR status",
-          "meanProbability": 0.3152173913043479
-        },
-        {
-          "name": "CUKR qualification",
-          "meanProbability": 0.14444444444444446
+          "name": "Check whether you can apply →",
+          "meanProbability": 0.9462365591397849
         }
       ]
     },
     {
-      "url": "https://dopomo.pl/en/pathfinder?step=positive",
-      "visits": 4,
-      "meanEntropy": 1.8286821423862656,
-      "meanConfusion": 2.3375000000000004,
+      "url": "https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3",
+      "visits": 12,
+      "meanEntropy": 2.76510001010764,
+      "meanConfusion": 3.174166666666667,
       "exits": 1,
       "leaveRate": 0,
       "backtracks": 1,
       "topSampled": [
         {
+          "name": "Ask the assistant",
+          "meanProbability": 0.4100812368330646
+        },
+        {
+          "name": "I agree",
+          "meanProbability": 0.32967032967032966
+        },
+        {
           "name": "Email address",
-          "meanProbability": 0.5786849020544672
+          "meanProbability": 0.29012266802964476
         }
       ]
     },
     {
-      "url": "https://dopomo.pl/en/pathfinder?step=tree",
-      "visits": 15,
-      "meanEntropy": 0.8809994422566324,
-      "meanConfusion": 2.102,
+      "url": "https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3",
+      "visits": 10,
+      "meanEntropy": 1.350424940429403,
+      "meanConfusion": 2.338,
       "exits": 0,
       "leaveRate": 0,
-      "backtracks": 1,
+      "backtracks": 0,
       "topSampled": [
         {
           "name": "🇺🇦Ukrainian citizenship",
           "meanProbability": 1
         },
         {
-          "name": "Next →",
-          "meanProbability": 0.898030045351474
+          "name": "For myself",
+          "meanProbability": 0.9052631578947369
         },
         {
-          "name": "Yes, on 4 June 2025 I had an active PESEL UKR",
-          "meanProbability": 0.8555555555555555
+          "name": "Next →",
+          "meanProbability": 0.7355528069813784
         }
       ]
     }
@@ -70,7 +74,7 @@
   "leaveRateByPersona": {
     "Olena": 0
   },
-  "charsPerToken": 2.7437642499510018,
+  "charsPerToken": 2.9438601530377855,
   "reportValidation": {
     "droppedFindings": 0,
     "downgradedFindings": 0
