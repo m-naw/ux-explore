@@ -123,8 +123,13 @@
   }
   footer .m b { color: var(--text); font-weight: 600; }
   footer .spacer { flex: 1; }
-  .badge { font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; border: 1px solid var(--border); color: var(--muted); }
-  .badge.on { color: #06281a; background: var(--good); border-color: var(--good); }
+  .meter { display: flex; align-items: center; gap: 8px; }
+  .meter .m-label { font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+  .meter .m-track { width: 90px; height: 8px; border-radius: 4px; background: var(--panel-2); border: 1px solid var(--border); overflow: hidden; }
+  .meter .m-fill { height: 100%; border-radius: 4px; }
+  .meter .m-fill.low { background: var(--faint); }
+  .meter .m-fill.mid { background: var(--accent); }
+  .meter .m-fill.high { background: var(--good); }
 
   /* Outcome card: replaces the screenshot + option panes with one centred verdict. */
   body.outcome { align-items: center; justify-content: center; }
@@ -309,15 +314,19 @@
       box.appendChild(d);
     }
 
+    // Goal confidence meter: grey below 0.5, amber 0.5-0.8, green at/above 0.8 —
+    // the engine's BELIEVES_DONE_THRESHOLD (engine/goal.ts).
     const goalMet = typeof row.goalMet === 'number' ? row.goalMet : 0;
-    const goalOn = goalMet >= 0.5;
+    const goalPct = Math.round(Math.max(0, Math.min(1, goalMet)) * 100);
+    const goalCls = goalMet >= 0.8 ? 'high' : goalMet >= 0.5 ? 'mid' : 'low';
     const f = document.getElementById('footer');
     f.innerHTML =
       `<span class="m">confidence <b>${fmt(row.confidence)}</b></span>` +
       `<span class="m">entropy <b>${fmt(row.entropy)}</b></span>` +
       (typeof row.confusion === 'number' ? `<span class="m">confusion <b>${fmt(row.confusion, 1)}</b></span>` : '') +
       `<span class="spacer"></span>` +
-      `<span class="badge ${goalOn ? 'on' : ''}">goal met ${fmt(goalMet)}</span>`;
+      `<span class="meter"><span class="m-label">goal ${goalPct}%</span>` +
+      `<span class="m-track"><span class="m-fill ${goalCls}" style="width:${goalPct}%"></span></span></span>`;
     return true;
   };
 

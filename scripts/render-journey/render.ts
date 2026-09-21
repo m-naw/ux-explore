@@ -6,8 +6,10 @@
  *       [--hold 2.5] [--width 1280] [--ffmpeg /path/to/ffmpeg] [--goal "..."] [--persona Olena]
  *       [--persona-line "45, British, speaks only English"] [--short]
  *
- * --short auto-selects at most 10 steps: first, last, every step where the sampled option
- * differs from the argmax, any step flagged `confused`, then the highest-entropy rest.
+ * --short auto-selects at most 14 steps: first, last, one representative per distinct screen
+ * (state hash / url change, falling back to a sampledName run-length grouping), every step
+ * where the sampled option differs from the argmax, any step flagged `confused`, then the
+ * highest-entropy rest.
  * A final outcome card (GOAL MET / GOAL NOT MET / GAVE UP / STUCK) is always appended and held 4s.
  *
  * ffmpeg is looked up as: --ffmpeg, then $FFMPEG, then `ffmpeg` on PATH.
@@ -22,6 +24,7 @@ import { parse } from 'yaml';
 type Row = {
   step: number;
   url: string;
+  stateHash?: string;
   screenshotPath?: string;
   options: { id: string; kind: string; description: string }[];
   distribution: Record<string, number>;
@@ -135,12 +138,24 @@ function readFindingsCount(runDir: string): number | null {
   return null;
 }
 
-/** --short: first, last, every sampled≠argmax, any confusion, then top entropy; ≤10, chronological. */
-function pickShort(rows: Row[], max = 10): Row[] {
+/**
+ * --short: first, last, one representative per distinct screen, every sampled≠argmax, any
+ * confusion, then top entropy; ≤14, chronological.
+ */
+function pickShort(rows: Row[], max = 14): Row[] {
   const keep = new Set<number>();
   const add = (r: Row | undefined) => { if (r && keep.size < max) keep.add(r.step); };
   add(rows[0]);
   add(rows.at(-1));
+  // One step per distinct screen, before the entropy fill, so --short never skips a whole
+  // screen. A screen changes when stateHash (or, lacking that, the url) changes; falls back
+  // to a sampledName run-length grouping when neither field is present.
+  let prevScreen: string | undefined;
+  for (const r of rows) {
+    const screen = r.stateHash || r.url || r.sampledName;
+    if (screen !== prevScreen) add(r);
+    prevScreen = screen;
+  }
   for (const r of rows) if (r.sampled && r.argmax && r.sampled !== r.argmax) add(r);
   // `confused` is the engine's flag for confusion above its threshold; every row carries a raw score.
   for (const r of rows) if (r.flags?.includes('confused')) add(r);
