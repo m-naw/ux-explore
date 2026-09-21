@@ -70,7 +70,7 @@ now:` (2,500 chars, 400 per block) and `Seen earlier on this page:` (1,000 chars
 
 ```
 engine/extract.ts      accessibility-derived elements, handles, geometry, iframes, shadow DOM, disabled/value state, state hash
-engine/overlay.ts      cookie banners and modals, PL/UK/RU dismiss words
+engine/overlay.ts      cookie banners and modals; dismiss keywords match natively in English, Polish, Ukrainian and Russian
 engine/options.ts      reserved slots, cap, meta actions (scroll, back, switch_language, leave on every step)
 engine/typed-input.ts  persona facts -> type:/select: options, required-field detection
 engine/jev-engine.ts   one POST per step, size fitting, retries, timeout, parser

@@ -68,8 +68,13 @@ Flags (`npx tsx cli.ts --help`):
 
 ### Example: the dopomo.pl pathfinder
 
+dopomo.pl is the author's own product, built by RunProven AI, a legal-help service for
+Ukrainians and other third-country nationals in Poland. It was chosen as the test platform
+here because the author has access to its real analytics, which made it possible to compare
+synthetic persona behaviour against live user behaviour rather than assume it.
+
 The pathfinder is a long wizard: from the landing page a human needs **14-15 clicks** to reach
-signup (accept the cookie banner, enter the pathfinder, then one answer plus one `Dalej →` per
+signup (accept the cookie banner, enter the pathfinder, then one answer plus one `Next →` per
 question), and it ends on one of two different screens depending on the case. The success
 pattern that covers both, and the one these runs used, is:
 
@@ -136,10 +141,12 @@ laptop, which is the intended difference.
 
 Each visible option also carries the copy around it: the nearest heading above it in the same
 landmark (80 characters) and the closest text block within 160 pixels (120 characters), so a
-button reads as `button "Перевірте →" (visible; under "Отримайте карту CUKR"; near
-"Безкоштовна перевірка за 2 хвилини")`. Prices survive verbatim. When all the option text
+button reads as `button "Check →" (visible; under "Get your card"; near
+"Free 2-minute check")`. Prices survive verbatim. When all the option text
 together would pass 6,000 characters, context is dropped from the lowest options first; names
-are never dropped.
+are never dropped. The extractor reads whatever language the page renders, with no translation
+step, and overlay dismissal matches accept/close keywords natively in English, Polish,
+Ukrainian and Russian.
 
 A page that never fit the device it opened on gets one extra line, `Page is not
 mobile-optimised; shown zoomed out`, and a page with disabled controls gets a `Disabled right

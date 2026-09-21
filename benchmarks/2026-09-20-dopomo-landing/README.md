@@ -2,6 +2,8 @@
 
 Live journeys and Decide-engine benchmark data behind the methodology post. No network access or API calls were made to produce this package; it repackages one live session's output.
 
+dopomo.pl is the author's own product (RunProven AI); it was used here because the author has access to its real analytics, letting synthetic persona behaviour be compared against live user behaviour.
+
 **Measured:** `https://dopomo.pl/uk/pathfinder/case/cukr/landing?ads` (CUKR residence-card ad-clicker landing flow), plus `https://books.toscrape.com/` for the smoke journey. Personas: `Oksana` + `Sergei` (`personas/*-ad-clicker.yaml`, low-intent/low-patience mobile), `Anna` for smoke. Seeds 1-3 per persona. Flags: `--max-steps 12 --no-report --record-decisions --verbose`.
 
 ## Commands (`$TYPESAFE_API_KEY`, `$ANTHROPIC_API_KEY` as env)
