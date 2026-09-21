@@ -178,9 +178,7 @@ export function buildOptions(ctx: OptionContext): OptionSet {
   // A human cannot click what is not on screen. Below-fold controls stay out of the option
   // list; scroll_down is how she reaches them. Their names are reported as a sample only.
   const visible = candidates.filter((el) => el.inViewport);
-  const below = candidates
-    .filter((el) => !el.inViewport)
-    .sort((a, b) => a.y - b.y);
+  const below = candidates.filter((el) => !el.inViewport).sort((a, b) => a.y - b.y);
   // A text field with no persona fact can only be focused, never filled. Offering that click
   // is a dead tap. Selects stay: choosing an option does not require a fact.
   const unfillable = (el: UxElement) => isTextInput(el) && !matchFact(el, persona.facts);
