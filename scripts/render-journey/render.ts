@@ -216,13 +216,22 @@ async function main() {
   }
 
   // Outcome card, held longer than a step so the verdict lands.
+  // Left pane is screenshots/final.jpg (state after the last action) when the run has one.
   const label = outcomeLabel(doc.summary, rows.at(-1));
   const findings = readFindingsCount(runDir);
+  const finalShot = join(runDir, 'screenshots', 'final.jpg');
+  const screenshotUrl = existsSync(finalShot) ? pathToFileURL(finalShot).href : '';
   await page.goto(frameHtml);
   await page.evaluate(
     ([m]) => (window as any).renderOutcome(m),
-    [{ persona, personaLine, goal, label, reason: doc.summary?.outcome?.reason ?? '', steps: doc.summary?.outcome?.totalSteps ?? total, findings }] as const,
+    [{ persona, personaLine, goal, label, reason: doc.summary?.outcome?.reason ?? '', steps: doc.summary?.outcome?.totalSteps ?? total, findings, screenshotUrl }] as const,
   );
+  if (screenshotUrl) {
+    await page.waitForFunction(() => {
+      const img = document.getElementById('img') as HTMLImageElement;
+      return img.complete && img.naturalWidth > 0;
+    });
+  }
   const outcomePng = join(framesDir, 'outcome.png');
   await page.screenshot({ path: outcomePng, type: 'png' });
   await browser.close();

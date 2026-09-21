@@ -1,6 +1,6 @@
 # Handoff: Jev demo gif + overlay fixes
 
-Written 2026-09-21. Branch `demo/journey-render`, PR #1 (draft, do not merge until the fixes below are in and the demo is re-rendered).
+Written 2026-09-21. Branch `demo/journey-render` (rebased onto `fix/overlay-handling`, not onto `main`). PR #1 stays draft. Engine fixes are PR #2 — do not merge either without the owner.
 
 ## Goal
 
@@ -53,6 +53,15 @@ Fix: in the extraction `page.evaluate`, run an `elementFromPoint` check at each 
 ### Site observations worth telling dopomo (from careful run)
 - Chat drawer first shows input disabled with "Give consent" bar; input label reads "Limit reached" while showing 0/3 messages (`sample-run/careful/screenshots/step-13.jpg` in the previous run set; re-check on the current one).
 - Eligibility flow: a user unsure of her UKR status answers "No / not sure" and lands on the negative branch with only chat/signup as exits.
+
+## Rerun after the overlay fixes (2026-09-21)
+
+Same command as above, still `--no-report` (Anthropic key still returns "credit balance too low"). Both runs wrote `screenshots/final.jpg`. Consent is a real step, not an auto-accept.
+
+- Careful (`reports/2026-09-21T20-52-08-pghv`): 25 steps, STUCK (step budget exhausted) on `?step=negative`. Step 2 sampled "Manage preferences", step 3 "Save choices", step 18 "I agree". No `overlayDismissal` on the consent step.
+- Tech-savvy (`reports/2026-09-21T20-53-07-9ih1`): 14 steps, GOAL MET. Step 2 sampled "Reject all".
+
+Assets re-rendered: `journey.gif` / `journey.mp4` are the short careful cut; full mp4s and `compare.png` updated. Outcome card shows `final.jpg` on the left when the file is present.
 
 ## Plan for the next session
 

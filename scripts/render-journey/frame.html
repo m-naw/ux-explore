@@ -131,11 +131,20 @@
   .meter .m-fill.mid { background: var(--accent); }
   .meter .m-fill.high { background: var(--good); }
 
-  /* Outcome card: replaces the screenshot + option panes with one centred verdict. */
-  body.outcome { align-items: center; justify-content: center; }
-  body.outcome #shot, body.outcome #card { display: none; }
+  /* Outcome card: final.jpg on the left when present; verdict fills the right pane. */
+  body.outcome #card { display: none; }
+  body.outcome:not(.has-final) { align-items: center; justify-content: center; }
+  body.outcome:not(.has-final) #shot { display: none; }
   #verdict { display: none; width: 900px; text-align: center; }
   body.outcome #verdict { display: block; }
+  body.outcome.has-final #verdict {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+  }
   #verdict .who { font-size: 22px; }
   #verdict .persona { white-space: normal; margin-top: 6px; }
   #verdict .goal { margin-top: 10px; font-size: 16px; }
@@ -333,6 +342,21 @@
   // Final card: { persona, personaLine, goal, label, reason, steps, findings }.
   window.renderOutcome = function renderOutcome(m) {
     document.body.classList.add('outcome');
+    if (m.screenshotUrl) {
+      document.body.classList.add('has-final');
+      const img = document.getElementById('img');
+      img.onload = () => {
+        const shot = document.getElementById('shot');
+        const portrait = img.naturalHeight > img.naturalWidth;
+        document.body.classList.toggle('phone', portrait);
+        const bezel = portrait ? 26 : 0;
+        const h = shot.clientHeight - bezel;
+        const want = h * (img.naturalWidth / img.naturalHeight) + 2 + bezel;
+        shot.style.flexBasis = Math.min(want, 0.55 * 1240) + 'px';
+        shot.style.flexGrow = '0';
+      };
+      img.src = m.screenshotUrl;
+    }
     const cls = { 'GOAL MET': 'met', 'GOAL NOT MET': 'notmet', 'GAVE UP': 'gaveup', 'STUCK': 'stuck' }[m.label] || 'notmet';
     const stats = [`<div><b>${esc(m.steps)}</b>steps taken</div>`];
     if (typeof m.findings === 'number') stats.push(`<div><b>${esc(m.findings)}</b>findings</div>`);
