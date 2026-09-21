@@ -3,7 +3,12 @@
  * mp4 and a social-sized gif via ffmpeg.
  *
  *   pnpm tsx scripts/render-journey/render.ts <runDir> [--out docs/demo] [--steps 1,3,5]
- *       [--hold 1.4] [--width 1280] [--ffmpeg /path/to/ffmpeg] [--goal "..."] [--persona Olena]
+ *       [--hold 2.5] [--width 1280] [--ffmpeg /path/to/ffmpeg] [--goal "..."] [--persona Olena]
+ *       [--persona-line "45, British, speaks only English"] [--short]
+ *
+ * --short auto-selects at most 10 steps: first, last, every step where the sampled option
+ * differs from the argmax, any step flagged `confused`, then the highest-entropy rest.
+ * A final outcome card (GOAL MET / GOAL NOT MET / GAVE UP / STUCK) is always appended and held 4s.
  *
  * ffmpeg is looked up as: --ffmpeg, then $FFMPEG, then `ffmpeg` on PATH.
  */
@@ -28,6 +33,12 @@ type Row = {
   entropy: number;
   goalMet: number;
   confusion: number;
+  flags?: string[];
+};
+
+type Summary = {
+  persona?: { name?: string; description?: string };
+  outcome?: { needMet?: boolean | null; gaveUp?: boolean; left?: boolean; reason?: string; totalSteps?: number };
 };
 
 type Args = {
@@ -39,10 +50,12 @@ type Args = {
   ffmpeg: string | null;
   goal: string | null;
   persona: string | null;
+  personaLine: string | null;
+  short: boolean;
 };
 
 function parseArgs(argv: string[]): Args {
-  const a: Args = { runDir: '', out: 'docs/demo', steps: null, hold: 1.4, width: 1280, ffmpeg: null, goal: null, persona: null };
+  const a: Args = { runDir: '', out: 'docs/demo', steps: null, hold: 2.5, width: 1280, ffmpeg: null, goal: null, persona: null, personaLine: null, short: false };
   for (let i = 0; i < argv.length; i++) {
     const v = argv[i] ?? '';
     const next = (): string => {
@@ -57,10 +70,12 @@ function parseArgs(argv: string[]): Args {
     else if (v === '--ffmpeg') a.ffmpeg = next();
     else if (v === '--goal') a.goal = next();
     else if (v === '--persona') a.persona = next();
+    else if (v === '--persona-line') a.personaLine = next();
+    else if (v === '--short') a.short = true;
     else if (!a.runDir && !v.startsWith('--')) a.runDir = v;
     else throw new Error(`unknown arg: ${v}`);
   }
-  if (!a.runDir) throw new Error('usage: render.ts <runDir> [--out dir] [--steps 1,2] [--hold s] [--width px] [--ffmpeg bin]');
+  if (!a.runDir) throw new Error('usage: render.ts <runDir> [--out dir] [--steps 1,2] [--hold s] [--width px] [--ffmpeg bin] [--persona-line "..."] [--short]');
   return a;
 }
 
@@ -89,6 +104,48 @@ function readGoal(runDir: string): string | null {
 
 function pad(n: number) { return String(n).padStart(2, '0'); }
 
+/** First sentence of the persona's YAML description, when the run carried one. */
+function personaLineFrom(summary: Summary | undefined): string | null {
+  const d = summary?.persona?.description?.trim();
+  if (!d) return null;
+  return (d.split(/(?<=\.)\s+|\n/)[0] ?? d).trim();
+}
+
+/** Map a run's outcome to the four demo labels. Order matters: a met goal wins over how it ended. */
+function outcomeLabel(summary: Summary | undefined, last: Row | undefined): 'GOAL MET' | 'GOAL NOT MET' | 'GAVE UP' | 'STUCK' {
+  const o = summary?.outcome ?? {};
+  if (o.needMet === true || (o.needMet == null && (last?.goalMet ?? 0) >= 0.5)) return 'GOAL MET';
+  if (o.gaveUp || o.left || /gave up|left the site/i.test(o.reason ?? '')) return 'GAVE UP';
+  if (/loop|budget|stuck|tool failure/i.test(o.reason ?? '')) return 'STUCK';
+  return 'GOAL NOT MET';
+}
+
+/** Findings count, or null when the report call failed (a zero would then be a lie). */
+function readFindingsCount(runDir: string): number | null {
+  const issues = join(runDir, 'tool-issues.json');
+  if (existsSync(issues) && /"report-failed"/.test(readFileSync(issues, 'utf8'))) return null;
+  for (const name of ['findings.yaml', 'findings.json']) {
+    const p = join(runDir, name);
+    if (!existsSync(p)) continue;
+    const v = parse(readFileSync(p, 'utf8'));
+    return Array.isArray(v) ? v.length : null;
+  }
+  return null;
+}
+
+/** --short: first, last, every sampled≠argmax, any confusion, then top entropy; ≤10, chronological. */
+function pickShort(rows: Row[], max = 10): Row[] {
+  const keep = new Set<number>();
+  const add = (r: Row | undefined) => { if (r && keep.size < max) keep.add(r.step); };
+  add(rows[0]);
+  add(rows.at(-1));
+  for (const r of rows) if (r.sampled && r.argmax && r.sampled !== r.argmax) add(r);
+  // `confused` is the engine's flag for confusion above its threshold; every row carries a raw score.
+  for (const r of rows) if (r.flags?.includes('confused')) add(r);
+  for (const r of [...rows].sort((a, b) => (b.entropy ?? 0) - (a.entropy ?? 0))) add(r);
+  return rows.filter((r) => keep.has(r.step));
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const runDir = resolve(args.runDir);
@@ -102,13 +159,14 @@ async function main() {
     process.exit(2);
   }
 
-  const doc = parse(readFileSync(join(runDir, 'journey.yaml'), 'utf8')) as { summary?: any; rows: Row[] };
+  const doc = parse(readFileSync(join(runDir, 'journey.yaml'), 'utf8')) as { summary?: Summary; rows: Row[] };
   const rows = doc.rows ?? [];
   if (!rows.length) throw new Error('journey.yaml has no rows');
   const persona = args.persona ?? doc.summary?.persona?.name ?? 'Persona';
+  const personaLine = args.personaLine ?? personaLineFrom(doc.summary) ?? '';
   const goal = args.goal ?? readGoal(runDir) ?? '';
 
-  const wanted = args.steps ? rows.filter((r) => args.steps!.includes(r.step)) : rows;
+  const wanted = args.steps ? rows.filter((r) => args.steps!.includes(r.step)) : args.short ? pickShort(rows) : rows;
   if (!wanted.length) throw new Error('no rows match --steps');
   const total = rows.length;
 
@@ -127,7 +185,7 @@ async function main() {
     await page.goto(frameHtml);
     await page.evaluate(
       ([r, i, t, s, m]) => (window as any).renderStep(r, i, t, s, m),
-      [row, row.step, total, pathToFileURL(shotFile).href, { persona, goal }] as const,
+      [row, row.step, total, pathToFileURL(shotFile).href, { persona, personaLine, goal }] as const,
     );
     await page.waitForFunction(() => {
       const img = document.getElementById('img') as HTMLImageElement;
@@ -139,12 +197,26 @@ async function main() {
     if (row.sampled !== row.argmax) diverged.push(row.step);
     process.stdout.write(`frame ${row.step}/${total}\n`);
   }
+
+  // Outcome card, held longer than a step so the verdict lands.
+  const label = outcomeLabel(doc.summary, rows.at(-1));
+  const findings = readFindingsCount(runDir);
+  await page.goto(frameHtml);
+  await page.evaluate(
+    ([m]) => (window as any).renderOutcome(m),
+    [{ persona, personaLine, goal, label, reason: doc.summary?.outcome?.reason ?? '', steps: doc.summary?.outcome?.totalSteps ?? total, findings }] as const,
+  );
+  const outcomePng = join(framesDir, 'outcome.png');
+  await page.screenshot({ path: outcomePng, type: 'png' });
   await browser.close();
 
-  // concat demuxer list: each still held for --hold seconds; last entry repeated so its duration applies.
+  // concat demuxer list: each still held for --hold seconds, the outcome card for 4s; last entry
+  // repeated so its duration applies.
+  const HOLD_OUTCOME = 4;
   const list = join(framesDir, 'list.txt');
-  const lines = framePaths.map((p) => `file '${p.replace(/'/g, "'\\''")}'\nduration ${args.hold}`);
-  lines.push(`file '${(framePaths.at(-1) ?? '').replace(/'/g, "'\\''")}'`);
+  const q = (p: string) => `file '${p.replace(/'/g, "'\\''")}'`;
+  const lines = framePaths.map((p) => `${q(p)}\nduration ${args.hold}`);
+  lines.push(`${q(outcomePng)}\nduration ${HOLD_OUTCOME}`, q(outcomePng));
   writeFileSync(list, lines.join('\n') + '\n');
 
   const mp4 = join(out, 'journey.mp4');
@@ -178,7 +250,8 @@ async function main() {
 
   const mp4Mb = (statSync(mp4).size / 1024 / 1024).toFixed(2);
   process.stdout.write(
-    `done: ${framePaths.length} frames -> ${mp4} (${mp4Mb} MB), ${gif} (${gifInfo})\n` +
+    `done: ${framePaths.length} frames + outcome (${label}) -> ${mp4} (${mp4Mb} MB), ${gif} (${gifInfo})\n` +
+    `steps rendered: ${wanted.map((r) => r.step).join(', ')}\n` +
     `sampled != argmax at steps: ${diverged.length ? diverged.join(', ') : 'none'}\n`,
   );
 }

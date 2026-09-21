@@ -56,12 +56,15 @@
   .top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
   .who { font-size: 20px; font-weight: 700; }
   .step { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .persona { margin-top: 2px; color: var(--muted); font-size: 13px; line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .goal { margin-top: 6px; color: var(--muted); font-size: 14px; line-height: 1.35; }
   .goal b { color: var(--text); font-weight: 600; }
   .url { margin-top: 6px; font-size: 12px; color: var(--faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: ui-monospace, Menlo, Consolas, monospace; }
 
   #options { flex: 1 1 auto; padding: 10px 18px; overflow: hidden; display: flex; flex-direction: column; gap: 6px; }
   .label-h { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); margin-bottom: 2px; }
+  .action { font-size: 15px; line-height: 1.35; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .action b { color: var(--accent); font-weight: 600; }
   .row {
     display: grid;
     grid-template-columns: 1fr 64px;
@@ -117,6 +120,23 @@
   footer .spacer { flex: 1; }
   .badge { font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; border: 1px solid var(--border); color: var(--muted); }
   .badge.on { color: #06281a; background: var(--good); border-color: var(--good); }
+
+  /* Outcome card: replaces the screenshot + option panes with one centred verdict. */
+  body.outcome { align-items: center; justify-content: center; }
+  body.outcome #shot, body.outcome #card { display: none; }
+  #verdict { display: none; width: 900px; text-align: center; }
+  body.outcome #verdict { display: block; }
+  #verdict .who { font-size: 22px; }
+  #verdict .persona { white-space: normal; margin-top: 6px; }
+  #verdict .goal { margin-top: 10px; font-size: 16px; }
+  #verdict .big { font-size: 84px; font-weight: 800; letter-spacing: .02em; line-height: 1.1; margin: 36px 0 10px; }
+  #verdict .big.met { color: var(--good); }
+  #verdict .big.notmet { color: var(--bad); }
+  #verdict .big.gaveup { color: var(--accent); }
+  #verdict .big.stuck { color: var(--argmax); }
+  #verdict .reason { color: var(--muted); font-size: 16px; }
+  #verdict .stats { margin-top: 36px; display: flex; justify-content: center; gap: 48px; font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  #verdict .stats b { display: block; color: var(--text); font-size: 34px; font-weight: 700; }
 </style>
 </head>
 <body>
@@ -124,12 +144,14 @@
   <div id="card">
     <header>
       <div class="top"><div class="who" id="who"></div><div class="step" id="step"></div></div>
+      <div class="persona" id="persona"></div>
       <div class="goal" id="goal"></div>
       <div class="url" id="url"></div>
     </header>
     <div id="options"></div>
     <footer id="footer"></footer>
   </div>
+  <div id="verdict"></div>
 
 <script>
   const MAX_ROWS = 7;
@@ -148,6 +170,20 @@
     return { role: opt.kind || '', name: d.replace(/\s*\(.*$/s, '') };
   }
 
+  // Plain-English line for what Jev did on this step.
+  function actionLine(row) {
+    const byId = new Map((row.options || []).map(o => [o.id, o]));
+    const opt = byId.get(row.sampled) || { id: row.sampled, kind: row.sampled, description: row.sampledName };
+    const meta = { scroll_down: 'Scrolled down', scroll_up: 'Scrolled up', leave: 'Left the site', back: 'Went back' };
+    if (meta[opt.id] || meta[opt.kind]) return { verb: meta[opt.id] || meta[opt.kind], target: '' };
+    const { role, name } = shortLabel(opt);
+    const label = (row.sampledName && !/^el_\d+$/.test(row.sampledName) ? row.sampledName : name) || opt.id;
+    // kind wins over role: a `type` action on a textbox typed, a plain `element` click on it only focused it.
+    const byKind = { type: 'Typed into', select: 'Chose' };
+    const byRole = { textbox: 'Focused', combobox: 'Opened', link: 'Opened', button: 'Clicked', checkbox: 'Ticked', radio: 'Selected' };
+    return { verb: byKind[opt.kind] || byRole[String(role).toLowerCase()] || 'Clicked', target: label };
+  }
+
   function pct(p) { return (p * 100).toFixed(p >= 0.1 ? 0 : 1) + '%'; }
   function fmt(x, n = 2) { return typeof x === 'number' ? x.toFixed(n) : '–'; }
 
@@ -164,6 +200,7 @@
     };
     img.src = screenshotUrl;
     document.getElementById('who').textContent = meta.persona || 'Persona';
+    document.getElementById('persona').textContent = meta.personaLine || '';
     document.getElementById('step').textContent = `Step ${index}/${total}`;
     document.getElementById('goal').innerHTML = meta.goal ? `Goal: <b>${esc(meta.goal)}</b>` : '';
     document.getElementById('url').textContent = String(row.url || '').replace(/&amp;/g, '&');
@@ -183,6 +220,11 @@
 
     const box = document.getElementById('options');
     box.innerHTML = '';
+    const act = actionLine(row);
+    const a = document.createElement('div');
+    a.className = 'action';
+    a.innerHTML = `Action: ${esc(act.verb)}${act.target ? ` <b>${esc(`"${act.target}"`)}</b>` : ''}`;
+    box.appendChild(a);
     const h = document.createElement('div');
     h.className = 'label-h';
     h.textContent = `Jev's options · ${totalOpts} on screen`;
@@ -236,6 +278,22 @@
       (typeof row.confusion === 'number' ? `<span class="m">confusion <b>${fmt(row.confusion, 1)}</b></span>` : '') +
       `<span class="spacer"></span>` +
       `<span class="badge ${goalOn ? 'on' : ''}">goal met ${fmt(goalMet)}</span>`;
+    return true;
+  };
+
+  // Final card: { persona, personaLine, goal, label, reason, steps, findings }.
+  window.renderOutcome = function renderOutcome(m) {
+    document.body.classList.add('outcome');
+    const cls = { 'GOAL MET': 'met', 'GOAL NOT MET': 'notmet', 'GAVE UP': 'gaveup', 'STUCK': 'stuck' }[m.label] || 'notmet';
+    const stats = [`<div><b>${esc(m.steps)}</b>steps taken</div>`];
+    if (typeof m.findings === 'number') stats.push(`<div><b>${esc(m.findings)}</b>findings</div>`);
+    document.getElementById('verdict').innerHTML =
+      `<div class="who">${esc(m.persona || 'Persona')}</div>` +
+      `<div class="persona">${esc(m.personaLine || '')}</div>` +
+      (m.goal ? `<div class="goal">Goal: <b>${esc(m.goal)}</b></div>` : '') +
+      `<div class="big ${cls}">${esc(m.label)}</div>` +
+      (m.reason ? `<div class="reason">${esc(m.reason)}</div>` : '') +
+      `<div class="stats">${stats.join('')}</div>`;
     return true;
   };
 </script>
