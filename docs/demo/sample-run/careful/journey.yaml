@@ -1,5 +1,5 @@
 summary:
-  runId: 2026-09-21T20-52-08-pghv
+  runId: 2026-09-21T21-34-31-bc8n
   persona:
     name: Olena
   browserLocale: uk-UA
@@ -10,317 +10,64 @@ summary:
     gaveUp: false
     left: false
     believedDone: false
-    reason: step budget exhausted
-    bucket: ux
-    totalSteps: 25
-    totalDurationMs: 35260
+    reason: loop detected
+    bucket: product
+    totalSteps: 17
+    totalDurationMs: 33243
     outcomeFindings: []
   perUrl:
     - url: https://dopomo.pl/en/cukr-card-application
-      visits: 1
-      meanEntropy: 0.5060827854579046
-      meanConfusion: 2.28
+      visits: 3
+      meanEntropy: 1.572246571152296
+      meanConfusion: 2.9166666666666665
       exits: 0
       leaveRate: 0
       backtracks: 0
       topSampled:
         - name: Check whether you can apply →
           meanProbability: 1
-    - url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-      visits: 10
-      meanEntropy: 2.3411519716444107
-      meanConfusion: 3.2700000000000005
+        - name: Save choices
+          meanProbability: 0.5494505494505495
+        - name: Manage preferences
+          meanProbability: 0.06593406593406592
+    - url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+      visits: 14
+      meanEntropy: 1.1807495821074183
+      meanConfusion: 2.4228571428571426
       exits: 1
       leaveRate: 0
-      backtracks: 2
+      backtracks: 5
       topSampled:
-        - name: Ask the assistant
-          meanProbability: 0.5531914893617021
-        - name: Compose your message
-          meanProbability: 0.5041898405635892
-        - name: ↳How can I check whether my UKR status is still active?
-          meanProbability: 0.4945054945054945
-    - url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
-      visits: 11
-      meanEntropy: 1.1811408260999878
-      meanConfusion: 2.7218181818181812
-      exits: 0
-      leaveRate: 0
-      backtracks: 1
-      topSampled:
+        - name: For myself
+          meanProbability: 1
         - name: 🇺🇦Ukrainian citizenship
           meanProbability: 1
         - name: Next →
-          meanProbability: 0.7261229998072104
-        - name: No / not sure / I have a different status (e.g. NUE, a residence permit)
-          meanProbability: 0.6532431271477663
+          meanProbability: 0.9315789473684211
 rows:
   - step: 1
-    timestamp: 1790023931188
+    timestamp: 1790026475499
     url: https://dopomo.pl/en/cukr-card-application
-    stateHash: fe87f3caeffc5abb7224e7e738fd61b84141d47d
-    viewHash: b5b0a3f61a2b652834c8f6b358548d41fd3767fd
+    stateHash: 921c8a941505b01046895549e8148657b5c21b19
+    viewHash: f9b3e2439d98839517cddbb870f633acf25a0894
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-01.jpg
-    elementsCount: 47
-    droppedElements: 0
-    options:
-      - id: el_01
-        kind: element
-        description: button "Dopomo home" (visible)
-        elementId: el_01
-      - id: el_02
-        kind: element
-        description: 'button "Language: EN" (visible)'
-        elementId: el_02
-      - id: el_03
-        kind: element
-        description: button "Open menu" (visible)
-        elementId: el_03
-      - id: el_27
-        kind: element
-        description: link "CUKR qualification" -> /en/pathfinder?step=tree (below fold)
-        elementId: el_27
-      - id: el_28
-        kind: element
-        description: link "Apply for CUKR" -> /en/cukr-card-application (below fold)
-        elementId: el_28
-      - id: el_29
-        kind: element
-        description: link "CUKR Photo Guide" -> /en/cukr-and-temporary-residence-photo (below fold)
-        elementId: el_29
-      - id: el_30
-        kind: element
-        description: link "CUKR timeline" -> /en/cukr-residence-card (below fold)
-        elementId: el_30
-      - id: el_31
-        kind: element
-        description: link "CUKR path for a child" -> /en/cukr-residence-card-for-child (below fold)
-        elementId: el_31
-      - id: el_32
-        kind: element
-        description: link "Application Fees" -> /en/residence-card-cukr-fees-2026 (below fold)
-        elementId: el_32
-      - id: el_33
-        kind: element
-        description: link "Chat" -> /en/chat (below fold)
-        elementId: el_33
-      - id: el_34
-        kind: element
-        description: link "EU long-term resident" -> /en/eu-long-term-resident (below fold)
-        elementId: el_34
-      - id: el_35
-        kind: element
-        description: link "Card issue/replacement application" -> /en/documents/residence-card-issue-replacement (below fold)
-        elementId: el_35
-      - id: el_36
-        kind: element
-        description: link "Your road in Poland" -> /en/residence-legalisation-help-poland (below fold)
-        elementId: el_36
-      - id: el_37
-        kind: element
-        description: link "More tools" -> /en/residence-legalisation-tools/paper-applications-fees-photo (below fold)
-        elementId: el_37
-      - id: el_38
-        kind: element
-        description: link "Residence-card appointment" -> /en/book-residence-card-appointment (below fold)
-        elementId: el_38
-      - id: el_39
-        kind: element
-        description: link "Bank account without a residence card" -> /en/polish-bank-account-for-foreigners (below fold)
-        elementId: el_39
-      - id: el_40
-        kind: element
-        description: link "Profil Zaufany via bank" -> /en/profil-zaufany-via-bank (below fold)
-        elementId: el_40
-      - id: el_41
-        kind: element
-        description: link "Temporary residence application" -> /en/temporary-residence-and-work-permit-poland (below fold)
-        elementId: el_41
-      - id: el_42
-        kind: element
-        description: link "About" -> /en/about (below fold)
-        elementId: el_42
-      - id: el_43
-        kind: element
-        description: link "Partnership" -> /en/partnership (below fold)
-        elementId: el_43
-      - id: el_44
-        kind: element
-        description: link "Blog" -> /en/blog (below fold)
-        elementId: el_44
-      - id: el_45
-        kind: element
-        description: link "Contact" -> /en/contact (below fold)
-        elementId: el_45
-      - id: el_46
-        kind: element
-        description: link "Careers" -> /en/careers (below fold)
-        elementId: el_46
-      - id: el_47
-        kind: element
-        description: link "Privacy" -> /en/privacy (below fold)
-        elementId: el_47
-      - id: el_48
-        kind: element
-        description: link "Terms" -> /en/terms (below fold)
-        elementId: el_48
-      - id: el_49
-        kind: element
-        description: link "Cookies" -> /en/cookies (below fold)
-        elementId: el_49
-      - id: el_50
-        kind: element
-        description: link "Polski" -> /pl/wniosek-o-karte-cukr (below fold)
-        elementId: el_50
-      - id: el_51
-        kind: element
-        description: link "Українська" -> /uk/zayava-na-kartu-cukr (below fold)
-        elementId: el_51
-      - id: el_52
-        kind: element
-        description: link "Русский" -> /ru/zayavlenie-na-kartu-cukr (below fold)
-        elementId: el_52
-      - id: el_04
-        kind: element
-        description: 'button "Check whether you can apply →" (visible; under "First, check if you can apply for CUKR. Free, in 2
-          minutes."; near "From there, Dopomo works like a CUKR expert beside you — from the photo to submitting on MOS:
-          every section, attachment ")'
-        elementId: el_04
-      - id: el_05
-        kind: element
-        description: button "See how it works ↓" (visible; under "First, check if you can apply for CUKR. Free, in 2 minutes.";
-          near "Free 2-minute check · application help for 199 zł — one-time.")
-        elementId: el_05
-      - id: el_13
-        kind: element
-        description: link "CUKR card guide" -> /en/blog/cukr-card-guide-2026 (below fold)
-        elementId: el_13
-      - id: el_14
-        kind: element
-        description: link "fee calculator" -> /en/residence-card-cukr-fees-2026 (below fold)
-        elementId: el_14
-      - id: el_15
-        kind: element
-        description: link "CUKR card timeline" -> /en/cukr-residence-card (below fold)
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "What is the virtual assistant?+" (below fold)
-        elementId: el_16
-      - id: el_18
-        kind: element
-        description: button "Does Dopomo submit the application for me?+" (below fold)
-        elementId: el_18
-      - id: el_17
-        kind: element
-        description: link "residence legalisation in Poland" -> /en/residence-legalisation-help-poland (below fold)
-        elementId: el_17
-      - id: el_19
-        kind: element
-        description: button "Do I need a Profil Zaufany?+" (below fold)
-        elementId: el_19
-      - id: el_20
-        kind: element
-        description: button "What documents do I need to prepare?+" (below fold)
-        elementId: el_20
-      - id: el_22
-        kind: element
-        description: button "Why 199 zł, when submitting on MOS is free?+" (below fold)
-        elementId: el_22
-      - id: el_21
-        kind: element
-        description: link "for a child application" -> /en/cukr-residence-card-for-child (below fold)
-        elementId: el_21
-      - id: el_23
-        kind: element
-        description: button "What if my data does not match the register?+" (below fold)
-        elementId: el_23
-      - id: el_24
-        kind: element
-        description: button "Do you store my criminal-record data?+" (below fold)
-        elementId: el_24
-      - id: el_25
-        kind: element
-        description: button "Do I pay only once?+" (below fold)
-        elementId: el_25
-      - id: el_53
-        kind: element
-        description: button "Cookie settings" (below fold)
-        elementId: el_53
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: switch_language:uk
-        kind: switch_language
-        description: switch the site language to uk ("Українська")
-        elementId: el_51
-        languageCode: uk
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      scroll_down: 0.02
-      switch_language:uk: 0.05
-      el_04: 0.92
-      el_27: 0.01
-    pruned:
-      el_04: 1
-    sampled: el_04
-    sampledName: Check whether you can apply →
-    argmax: el_04
-    exploration: false
-    confidence: 0.92
-    entropy: 0.5060827854579046
-    goalMet: 0.06
-    confusion: 2.28
-    outcome:
-      urlChanged: true
-      stateChanged: true
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 685
-    timing:
-      extractMs: 452
-      decideMs: 694
-      decideRetryMs: 0
-      executeMs: 686
-      settleMs: 473
-    flags: []
-    bucket: none
-    stateChars: 5996
-    inputTokens: 2462
-    visibleTextChars: 552
-    seenTextChars: 0
-    scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
-    clickPath: handle
-  - step: 2
-    timestamp: 1790023932038
-    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
-    stateHash: f04d5e53d37c87b3f95d70414cb690950df858fe
-    viewHash: cb6d80948f0b2152dc51feb15ef34b6518bd37cc
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-02.jpg
-    elementsCount: 11
-    droppedElements: 0
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-01.jpg
+    elementsCount: 52
+    droppedElements: 41
     options:
       - id: el_06
         kind: element
-        description: button "Dopomo home" (visible; near "Step 1 Eligibility")
+        description: button "Dopomo home" (visible)
         elementId: el_06
       - id: el_07
         kind: element
-        description: 'button "Language: EN" (visible; near "Step 1 Eligibility")'
+        description: 'button "Language: EN" (visible)'
         elementId: el_07
       - id: el_08
         kind: element
-        description: button "Open menu" (visible; near "Step 1 Eligibility")
+        description: button "Open menu" (visible)
         elementId: el_08
       - id: el_01
         kind: element
@@ -336,115 +83,110 @@ rows:
         elementId: el_02
       - id: el_03
         kind: element
-        description: button "Accept all" (visible; under "Cookie consent"; near "We use necessary cookies to keep Dopomo
-          working. With your permission we’d also use cookies to understand how the site i") [inside a dialog covering
-          the page]
+        description: button "Accept all" (visible; under "Cookie consent"; near "Biometric photo 35×45") [inside a dialog
+          covering the page]
         elementId: el_03
       - id: el_04
         kind: element
-        description: button "Reject all" (visible; under "Cookie consent"; near "We use necessary cookies to keep Dopomo
-          working. With your permission we’d also use cookies to understand how the site i") [inside a dialog covering
-          the page]
+        description: button "Reject all" (visible; under "Cookie consent"; near "Proof of the 100 zł payment") [inside a dialog
+          covering the page]
         elementId: el_04
       - id: el_05
         kind: element
-        description: button "Manage preferences" (visible; under "Cookie consent"; near "We use necessary cookies to keep Dopomo
-          working. With your permission we’d also use cookies to understand how the site i") [inside a dialog covering
-          the page]
+        description: button "Manage preferences" (visible; under "Cookie consent"; near "Only what is genuinely required — no
+          unnecessary scans. We also make sure attachments are in Polish — another language s") [inside a dialog
+          covering the page]
         elementId: el_05
       - id: el_09
         kind: element
-        description: button "Exit" (visible; near "Step 1 Eligibility")
+        description: 'button "Check whether you can apply →" (visible; under "First, check if you can apply for CUKR. Free, in 2
+          minutes."; near "From there, Dopomo works like a CUKR expert beside you — from the photo to submitting on MOS:
+          every section, attachment ")'
         elementId: el_09
       - id: el_10
         kind: element
-        description: radio "For myself" (visible; under "Who do you want to prepare the CUKR residence-card application for?";
-          near "Question 1 of 6")
+        description: button "See how it works ↓" (visible; under "First, check if you can apply for CUKR. Free, in 2 minutes.";
+          near "Free 2-minute check · application help for 199 zł — one-time.")
         elementId: el_10
-      - id: el_11
-        kind: element
-        description: radio "For my child" (visible; under "Who do you want to prepare the CUKR residence-card application for?";
-          near "Not sure?")
-        elementId: el_11
-      - id: back
-        kind: back
-        description: go back to the previous page
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
       - id: leave
         kind: leave
         description: leave this site
     distribution:
-      el_03: 0.13
-      el_11: 0.01
-      el_04: 0.32
+      el_03: 0.17
       el_01: 0.02
-      el_10: 0.36
-      el_02: 0.04
-      el_05: 0.12
+      scroll_down: 0.05
+      el_10: 0.01
+      el_02: 0.01
+      el_04: 0.23
+      el_05: 0.06
+      el_09: 0.45
     pruned:
-      el_10: 0.3870967741935484
-      el_04: 0.34408602150537637
-      el_03: 0.13978494623655915
-      el_05: 0.12903225806451613
+      el_09: 0.4945054945054944
+      el_04: 0.25274725274725274
+      el_03: 0.1868131868131868
+      el_05: 0.06593406593406592
     sampled: el_05
     sampledName: Manage preferences
-    argmax: el_10
+    argmax: el_09
     exploration: true
-    confidence: 0.36
-    entropy: 2.1714305258106115
-    goalMet: 0.05
-    confusion: 2.28
+    confidence: 0.45
+    entropy: 2.146040208733063
+    goalMet: 0.06
+    confusion: 2.63
     outcome:
       urlChanged: false
       stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 327
+      durationMs: 423
     timing:
-      extractMs: 33
-      decideMs: 256
+      extractMs: 92
+      decideMs: 285
       decideRetryMs: 0
-      executeMs: 327
-      settleMs: 159
+      executeMs: 424
+      settleMs: 170
     flags:
       - high-entropy
       - low-confidence
     bucket: ux
-    stateChars: 3984
-    inputTokens: 1394
-    visibleTextChars: 387
+    stateChars: 4327
+    inputTokens: 1463
+    visibleTextChars: 770
     seenTextChars: 0
     scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    nextUrl: https://dopomo.pl/en/cukr-card-application
     clickPath: handle
-  - step: 3
-    timestamp: 1790023933050
-    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
-    stateHash: 4b42146afa7df8363d2ee95af5ee65c2b81577d9
-    viewHash: 46b6d24d58daa30027f6b196137bb913f217ef97
+  - step: 2
+    timestamp: 1790026476822
+    url: https://dopomo.pl/en/cukr-card-application
+    stateHash: 0e7d81e7b47c02757ee5b2456f5b614d4824a8eb
+    viewHash: 58dcdddc85c1140456de0caa69a03591cafb6ae4
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-03.jpg
-    elementsCount: 10
-    droppedElements: 0
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-02.jpg
+    elementsCount: 52
+    droppedElements: 44
     options:
       - id: el_01
         kind: element
-        description: button "Close" (visible; under "Cookie preferences"; near "One minute to see whether applying makes
-          sense.") [inside a dialog covering the page]
+        description: button "Close" (visible; under "Cookie preferences"; near "Choose which cookies Dopomo may use. Necessary
+          cookies are always on so the site works. Everything else is off until you") [inside a dialog covering the
+          page]
         elementId: el_01
       - id: el_03
         kind: element
-        description: switch "Analytics" (visible; under "Cookie preferences"; near "Helps us see which pages are useful so we
-          can improve them. We use Matomo, which runs without cookies by default and res") [inside a dialog covering the
-          page]
+        description: switch "Analytics" (visible; under "Cookie preferences"; near "Free 2-minute check · application help for
+          199 zł — one-time.") [inside a dialog covering the page]
         elementId: el_03
       - id: el_04
         kind: element
-        description: 'switch "Measurement without cookies" (visible; under "Cookie preferences"; near "On by default: Matomo
-          counts your visits without cookies or other identifiers on your device, so we can see which pages ") [inside a
-          dialog covering the page]'
+        description: switch "Measurement without cookies" (visible; under "Cookie preferences"; near "Biometric photo 35×45")
+          [inside a dialog covering the page]
         elementId: el_04
       - id: el_08
         kind: element
@@ -464,80 +206,179 @@ rows:
           without cookies or other identifiers on your device, so we can see which pages ") [inside a dialog covering
           the page]'
         elementId: el_10
-      - id: el_05
-        kind: element
-        description: switch "Marketing" (below fold) [inside a dialog covering the page]
-        elementId: el_05
-      - id: el_06
-        kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold) [inside a dialog covering the page]
-        elementId: el_06
-      - id: el_07
-        kind: element
-        description: link "Cookie Policy" -> /en/cookies (below fold) [inside a dialog covering the page]
-        elementId: el_07
-      - id: back
-        kind: back
-        description: go back to the previous page
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
       - id: leave
         kind: leave
         description: leave this site
     distribution:
-      back: 0.05
-      el_01: 0.19
-      el_10: 0.05
-      el_03: 0.03
-      el_04: 0.03
-      el_08: 0.12
-      el_09: 0.52
-      el_06: 0.01
+      scroll_down: 0.13000000000000003
+      el_10: 0.020000000000000004
+      el_03: 0.04000000000000001
+      el_09: 0.5000000000000001
+      el_04: 0.030000000000000002
+      el_01: 0.20000000000000004
+      el_08: 0.08000000000000002
     pruned:
-      el_09: 0.5591397849462365
-      el_01: 0.2043010752688172
-      el_08: 0.12903225806451613
-      back: 0.053763440860215055
-      el_10: 0.053763440860215055
+      el_09: 0.5494505494505495
+      el_01: 0.21978021978021978
+      scroll_down: 0.14285714285714288
+      el_08: 0.08791208791208792
     sampled: el_09
     sampledName: Save choices
     argmax: el_09
     exploration: false
-    confidence: 0.52
-    entropy: 2.115035249168531
-    goalMet: 0.05
-    confusion: 3.09
+    confidence: 0.5000000000000001
+    entropy: 2.0889364375299135
+    goalMet: 0.06
+    confusion: 3.12
     outcome:
       urlChanged: false
       stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 291
+      durationMs: 370
     timing:
-      extractMs: 44
-      decideMs: 280
+      extractMs: 99
+      decideMs: 249
       decideRetryMs: 0
-      executeMs: 291
-      settleMs: 157
+      executeMs: 370
+      settleMs: 163
     flags:
       - high-entropy
       - confused
     bucket: ux
-    stateChars: 4933
-    inputTokens: 1540
-    visibleTextChars: 1074
+    stateChars: 4957
+    inputTokens: 1506
+    visibleTextChars: 1457
     seenTextChars: 217
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/en/cukr-card-application
+    clickPath: handle
+  - step: 3
+    timestamp: 1790026478068
+    url: https://dopomo.pl/en/cukr-card-application
+    stateHash: 616176c8afe7819037da6a5c9c9fb4ddffa55f4b
+    viewHash: 4aeea9ce1b01db8e3f2e05a2fb068ade3338de26
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-03.jpg
+    elementsCount: 54
+    droppedElements: 41
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible)
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: EN" (visible)'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Open menu" (visible)
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: 'button "Check whether you can apply →" (visible; under "First, check if you can apply for CUKR. Free, in 2
+          minutes."; near "From there, Dopomo works like a CUKR expert beside you — from the photo to submitting on MOS:
+          every section, attachment ")'
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: button "See how it works ↓" (visible; under "First, check if you can apply for CUKR. Free, in 2 minutes.";
+          near "Free 2-minute check · application help for 199 zł — one-time.")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: 'button "Step 1: A document list for your case" (visible; under "First, check if you can apply for CUKR.
+          Free, in 2 minutes."; near "Your documents and attachments")'
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: 'button "Step 2: Every field without guessing" (visible; under "First, check if you can apply for CUKR.
+          Free, in 2 minutes."; near "Your documents and attachments")'
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: 'button "Step 3: Biometric photo included" (visible; under "First, check if you can apply for CUKR. Free,
+          in 2 minutes."; near "Your documents and attachments")'
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: 'button "Step 4: Fees without slip-ups" (visible; under "First, check if you can apply for CUKR. Free, in 2
+          minutes."; near "Your documents and attachments")'
+        elementId: el_09
+      - id: el_10
+        kind: element
+        description: 'button "Step 5: The criminal-record section without stress" (visible; under "First, check if you can apply
+          for CUKR. Free, in 2 minutes."; near "Your documents and attachments")'
+        elementId: el_10
+      - id: el_11
+        kind: element
+        description: 'button "Step 6: Verification before submission" (visible; under "First, check if you can apply for CUKR.
+          Free, in 2 minutes."; near "Your documents and attachments")'
+        elementId: el_11
+      - id: el_12
+        kind: element
+        description: 'button "Step 7: MOS together + AI assistant" (visible; under "First, check if you can apply for CUKR.
+          Free, in 2 minutes."; near "Your documents and attachments")'
+        elementId: el_12
+      - id: scroll_down
+        kind: scroll_down
+        description: scroll down to see more
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_04: 0.91
+      scroll_down: 0.08
+      el_06: 0.01
+    pruned:
+      el_04: 1
+    sampled: el_04
+    sampledName: Check whether you can apply →
+    argmax: el_04
+    exploration: false
+    confidence: 0.91
+    entropy: 0.48176306719391104
+    goalMet: 0.07
+    confusion: 3
+    outcome:
+      urlChanged: true
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 625
+    timing:
+      extractMs: 68
+      decideMs: 237
+      decideRetryMs: 0
+      executeMs: 625
+      settleMs: 479
+    flags:
+      - confused
+    bucket: ux
+    stateChars: 5376
+    inputTokens: 1736
+    visibleTextChars: 552
+    seenTextChars: 904
     scrollOnly: false
     nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
   - step: 4
-    timestamp: 1790023933923
+    timestamp: 1790026478855
     url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     stateHash: 8e9bbe6ffebbfb2a0349cb9ac9974169d7d33c69
     viewHash: be7730256a6b0fb36a930c7599dbea80cf07d29f
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-04.jpg
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-04.jpg
     elementsCount: 9
     droppedElements: 0
     options:
@@ -579,51 +420,49 @@ rows:
         kind: leave
         description: leave this site
     distribution:
-      back: 0.02
-      el_05: 0.96
-      el_07: 0.01
-      el_03: 0.01
+      el_05: 0.97
+      el_07: 0.03
     pruned:
       el_05: 1
     sampled: el_05
     sampledName: For myself
     argmax: el_05
     exploration: false
-    confidence: 0.96
-    entropy: 0.3022921890824148
-    goalMet: 0.05
-    confusion: 2.86
+    confidence: 0.97
+    entropy: 0.1943918578315762
+    goalMet: 0.06
+    confusion: 2.03
     outcome:
       urlChanged: false
       stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 271
+      durationMs: 244
     timing:
-      extractMs: 28
-      decideMs: 372
+      extractMs: 31
+      decideMs: 265
       decideRetryMs: 0
-      executeMs: 271
-      settleMs: 164
+      executeMs: 244
+      settleMs: 157
     flags: []
     bucket: none
-    stateChars: 3781
-    inputTokens: 1304
+    stateChars: 2849
+    inputTokens: 1113
     visibleTextChars: 169
-    seenTextChars: 904
+    seenTextChars: 0
     scrollOnly: false
     nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
   - step: 5
-    timestamp: 1790023934626
+    timestamp: 1790026479626
     url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     stateHash: 68f598fa6f4a8643b39eddcb6490db65796e9e90
     viewHash: 2638412e2bd6914e097a0d5cb75c2ef67542ad19
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-05.jpg
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-05.jpg
     elementsCount: 9
     droppedElements: 0
     options:
@@ -669,238 +508,51 @@ rows:
         kind: leave
         description: leave this site
     distribution:
-      el_07: 0.03
-      el_09: 0.88
-      el_05: 0.09
+      el_07: 0.0404040404040404
+      el_05: 0.1313131313131313
+      el_09: 0.8282828282828283
     pruned:
-      el_09: 0.9072164948453608
-      el_05: 0.09278350515463918
-    sampled: el_05
-    sampledName: For myself
-    argmax: el_09
-    exploration: true
-    confidence: 0.88
-    entropy: 0.6267142402224603
-    goalMet: 0.05
-    confusion: 2.36
-    outcome:
-      urlChanged: false
-      stateChanged: false
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 281
-    timing:
-      extractMs: 28
-      decideMs: 225
-      decideRetryMs: 0
-      executeMs: 281
-      settleMs: 159
-    flags: []
-    bucket: none
-    stateChars: 3939
-    inputTokens: 1355
-    visibleTextChars: 169
-    seenTextChars: 904
-    scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
-    clickPath: handle
-  - step: 6
-    timestamp: 1790023935323
-    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
-    stateHash: 68f598fa6f4a8643b39eddcb6490db65796e9e90
-    viewHash: 2638412e2bd6914e097a0d5cb75c2ef67542ad19
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-06.jpg
-    elementsCount: 9
-    droppedElements: 0
-    options:
-      - id: el_01
-        kind: element
-        description: button "Dopomo home" (visible; near "Step 1 Eligibility")
-        elementId: el_01
-      - id: el_02
-        kind: element
-        description: 'button "Language: EN" (visible; near "Step 1 Eligibility")'
-        elementId: el_02
-      - id: el_03
-        kind: element
-        description: button "Open menu" (visible; near "Step 1 Eligibility")
-        elementId: el_03
-      - id: el_04
-        kind: element
-        description: button "Exit" (visible; near "Step 1 Eligibility")
-        elementId: el_04
-      - id: el_05
-        kind: element
-        description: radio "For myself" (visible; under "Who do you want to prepare the CUKR residence-card application for?";
-          near "Question 1 of 6")
-        elementId: el_05
-      - id: el_06
-        kind: element
-        description: radio "For my child" (visible; under "Who do you want to prepare the CUKR residence-card application for?";
-          near "Not sure?")
-        elementId: el_06
-      - id: el_07
-        kind: element
-        description: button "💬Ask the assistant" (visible; under "Who do you want to prepare the CUKR residence-card
-          application for?"; near "Not sure?")
-        elementId: el_07
-      - id: el_09
-        kind: element
-        description: button "Next →" (visible; under "Who do you want to prepare the CUKR residence-card application for?")
-        elementId: el_09
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      el_05: 0.2
-      el_09: 0.7
-      back: 0.05
-      el_07: 0.05
-    pruned:
-      el_09: 0.7368421052631579
-      el_05: 0.2105263157894737
-      back: 0.052631578947368425
-    sampled: el_05
-    sampledName: For myself
-    argmax: el_09
-    exploration: true
-    confidence: 0.7
-    entropy: 1.2567796494470393
-    goalMet: 0.05
-    confusion: 2.96
-    outcome:
-      urlChanged: false
-      stateChanged: false
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 246
-    timing:
-      extractMs: 27
-      decideMs: 255
-      decideRetryMs: 0
-      executeMs: 246
-      settleMs: 157
-    flags: []
-    bucket: none
-    stateChars: 4083
-    inputTokens: 1392
-    visibleTextChars: 169
-    seenTextChars: 904
-    scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
-    clickPath: handle
-  - step: 7
-    timestamp: 1790023936105
-    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
-    stateHash: 68f598fa6f4a8643b39eddcb6490db65796e9e90
-    viewHash: 2638412e2bd6914e097a0d5cb75c2ef67542ad19
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-07.jpg
-    elementsCount: 9
-    droppedElements: 0
-    options:
-      - id: el_01
-        kind: element
-        description: button "Dopomo home" (visible; near "Step 1 Eligibility")
-        elementId: el_01
-      - id: el_02
-        kind: element
-        description: 'button "Language: EN" (visible; near "Step 1 Eligibility")'
-        elementId: el_02
-      - id: el_03
-        kind: element
-        description: button "Open menu" (visible; near "Step 1 Eligibility")
-        elementId: el_03
-      - id: el_04
-        kind: element
-        description: button "Exit" (visible; near "Step 1 Eligibility")
-        elementId: el_04
-      - id: el_05
-        kind: element
-        description: radio "For myself" (visible; under "Who do you want to prepare the CUKR residence-card application for?";
-          near "Question 1 of 6")
-        elementId: el_05
-      - id: el_06
-        kind: element
-        description: radio "For my child" (visible; under "Who do you want to prepare the CUKR residence-card application for?";
-          near "Not sure?")
-        elementId: el_06
-      - id: el_07
-        kind: element
-        description: button "💬Ask the assistant" (visible; under "Who do you want to prepare the CUKR residence-card
-          application for?"; near "Not sure?")
-        elementId: el_07
-      - id: el_09
-        kind: element
-        description: button "Next →" (visible; under "Who do you want to prepare the CUKR residence-card application for?")
-        elementId: el_09
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      back: 0.07070707070707072
-      el_03: 0.010101010101010102
-      el_05: 0.13131313131313133
-      el_07: 0.11111111111111112
-      el_09: 0.6767676767676768
-    pruned:
-      el_09: 0.7362637362637362
-      el_05: 0.14285714285714285
-      el_07: 0.12087912087912087
+      el_09: 0.8631578947368421
+      el_05: 0.13684210526315788
     sampled: el_09
     sampledName: Next →
     argmax: el_09
     exploration: false
-    confidence: 0.6767676767676768
-    entropy: 1.4552260710299283
+    confidence: 0.8282828282828283
+    entropy: 0.79678105730671
     goalMet: 0.06
-    confusion: 3.2
+    confusion: 1.48
     outcome:
       urlChanged: false
       stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 269
+      durationMs: 277
     timing:
-      extractMs: 23
-      decideMs: 318
+      extractMs: 27
+      decideMs: 260
       decideRetryMs: 0
-      executeMs: 269
-      settleMs: 159
-    flags:
-      - confused
-      - backtrack
-    bucket: ux
-    stateChars: 4133
-    inputTokens: 1406
+      executeMs: 277
+      settleMs: 157
+    flags: []
+    bucket: none
+    stateChars: 3007
+    inputTokens: 1164
     visibleTextChars: 169
-    seenTextChars: 904
+    seenTextChars: 0
     scrollOnly: false
     nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
-  - step: 8
-    timestamp: 1790023936861
+  - step: 6
+    timestamp: 1790026480341
     url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     stateHash: 028255e5cd0865bbe21c739bcde406a5b006a55c
     viewHash: c591e0f9a27a5809592d32e27c287e23d329e79c
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-08.jpg
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-06.jpg
     elementsCount: 9
     droppedElements: 0
     options:
@@ -944,8 +596,8 @@ rows:
         kind: leave
         description: leave this site
     distribution:
-      el_07: 0.02
-      el_05: 0.97
+      el_05: 0.95
+      el_07: 0.04
       el_06: 0.01
     pruned:
       el_05: 1
@@ -953,41 +605,41 @@ rows:
     sampledName: 🇺🇦Ukrainian citizenship
     argmax: el_05
     exploration: false
-    confidence: 0.97
-    entropy: 0.22194073285321086
-    goalMet: 0.05
-    confusion: 2.59
+    confidence: 0.95
+    entropy: 0.3224933618603243
+    goalMet: 0.06
+    confusion: 1.75
     outcome:
       urlChanged: false
       stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 250
+      durationMs: 263
     timing:
-      extractMs: 26
-      decideMs: 313
+      extractMs: 23
+      decideMs: 228
       decideRetryMs: 0
-      executeMs: 250
-      settleMs: 157
+      executeMs: 263
+      settleMs: 158
     flags: []
     bucket: none
-    stateChars: 3967
-    inputTokens: 1369
+    stateChars: 3166
+    inputTokens: 1200
     visibleTextChars: 178
-    seenTextChars: 841
+    seenTextChars: 140
     scrollOnly: false
     nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
-  - step: 9
-    timestamp: 1790023937564
+  - step: 7
+    timestamp: 1790026481073
     url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     stateHash: b5816175c0816995f371091e18fc75c04f0145b8
     viewHash: d544b6cdcd9484c5701780bca928c9defc947cef
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-09.jpg
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-07.jpg
     elementsCount: 9
     droppedElements: 0
     options:
@@ -1035,52 +687,50 @@ rows:
         kind: leave
         description: leave this site
     distribution:
-      el_09: 0.93
-      el_08: 0.01
       el_07: 0.02
-      el_06: 0.01
-      el_05: 0.03
+      el_05: 0.02
+      el_09: 0.96
     pruned:
       el_09: 1
     sampled: el_09
     sampledName: Next →
     argmax: el_09
     exploration: false
-    confidence: 0.93
-    entropy: 0.49488962042262075
+    confidence: 0.96
+    entropy: 0.28229218908241477
     goalMet: 0.07
-    confusion: 2.25
+    confusion: 1.51
     outcome:
       urlChanged: false
       stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 264
+      durationMs: 265
     timing:
-      extractMs: 24
-      decideMs: 251
+      extractMs: 27
+      decideMs: 232
       decideRetryMs: 0
-      executeMs: 264
-      settleMs: 158
+      executeMs: 265
+      settleMs: 159
     flags: []
     bucket: none
-    stateChars: 4079
-    inputTokens: 1412
+    stateChars: 3278
+    inputTokens: 1244
     visibleTextChars: 178
-    seenTextChars: 841
+    seenTextChars: 140
     scrollOnly: false
     nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
-  - step: 10
-    timestamp: 1790023938297
+  - step: 8
+    timestamp: 1790026481836
     url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     stateHash: 965883b11bbed28410d3cc3a1ab739ee0bbaaa91
     viewHash: ec8a619649292d10421de5b0a991cf03c5bfa9a9
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-10.jpg
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-08.jpg
     elementsCount: 9
     droppedElements: 0
     options:
@@ -1128,52 +778,212 @@ rows:
         kind: leave
         description: leave this site
     distribution:
-      el_07: 0.26
-      el_05: 0.03
-      el_06: 0.7
+      el_05: 0.02
       el_08: 0.01
+      el_07: 0.37
+      el_06: 0.6
     pruned:
-      el_06: 0.7291666666666666
-      el_07: 0.27083333333333337
+      el_06: 0.6185567010309279
+      el_07: 0.3814432989690722
     sampled: el_06
     sampledName: No / not sure / I have a different status (e.g. NUE, a residence permit)
     argmax: el_06
     exploration: false
-    confidence: 0.7
-    entropy: 1.0836948761749294
-    goalMet: 0.06
-    confusion: 2.7
+    confidence: 0.6
+    entropy: 1.152224087126902
+    goalMet: 0.05
+    confusion: 2.52
     outcome:
       urlChanged: false
       stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 261
+      durationMs: 268
     timing:
-      extractMs: 25
-      decideMs: 253
+      extractMs: 29
+      decideMs: 263
       decideRetryMs: 0
-      executeMs: 261
-      settleMs: 158
+      executeMs: 268
+      settleMs: 166
     flags: []
     bucket: none
-    stateChars: 4580
-    inputTokens: 1540
+    stateChars: 3779
+    inputTokens: 1371
     visibleTextChars: 241
-    seenTextChars: 991
+    seenTextChars: 290
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    clickPath: handle
+  - step: 9
+    timestamp: 1790026482716
+    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: 4273962ccc4d8c06dcb4d5898bdc8ec93367e1f8
+    viewHash: 00b9ea0794301415427d1f4bf2db31ebf0e47c60
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-09.jpg
+    elementsCount: 9
+    droppedElements: 0
+    options:
+      - id: el_01
+        kind: element
+        description: button "Dopomo home" (visible; near "Step 1 Eligibility")
+        elementId: el_01
+      - id: el_02
+        kind: element
+        description: 'button "Language: EN" (visible; near "Step 1 Eligibility")'
+        elementId: el_02
+      - id: el_03
+        kind: element
+        description: button "Open menu" (visible; near "Step 1 Eligibility")
+        elementId: el_03
+      - id: el_04
+        kind: element
+        description: button "Exit" (visible; near "Step 1 Eligibility")
+        elementId: el_04
+      - id: el_05
+        kind: element
+        description: radio "Yes, I have an active PESEL UKR" (visible; under "Do you currently have an active UKR status (a
+          PESEL number with the “UKR” status"; near "This is the same status you received as a person under temporary
+          protection after arriving from Ukraine.")
+        elementId: el_05
+      - id: el_06
+        kind: element
+        description: radio "No / not sure / I have a different status (e.g. NUE, a residence permit)" (visible; under "Do you
+          currently have an active UKR status (a PESEL number with the “UKR” status"; near "Not sure?")
+        elementId: el_06
+      - id: el_07
+        kind: element
+        description: button "💬Ask the assistant" (visible; under "Do you currently have an active UKR status (a PESEL number
+          with the “UKR” status"; near "Not sure?")
+        elementId: el_07
+      - id: el_08
+        kind: element
+        description: button "Back" (visible; under "Do you currently have an active UKR status (a PESEL number with the “UKR”
+          status")
+        elementId: el_08
+      - id: el_09
+        kind: element
+        description: button "Next →" (visible; under "Do you currently have an active UKR status (a PESEL number with the “UKR”
+          status")
+        elementId: el_09
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_09: 0.29
+      el_06: 0.38
+      el_05: 0.01
+      el_08: 0.01
+      el_07: 0.31
+    pruned:
+      el_06: 0.3877551020408163
+      el_07: 0.3163265306122449
+      el_09: 0.29591836734693877
+    sampled: el_07
+    sampledName: 💬Ask the assistant
+    argmax: el_06
+    exploration: true
+    confidence: 0.38
+    entropy: 1.7050283898592347
+    goalMet: 0.07
+    confusion: 2.34
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 424
+    timing:
+      extractMs: 28
+      decideMs: 237
+      decideRetryMs: 0
+      executeMs: 424
+      settleMs: 313
+    flags:
+      - low-confidence
+    bucket: none
+    stateChars: 3993
+    inputTokens: 1441
+    visibleTextChars: 241
+    seenTextChars: 290
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    clickPath: handle
+  - step: 10
+    timestamp: 1790026484037
+    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: ab65b001cf608dec4093bb79f56155cc8d1161b7
+    viewHash: 1ae937d280fc7ec6ad7674fdbd87f557b7769a95
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-10.jpg
+    elementsCount: 1
+    droppedElements: 0
+    options:
+      - id: el_10
+        kind: element
+        description: button "Close" (visible; near "Question 3 of 6") [inside a dialog covering the page]
+        elementId: el_10
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      back: 0.29
+      el_10: 0.68
+      leave: 0.03
+    pruned:
+      el_10: 0.7010309278350516
+      back: 0.29896907216494845
+    sampled: el_10
+    sampledName: Close
+    argmax: el_10
+    exploration: false
+    confidence: 0.68
+    entropy: 1.0480180941158632
+    goalMet: 0.07
+    confusion: 2.44
+    outcome:
+      urlChanged: false
+      stateChanged: true
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 511
+    timing:
+      extractMs: 33
+      decideMs: 252
+      decideRetryMs: 0
+      executeMs: 511
+      settleMs: 315
+    flags: []
+    bucket: none
+    stateChars: 3036
+    inputTokens: 1096
+    visibleTextChars: 310
+    seenTextChars: 290
     scrollOnly: false
     nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
   - step: 11
-    timestamp: 1790023938991
+    timestamp: 1790026485369
     url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     stateHash: 4273962ccc4d8c06dcb4d5898bdc8ec93367e1f8
     viewHash: 00b9ea0794301415427d1f4bf2db31ebf0e47c60
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-11.jpg
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-11.jpg
     elementsCount: 9
     droppedElements: 0
     options:
@@ -1226,99 +1036,76 @@ rows:
         kind: leave
         description: leave this site
     distribution:
-      el_08: 0.0101010101010101
-      el_07: 0.23232323232323232
-      el_09: 0.1818181818181818
-      el_05: 0.0101010101010101
-      el_06: 0.5656565656565656
+      el_07: 0.6
+      el_05: 0.01
+      el_08: 0.01
+      el_09: 0.04
+      el_06: 0.34
     pruned:
-      el_06: 0.5773195876288659
-      el_07: 0.23711340206185566
-      el_09: 0.18556701030927833
-    sampled: el_06
-    sampledName: No / not sure / I have a different status (e.g. NUE, a residence permit)
-    argmax: el_06
+      el_07: 0.6382978723404256
+      el_06: 0.3617021276595745
+    sampled: el_07
+    sampledName: 💬Ask the assistant
+    argmax: el_07
     exploration: false
-    confidence: 0.5656565656565656
-    entropy: 1.5352914619937637
+    confidence: 0.6
+    entropy: 1.2899844663844982
     goalMet: 0.07
-    confusion: 2.52
+    confusion: 2.49
     outcome:
       urlChanged: false
-      stateChanged: false
+      stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 254
+      durationMs: 436
     timing:
-      extractMs: 29
-      decideMs: 227
+      extractMs: 25
+      decideMs: 271
       decideRetryMs: 0
-      executeMs: 254
-      settleMs: 159
-    flags: []
-    bucket: none
-    stateChars: 4795
-    inputTokens: 1610
+      executeMs: 436
+      settleMs: 314
+    flags:
+      - backtrack
+    bucket: ux
+    stateChars: 4273
+    inputTokens: 1519
     visibleTextChars: 241
-    seenTextChars: 991
+    seenTextChars: 359
     scrollOnly: false
     nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
   - step: 12
-    timestamp: 1790023939891
+    timestamp: 1790026486476
     url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
-    stateHash: 4273962ccc4d8c06dcb4d5898bdc8ec93367e1f8
-    viewHash: 00b9ea0794301415427d1f4bf2db31ebf0e47c60
+    stateHash: a32cff258b8ebb8b15e677784ac1c4f1520b2515
+    viewHash: a35f9a7b8bf11f25b970f41e4a84a7ecce3e07f5
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-12.jpg
-    elementsCount: 9
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-12.jpg
+    elementsCount: 6
     droppedElements: 0
     options:
-      - id: el_01
+      - id: el_10
         kind: element
-        description: button "Dopomo home" (visible; near "Step 1 Eligibility")
-        elementId: el_01
-      - id: el_02
+        description: button "Close" (visible; near "Question 3 of 6") [inside a dialog covering the page]
+        elementId: el_10
+      - id: el_11
         kind: element
-        description: 'button "Language: EN" (visible; near "Step 1 Eligibility")'
-        elementId: el_02
-      - id: el_03
+        description: button "I have a residence-and-work permit — do I still have the UKR status needed for t" (visible; near
+          "Questions for this screen") [inside a dialog covering the page]
+        elementId: el_11
+      - id: el_12
         kind: element
-        description: button "Open menu" (visible; near "Step 1 Eligibility")
-        elementId: el_03
-      - id: el_04
+        description: button "What is UKR status and why does it matter for the CUKR card?" (visible; near "Not sure?") [inside a
+          dialog covering the page]
+        elementId: el_12
+      - id: el_13
         kind: element
-        description: button "Exit" (visible; near "Step 1 Eligibility")
-        elementId: el_04
-      - id: el_05
-        kind: element
-        description: radio "Yes, I have an active PESEL UKR" (visible; under "Do you currently have an active UKR status (a
-          PESEL number with the “UKR” status"; near "This is the same status you received as a person under temporary
-          protection after arriving from Ukraine.")
-        elementId: el_05
-      - id: el_06
-        kind: element
-        description: radio "No / not sure / I have a different status (e.g. NUE, a residence permit)" (visible; under "Do you
-          currently have an active UKR status (a PESEL number with the “UKR” status"; near "Not sure?")
-        elementId: el_06
-      - id: el_07
-        kind: element
-        description: button "💬Ask the assistant" (visible; under "Do you currently have an active UKR status (a PESEL number
-          with the “UKR” status"; near "Not sure?")
-        elementId: el_07
-      - id: el_08
-        kind: element
-        description: button "Back" (visible; under "Do you currently have an active UKR status (a PESEL number with the “UKR”
-          status")
-        elementId: el_08
-      - id: el_09
-        kind: element
-        description: button "Next →" (visible; under "Do you currently have an active UKR status (a PESEL number with the “UKR”
-          status")
-        elementId: el_09
+        description: button "I went back to Ukraine and returned — do I still have UKR status for the CUKR ca" (visible; near
+          "Not sure?") [inside a dialog covering the page]
+        elementId: el_13
       - id: back
         kind: back
         description: go back to the previous page
@@ -1326,120 +1113,72 @@ rows:
         kind: leave
         description: leave this site
     distribution:
+      el_11: 0.09
+      el_10: 0.02
+      el_12: 0.88
       back: 0.01
-      el_08: 0.02
-      el_07: 0.4
-      el_05: 0.02
-      el_09: 0.42
-      el_06: 0.13
     pruned:
-      el_09: 0.44210526315789467
-      el_07: 0.42105263157894735
-      el_06: 0.13684210526315788
-    sampled: el_09
-    sampledName: Next →
-    argmax: el_09
+      el_12: 0.9072164948453608
+      el_11: 0.09278350515463918
+    sampled: el_12
+    sampledName: What is UKR status and why does it matter for the CUKR card?
+    argmax: el_12
     exploration: false
-    confidence: 0.42
-    entropy: 1.7292544708943585
-    goalMet: 0.06
-    confusion: 3.13
+    confidence: 0.88
+    entropy: 0.654263115244095
+    goalMet: 0.07
+    confusion: 2.63
     outcome:
-      urlChanged: true
+      urlChanged: false
       stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 441
+      durationMs: 331
     timing:
-      extractMs: 26
-      decideMs: 270
+      extractMs: 39
+      decideMs: 251
       decideRetryMs: 0
-      executeMs: 441
-      settleMs: 313
-    flags:
-      - low-confidence
-      - confused
-    bucket: ux
-    stateChars: 4935
-    inputTokens: 1638
-    visibleTextChars: 241
-    seenTextChars: 991
+      executeMs: 331
+      settleMs: 160
+    flags: []
+    bucket: none
+    stateChars: 3920
+    inputTokens: 1352
+    visibleTextChars: 537
+    seenTextChars: 290
     scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
+    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
   - step: 13
-    timestamp: 1790023940677
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: d69a339d6918d0a248018295cc0b8a6d8e167d63
-    viewHash: 3a110cfd891559f724f746e90534be48e03d7b06
+    timestamp: 1790026487935
+    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: d5617ed4fb129343229bb94056096de69b23dd4f
+    viewHash: affecdf96abd4714050b91af51fa82a40721f9dc
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-13.jpg
-    elementsCount: 14
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-13.jpg
+    elementsCount: 4
     droppedElements: 0
     options:
-      - id: el_09
+      - id: el_16
         kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
-      - id: el_10
+        description: button "Close" (visible; near "0 / 3 messages") [inside a dialog covering the page]
+        elementId: el_16
+      - id: el_17
         kind: element
-        description: textbox "Email address" (below fold)
-        elementId: el_10
-      - id: el_11
+        description: link "Privacy policy" -> /en/privacy (visible; under "Your consent to chat"; near "Not sure?") [inside a
+          dialog covering the page]
+        elementId: el_17
+      - id: el_18
         kind: element
-        description: link "Terms of Service" -> /en/terms (below fold)
-        elementId: el_11
-      - id: el_12
+        description: button "I agree" (visible; under "Your consent to chat"; near "Not sure?") [inside a dialog covering the page]
+        elementId: el_18
+      - id: el_19
         kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold)
-        elementId: el_12
-      - id: el_14
-        kind: element
-        description: link "Log in →" -> /login (below fold)
-        elementId: el_14
-      - id: el_01
-        kind: element
-        description: button "Dopomo home" (visible; near "Another path")
-        elementId: el_01
-      - id: el_02
-        kind: element
-        description: 'button "Language: EN" (visible; near "Another path")'
-        elementId: el_02
-      - id: el_03
-        kind: element
-        description: button "Open menu" (visible; near "Another path")
-        elementId: el_03
-      - id: el_04
-        kind: element
-        description: button "← Back" (visible; near "Another path")
-        elementId: el_04
-      - id: el_05
-        kind: element
-        description: button "Ask the assistant" (below fold)
-        elementId: el_05
-      - id: el_06
-        kind: element
-        description: button "↳How can I check whether my UKR status is still active?" (below fold)
-        elementId: el_06
-      - id: el_07
-        kind: element
-        description: button "↳Why did my status in the PESEL register change from “UKR” to “NUE”?" (below fold)
-        elementId: el_07
-      - id: el_08
-        kind: element
-        description: button "↳What is an ordinary temporary residence and work permit (single permit)?" (below fold)
-        elementId: el_08
-      - id: type:el_10
-        kind: type
-        description: type "olena.hale@example.com" into textbox "Email address"
-        elementId: el_10
-        value: olena.hale@example.com
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
+        description: button "Not now" (visible; under "Your consent to chat"; near "Not sure?") [inside a dialog covering the page]
+        elementId: el_19
       - id: back
         kind: back
         description: go back to the previous page
@@ -1447,129 +1186,74 @@ rows:
         kind: leave
         description: leave this site
     distribution:
-      el_04: 0.02
-      el_06: 0.45
-      el_07: 0.01
-      back: 0.04
-      el_05: 0.02
-      scroll_down: 0.46
+      el_16: 0.11
+      back: 0.02
+      el_18: 0.84
+      el_19: 0.03
     pruned:
-      scroll_down: 0.5054945054945055
-      el_06: 0.4945054945054945
-    sampled: el_06
-    sampledName: ↳How can I check whether my UKR status is still active?
-    argmax: scroll_down
-    exploration: true
-    confidence: 0.46
-    entropy: 1.5116837966401453
-    goalMet: 0.28
-    confusion: 3.02
+      el_18: 0.8842105263157894
+      el_16: 0.11578947368421053
+    sampled: el_18
+    sampledName: I agree
+    argmax: el_18
+    exploration: false
+    confidence: 0.84
+    entropy: 0.8262232015688287
+    goalMet: 0.08
+    confusion: 2.58
     outcome:
       urlChanged: false
       stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 307
+      durationMs: 512
     timing:
-      extractMs: 36
-      decideMs: 252
+      extractMs: 43
+      decideMs: 300
       decideRetryMs: 0
-      executeMs: 307
-      settleMs: 158
-    flags:
-      - low-confidence
-      - confused
-    bucket: ux
-    stateChars: 4388
-    inputTokens: 1591
-    visibleTextChars: 885
-    seenTextChars: 0
+      executeMs: 512
+      settleMs: 315
+    flags: []
+    bucket: none
+    stateChars: 4127
+    inputTokens: 1398
+    visibleTextChars: 903
+    seenTextChars: 290
     scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
+    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
   - step: 14
-    timestamp: 1790023946223
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: 5970ed3ac3087de299a66e985210d2d0d452dcb3
-    viewHash: a6481c8f974e2825fc86c75c40b0b90ed3bc5c00
+    timestamp: 1790026492832
+    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: a32cff258b8ebb8b15e677784ac1c4f1520b2515
+    viewHash: a35f9a7b8bf11f25b970f41e4a84a7ecce3e07f5
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-14.jpg
-    elementsCount: 14
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-14.jpg
+    elementsCount: 6
     droppedElements: 0
     options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
       - id: el_10
         kind: element
-        description: textbox "Email address" (below fold)
+        description: button "Close" (visible; near "Question 3 of 6") [inside a dialog covering the page]
         elementId: el_10
       - id: el_11
         kind: element
-        description: link "Terms of Service" -> /en/terms (below fold)
+        description: button "I have a residence-and-work permit — do I still have the UKR status needed for t" (visible; near
+          "Questions for this screen") [inside a dialog covering the page]
         elementId: el_11
       - id: el_12
         kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold)
+        description: button "What is UKR status and why does it matter for the CUKR card?" (visible; near "Not sure?") [inside a
+          dialog covering the page]
         elementId: el_12
-      - id: el_14
+      - id: el_13
         kind: element
-        description: link "Log in →" -> /login (below fold)
-        elementId: el_14
-      - id: el_01
-        kind: element
-        description: button "Dopomo home" (visible; near "If you no longer hold UKR status, your next residence permit will be
-          granted under the general rules — with a documented")
-        elementId: el_01
-      - id: el_02
-        kind: element
-        description: 'button "Language: EN" (visible; near "If you no longer hold UKR status, your next residence permit will be
-          granted under the general rules — with a documented")'
-        elementId: el_02
-      - id: el_03
-        kind: element
-        description: button "Open menu" (visible; near "If you no longer hold UKR status, your next residence permit will be
-          granted under the general rules — with a documented")
-        elementId: el_03
-      - id: el_05
-        kind: element
-        description: button "Ask the assistant" (visible; near "Describe your situation and the assistant will point you to the
-          simplest legal path.")
-        elementId: el_05
-      - id: el_06
-        kind: element
-        description: button "↳How can I check whether my UKR status is still active?" (visible; near "Describe your situation
-          and the assistant will point you to the simplest legal path.")
-        elementId: el_06
-      - id: el_07
-        kind: element
-        description: button "↳Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "Describe your
-          situation and the assistant will point you to the simplest legal path.")
-        elementId: el_07
-      - id: el_08
-        kind: element
-        description: button "↳What is an ordinary temporary residence and work permit (single permit)?" (visible; near "Create a
-          free account")
-        elementId: el_08
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: type:el_10
-        kind: type
-        description: type "olena.hale@example.com" into textbox "Email address"
-        elementId: el_10
-        value: olena.hale@example.com
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
+        description: button "I went back to Ukraine and returned — do I still have UKR status for the CUKR ca" (visible; near
+          "Not sure?") [inside a dialog covering the page]
+        elementId: el_13
       - id: back
         kind: back
         description: go back to the previous page
@@ -1577,671 +1261,161 @@ rows:
         kind: leave
         description: leave this site
     distribution:
-      el_09: 0.01
-      back: 0.01
-      el_06: 0.2
-      scroll_down: 0.22
-      el_05: 0.52
-      scroll_up: 0.01
-      el_04: 0.01
-      el_07: 0.02
+      el_13: 0.1
+      el_12: 0.18
+      el_11: 0.45999999999999996
+      el_10: 0.22
+      back: 0.04
     pruned:
-      el_05: 0.5531914893617021
-      scroll_down: 0.23404255319148937
-      el_06: 0.21276595744680854
-    sampled: el_05
-    sampledName: Ask the assistant
-    argmax: el_05
+      el_11: 0.4791666666666667
+      el_10: 0.2291666666666667
+      el_12: 0.18750000000000003
+      el_13: 0.10416666666666669
+    sampled: el_11
+    sampledName: I have a residence-and-work permit — do I still have the UKR status needed for t
+    argmax: el_11
     exploration: false
-    confidence: 0.52
-    entropy: 1.8141669612636786
-    goalMet: 0.3
-    confusion: 3.06
+    confidence: 0.45999999999999996
+    entropy: 1.959163424139941
+    goalMet: 0.1
+    confusion: 2.71
     outcome:
       urlChanged: false
-      stateChanged: true
+      stateChanged: false
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 4302
+      durationMs: 4151
     timing:
-      extractMs: 33
-      decideMs: 249
+      extractMs: 35
+      decideMs: 219
       decideRetryMs: 0
-      executeMs: 4302
+      executeMs: 4151
+      settleMs: 4003
+    flags:
+      - low-confidence
+      - no-change
+      - backtrack
+    bucket: product
+    stateChars: 4400
+    inputTokens: 1457
+    visibleTextChars: 537
+    seenTextChars: 656
+    scrollOnly: false
+    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    clickPath: handle
+  - step: 15
+    timestamp: 1790026498051
+    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: a32cff258b8ebb8b15e677784ac1c4f1520b2515
+    viewHash: a35f9a7b8bf11f25b970f41e4a84a7ecce3e07f5
+    viewport:
+      width: 390
+      height: 844
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-15.jpg
+    elementsCount: 6
+    droppedElements: 0
+    options:
+      - id: el_10
+        kind: element
+        description: button "Close" (visible; near "Question 3 of 6") [inside a dialog covering the page]
+        elementId: el_10
+      - id: el_11
+        kind: element
+        description: button "I have a residence-and-work permit — do I still have the UKR status needed for t" (visible; near
+          "Questions for this screen") [inside a dialog covering the page]
+        elementId: el_11
+      - id: el_12
+        kind: element
+        description: button "What is UKR status and why does it matter for the CUKR card?" (visible; near "Not sure?") [inside a
+          dialog covering the page]
+        elementId: el_12
+      - id: el_13
+        kind: element
+        description: button "I went back to Ukraine and returned — do I still have UKR status for the CUKR ca" (visible; near
+          "Not sure?") [inside a dialog covering the page]
+        elementId: el_13
+      - id: back
+        kind: back
+        description: go back to the previous page
+      - id: leave
+        kind: leave
+        description: leave this site
+    distribution:
+      el_12: 0.18
+      el_11: 0.51
+      el_13: 0.1
+      el_10: 0.17
+      back: 0.04
+    pruned:
+      el_11: 0.53125
+      el_12: 0.1875
+      el_10: 0.17708333333333334
+      el_13: 0.10416666666666667
+    sampled: el_11
+    sampledName: I have a residence-and-work permit — do I still have the UKR status needed for t
+    argmax: el_11
+    exploration: false
+    confidence: 0.51
+    entropy: 1.8932712726083518
+    goalMet: 0.08
+    confusion: 3.03
+    outcome:
+      urlChanged: false
+      stateChanged: false
+      consoleErrors: []
+      failedRequests: []
+      validationMessages: []
+      durationMs: 4164
+    timing:
+      extractMs: 34
+      decideMs: 601
+      decideRetryMs: 0
+      executeMs: 4164
       settleMs: 4004
     flags:
       - confused
-    bucket: ux
-    stateChars: 5381
-    inputTokens: 1797
-    visibleTextChars: 499
-    seenTextChars: 660
+      - no-change
+      - backtrack
+    bucket: product
+    stateChars: 4613
+    inputTokens: 1509
+    visibleTextChars: 537
+    seenTextChars: 656
     scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    clickPath: handle
-    overlayDismissal:
-      dismissed: true
-      method: escape
-  - step: 15
-    timestamp: 1790023947593
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: d4594be9fb39c39c17bd64ef99071fdbe49d66d9
-    viewHash: eb58e47423f383fccdc23eda0d5350c96eae54f5
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-15.jpg
-    elementsCount: 16
-    droppedElements: 0
-    options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
-      - id: el_10
-        kind: element
-        description: textbox "Email address" (below fold)
-        elementId: el_10
-      - id: el_11
-        kind: element
-        description: link "Terms of Service" -> /en/terms (below fold)
-        elementId: el_11
-      - id: el_12
-        kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold)
-        elementId: el_12
-      - id: el_14
-        kind: element
-        description: link "Log in →" -> /login (below fold)
-        elementId: el_14
-      - id: el_19
-        kind: element
-        description: textbox "Compose your message" (visible; near "Keep your assistant conversation history and ask more.")
-          [inside a dialog covering the page]
-        elementId: el_19
-      - id: el_01
-        kind: element
-        description: button "Dopomo home" (below fold)
-        elementId: el_01
-      - id: el_02
-        kind: element
-        description: 'button "Language: EN" (below fold)'
-        elementId: el_02
-      - id: el_03
-        kind: element
-        description: button "Open menu" (below fold)
-        elementId: el_03
-      - id: el_15
-        kind: element
-        description: button "Close" (visible; near "Dopomo AI Assistant") [inside a dialog covering the page]
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "How can I check whether my UKR status is still active?" (visible; near "Questions for this screen")
-          [inside a dialog covering the page]
-        elementId: el_16
-      - id: el_17
-        kind: element
-        description: button "Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "Questions for
-          this screen") [inside a dialog covering the page]
-        elementId: el_17
-      - id: el_18
-        kind: element
-        description: button "What is an ordinary temporary residence and work permit (single permit)?" (visible; near "Create a
-          free account") [inside a dialog covering the page]
-        elementId: el_18
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: type:el_10
-        kind: type
-        description: type "olena.hale@example.com" into textbox "Email address"
-        elementId: el_10
-        value: olena.hale@example.com
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      el_04: 0.01
-      scroll_down: 0.06
-      el_16: 0.12
-      el_17: 0.07
-      el_19: 0.68
-      el_15: 0.01
-      el_09: 0.05
-    pruned:
-      el_19: 0.7311827956989246
-      el_16: 0.1290322580645161
-      el_17: 0.07526881720430106
-      scroll_down: 0.06451612903225805
-    sampled: el_19
-    sampledName: Compose your message
-    argmax: el_19
-    exploration: false
-    confidence: 0.68
-    entropy: 1.6064769583062852
-    goalMet: 0.22
-    confusion: 3.2
-    outcome:
-      urlChanged: false
-      stateChanged: false
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 298
-    timing:
-      extractMs: 44
-      decideMs: 548
-      decideRetryMs: 0
-      executeMs: 298
-      settleMs: 158
-    flags:
-      - confused
-    bucket: ux
-    stateChars: 5360
-    inputTokens: 1821
-    visibleTextChars: 746
-    seenTextChars: 660
-    scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
+    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
   - step: 16
-    timestamp: 1790023948533
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: d4594be9fb39c39c17bd64ef99071fdbe49d66d9
-    viewHash: eb58e47423f383fccdc23eda0d5350c96eae54f5
+    timestamp: 1790026503310
+    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: a32cff258b8ebb8b15e677784ac1c4f1520b2515
+    viewHash: a35f9a7b8bf11f25b970f41e4a84a7ecce3e07f5
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-16.jpg
-    elementsCount: 16
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-16.jpg
+    elementsCount: 6
     droppedElements: 0
     options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
       - id: el_10
         kind: element
-        description: textbox "Email address" (below fold)
+        description: button "Close" (visible; near "Question 3 of 6") [inside a dialog covering the page]
         elementId: el_10
       - id: el_11
         kind: element
-        description: link "Terms of Service" -> /en/terms (below fold)
+        description: button "I have a residence-and-work permit — do I still have the UKR status needed for t" (visible; near
+          "Questions for this screen") [inside a dialog covering the page]
         elementId: el_11
       - id: el_12
         kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold)
-        elementId: el_12
-      - id: el_14
-        kind: element
-        description: link "Log in →" -> /login (below fold)
-        elementId: el_14
-      - id: el_19
-        kind: element
-        description: textbox "Compose your message" (visible; near "Keep your assistant conversation history and ask more.")
-          [inside a dialog covering the page]
-        elementId: el_19
-      - id: el_01
-        kind: element
-        description: button "Dopomo home" (below fold)
-        elementId: el_01
-      - id: el_02
-        kind: element
-        description: 'button "Language: EN" (below fold)'
-        elementId: el_02
-      - id: el_03
-        kind: element
-        description: button "Open menu" (below fold)
-        elementId: el_03
-      - id: el_15
-        kind: element
-        description: button "Close" (visible; near "Dopomo AI Assistant") [inside a dialog covering the page]
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "How can I check whether my UKR status is still active?" (visible; near "Questions for this screen")
-          [inside a dialog covering the page]
-        elementId: el_16
-      - id: el_17
-        kind: element
-        description: button "Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "Questions for
-          this screen") [inside a dialog covering the page]
-        elementId: el_17
-      - id: el_18
-        kind: element
-        description: button "What is an ordinary temporary residence and work permit (single permit)?" (visible; near "Create a
-          free account") [inside a dialog covering the page]
-        elementId: el_18
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: type:el_10
-        kind: type
-        description: type "olena.hale@example.com" into textbox "Email address"
-        elementId: el_10
-        value: olena.hale@example.com
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      el_04: 0.0101010101010101
-      scroll_down: 0.10101010101010101
-      scroll_up: 0.0101010101010101
-      el_16: 0.1717171717171717
-      el_19: 0.5353535353535354
-      back: 0.0202020202020202
-      el_15: 0.0202020202020202
-      el_17: 0.050505050505050504
-      el_09: 0.0808080808080808
-    pruned:
-      el_19: 0.5698924731182796
-      el_16: 0.1827956989247312
-      scroll_down: 0.10752688172043011
-      el_09: 0.08602150537634408
-      el_17: 0.053763440860215055
-    sampled: el_19
-    sampledName: Compose your message
-    argmax: el_19
-    exploration: false
-    confidence: 0.5353535353535354
-    entropy: 2.125360924964299
-    goalMet: 0.19
-    confusion: 3.43
-    outcome:
-      urlChanged: false
-      stateChanged: false
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 305
-    timing:
-      extractMs: 48
-      decideMs: 209
-      decideRetryMs: 0
-      executeMs: 305
-      settleMs: 159
-    flags:
-      - high-entropy
-      - confused
-    bucket: ux
-    stateChars: 5475
-    inputTokens: 1847
-    visibleTextChars: 746
-    seenTextChars: 660
-    scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    clickPath: handle
-  - step: 17
-    timestamp: 1790023949600
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: d4594be9fb39c39c17bd64ef99071fdbe49d66d9
-    viewHash: eb58e47423f383fccdc23eda0d5350c96eae54f5
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-17.jpg
-    elementsCount: 16
-    droppedElements: 0
-    options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
-      - id: el_10
-        kind: element
-        description: textbox "Email address" (below fold)
-        elementId: el_10
-      - id: el_11
-        kind: element
-        description: link "Terms of Service" -> /en/terms (below fold)
-        elementId: el_11
-      - id: el_12
-        kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold)
-        elementId: el_12
-      - id: el_14
-        kind: element
-        description: link "Log in →" -> /login (below fold)
-        elementId: el_14
-      - id: el_19
-        kind: element
-        description: textbox "Compose your message" (visible; near "Keep your assistant conversation history and ask more.")
-          [inside a dialog covering the page]
-        elementId: el_19
-      - id: el_01
-        kind: element
-        description: button "Dopomo home" (below fold)
-        elementId: el_01
-      - id: el_02
-        kind: element
-        description: 'button "Language: EN" (below fold)'
-        elementId: el_02
-      - id: el_03
-        kind: element
-        description: button "Open menu" (below fold)
-        elementId: el_03
-      - id: el_15
-        kind: element
-        description: button "Close" (visible; near "Dopomo AI Assistant") [inside a dialog covering the page]
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "How can I check whether my UKR status is still active?" (visible; near "Questions for this screen")
-          [inside a dialog covering the page]
-        elementId: el_16
-      - id: el_17
-        kind: element
-        description: button "Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "Questions for
-          this screen") [inside a dialog covering the page]
-        elementId: el_17
-      - id: el_18
-        kind: element
-        description: button "What is an ordinary temporary residence and work permit (single permit)?" (visible; near "Create a
-          free account") [inside a dialog covering the page]
-        elementId: el_18
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: type:el_10
-        kind: type
-        description: type "olena.hale@example.com" into textbox "Email address"
-        elementId: el_10
-        value: olena.hale@example.com
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      scroll_down: 0.16999999999999998
-      el_17: 0.09999999999999998
-      el_04: 0.029999999999999992
-      back: 0.039999999999999994
-      el_01: 0.009999999999999998
-      el_18: 0.009999999999999998
-      el_02: 0.009999999999999998
-      el_16: 0.23999999999999994
-      el_19: 0.25999999999999995
-      el_09: 0.04999999999999999
-      scroll_up: 0.029999999999999992
-      el_15: 0.04999999999999999
-    pruned:
-      el_19: 0.2857142857142857
-      el_16: 0.2637362637362637
-      scroll_down: 0.18681318681318682
-      el_17: 0.10989010989010987
-      el_09: 0.05494505494505494
-      el_15: 0.05494505494505494
-      back: 0.04395604395604395
-    sampled: el_16
-    sampledName: How can I check whether my UKR status is still active?
-    argmax: el_19
-    exploration: true
-    confidence: 0.25999999999999995
-    entropy: 2.8869988108516633
-    goalMet: 0.23
-    confusion: 3.45
-    outcome:
-      urlChanged: false
-      stateChanged: true
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 346
-    timing:
-      extractMs: 46
-      decideMs: 231
-      decideRetryMs: 0
-      executeMs: 346
-      settleMs: 160
-    flags:
-      - high-entropy
-      - low-confidence
-      - confused
-      - backtrack
-    bucket: ux
-    stateChars: 5486
-    inputTokens: 1849
-    visibleTextChars: 746
-    seenTextChars: 660
-    scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    clickPath: handle
-  - step: 18
-    timestamp: 1790023951022
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: 19e86b2d9b9f8ed3b0e2dad9c9ffea586b592d32
-    viewHash: 051793242ece85969959534445319c8273c21be1
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-18.jpg
-    elementsCount: 14
-    droppedElements: 0
-    options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
-      - id: el_10
-        kind: element
-        description: textbox "Email address" (below fold)
-        elementId: el_10
-      - id: el_11
-        kind: element
-        description: link "Terms of Service" -> /en/terms (below fold)
-        elementId: el_11
-      - id: el_12
-        kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold)
-        elementId: el_12
-      - id: el_14
-        kind: element
-        description: link "Log in →" -> /login (below fold)
-        elementId: el_14
-      - id: el_01
-        kind: element
-        description: button "Dopomo home" (below fold)
-        elementId: el_01
-      - id: el_02
-        kind: element
-        description: 'button "Language: EN" (below fold)'
-        elementId: el_02
-      - id: el_03
-        kind: element
-        description: button "Open menu" (below fold)
-        elementId: el_03
-      - id: el_21
-        kind: element
-        description: button "Close" (visible; near "0 / 3 messages") [inside a dialog covering the page]
-        elementId: el_21
-      - id: el_22
-        kind: element
-        description: link "Privacy policy" -> /en/privacy (visible; under "Your consent to chat"; near "To help you, we process
-          what you write in the chat — our AI assistant replies to you. Sometimes these may be personal ma") [inside a
+        description: button "What is UKR status and why does it matter for the CUKR card?" (visible; near "Not sure?") [inside a
           dialog covering the page]
-        elementId: el_22
-      - id: el_23
-        kind: element
-        description: button "I agree" (visible; under "Your consent to chat"; near "Create a free account") [inside a dialog
-          covering the page]
-        elementId: el_23
-      - id: el_24
-        kind: element
-        description: button "Not now" (visible; under "Your consent to chat"; near "Create a free account") [inside a dialog
-          covering the page]
-        elementId: el_24
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: type:el_10
-        kind: type
-        description: type "olena.hale@example.com" into textbox "Email address"
-        elementId: el_10
-        value: olena.hale@example.com
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      scroll_up: 0.050505050505050504
-      el_23: 0.3434343434343434
-      scroll_down: 0.2727272727272727
-      el_21: 0.0303030303030303
-      el_02: 0.0101010101010101
-      back: 0.0303030303030303
-      el_09: 0.0808080808080808
-      el_04: 0.0202020202020202
-      el_24: 0.1616161616161616
-    pruned:
-      el_23: 0.3777777777777778
-      scroll_down: 0.30000000000000004
-      el_24: 0.17777777777777778
-      el_09: 0.08888888888888889
-      scroll_up: 0.055555555555555566
-    sampled: el_23
-    sampledName: I agree
-    argmax: el_23
-    exploration: false
-    confidence: 0.3434343434343434
-    entropy: 2.462941320688812
-    goalMet: 0.31
-    confusion: 3.29
-    outcome:
-      urlChanged: false
-      stateChanged: true
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 420
-    timing:
-      extractMs: 61
-      decideMs: 262
-      decideRetryMs: 0
-      executeMs: 420
-      settleMs: 171
-    flags:
-      - high-entropy
-      - low-confidence
-      - confused
-    bucket: ux
-    stateChars: 5665
-    inputTokens: 1881
-    visibleTextChars: 1112
-    seenTextChars: 660
-    scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    clickPath: handle
-  - step: 19
-    timestamp: 1790023955898
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: d4594be9fb39c39c17bd64ef99071fdbe49d66d9
-    viewHash: eb58e47423f383fccdc23eda0d5350c96eae54f5
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-19.jpg
-    elementsCount: 13
-    droppedElements: 0
-    options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
-      - id: el_10
-        kind: element
-        description: textbox "Email address" (below fold)
-        elementId: el_10
-      - id: el_11
-        kind: element
-        description: link "Terms of Service" -> /en/terms (below fold)
-        elementId: el_11
-      - id: el_12
-        kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold)
         elementId: el_12
-      - id: el_14
+      - id: el_13
         kind: element
-        description: link "Log in →" -> /login (below fold)
-        elementId: el_14
-      - id: el_19
-        kind: element
-        description: textbox "Compose your message" (visible; near "Keep your assistant conversation history and ask more.")
-          [inside a dialog covering the page]
-        elementId: el_19
-      - id: el_15
-        kind: element
-        description: button "Close" (visible; near "Dopomo AI Assistant") [inside a dialog covering the page]
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "How can I check whether my UKR status is still active?" (visible; near "Questions for this screen")
-          [inside a dialog covering the page]
-        elementId: el_16
-      - id: el_17
-        kind: element
-        description: button "Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "Questions for
-          this screen") [inside a dialog covering the page]
-        elementId: el_17
-      - id: el_18
-        kind: element
-        description: button "What is an ordinary temporary residence and work permit (single permit)?" (visible; near "Create a
-          free account") [inside a dialog covering the page]
-        elementId: el_18
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: type:el_10
-        kind: type
-        description: type "olena.hale@example.com" into textbox "Email address"
-        elementId: el_10
-        value: olena.hale@example.com
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
+        description: button "I went back to Ukraine and returned — do I still have UKR status for the CUKR ca" (visible; near
+          "Not sure?") [inside a dialog covering the page]
+        elementId: el_13
       - id: back
         kind: back
         description: go back to the previous page
@@ -2249,41 +1423,36 @@ rows:
         kind: leave
         description: leave this site
     distribution:
-      el_09: 0.07
-      el_04: 0.02
-      el_17: 0.05
-      scroll_down: 0.25
-      el_16: 0.29000000000000004
-      el_19: 0.26
-      back: 0.02
-      scroll_up: 0.03
-      el_15: 0.01
+      el_13: 0.17
+      el_10: 0.32
+      el_11: 0.2
+      el_12: 0.25
+      back: 0.06
     pruned:
-      el_16: 0.31521739130434784
-      el_19: 0.2826086956521739
-      scroll_down: 0.27173913043478254
-      el_09: 0.07608695652173912
-      el_17: 0.05434782608695651
-    sampled: el_17
-    sampledName: Why did my status in the PESEL register change from “UKR” to “NUE”?
-    argmax: el_16
+      el_10: 0.3404255319148936
+      el_12: 0.26595744680851063
+      el_11: 0.2127659574468085
+      el_13: 0.18085106382978725
+    sampled: el_12
+    sampledName: What is UKR status and why does it matter for the CUKR card?
+    argmax: el_10
     exploration: true
-    confidence: 0.29000000000000004
-    entropy: 2.4518032027173287
-    goalMet: 0.18
-    confusion: 3.34
+    confidence: 0.32
+    entropy: 2.168540090297744
+    goalMet: 0.07
+    confusion: 3.04
     outcome:
       urlChanged: false
       stateChanged: false
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 4177
+      durationMs: 4172
     timing:
-      extractMs: 55
-      decideMs: 238
+      extractMs: 51
+      decideMs: 611
       decideRetryMs: 0
-      executeMs: 4177
+      executeMs: 4172
       settleMs: 4005
     flags:
       - high-entropy
@@ -2292,84 +1461,44 @@ rows:
       - no-change
       - backtrack
     bucket: product
-    stateChars: 5790
-    inputTokens: 1869
-    visibleTextChars: 746
-    seenTextChars: 951
+    stateChars: 4687
+    inputTokens: 1526
+    visibleTextChars: 537
+    seenTextChars: 656
     scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
+    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle
-  - step: 20
-    timestamp: 1790023957815
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: d4594be9fb39c39c17bd64ef99071fdbe49d66d9
-    viewHash: eb58e47423f383fccdc23eda0d5350c96eae54f5
+  - step: 17
+    timestamp: 1790026504854
+    url: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
+    stateHash: a32cff258b8ebb8b15e677784ac1c4f1520b2515
+    viewHash: a35f9a7b8bf11f25b970f41e4a84a7ecce3e07f5
     viewport:
       width: 390
       height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-20.jpg
-    elementsCount: 13
+    screenshotPath: reports/2026-09-21T21-34-31-bc8n/screenshots/step-17.jpg
+    elementsCount: 6
     droppedElements: 0
     options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
       - id: el_10
         kind: element
-        description: textbox "Email address" (below fold)
+        description: button "Close" (visible; near "Question 3 of 6") [inside a dialog covering the page]
         elementId: el_10
       - id: el_11
         kind: element
-        description: link "Terms of Service" -> /en/terms (below fold)
+        description: button "I have a residence-and-work permit — do I still have the UKR status needed for t" (visible; near
+          "Questions for this screen") [inside a dialog covering the page]
         elementId: el_11
       - id: el_12
         kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold)
+        description: button "What is UKR status and why does it matter for the CUKR card?" (visible; near "Not sure?") [inside a
+          dialog covering the page]
         elementId: el_12
-      - id: el_14
+      - id: el_13
         kind: element
-        description: link "Log in →" -> /login (below fold)
-        elementId: el_14
-      - id: el_19
-        kind: element
-        description: textbox "Compose your message" (visible; near "Keep your assistant conversation history and ask more.")
-          [inside a dialog covering the page]
-        elementId: el_19
-      - id: el_15
-        kind: element
-        description: button "Close" (visible; near "Dopomo AI Assistant") [inside a dialog covering the page]
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "How can I check whether my UKR status is still active?" (visible; near "Questions for this screen")
-          [inside a dialog covering the page]
-        elementId: el_16
-      - id: el_17
-        kind: element
-        description: button "Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "Questions for
-          this screen") [inside a dialog covering the page]
-        elementId: el_17
-      - id: el_18
-        kind: element
-        description: button "What is an ordinary temporary residence and work permit (single permit)?" (visible; near "Create a
-          free account") [inside a dialog covering the page]
-        elementId: el_18
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: type:el_10
-        kind: type
-        description: type "olena.hale@example.com" into textbox "Email address"
-        elementId: el_10
-        value: olena.hale@example.com
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
+        description: button "I went back to Ukraine and returned — do I still have UKR status for the CUKR ca" (visible; near
+          "Not sure?") [inside a dialog covering the page]
+        elementId: el_13
       - id: back
         kind: back
         description: go back to the previous page
@@ -2377,690 +1506,48 @@ rows:
         kind: leave
         description: leave this site
     distribution:
-      el_15: 0.019999999999999997
-      el_19: 0.16999999999999998
-      scroll_up: 0.029999999999999992
-      el_16: 0.30999999999999994
-      scroll_down: 0.31999999999999995
-      el_09: 0.04999999999999999
-      back: 0.04999999999999999
-      el_18: 0.009999999999999998
-      el_04: 0.039999999999999994
+      leave: 0.01
+      el_11: 0.21
+      el_10: 0.28
+      el_13: 0.22
+      back: 0.23
+      el_12: 0.05
     pruned:
-      scroll_down: 0.3404255319148936
-      el_16: 0.32978723404255317
-      el_19: 0.18085106382978722
-      back: 0.05319148936170212
-      el_09: 0.05319148936170212
-      el_04: 0.0425531914893617
-    sampled: scroll_down
-    sampledName: scroll_down
-    argmax: scroll_down
+      el_10: 0.29787234042553196
+      back: 0.2446808510638298
+      el_13: 0.23404255319148937
+      el_11: 0.22340425531914895
+    sampled: el_10
+    sampledName: Close
+    argmax: el_10
     exploration: false
-    confidence: 0.31999999999999995
-    entropy: 2.4334449660318644
-    goalMet: 0.22
-    confusion: 3.48
+    confidence: 0.28
+    entropy: 2.237819542077369
+    goalMet: 0.08
+    confusion: 3.37
     outcome:
       urlChanged: false
       stateChanged: true
       consoleErrors: []
       failedRequests: []
       validationMessages: []
-      durationMs: 586
+      durationMs: 480
     timing:
-      extractMs: 38
-      decideMs: 626
+      extractMs: 48
+      decideMs: 604
       decideRetryMs: 0
-      executeMs: 586
-      settleMs: 469
+      executeMs: 480
+      settleMs: 319
     flags:
       - high-entropy
       - low-confidence
       - confused
       - backtrack
     bucket: ux
-    stateChars: 5981
-    inputTokens: 1923
-    visibleTextChars: 746
-    seenTextChars: 951
-    scrollOnly: true
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    clickPath: handle
-  - step: 21
-    timestamp: 1790023958738
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: 1839498592980f9723234bb7af36c97835a96054
-    viewHash: 60d7208c3e377f4febc74edd9814b1064c603f9e
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-21.jpg
-    elementsCount: 12
-    droppedElements: 0
-    options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
-      - id: el_19
-        kind: element
-        description: textbox "Compose your message" (visible; near "This is an automated, informational assessment — not an
-          official decision. Only the relevant office (voivodeship office ") [inside a dialog covering the page]
-        elementId: el_19
-      - id: el_15
-        kind: element
-        description: button "Close" (visible; near "Dopomo AI Assistant") [inside a dialog covering the page]
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "How can I check whether my UKR status is still active?" (visible; near "By continuing, you agree to
-          our and .") [inside a dialog covering the page]
-        elementId: el_16
-      - id: el_17
-        kind: element
-        description: button "Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "We'll send the
-          code to this address · valid for 10 minutes") [inside a dialog covering the page]
-        elementId: el_17
-      - id: el_18
-        kind: element
-        description: button "What is an ordinary temporary residence and work permit (single permit)?" (visible; near "We'll
-          send the code to this address · valid for 10 minutes") [inside a dialog covering the page]
-        elementId: el_18
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: el_05
-        kind: element
-        description: button "Ask the assistant" (below fold)
-        elementId: el_05
-      - id: el_06
-        kind: element
-        description: button "↳How can I check whether my UKR status is still active?" (below fold)
-        elementId: el_06
-      - id: el_07
-        kind: element
-        description: button "↳Why did my status in the PESEL register change from “UKR” to “NUE”?" (below fold)
-        elementId: el_07
-      - id: el_08
-        kind: element
-        description: button "↳What is an ordinary temporary residence and work permit (single permit)?" (below fold)
-        elementId: el_08
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      el_07: 0.0202020202020202
-      el_09: 0.0707070707070707
-      el_15: 0.0101010101010101
-      el_17: 0.0404040404040404
-      el_16: 0.0404040404040404
-      scroll_down: 0.1111111111111111
-      el_05: 0.0707070707070707
-      el_06: 0.0606060606060606
-      el_19: 0.5656565656565656
-      scroll_up: 0.0101010101010101
-    pruned:
-      el_19: 0.6153846153846154
-      scroll_down: 0.12087912087912088
-      el_05: 0.07692307692307693
-      el_09: 0.07692307692307693
-      el_06: 0.06593406593406594
-      el_16: 0.04395604395604395
-    sampled: scroll_down
-    sampledName: scroll_down
-    argmax: el_19
-    exploration: true
-    confidence: 0.5656565656565656
-    entropy: 2.2245246266112306
-    goalMet: 0.07
-    confusion: 3.24
-    outcome:
-      urlChanged: false
-      stateChanged: true
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 271
-    timing:
-      extractMs: 52
-      decideMs: 235
-      decideRetryMs: 0
-      executeMs: 271
-      settleMs: 159
-    flags:
-      - high-entropy
-      - confused
-    bucket: ux
-    stateChars: 5614
-    inputTokens: 1806
-    visibleTextChars: 920
-    seenTextChars: 722
-    scrollOnly: true
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    clickPath: handle
-  - step: 22
-    timestamp: 1790023959757
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: 6a6245ed87db27af8810b52bc6106e4268ef826c
-    viewHash: b34a854b2da62154d665e8a35350e729f258c1a0
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-22.jpg
-    elementsCount: 12
-    droppedElements: 0
-    options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
-      - id: el_19
-        kind: element
-        description: textbox "Compose your message" (visible; near "This is an automated, informational assessment — not an
-          official decision. Only the relevant office (voivodeship office ") [inside a dialog covering the page]
-        elementId: el_19
-      - id: el_15
-        kind: element
-        description: button "Close" (visible; near "A higher message limit") [inside a dialog covering the page]
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "How can I check whether my UKR status is still active?" (visible; near "By continuing, you agree to
-          our and .") [inside a dialog covering the page]
-        elementId: el_16
-      - id: el_17
-        kind: element
-        description: button "Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "We'll send the
-          code to this address · valid for 10 minutes") [inside a dialog covering the page]
-        elementId: el_17
-      - id: el_18
-        kind: element
-        description: button "What is an ordinary temporary residence and work permit (single permit)?" (visible; near "We'll
-          send the code to this address · valid for 10 minutes") [inside a dialog covering the page]
-        elementId: el_18
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: el_05
-        kind: element
-        description: button "Ask the assistant" (below fold)
-        elementId: el_05
-      - id: el_06
-        kind: element
-        description: button "↳How can I check whether my UKR status is still active?" (below fold)
-        elementId: el_06
-      - id: el_07
-        kind: element
-        description: button "↳Why did my status in the PESEL register change from “UKR” to “NUE”?" (below fold)
-        elementId: el_07
-      - id: el_08
-        kind: element
-        description: button "↳What is an ordinary temporary residence and work permit (single permit)?" (below fold)
-        elementId: el_08
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      el_17: 0.029999999999999992
-      el_04: 0.009999999999999998
-      el_08: 0.009999999999999998
-      scroll_up: 0.059999999999999984
-      el_15: 0.029999999999999992
-      el_07: 0.019999999999999997
-      el_19: 0.4999999999999999
-      el_09: 0.08999999999999998
-      el_06: 0.059999999999999984
-      el_16: 0.039999999999999994
-      back: 0.019999999999999997
-      el_18: 0.009999999999999998
-      el_05: 0.11999999999999998
-    pruned:
-      el_19: 0.574712643678161
-      el_05: 0.13793103448275865
-      el_09: 0.10344827586206898
-      el_06: 0.06896551724137931
-      scroll_up: 0.06896551724137931
-      el_16: 0.04597701149425288
-    sampled: el_19
-    sampledName: Compose your message
-    argmax: el_19
-    exploration: false
-    confidence: 0.4999999999999999
-    entropy: 2.581146094541207
-    goalMet: 0.07
-    confusion: 3.17
-    outcome:
-      urlChanged: false
-      stateChanged: false
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 316
-    timing:
-      extractMs: 46
-      decideMs: 225
-      decideRetryMs: 0
-      executeMs: 316
-      settleMs: 160
-    flags:
-      - high-entropy
-      - low-confidence
-      - confused
-    bucket: ux
-    stateChars: 5507
-    inputTokens: 1769
-    visibleTextChars: 920
-    seenTextChars: 722
+    stateChars: 4721
+    inputTokens: 1532
+    visibleTextChars: 537
+    seenTextChars: 656
     scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    clickPath: handle
-  - step: 23
-    timestamp: 1790023961049
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: 6a6245ed87db27af8810b52bc6106e4268ef826c
-    viewHash: b34a854b2da62154d665e8a35350e729f258c1a0
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-23.jpg
-    elementsCount: 12
-    droppedElements: 0
-    options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
-      - id: el_19
-        kind: element
-        description: textbox "Compose your message" (visible; near "This is an automated, informational assessment — not an
-          official decision. Only the relevant office (voivodeship office ") [inside a dialog covering the page]
-        elementId: el_19
-      - id: el_15
-        kind: element
-        description: button "Close" (visible; near "A higher message limit") [inside a dialog covering the page]
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "How can I check whether my UKR status is still active?" (visible; near "By continuing, you agree to
-          our and .") [inside a dialog covering the page]
-        elementId: el_16
-      - id: el_17
-        kind: element
-        description: button "Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "We'll send the
-          code to this address · valid for 10 minutes") [inside a dialog covering the page]
-        elementId: el_17
-      - id: el_18
-        kind: element
-        description: button "What is an ordinary temporary residence and work permit (single permit)?" (visible; near "We'll
-          send the code to this address · valid for 10 minutes") [inside a dialog covering the page]
-        elementId: el_18
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: el_05
-        kind: element
-        description: button "Ask the assistant" (below fold)
-        elementId: el_05
-      - id: el_06
-        kind: element
-        description: button "↳How can I check whether my UKR status is still active?" (below fold)
-        elementId: el_06
-      - id: el_07
-        kind: element
-        description: button "↳Why did my status in the PESEL register change from “UKR” to “NUE”?" (below fold)
-        elementId: el_07
-      - id: el_08
-        kind: element
-        description: button "↳What is an ordinary temporary residence and work permit (single permit)?" (below fold)
-        elementId: el_08
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      el_08: 0.009999999999999998
-      el_06: 0.06999999999999999
-      el_09: 0.11999999999999997
-      back: 0.07999999999999999
-      el_18: 0.009999999999999998
-      scroll_up: 0.07999999999999999
-      el_15: 0.07999999999999999
-      el_16: 0.029999999999999992
-      el_07: 0.019999999999999997
-      el_04: 0.019999999999999997
-      el_17: 0.039999999999999994
-      el_19: 0.32999999999999996
-      el_05: 0.10999999999999997
-    pruned:
-      el_19: 0.3626373626373627
-      el_09: 0.13186813186813187
-      el_05: 0.12087912087912088
-      back: 0.08791208791208792
-      el_15: 0.08791208791208792
-      scroll_up: 0.08791208791208792
-      el_06: 0.07692307692307693
-      el_17: 0.04395604395604396
-    sampled: scroll_up
-    sampledName: scroll_up
-    argmax: el_19
-    exploration: true
-    confidence: 0.32999999999999996
-    entropy: 3.084409432684126
-    goalMet: 0.06
-    confusion: 3.35
-    outcome:
-      urlChanged: false
-      stateChanged: true
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 668
-    timing:
-      extractMs: 49
-      decideMs: 227
-      decideRetryMs: 0
-      executeMs: 668
-      settleMs: 469
-    flags:
-      - high-entropy
-      - low-confidence
-      - confused
-    bucket: ux
-    stateChars: 5561
-    inputTokens: 1767
-    visibleTextChars: 920
-    seenTextChars: 722
-    scrollOnly: true
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    clickPath: handle
-  - step: 24
-    timestamp: 1790023962104
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: 4e542b9af4e594d6a3d007ffbb2e4dd297677b5b
-    viewHash: dc1072aa7d9132a26856fa3c7d0c7b1c296cc6f5
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-24.jpg
-    elementsCount: 13
-    droppedElements: 0
-    options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
-      - id: el_10
-        kind: element
-        description: textbox "Email address" (below fold)
-        elementId: el_10
-      - id: el_11
-        kind: element
-        description: link "Terms of Service" -> /en/terms (below fold)
-        elementId: el_11
-      - id: el_12
-        kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold)
-        elementId: el_12
-      - id: el_14
-        kind: element
-        description: link "Log in →" -> /login (below fold)
-        elementId: el_14
-      - id: el_19
-        kind: element
-        description: textbox "Compose your message" (visible; near "Conversation history with the Dopomo assistant — all in one
-          place") [inside a dialog covering the page]
-        elementId: el_19
-      - id: el_15
-        kind: element
-        description: button "Close" (visible; near "Dopomo AI Assistant") [inside a dialog covering the page]
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "How can I check whether my UKR status is still active?" (visible; near "Questions for this screen")
-          [inside a dialog covering the page]
-        elementId: el_16
-      - id: el_17
-        kind: element
-        description: button "Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "Questions for
-          this screen") [inside a dialog covering the page]
-        elementId: el_17
-      - id: el_18
-        kind: element
-        description: button "What is an ordinary temporary residence and work permit (single permit)?" (visible; near "Create a
-          free account") [inside a dialog covering the page]
-        elementId: el_18
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: type:el_10
-        kind: type
-        description: type "olena.hale@example.com" into textbox "Email address"
-        elementId: el_10
-        value: olena.hale@example.com
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      el_19: 0.41414141414141414
-      el_15: 0.0202020202020202
-      el_14: 0.0101010101010101
-      el_17: 0.0606060606060606
-      type:el_10: 0.050505050505050504
-      back: 0.0101010101010101
-      el_09: 0.10101010101010101
-      scroll_down: 0.10101010101010101
-      el_10: 0.0404040404040404
-      el_16: 0.1313131313131313
-      scroll_up: 0.0404040404040404
-      el_04: 0.0101010101010101
-      el_18: 0.0101010101010101
-    pruned:
-      el_19: 0.4408602150537635
-      el_16: 0.13978494623655913
-      el_09: 0.10752688172043011
-      scroll_down: 0.10752688172043011
-      el_17: 0.06451612903225806
-      type:el_10: 0.053763440860215055
-      el_10: 0.04301075268817204
-      scroll_up: 0.04301075268817204
-    sampled: el_19
-    sampledName: Compose your message
-    argmax: el_19
-    exploration: false
-    confidence: 0.41414141414141414
-    entropy: 2.797807873597926
-    goalMet: 0.07
-    confusion: 3.3
-    outcome:
-      urlChanged: false
-      stateChanged: false
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 320
-    timing:
-      extractMs: 48
-      decideMs: 309
-      decideRetryMs: 0
-      executeMs: 320
-      settleMs: 161
-    flags:
-      - high-entropy
-      - low-confidence
-      - confused
-    bucket: ux
-    stateChars: 5338
-    inputTokens: 1733
-    visibleTextChars: 769
-    seenTextChars: 873
-    scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    clickPath: handle
-  - step: 25
-    timestamp: 1790023963148
-    url: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
-    stateHash: 4e542b9af4e594d6a3d007ffbb2e4dd297677b5b
-    viewHash: dc1072aa7d9132a26856fa3c7d0c7b1c296cc6f5
-    viewport:
-      width: 390
-      height: 844
-    screenshotPath: reports/2026-09-21T20-52-08-pghv/screenshots/step-25.jpg
-    elementsCount: 13
-    droppedElements: 0
-    options:
-      - id: el_09
-        kind: element
-        description: textbox "[unnamed textbox]" (below fold)
-        elementId: el_09
-      - id: el_10
-        kind: element
-        description: textbox "Email address" (below fold)
-        elementId: el_10
-      - id: el_11
-        kind: element
-        description: link "Terms of Service" -> /en/terms (below fold)
-        elementId: el_11
-      - id: el_12
-        kind: element
-        description: link "Privacy Policy" -> /en/privacy (below fold)
-        elementId: el_12
-      - id: el_14
-        kind: element
-        description: link "Log in →" -> /login (below fold)
-        elementId: el_14
-      - id: el_19
-        kind: element
-        description: textbox "Compose your message" (visible; near "Conversation history with the Dopomo assistant — all in one
-          place") [inside a dialog covering the page]
-        elementId: el_19
-      - id: el_15
-        kind: element
-        description: button "Close" (visible; near "Dopomo AI Assistant") [inside a dialog covering the page]
-        elementId: el_15
-      - id: el_16
-        kind: element
-        description: button "How can I check whether my UKR status is still active?" (visible; near "Questions for this screen")
-          [inside a dialog covering the page]
-        elementId: el_16
-      - id: el_17
-        kind: element
-        description: button "Why did my status in the PESEL register change from “UKR” to “NUE”?" (visible; near "Questions for
-          this screen") [inside a dialog covering the page]
-        elementId: el_17
-      - id: el_18
-        kind: element
-        description: button "What is an ordinary temporary residence and work permit (single permit)?" (visible; near "Create a
-          free account") [inside a dialog covering the page]
-        elementId: el_18
-      - id: el_04
-        kind: element
-        description: button "← Back" (below fold)
-        elementId: el_04
-      - id: type:el_10
-        kind: type
-        description: type "olena.hale@example.com" into textbox "Email address"
-        elementId: el_10
-        value: olena.hale@example.com
-      - id: scroll_down
-        kind: scroll_down
-        description: scroll down to see more
-      - id: scroll_up
-        kind: scroll_up
-        description: scroll back up the page
-      - id: back
-        kind: back
-        description: go back to the previous page
-      - id: leave
-        kind: leave
-        description: leave this site
-    distribution:
-      el_18: 0.009999999999999998
-      scroll_up: 0.039999999999999994
-      el_16: 0.23999999999999996
-      el_04: 0.009999999999999998
-      el_14: 0.009999999999999998
-      type:el_10: 0.07999999999999999
-      el_17: 0.07999999999999999
-      el_19: 0.18999999999999995
-      el_10: 0.059999999999999984
-      el_09: 0.039999999999999994
-      scroll_down: 0.13999999999999999
-      back: 0.039999999999999994
-      el_15: 0.059999999999999984
-    pruned:
-      el_16: 0.25806451612903225
-      el_19: 0.2043010752688172
-      scroll_down: 0.15053763440860216
-      el_17: 0.08602150537634409
-      type:el_10: 0.08602150537634409
-      el_10: 0.06451612903225806
-      el_15: 0.06451612903225806
-      back: 0.043010752688172046
-      el_09: 0.043010752688172046
-    sampled: el_19
-    sampledName: Compose your message
-    argmax: el_16
-    exploration: true
-    confidence: 0.23999999999999996
-    entropy: 3.1731337728727618
-    goalMet: 0.06
-    confusion: 3.44
-    outcome:
-      urlChanged: false
-      stateChanged: false
-      consoleErrors: []
-      failedRequests: []
-      validationMessages: []
-      durationMs: 305
-    timing:
-      extractMs: 52
-      decideMs: 305
-      decideRetryMs: 0
-      executeMs: 305
-      settleMs: 159
-    flags:
-      - high-entropy
-      - low-confidence
-      - confused
-    bucket: ux
-    stateChars: 5444
-    inputTokens: 1756
-    visibleTextChars: 769
-    seenTextChars: 873
-    scrollOnly: false
-    nextUrl: https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3
+    nextUrl: https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3
     clickPath: handle

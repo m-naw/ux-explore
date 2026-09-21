@@ -1,9 +1,9 @@
 {
   "runIds": [
-    "2026-09-21T20-52-08-pghv"
+    "2026-09-21T21-34-31-bc8n"
   ],
   "divergenceRatio": null,
-  "explorationRate": 0.36,
+  "explorationRate": 0.17647058823529413,
   "completionRateByExploration": {
     "explored": 0,
     "exploited": null
@@ -11,9 +11,9 @@
   "perUrl": [
     {
       "url": "https://dopomo.pl/en/cukr-card-application",
-      "visits": 1,
-      "meanEntropy": 0.5060827854579046,
-      "meanConfusion": 2.28,
+      "visits": 3,
+      "meanEntropy": 1.572246571152296,
+      "meanConfusion": 2.9166666666666665,
       "exits": 0,
       "leaveRate": 0,
       "backtracks": 0,
@@ -21,52 +21,37 @@
         {
           "name": "Check whether you can apply →",
           "meanProbability": 1
-        }
-      ]
-    },
-    {
-      "url": "https://dopomo.pl/en/pathfinder?step=negative&from=cukr-landing-v3",
-      "visits": 10,
-      "meanEntropy": 2.3411519716444107,
-      "meanConfusion": 3.2700000000000005,
-      "exits": 1,
-      "leaveRate": 0,
-      "backtracks": 2,
-      "topSampled": [
-        {
-          "name": "Ask the assistant",
-          "meanProbability": 0.5531914893617021
         },
         {
-          "name": "Compose your message",
-          "meanProbability": 0.5041898405635892
+          "name": "Save choices",
+          "meanProbability": 0.5494505494505495
         },
         {
-          "name": "↳How can I check whether my UKR status is still active?",
-          "meanProbability": 0.4945054945054945
+          "name": "Manage preferences",
+          "meanProbability": 0.06593406593406592
         }
       ]
     },
     {
       "url": "https://dopomo.pl/en/pathfinder?step=tree&from=cukr-landing-v3",
-      "visits": 11,
-      "meanEntropy": 1.1811408260999878,
-      "meanConfusion": 2.7218181818181812,
-      "exits": 0,
+      "visits": 14,
+      "meanEntropy": 1.1807495821074183,
+      "meanConfusion": 2.4228571428571426,
+      "exits": 1,
       "leaveRate": 0,
-      "backtracks": 1,
+      "backtracks": 5,
       "topSampled": [
+        {
+          "name": "For myself",
+          "meanProbability": 1
+        },
         {
           "name": "🇺🇦Ukrainian citizenship",
           "meanProbability": 1
         },
         {
           "name": "Next →",
-          "meanProbability": 0.7261229998072104
-        },
-        {
-          "name": "No / not sure / I have a different status (e.g. NUE, a residence permit)",
-          "meanProbability": 0.6532431271477663
+          "meanProbability": 0.9315789473684211
         }
       ]
     }
@@ -74,7 +59,7 @@
   "leaveRateByPersona": {
     "Olena": 0
   },
-  "charsPerToken": 2.9729498062562976,
+  "charsPerToken": 2.8796612468600054,
   "reportValidation": {
     "droppedFindings": 0,
     "downgradedFindings": 0

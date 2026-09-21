@@ -37,6 +37,7 @@ import {
   type GoalCriteria,
 } from './goal';
 import { detectLoop } from './loop-detector';
+import { isBannerChoiceName, lateConsentAppeared } from './overlay';
 import { requiredInputsWithoutFacts } from './typed-input';
 import { timer } from './timing';
 
@@ -175,6 +176,7 @@ export async function drive(config: ExploreConfig, deps: DriverDeps): Promise<Jo
   let criteriaMatched = false;
   let looped = false;
   let maxStepsReached = false;
+  let lateConsentRetryStep = 0;
   let fatalToolFailure: ToolFailure | undefined;
   let screenshotDir = '';
   let decisionDir = '';
@@ -339,6 +341,27 @@ export async function drive(config: ExploreConfig, deps: DriverDeps): Promise<Jo
       const decideMs = decideTimer();
       const decideRetryMs = retryMsOf();
       const decision = toDecision(raw, rng);
+
+      // A CMP often injects the banner during the decide round-trip, sometimes inside an
+      // open shadow root the light-DOM signature cannot see. Re-read once before the screenshot.
+      const hadBanner = extraction.state.elements.some(
+        (el) => el.dismissesOverlay || isBannerChoiceName(el.name),
+      );
+      if (lateConsentRetryStep !== step && !hadBanner) {
+        try {
+          const again = await extractWithRetry(page);
+          if (lateConsentAppeared(extraction.state, again.state)) {
+            await extraction.dispose();
+            await again.dispose();
+            lateConsentRetryStep = step;
+            step -= 1;
+            continue;
+          }
+          await again.dispose();
+        } catch (err) {
+          if (!isNavigationRaceError(err)) throw err;
+        }
+      }
 
       if (config.recordDecisions) {
         // Written after the decision so the live Jev distribution travels with the input the

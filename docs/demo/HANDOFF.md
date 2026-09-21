@@ -58,8 +58,8 @@ Fix: in the extraction `page.evaluate`, run an `elementFromPoint` check at each 
 
 Same command as above, still `--no-report` (Anthropic key still returns "credit balance too low"). Both runs wrote `screenshots/final.jpg`. Consent is a real step, not an auto-accept.
 
-- Careful (`reports/2026-09-21T20-52-08-pghv`): 25 steps, STUCK (step budget exhausted) on `?step=negative`. Step 2 sampled "Manage preferences", step 3 "Save choices", step 18 "I agree". No `overlayDismissal` on the consent step.
-- Tech-savvy (`reports/2026-09-21T20-53-07-9ih1`): 14 steps, GOAL MET. Step 2 sampled "Reject all".
+- Careful (`reports/2026-09-21T21-34-31-bc8n`): 17 steps, STUCK (loop). Step 1 sampled "Manage preferences" (Accept/Reject were options on first paint), step 2 "Save choices". No below-fold clicks. No free-text compose tap.
+- Tech-savvy (`reports/2026-09-21T21-35-13-trcd`): 14 steps, GOAL MET. Step 1 sampled "Reject all".
 
 Assets re-rendered: `journey.gif` / `journey.mp4` are the short careful cut; full mp4s and `compare.png` updated. Outcome card shows `final.jpg` on the left when the file is present.
 

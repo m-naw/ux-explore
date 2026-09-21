@@ -647,6 +647,38 @@ describeBrowser('leaving after belief, and the non-responsive flag', () => {
     for (const later of journey.rows.slice(1)) expect(later.flags).not.toContain('non-responsive');
   });
 
+  it('re-decides when a cookie banner arrives during decide', async () => {
+    const browser = await getBrowser();
+    let calls = 0;
+    const engine: DecideEngine = {
+      async decide(input: DecideInput): Promise<RawDecision> {
+        calls += 1;
+        await new Promise((resolve) => setTimeout(resolve, 600));
+        const reject = input.options.find((o) => o.description.includes('Reject all'));
+        const id =
+          reject?.id ?? input.options.find((o) => o.description.includes('Check whether'))!.id;
+        return {
+          distribution: { [id]: 1 },
+          goalMet: 0,
+          confusion: 1,
+          latencyMs: 5,
+          stateChars: 500,
+          inputTokens: 160,
+          offeredOptions: input.options,
+          stateText: 'state text',
+        };
+      },
+    };
+    const journey = await drive(config({ url: server.url('late-cookie.html'), maxSteps: 1 }), {
+      browser,
+      engine,
+    });
+    expect(calls).toBe(2);
+    expect(journey.rows).toHaveLength(1);
+    expect(journey.rows[0]!.sampledName).toBe('Reject all');
+    expect(journey.rows[0]!.options.some((o) => o.description.includes('Accept all'))).toBe(true);
+  });
+
   it('writes screenshots/final.jpg on every exit path', async () => {
     const output = await mkdtemp(path.join(tmpdir(), 'ux-final-'));
     const browser = await getBrowser();

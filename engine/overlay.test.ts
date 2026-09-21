@@ -5,6 +5,7 @@ import {
   isConsentText,
   isDismissName,
   isOverlayOccluder,
+  lateConsentAppeared,
   overlayDismissPlan,
 } from './overlay';
 
@@ -50,6 +51,47 @@ describe('isDismissName', () => {
     expect(CONSENT_KEYWORDS).toContain('согласен');
     expect(DISMISS_KEYWORDS.length).toBe(12);
     expect(CONSENT_KEYWORDS.length).toBe(8);
+  });
+});
+
+describe('lateConsentAppeared', () => {
+  const el = (name: string, overlay = false, dismissesOverlay = false) => ({
+    name,
+    overlay,
+    dismissesOverlay,
+  });
+
+  it('is false when the page hash did not move', () => {
+    expect(
+      lateConsentAppeared(
+        { stateHash: 'a', elements: [el('Apply')] },
+        { stateHash: 'a', elements: [el('Apply'), el('Accept all', true)] },
+      ),
+    ).toBe(false);
+  });
+
+  it('is true when a consent or reject control arrived', () => {
+    expect(
+      lateConsentAppeared(
+        { stateHash: 'a', elements: [el('Apply')] },
+        { stateHash: 'b', elements: [el('Apply'), el('Reject all')] },
+      ),
+    ).toBe(true);
+    expect(
+      lateConsentAppeared(
+        { stateHash: 'a', elements: [el('Apply')] },
+        { stateHash: 'b', elements: [el('Apply'), el('Accept all')] },
+      ),
+    ).toBe(true);
+  });
+
+  it('is false when the only new control is ordinary page content', () => {
+    expect(
+      lateConsentAppeared(
+        { stateHash: 'a', elements: [el('Apply')] },
+        { stateHash: 'b', elements: [el('Apply'), el('Blog')] },
+      ),
+    ).toBe(false);
   });
 });
 

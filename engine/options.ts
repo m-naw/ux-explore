@@ -2,7 +2,7 @@
 // Turns a PageState into the option list Jev chooses from.
 
 import type { Element as UxElement, Option, PageState, PersonaProfile } from './types';
-import { buildTypedOptions } from './typed-input';
+import { buildTypedOptions, isTextInput, matchFact } from './typed-input';
 
 /** Cap on element options. */
 export const OPTION_CAP = 30;
@@ -175,10 +175,20 @@ export function buildOptions(ctx: OptionContext): OptionSet {
   // burn the action timeout and land the step in the `tool` bucket. `meta.disabledControls`
   // is what tells the persona it is there.
   const candidates = state.elements.filter((el) => !isSocial(el) && !el.disabled);
+  // A human cannot click what is not on screen. Below-fold controls stay out of the option
+  // list; scroll_down is how she reaches them. Their names are reported as a sample only.
+  const visible = candidates.filter((el) => el.inViewport);
+  const below = candidates
+    .filter((el) => !el.inViewport)
+    .sort((a, b) => a.y - b.y);
+  // A text field with no persona fact can only be focused, never filled. Offering that click
+  // is a dead tap. Selects stay: choosing an option does not require a fact.
+  const unfillable = (el: UxElement) => isTextInput(el) && !matchFact(el, persona.facts);
 
   const seen = new Set<string>();
   // Reserved slots (form controls, nav/header, langSwitcher, matching footer links) are never
   // capped; only the non-reserved remainder (main content) is subject to OPTION_CAP.
+  // Both are visible-only.
   const reserved: UxElement[] = [];
   const rest: UxElement[] = [];
   const take = (el: UxElement, bucket: UxElement[]): boolean => {
@@ -189,36 +199,36 @@ export function buildOptions(ctx: OptionContext): OptionSet {
     return true;
   };
 
-  for (const el of candidates) if (el.landmark === 'form') take(el, reserved);
-  for (const el of candidates)
-    if (el.landmark === 'nav' || el.landmark === 'header') take(el, reserved);
+  for (const el of visible) if (el.landmark === 'form' && !unfillable(el)) take(el, reserved);
+  for (const el of visible)
+    if ((el.landmark === 'nav' || el.landmark === 'header') && !unfillable(el)) take(el, reserved);
 
   const switcherIds = new Set(state.meta.langSwitcher.map((l) => l.elementId));
-  for (const el of candidates) if (switcherIds.has(el.id)) take(el, reserved);
+  for (const el of visible) if (switcherIds.has(el.id) && !unfillable(el)) take(el, reserved);
 
   const keywords = footerKeywordsFor(persona);
   let footerTaken = 0;
-  for (const el of candidates) {
+  for (const el of visible) {
     if (footerTaken >= FOOTER_LINK_CAP) break;
-    if (el.landmark !== 'footer') continue;
+    if (el.landmark !== 'footer' || unfillable(el)) continue;
     const name = el.name.toLowerCase();
     if (!keywords.some((k) => name.includes(k))) continue;
     if (take(el, reserved)) footerTaken += 1;
   }
 
-  for (const el of candidates) if (el.inViewport) take(el, rest);
-  for (const el of [...candidates].filter((e) => !e.inViewport).sort((a, b) => a.y - b.y))
-    take(el, rest);
+  for (const el of visible) if (!unfillable(el)) take(el, rest);
 
   const kept = [...reserved, ...rest.slice(0, OPTION_CAP)];
-  const dropped = rest.slice(OPTION_CAP);
+  const dropped = [...rest.slice(OPTION_CAP), ...below];
 
-  const options: Option[] = kept.map((el) => ({
-    id: el.id,
-    kind: 'element',
-    description: describeOption(el),
-    elementId: el.id,
-  }));
+  const options: Option[] = kept
+    .filter((el) => !(isTextInput(el) && matchFact(el, persona.facts)))
+    .map((el) => ({
+      id: el.id,
+      kind: 'element',
+      description: describeOption(el),
+      elementId: el.id,
+    }));
 
   // Typed input options for the elements that survived the cap.
   const keptIds = new Set(kept.map((el) => el.id));
@@ -241,12 +251,14 @@ export function buildOptions(ctx: OptionContext): OptionSet {
     options.push({ id: 'back', kind: 'back', description: 'go back to the previous page' });
   }
   const readable = readableLanguages(persona);
+  const visibleIds = new Set(visible.map((el) => el.id));
   // The extractor already keeps disabled links out of langSwitcher; this holds for a state
   // built by hand or by an older run.
   const disabledIds = new Set(state.elements.filter((el) => el.disabled).map((el) => el.id));
   for (const target of state.meta.langSwitcher) {
     if (!readable.has(target.code)) continue;
     if (disabledIds.has(target.elementId)) continue;
+    if (!visibleIds.has(target.elementId)) continue;
     options.push({
       id: `switch_language:${target.code}`,
       kind: 'switch_language',

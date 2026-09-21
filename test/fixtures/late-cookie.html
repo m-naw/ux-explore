@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><title>Late cookie</title>
+    <style>
+      body { margin: 0; font-family: sans-serif; }
+      #bar { position: fixed; left: 0; right: 0; bottom: 0; height: 88px; background: #222; color: #fff; z-index: 40; }
+    </style>
+  </head>
+  <body>
+    <main><h1>Plans</h1><button id="cta">Check whether you can apply</button></main>
+    <script>
+      setTimeout(() => {
+        const bar = document.createElement('div');
+        bar.id = 'bar';
+        bar.innerHTML = '<span>We use cookies.</span> <button id="reject">Reject all</button> <button id="accept">Accept all</button>';
+        document.body.appendChild(bar);
+      }, 400);
+    </script>
+  </body>
+</html>

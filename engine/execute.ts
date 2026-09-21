@@ -211,6 +211,11 @@ async function settleLate(
   return alreadyMs + stop();
 }
 
+/** In-viewport control signature. A late cookie bar changes it; a quiet page does not. */
+export async function visibleControlSignature(page: Page): Promise<string | null> {
+  return sampleSignatureSafe(page);
+}
+
 export async function settle(page: Page, maxMs: number = SETTLE_MAX_MS): Promise<number> {
   const stop = timer();
   await installShim(page);

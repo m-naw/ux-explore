@@ -68,6 +68,34 @@ export function isConsentText(text: string): boolean {
   return CONSENT_RE.test(text.toLowerCase());
 }
 
+const REJECT_RE = /(?<![\p{L}])(?:reject|odrzuc|відхил|отклон)/iu;
+
+/** A banner control the persona should be offered: accept, reject, or a plain close. */
+export function isBannerChoiceName(name: string): boolean {
+  return isConsentText(name) || isDismissName(name) || REJECT_RE.test(name);
+}
+
+/**
+ * A consent layer injected after extract (typical CMP) and before the screenshot.
+ * The decision was made on a page that did not yet offer closing the banner.
+ */
+export function lateConsentAppeared(
+  before: {
+    stateHash: string;
+    elements: Array<{ name: string; overlay: boolean; dismissesOverlay: boolean }>;
+  },
+  after: {
+    stateHash: string;
+    elements: Array<{ name: string; overlay: boolean; dismissesOverlay: boolean }>;
+  },
+): boolean {
+  if (before.stateHash === after.stateHash) return false;
+  const known = new Set(before.elements.map((e) => e.name));
+  return after.elements.some(
+    (e) => !known.has(e.name) && (e.overlay || e.dismissesOverlay || isBannerChoiceName(e.name)),
+  );
+}
+
 export type OverlayDismissPlan = 'control' | 'defer' | 'escape';
 
 /**
