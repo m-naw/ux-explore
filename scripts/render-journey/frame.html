@@ -295,8 +295,8 @@
       const isPruned = !(id in kept) && !isPicked;
       const cls = ['row', isPruned && 'pruned', isArgmax && 'argmax', isPicked && 'picked'].filter(Boolean).join(' ');
       const tags = [
-        isPicked && '<span class="tag picked">picked</span>',
-        isArgmax && '<span class="tag argmax">argmax</span>',
+        isPicked && '<span class="tag picked">she picked</span>',
+        isArgmax && '<span class="tag argmax">optimal</span>',
       ].filter(Boolean).join('');
       const el = document.createElement('div');
       el.className = cls;
@@ -319,7 +319,7 @@
     if (diverged) {
       const d = document.createElement('div');
       d.className = 'diverge';
-      d.textContent = 'Exploration: sampled a different option than the argmax';
+      d.textContent = 'She skipped the optimal move';
       box.appendChild(d);
     }
 
@@ -385,10 +385,10 @@
         `<div class="big ${cls}">${esc(r.label)}</div>` +
         (r.reason ? `<div class="reason">${esc(r.reason)}</div>` : '') +
         `<div class="stats"><div><b>${r.steps}</b>steps taken</div>` +
-        `<div class="expl"><b>${r.exploration}</b>exploration moves</div>` +
+        `<div class="expl"><b>${r.exploration}</b>skipped optimal</div>` +
         `<div class="conf"><b>${r.confusion}</b>confusion steps</div></div>` +
         `<div class="strip"><div class="label-h">entropy per step</div><div class="bars">${bars}</div>` +
-        `<div class="legend"><span><i></i>step</span><span><i class="expl"></i>sampled ≠ argmax</span><span><i class="conf"></i>confused</span></div></div>` +
+        `<div class="legend"><span><i></i>step</span><span><i class="expl"></i>not the optimal move</span><span><i class="conf"></i>confused</span></div></div>` +
         `</div>`;
     }).join('');
     document.getElementById('compare').innerHTML =
