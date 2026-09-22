@@ -2,18 +2,18 @@
 
 A browser journey as a named person, not the fastest path to done.
 
-It samples like that person. It carries a persona, and it reports where she hesitates or
-leaves.
+It samples like that person. It carries a persona, and it reports where that person hesitates
+or leaves.
 
 Same site, same goal, same seed. Two Olenas on a phone, checking whether they qualify for a
 residence card.
 
-**Careful.** She does not know her legal status. She does not guess, and she does not open
-the chat. She leaves.
+**Careful Olena.** Does not know the legal status. Does not guess, and does not open the chat.
+Leaves.
 
-[![Careful Olena leaves on the question she cannot answer](docs/demo/journey-careful.gif)](docs/demo/journey-full-careful.mp4)
+[![Careful Olena leaves on an unanswered question](docs/demo/journey-careful.gif)](docs/demo/journey-full-careful.mp4)
 
-**Tech-savvy.** She knows the answers and finishes.
+**Tech-savvy Olena.** Knows the answers and finishes.
 
 [![Tech-savvy Olena qualifies](docs/demo/journey-techsavvy.gif)](docs/demo/journey-full-techsavvy.mp4)
 
