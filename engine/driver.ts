@@ -37,6 +37,7 @@ import {
   type GoalCriteria,
 } from './goal';
 import { detectLoop } from './loop-detector';
+import { isBannerChoiceName, lateConsentAppeared } from './overlay';
 import { requiredInputsWithoutFacts } from './typed-input';
 import { timer } from './timing';
 
@@ -175,9 +176,11 @@ export async function drive(config: ExploreConfig, deps: DriverDeps): Promise<Jo
   let criteriaMatched = false;
   let looped = false;
   let maxStepsReached = false;
+  let lateConsentRetryStep = 0;
   let fatalToolFailure: ToolFailure | undefined;
   let screenshotDir = '';
   let decisionDir = '';
+  let page: Page | undefined;
 
   // JevEngine resets retryMs at the start of each decide and the value survives the throw,
   // so a failed step reports its own backoff rather than the previous step's.
@@ -190,7 +193,7 @@ export async function drive(config: ExploreConfig, deps: DriverDeps): Promise<Jo
   let monitor: PageMonitor | undefined;
 
   try {
-    const page = await context.newPage();
+    page = await context.newPage();
     // Created before the first navigation, so load-time console noise becomes the baseline.
     const pageMonitor = createPageMonitor(page);
     monitor = pageMonitor;
@@ -339,6 +342,27 @@ export async function drive(config: ExploreConfig, deps: DriverDeps): Promise<Jo
       const decideRetryMs = retryMsOf();
       const decision = toDecision(raw, rng);
 
+      // A CMP often injects the banner during the decide round-trip, sometimes inside an
+      // open shadow root the light-DOM signature cannot see. Re-read once before the screenshot.
+      const hadBanner = extraction.state.elements.some(
+        (el) => el.dismissesOverlay || isBannerChoiceName(el.name),
+      );
+      if (lateConsentRetryStep !== step && !hadBanner) {
+        try {
+          const again = await extractWithRetry(page);
+          if (lateConsentAppeared(extraction.state, again.state)) {
+            await extraction.dispose();
+            await again.dispose();
+            lateConsentRetryStep = step;
+            step -= 1;
+            continue;
+          }
+          await again.dispose();
+        } catch (err) {
+          if (!isNavigationRaceError(err)) throw err;
+        }
+      }
+
       if (config.recordDecisions) {
         // Written after the decision so the live Jev distribution travels with the input the
         // bench will replay, and `stateText` comes from the engine's own answer (`raw.stateText`)
@@ -386,7 +410,7 @@ export async function drive(config: ExploreConfig, deps: DriverDeps): Promise<Jo
           extraction,
           option: sampledOption,
           monitor: pageMonitor,
-          reExtract: () => extract(page),
+          reExtract: () => extract(page!),
         });
       } catch (err) {
         // The action landed, but reading the page it produced lost its context twice. The
@@ -564,6 +588,17 @@ export async function drive(config: ExploreConfig, deps: DriverDeps): Promise<Jo
       if (step === config.maxSteps) maxStepsReached = true;
     }
   } finally {
+    if (config.screenshots && screenshotDir && page) {
+      try {
+        await page.screenshot({
+          path: path.join(screenshotDir, 'final.jpg'),
+          type: 'jpeg',
+          quality: 70,
+        });
+      } catch {
+        // Navigation may have failed before a document existed, or the page is already gone.
+      }
+    }
     monitor?.dispose();
     await context.close();
   }

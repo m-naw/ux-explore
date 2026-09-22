@@ -76,17 +76,18 @@ const BASE = {
 };
 
 describe('buildOptions', () => {
-  it('caps element options at 30 and reports what it dropped', () => {
+  it('offers only what is on screen and reports the rest as below the fold', () => {
     const elements = Array.from({ length: 45 }, (_, i) =>
       el({ id: `el_${i}`, name: `Item ${i}`, inViewport: i < 10, y: 100 + i * 50 }),
     );
     const set = buildOptions({ ...BASE, state: state(elements) });
-    expect(set.options.filter((o) => o.kind === 'element')).toHaveLength(OPTION_CAP);
-    expect(set.droppedElements).toBe(15);
+    expect(set.options.filter((o) => o.kind === 'element')).toHaveLength(10);
+    expect(set.options.some((o) => o.description.includes('below fold'))).toBe(false);
+    expect(set.droppedElements).toBe(35);
     expect(set.belowFoldSample).toHaveLength(5);
   });
 
-  it('always reserves form controls, nav and header links, and at most six matching footer links', () => {
+  it('reserves visible form, nav, header and footer controls, never ones below the fold', () => {
     const elements = [
       el({
         id: 'el_form',
@@ -114,12 +115,13 @@ describe('buildOptions', () => {
         el({ id: `el_body${i}`, name: `Body ${i}`, inViewport: true, y: 200 + i }),
       ),
     ];
-    const ids = buildOptions({ ...BASE, state: state(elements) }).options.map((o) => o.id);
-    expect(ids).toContain('el_form');
-    expect(ids).toContain('el_nav');
-    expect(ids).toContain('el_head');
-    expect(ids.filter((id) => /^el_f\d$/.test(id))).toHaveLength(6);
-    expect(ids).not.toContain('el_f6'); // Blog matches no keyword
+    const set = buildOptions({ ...BASE, state: state(elements) });
+    const ids = set.options.map((o) => o.id);
+    expect(ids).not.toContain('el_form');
+    expect(ids).not.toContain('el_nav');
+    expect(ids).not.toContain('el_head');
+    expect(ids.filter((id) => /^el_f\d$/.test(id))).toHaveLength(0);
+    expect(set.belowFoldSample).toEqual(expect.arrayContaining(['Dalej', 'Usługi', 'Zaloguj']));
   });
 
   it('tells the persona what a field already holds', () => {
@@ -225,7 +227,8 @@ describe('buildOptions', () => {
     });
     const byId = new Map(set.options.map((o) => [o.id, o.description]));
     expect(byId.get('el_14')).toBe('link "Karta CUKR" -> /pl/cukr (visible)');
-    expect(byId.get('el_22')).toBe('button "Dalej" (below fold)');
+    expect(byId.has('el_22')).toBe(false);
+    expect(set.belowFoldSample).toContain('Dalej');
     expect(byId.get('scroll_down')).toBe('scroll down to see more');
   });
 
@@ -286,7 +289,7 @@ describe('buildOptions', () => {
 
   it('never caps reserved slots, even when they exceed the option cap', () => {
     const reserved = Array.from({ length: 35 }, (_, i) =>
-      el({ id: `el_nav${i}`, name: `Nav ${i}`, landmark: 'nav', inViewport: false, y: 4000 + i }),
+      el({ id: `el_nav${i}`, name: `Nav ${i}`, landmark: 'nav', inViewport: true, y: 10 + i }),
     );
     const main = Array.from({ length: 10 }, (_, i) =>
       el({ id: `el_main${i}`, name: `Main ${i}`, inViewport: true, y: 100 + i }),
@@ -300,7 +303,7 @@ describe('buildOptions', () => {
 
   it('caps only the non-reserved remainder when reserved slots exceed the cap', () => {
     const reserved = Array.from({ length: 35 }, (_, i) =>
-      el({ id: `el_nav${i}`, name: `Nav ${i}`, landmark: 'nav', inViewport: false, y: 4000 + i }),
+      el({ id: `el_nav${i}`, name: `Nav ${i}`, landmark: 'nav', inViewport: true, y: 10 + i }),
     );
     const mainKept = Array.from({ length: 30 }, (_, i) =>
       el({ id: `el_main${i}`, name: `Main ${i}`, inViewport: true, y: 100 + i }),
@@ -344,6 +347,26 @@ describe('buildOptions', () => {
       ]),
     });
     expect(set.options.map((o) => o.id)).toContain('type:el_01');
+    expect(set.options.map((o) => o.id)).not.toContain('el_01');
+  });
+
+  it('does not offer a visible text field the persona has nothing to type into', () => {
+    const set = buildOptions({
+      ...BASE,
+      state: state([
+        el({
+          id: 'el_chat',
+          name: 'Compose your message',
+          role: 'textbox',
+          href: undefined,
+        }),
+        el({ id: 'el_next', name: 'Next', role: 'button', href: undefined }),
+      ]),
+    });
+    const ids = set.options.map((o) => o.id);
+    expect(ids).not.toContain('el_chat');
+    expect(ids).not.toContain('type:el_chat');
+    expect(ids).toContain('el_next');
   });
 });
 

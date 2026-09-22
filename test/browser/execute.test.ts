@@ -232,14 +232,72 @@ describeBrowser('execute', () => {
     await closePage(page);
   });
 
-  it('dismisses a cookie overlay before clicking the covered call to action', async () => {
+  it('dismisses a cookie overlay via close, not accept, before clicking the covered call to action', async () => {
     const page = await openPage();
     await page.goto(server.url('cookie-modal.html'));
-    const id = await idOf(page, 'Wybierz plan');
-    const result = await run(page, { id, kind: 'element', description: 'cta', elementId: id });
+    const extraction = await extract(page);
+    expect(extraction.state.elements.find((e) => e.name === 'Wybierz plan')).toBeUndefined();
+    const template = extraction.state.elements[0]!;
+    const handle = await page.locator('#cta').elementHandle();
+    extraction.state.elements.push({
+      ...template,
+      id: 'el_cta',
+      name: 'Wybierz plan',
+      overlay: false,
+      dismissesOverlay: false,
+    });
+    extraction.handles.set('el_cta', handle!);
+    const monitor = createPageMonitor(page);
+    monitor.mark();
+    const result = await execute({
+      page,
+      extraction,
+      option: { id: 'el_cta', kind: 'element', description: 'cta', elementId: 'el_cta' },
+      monitor,
+      reExtract: () => extract(page),
+    });
     expect(result.overlayBlocked).toBe(false);
     expect(result.overlayDismissal).toEqual({ dismissed: true, method: 'control' });
+    expect(await page.evaluate(() => document.body.dataset.dismissed)).toBe('close');
     expect(await page.title()).toBe('cta-clicked');
+    await extraction.dispose();
+    await result.after?.dispose();
+    await closePage(page);
+  });
+
+  it('does not accept cookies when a covered target has only consent choices', async () => {
+    const page = await openPage();
+    await page.goto(server.url('consent-choice.html'));
+    const extraction = await extract(page);
+    expect(extraction.state.elements.find((e) => e.name === 'Choose plan')).toBeUndefined();
+    expect(extraction.state.elements.find((e) => e.name === 'Accept all')!.dismissesOverlay).toBe(
+      false,
+    );
+    const template = extraction.state.elements[0]!;
+    const handle = await page.locator('#cta').elementHandle();
+    extraction.state.elements.push({
+      ...template,
+      id: 'el_cta',
+      name: 'Choose plan',
+      overlay: false,
+      dismissesOverlay: false,
+    });
+    extraction.handles.set('el_cta', handle!);
+    const monitor = createPageMonitor(page);
+    monitor.mark();
+    const result = await execute({
+      page,
+      extraction,
+      option: { id: 'el_cta', kind: 'element', description: 'cta', elementId: 'el_cta' },
+      monitor,
+      reExtract: () => extract(page),
+    });
+    expect(result.overlayBlocked).toBe(true);
+    expect(result.overlayDismissal).toBeUndefined();
+    expect(await page.evaluate(() => document.body.dataset.dismissed ?? '')).toBe('');
+    expect(await page.title()).toBe('Consent choice');
+    expect(await page.locator('#dialog').count()).toBe(1);
+    await extraction.dispose();
     await result.after?.dispose();
     await closePage(page);
   });
@@ -247,8 +305,24 @@ describeBrowser('execute', () => {
   it('reports overlayBlocked when the overlay survives the dismissal', async () => {
     const page = await openPage();
     await page.goto(server.url('stubborn-overlay.html'));
-    const id = await idOf(page, 'Choose plan');
-    const result = await run(page, { id, kind: 'element', description: 'cta', elementId: id });
+    await page.evaluate(() => document.getElementById('veil')!.remove());
+    const extraction = await extract(page);
+    const cta = extraction.state.elements.find((e) => e.name === 'Choose plan')!;
+    await page.evaluate(() => {
+      const veil = document.createElement('div');
+      veil.id = 'veil';
+      veil.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50';
+      document.body.appendChild(veil);
+    });
+    const monitor = createPageMonitor(page);
+    monitor.mark();
+    const result = await execute({
+      page,
+      extraction,
+      option: { id: cta.id, kind: 'element', description: 'cta', elementId: cta.id },
+      monitor,
+      reExtract: () => extract(page),
+    });
     // The diagnosis has to survive the click that then fails: this is the step the driver flags
     // `overlay-blocked`, and the flag would be lost if the throw discarded the pre-check result.
     expect(result.overlayBlocked).toBe(true);
@@ -257,6 +331,7 @@ describeBrowser('execute', () => {
     expect(result.overlayDismissal).toEqual({ dismissed: true, method: 'escape' });
     expect(result.outcome.errorClass).toBe('intercepted');
     expect(await page.title()).toBe('Stubborn overlay');
+    await extraction.dispose();
     await result.after?.dispose();
     await closePage(page);
   });

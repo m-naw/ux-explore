@@ -950,7 +950,23 @@ export async function extract(page: Page): Promise<Extraction> {
     viewHash: '',
   };
 
-  await annotateOverlays(page, state);
+  const coveredIds = new Set(await annotateOverlays(page, state));
+  if (coveredIds.size > 0) {
+    state.elements = state.elements.filter((el) => !coveredIds.has(el.id));
+    await Promise.all(
+      [...coveredIds].map(async (id) => {
+        const handle = handles.get(id);
+        handles.delete(id);
+        if (handle) await handle.dispose();
+      }),
+    );
+    state.meta.langSwitcher = state.elements
+      .filter((e) => e.langCode && !e.disabled)
+      .map((e) => ({ code: e.langCode!, elementId: e.id, name: e.name }));
+    state.meta.disabledControls = [
+      ...new Set(state.elements.filter((e) => e.disabled).map((e) => e.name)),
+    ].slice(0, DISABLED_CONTROL_SAMPLE);
+  }
 
   state.stateHash = sha1(`${normalizeUrl(state.meta.url)}\n${viewportSignature(state).join('\n')}`);
   state.viewHash = sha1(

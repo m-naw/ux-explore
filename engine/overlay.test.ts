@@ -1,16 +1,35 @@
 import { describe, it, expect } from 'vitest';
-import { DISMISS_KEYWORDS, isDismissName, isOverlayOccluder } from './overlay';
+import {
+  CONSENT_KEYWORDS,
+  DISMISS_KEYWORDS,
+  isConsentText,
+  isDismissName,
+  isOverlayOccluder,
+  lateConsentAppeared,
+  overlayDismissPlan,
+} from './overlay';
 
 describe('isDismissName', () => {
   it('matches dismiss stems at a word start, in every spec language', () => {
-    expect(isDismissName('Akceptuję wszystkie')).toBe(true);
-    expect(isDismissName('Zgadzam się')).toBe(true);
     expect(isDismissName('ЗАКРИТИ')).toBe(true);
     expect(isDismissName('Понятно')).toBe(true);
     expect(isDismissName('Got it, thanks')).toBe(true);
     expect(isDismissName('OK')).toBe(true);
     expect(isDismissName('Close')).toBe(true);
+    expect(isDismissName('Dismiss')).toBe(true);
+    expect(isDismissName('Skip')).toBe(true);
     expect(isDismissName('×')).toBe(true);
+  });
+
+  it('does not treat accept or agree as a dismiss control', () => {
+    expect(isDismissName('Accept all')).toBe(false);
+    expect(isDismissName('I agree')).toBe(false);
+    expect(isDismissName('Akceptuję wszystkie')).toBe(false);
+    expect(isDismissName('Zgadzam się')).toBe(false);
+    expect(isDismissName('Прийняти всі')).toBe(false);
+    expect(isDismissName('Согласен')).toBe(false);
+    expect(isConsentText('Accept all')).toBe(true);
+    expect(isConsentText('Akceptuję wszystkie')).toBe(true);
   });
 
   it('does not match a stem buried inside another word', () => {
@@ -20,11 +39,75 @@ describe('isDismissName', () => {
     expect(isDismissName('Choose plan')).toBe(false);
   });
 
-  it('carries the full spec keyword list', () => {
-    expect(DISMISS_KEYWORDS).toContain('zgadzam');
-    expect(DISMISS_KEYWORDS).toContain('прийняти');
-    expect(DISMISS_KEYWORDS).toContain('согласен');
-    expect(DISMISS_KEYWORDS.length).toBe(18);
+  it('carries close/dismiss/skip and not consent choices', () => {
+    expect(DISMISS_KEYWORDS).toContain('close');
+    expect(DISMISS_KEYWORDS).toContain('dismiss');
+    expect(DISMISS_KEYWORDS).toContain('skip');
+    expect(DISMISS_KEYWORDS).not.toContain('accept');
+    expect(DISMISS_KEYWORDS).not.toContain('agree');
+    expect(DISMISS_KEYWORDS).not.toContain('zgadzam');
+    expect(CONSENT_KEYWORDS).toContain('akceptuj');
+    expect(CONSENT_KEYWORDS).toContain('прийняти');
+    expect(CONSENT_KEYWORDS).toContain('согласен');
+    expect(DISMISS_KEYWORDS.length).toBe(12);
+    expect(CONSENT_KEYWORDS.length).toBe(8);
+  });
+});
+
+describe('lateConsentAppeared', () => {
+  const el = (name: string, overlay = false, dismissesOverlay = false) => ({
+    name,
+    overlay,
+    dismissesOverlay,
+  });
+
+  it('is false when the page hash did not move', () => {
+    expect(
+      lateConsentAppeared(
+        { stateHash: 'a', elements: [el('Apply')] },
+        { stateHash: 'a', elements: [el('Apply'), el('Accept all', true)] },
+      ),
+    ).toBe(false);
+  });
+
+  it('is true when a consent or reject control arrived', () => {
+    expect(
+      lateConsentAppeared(
+        { stateHash: 'a', elements: [el('Apply')] },
+        { stateHash: 'b', elements: [el('Apply'), el('Reject all')] },
+      ),
+    ).toBe(true);
+    expect(
+      lateConsentAppeared(
+        { stateHash: 'a', elements: [el('Apply')] },
+        { stateHash: 'b', elements: [el('Apply'), el('Accept all')] },
+      ),
+    ).toBe(true);
+  });
+
+  it('is false when the only new control is ordinary page content', () => {
+    expect(
+      lateConsentAppeared(
+        { stateHash: 'a', elements: [el('Apply')] },
+        { stateHash: 'b', elements: [el('Apply'), el('Blog')] },
+      ),
+    ).toBe(false);
+  });
+});
+
+describe('overlayDismissPlan', () => {
+  const el = (overlay: boolean, dismissesOverlay: boolean) => ({ overlay, dismissesOverlay });
+
+  it('clicks a plain close control when one is present', () => {
+    expect(overlayDismissPlan([el(true, false), el(true, true)])).toBe('control');
+  });
+
+  it('defers when the overlay only offers consent choices', () => {
+    expect(overlayDismissPlan([el(true, false), el(true, false)])).toBe('defer');
+  });
+
+  it('falls back to Escape when the occluder has no controls', () => {
+    expect(overlayDismissPlan([el(false, false)])).toBe('escape');
   });
 });
 
@@ -80,6 +163,14 @@ describe('isOverlayOccluder', () => {
         frameOffset: main,
         topViewport: top,
         text: 'We use cookies. Got it',
+      }),
+    ).toBe(true);
+    expect(
+      isOverlayOccluder({
+        rect,
+        frameOffset: main,
+        topViewport: top,
+        text: 'We use cookies. Accept all',
       }),
     ).toBe(true);
     // The same bar without one is a sticky footer to scroll clear of.

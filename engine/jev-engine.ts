@@ -10,6 +10,7 @@ import type {
   PersonaProfile,
   RawDecision,
 } from './types';
+import { isTextInput, matchFact } from './typed-input';
 
 export const JEV_URL = 'https://api.typesafe.ai/v1/systemone';
 export const JEV_MODEL = 'jev-latest';
@@ -164,6 +165,16 @@ export function renderStateText(input: DecideInput): string {
   if (meta.nonResponsive) metaParts.push('Page is not mobile-optimised; shown zoomed out');
   if (meta.validationMessages.length > 0) {
     metaParts.push(`Error or validation text on the page: ${meta.validationMessages.join(' | ')}`);
+  }
+  const unfillable = input.state.elements.filter(
+    (el) => el.inViewport && !el.disabled && isTextInput(el) && !matchFact(el, input.persona.facts),
+  );
+  if (unfillable.length > 0) {
+    metaParts.push(
+      `Visible fields you cannot fill, so they are not options: ${unfillable
+        .map((el) => `"${el.name}"`)
+        .join(', ')}.`,
+    );
   }
   if (meta.disabledControls.length > 0) {
     // Named but never offered: the persona has to be able to see the gate to reason about it.

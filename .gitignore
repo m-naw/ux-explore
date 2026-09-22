@@ -8,3 +8,4 @@ dist/
 # Run output: journeys, narratives, findings and screenshots.
 reports/
 .worktrees/
+docs/demo/frames/
