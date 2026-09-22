@@ -1,12 +1,30 @@
 # ux-explore
 
-Drives a real browser through a website as a named persona and reports where that persona
-got confused, stuck or lost. Each step extracts the page's interactive elements, asks the
-TypeSafe Jev System One engine which option the persona would take next, executes it with
-Playwright, and records the decision. One Claude call at the end turns the trace into a
-narrative and a list of findings.
+A browser journey as a named person, not the fastest path to done.
 
-Requires a typesafe.ai API key (request access at typesafe.ai).
+It samples like that person. It carries a persona, and it reports where she hesitates or
+leaves.
+
+Same site, same goal, same seed. Two Olenas on a phone, checking whether they qualify for a
+residence card.
+
+**Careful.** She does not know her legal status. She does not guess, and she does not open
+the chat. She leaves.
+
+[![Careful Olena leaves on the question she cannot answer](docs/demo/journey-careful.gif)](docs/demo/journey-full-careful.mp4)
+
+**Tech-savvy.** She knows the answers and finishes.
+
+[![Tech-savvy Olena qualifies](docs/demo/journey-techsavvy.gif)](docs/demo/journey-full-techsavvy.mp4)
+
+[![Same goal, two outcomes](docs/demo/compare.png)](docs/demo/compare.png)
+
+Each step extracts the page's interactive elements, asks Jev which option this persona would
+take, executes it with Playwright, and records the decision. An optional Claude call at the
+end turns the trace into a narrative and a list of findings. The journey itself does not need
+that call.
+
+Requires a typesafe.ai API key (request access at [typesafe.ai](https://typesafe.ai)).
 
 ## Setup
 
@@ -15,11 +33,14 @@ npm install
 npx playwright install chromium
 ```
 
-Two API keys are required:
+`TYPESAFE_API_KEY` is required. It is the Jev decide engine, called once per step.
 
-- `TYPESAFE_API_KEY` — the Jev decide engine, called once per step.
-- `ANTHROPIC_API_KEY` — the single report call at the end of the journey.
-- `UX_EXPLORE_REPORT_MODEL` (optional) — overrides the report model id.
+`ANTHROPIC_API_KEY` is optional. It pays for one Claude call after the journey, which writes
+`narrative.md` and `findings.yaml`. Without it, pass `--no-report`. The run still writes the
+journey, metrics, and screenshots. You do not get the narrative or the findings list, and the
+CLI will refuse to start if the key is missing and `--no-report` is not set.
+
+`UX_EXPLORE_REPORT_MODEL` (optional) overrides the report model id. Ignored with `--no-report`.
 
 Put them in the environment or in a `.env.local` / `.env` next to `cli.ts`; both are
 gitignored. See `.env.example` for the full list.
