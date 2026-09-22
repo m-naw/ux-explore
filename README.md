@@ -114,14 +114,14 @@ A tighter pattern misses the CUKR branch, which stops at `?step=positive` and ne
 name: Olena
 description: |
   38, from Kharkiv, in Wrocław since 2022 under temporary protection.
-  Needs to switch to a CUKR residence card before her status ends.
-  Uses her phone for everything. Bureaucracy scares her.
+  Needs to switch to a CUKR residence card before that status ends.
+  Uses a phone for everything. Bureaucracy is frightening.
 languages: { native: uk, reads: { uk: fluent, pl: weak, en: none } }
 device: mobile # desktop | mobile
 techLiteracy: low # low | medium | high
 domainLiteracy: low # low | medium | high
-patience: low # low | medium | high — how long before she gives up
-intent: high # low | medium | high — how much she wants this today
+patience: low # low | medium | high — how long before this person gives up
+intent: high # low | medium | high — how much this person wants this today
 facts:
   {
     givenName: Olena,
