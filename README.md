@@ -38,7 +38,8 @@ npx playwright install chromium
 `ANTHROPIC_API_KEY` is optional. It pays for one Claude call after the journey, which writes
 `narrative.md` and `findings.yaml`. Without it, pass `--no-report`. The run still writes the
 journey, metrics, and screenshots. You do not get the narrative or the findings list, and the
-CLI will refuse to start if the key is missing and `--no-report` is not set.
+CLI will refuse to start if the key is missing and `--no-report` is not set. See
+[Optional report](#optional-report) for what the report gives you.
 
 `UX_EXPLORE_REPORT_MODEL` (optional) overrides the report model id. Ignored with `--no-report`.
 
@@ -221,6 +222,29 @@ Each run writes `<output>/<runId>/`:
   non-zero or the run is `--verbose`.
 - `screenshots/` — viewport JPEGs of the flagged steps.
 
+## Optional report
+
+After the journey, one Claude call (Sonnet 5 by default; `UX_EXPLORE_REPORT_MODEL` changes
+it) reads the whole trace: every step, the options on screen, the persona's probabilities and
+the flags. It writes two files:
+
+- `narrative.md`: the persona's journey in prose, step by step.
+- `findings.yaml`: the problems it found, each with a severity, the steps that show it, and a
+  recommendation.
+
+Why it exists: the trace is data. The report turns it into something a product owner or a
+designer can read in two minutes: where the persona hesitated, why it probably left, and what
+to change first. Use it to triage a release, brief a designer, compare personas on the same
+flow, or start tickets.
+
+It is checked, not trusted. Findings that cite steps missing from the trace are dropped, and
+`product` findings with no evidence in the cited steps are downgraded (see `reportValidation`
+in `metrics.json`).
+
+It is the only LLM call in a run, and most of a run's cost: about $0.10 per journey, Jev
+included (see `docs/ARCHITECTURE.md`). With `--no-report` you still get the journey, the
+metrics and the screenshots, and `ANTHROPIC_API_KEY` is not needed.
+
 ## Run-set metrics
 
 ```bash
@@ -238,11 +262,38 @@ check reports whether the personas really did need more steps in that order. It 
 anywhere in the arguments. Without it no `ordinalCheck` is reported, because there is no
 declared ranking to measure the run set against.
 
-## Decide benchmark
+## Decide benchmark: Jev vs an LLM
 
-See `benchmarks/` for real-site benchmark data drops (e.g. `benchmarks/2026-09-20-dopomo-landing/`).
+The tool uses Jev to choose every step. This benchmark asks what happens if an LLM makes
+those choices instead. It replays the same recorded decisions (same page, same persona, same
+options on screen) through Jev, Claude Haiku 4.5 and Claude Sonnet 5, and compares time, cost
+and agreement. The LLMs here only stand in for Jev as a baseline. This is not the optional
+report (see [Optional report](#optional-report)).
 
-Record a few journeys, then replay their decision states against all three engines:
+Recorded run: [`benchmarks/2026-09-20-dopomo-landing/`](benchmarks/2026-09-20-dopomo-landing/),
+30 decisions from live journeys on dopomo.pl. One run; cost computed from list prices.
+
+|                         | Jev                                       | Claude Haiku 4.5                                    | Claude Sonnet 5 |
+| ----------------------- | ----------------------------------------- | --------------------------------------------------- | --------------- |
+| Median time per call    | 0.60 s                                    | 1.09 s                                              | 1.68 s          |
+| Calls per decision      | 1: returns a probability for every option | 5: one pick per call, repeated to get probabilities | 5               |
+| Cost per decision       | ~$0.0001                                  | ~$0.010                                             | ~$0.022         |
+| Same top pick as Sonnet | 83%                                       | 77%                                                 | reference       |
+
+What it shows:
+
+- An LLM can make these choices. Getting the per-step probabilities, which are the tool's
+  hesitation signal, costs about 100 to 240 times more per decision than with Jev. If you only
+  need the top pick, one LLM call is enough, and the gap is about 20 to 50 times.
+- Each LLM call is 2 to 3 times slower than a Jev call. Times are measured per call on the
+  client, network included.
+- Jev's top pick matched Sonnet's more often than Haiku's did. Sonnet is a reference point, not
+  the right answer: no human labelled these decisions.
+
+<details>
+<summary>How to run it, and what exactly it measures</summary>
+
+Record a few journeys, then replay their decisions against the engines:
 
 ```bash
 npx tsx cli.ts --url https://dopomo.pl/ --need "get a residence card" \
@@ -250,41 +301,37 @@ npx tsx cli.ts --url https://dopomo.pl/ --need "get a residence card" \
 npm run bench -- ./reports --states 30 --out ./reports/bench
 ```
 
-`bench-decide.ts` samples 30 states across the recorded journeys by default and, for each,
-calls Jev three times (a distribution plus a three-way repeat baseline) and Claude Haiku 4.5
-and Claude Sonnet 5 five times each — a five-sample distribution, no temperature-0 call (Sonnet
-5 rejects `temperature`; Sonnet samples at `effort: 'low'` instead). The reference argmax for
-each state is the _mode_ of Sonnet's five samples, so it is itself stochastic: a reference
-point, not a correct answer. It writes `bench.md` and `bench.json` under `--out` after every
-state (so an interrupted run still leaves usable output) with median and p95 latency, tokens
-and cost per engine from the price table constant, mean L1 between repeats, argmax agreement
-with the Sonnet reference, every pairwise L1 including Jev against Haiku, and the per-state
-picks.
+- **Same input for every engine.** The script rebuilds the exact input the driver had and
+  checks that Jev's rendered state matches the recorded text byte for byte.
+- **Jev** is called three times per decision: once for the probabilities, twice more to see
+  how much they move between repeats.
+- **Claude** has no probability output, so each model is asked five times and its picks are
+  counted. Sonnet 5 does not accept a temperature setting, so it runs at its low effort
+  setting instead.
+- **Reference.** For each decision, Sonnet's most frequent pick is the reference. It is itself
+  sampled, so it is a point of comparison, not a correct answer.
+- **Output.** `bench.md` and `bench.json` under `--out`, rewritten after every decision, so an
+  interrupted run still leaves results: median and p95 time per call, tokens, cost (from the
+  price table in the script), how much each engine's probabilities move between repeats
+  (mean L1 distance), top-pick agreement with Sonnet, pairwise distances between engines, and
+  every decision's picks.
+- **Hand labels.** A `labels.json` in the input directory, shaped
+  `{ "<runId>#<step>": ["el_14", "scroll_down"] }`, maps a decision (its id is printed in the
+  per-decision table) to the options a human accepts. The output then adds a label-accuracy
+  column, which reads `n/a` without the file.
+- **End to end.** `--e2e` also runs the books.toscrape smoke journey (6 steps, seed 1) once
+  per engine and reports whether it reached the goal, steps, time and cost. The Claude engines
+  exist only in `scripts/bench-decide.ts`: the tool itself ships one decide engine and needs a
+  Jev key. `--states 1 --e2e` is the cheap way to get only the end-to-end comparison.
+- **Cost and scope.** Calls run one at a time. The recorded 30-decision run cost about $1 in
+  total, all three engines together. Cut it with `--states 10` or `--engines jev,haiku`
+  (without Sonnet there is no reference, so agreement reads `n/a`). `--repeat` asks each LLM
+  for a second set of five to measure its own stability, for about 80% more cost.
+- **Keys.** `TYPESAFE_API_KEY` when `jev` is selected, `ANTHROPIC_API_KEY` for `haiku` or
+  `sonnet`. The script says what is missing and exits instead of running half a benchmark.
+  Output lands under `reports/`, which is gitignored.
 
-All three engines are handed the same words: the benchmark rebuilds the exact `DecideInput`
-the driver had and asserts that Jev's rendered state matches the recorded text byte for byte.
-
-Every call runs sequentially — no concurrency, so a 30-state run is roughly 15 to 20 minutes
-of wall time and **$2.50 to $3** at the default settings. Cut it with `--states 10` or
-`--engines jev,haiku`; dropping Sonnet also drops the reference, and the agreement columns
-then read `n/a`. `--repeat` doubles each LLM's samples (a second five-sample set) so their own
-repeat stability can be measured too, for about 80% more cost.
-
-If you have hand labels, put a `labels.json` in the input directory shaped
-`{ "<runId>#<step>": ["el_14", "scroll_down"] }`, mapping a state id (the one printed in the
-per-state table) to the option ids a human considers acceptable; the report then adds a
-label-accuracy column, and reads `n/a` without the file.
-
-`--e2e` additionally runs the books.toscrape smoke journey (6 steps, seed 1) once per engine
-and reports `needMet`, steps, wall time and cost. The Claude engines used there live inside
-`scripts/bench-decide.ts` and are not a product feature: the tool ships one decide engine and
-requires a Jev key. `--e2e` re-runs the state benchmark rather than replacing it, so
-`--states 1 --e2e` is the cheap way to get only the end-to-end comparison.
-
-`TYPESAFE_API_KEY` is required whenever `jev` is one of the selected engines, and
-`ANTHROPIC_API_KEY` whenever `haiku` or `sonnet` is; the script prints what is missing and
-exits rather than running half a benchmark. Output lands under `reports/`, which is
-gitignored.
+</details>
 
 ## Repository
 
